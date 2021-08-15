@@ -1,0 +1,11 @@
+.project-card-demo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  &-box {
+    width: 400px;
+    height: 500px;
+  }
+}

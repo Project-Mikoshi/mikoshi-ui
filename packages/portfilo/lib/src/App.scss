@@ -1,0 +1,23 @@
+$blue-1: #1DA1F2;
+$blue-2: #36C5F0;
+$red-1: #DB4437;
+$yellow-1: #F4B400;
+$green-1: #0F9D58;
+
+body {
+  background-color: aliceblue;
+  padding: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: $blue-1;
+
+  &:active, &:focus {
+    color: $blue-2;
+  }
+}
+
+.demo-app-bar {
+  align-items: center;
+}
