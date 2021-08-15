@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Tesla, Inc.",
+    "quote": 410.36,
+    "symbol": "TSLA",
+    "share": 2,
+    "orderType": "buy",
+    "orderId": "39c06207-d4dc-43f3-84a6-2d52de762bfc",
+    "username": "jerry137",
+    "date": "2020-12-04",
+    "limitPrice": 500
+  },
+  {
+    "name": "Virgin Galactic Holdings, Inc.",
+    "quote": 20.47,
+    "symbol": "SPCE",
+    "share": 50,
+    "orderType": "buy",
+    "orderId": "28dba937-a1dc-4544-aeec-746b4691385b",
+    "username": "robinhood",
+    "date": "2020-12-04",
+    "limitPrice": 25
+  },
+  {
+    "name": "Sea Limited",
+    "quote": 360,
+    "symbol": "SE",
+    "share": 5,
+    "orderType": "buy",
+    "orderId": "9cb8f9c8-8c01-46f4-9a78-7924a41ea71a",
+    "username": "TheDonald",
+    "date": "2020-12-05",
+    "limitPrice": 160
+  },
+  {
+    "name": "Netflix, Inc.",
+    "quote": 566.67,
+    "symbol": "NFLX",
+    "share": 10,
+    "orderType": "buy",
+    "orderId": "5dd41952-3883-4079-a956-edc9f5e38a2c",
+    "username": "Voldemort",
+    "date": "2020-12-06",
+    "limitPrice": 600
+  }
+]

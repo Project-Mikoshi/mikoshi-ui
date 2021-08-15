@@ -1,0 +1,946 @@
+{
+  "jerry137": {
+    "username": "jerry137",
+    "password": "121212",
+    "name": "Jerry Smith",
+    "watchlist": [
+      {
+        "symbol": "D35-C",
+        "quote": 1956275.83,
+        "name": "Dimension 35-C",
+        "volume": 1517
+      },
+      {
+        "symbol": "F",
+        "quote": 8.38,
+        "name": "Ford Motor Company",
+        "volume": 0
+      },
+      {
+        "symbol": "MAXR",
+        "quote": 74,
+        "name": "Maxar Technologies Inc.",
+        "volume": 3
+      },
+      {
+        "symbol": "GOOG",
+        "quote": 1740.39,
+        "name": "Alphabet Inc.",
+        "volume": 0
+      }
+    ],
+    "eventList": [],
+    "ownedStocks": [
+      {
+        "name": "Maxar Technologies Inc.",
+        "quote": 100,
+        "total_cost": 300,
+        "average_cost": 13.64,
+        "symbol": "MAXR",
+        "share": 22
+      },
+      {
+        "name": "Walmart Inc.",
+        "quote": 150,
+        "total_cost": 300,
+        "average_cost": 150,
+        "symbol": "WMT",
+        "share": 2
+      },
+      {
+        "name": "Netflix, Inc.",
+        "quote": 500,
+        "total_cost": 1000,
+        "average_cost": 500,
+        "symbol": "NFLX",
+        "share": 2
+      }
+    ],
+    "activity": [
+      {
+        "date": "2020-11-29",
+        "activities": [
+          {
+            "date": "2020-11-29",
+            "action": "buy",
+            "message": "Bought 10 shares of SE at $200 from rick137 - 2020-11-29"
+          },
+          {
+            "date": "2020-11-29",
+            "action": "sell",
+            "message": "Sold 10 shares of SE at $200 to rick137 - 2020-11-29"
+          },
+          {
+            "date": "2020-11-29",
+            "action": "buy",
+            "message": "Bought 10 shares of SE at $160 from rick137 - 2020-11-29"
+          }
+        ]
+      },
+      {
+        "date": "2020-12-01",
+        "activities": [
+          {
+            "date": "2020-12-01",
+            "action": "sell",
+            "message": "Sold 10 shares of SE at $200 to rick137 - 2020-12-01"
+          },
+          {
+            "date": "2020-12-01",
+            "action": "buy",
+            "message": "Bought 10 shares of SE at $190 from rick137 - 2020-12-01"
+          },
+          {
+            "date": "2020-12-01",
+            "action": "sell",
+            "message": "Sold 10 shares of SE at $200 to rick137 - 2020-12-01"
+          },
+          {
+            "date": "2020-12-01",
+            "action": "buy",
+            "message": "Bought 5 shares of SE at $250 from rick137 - 2020-12-01"
+          },
+          {
+            "date": "2020-12-01",
+            "action": "sell",
+            "message": "Sold 5 shares of SE at $200 to rick137 - 2020-12-01"
+          },
+          {
+            "date": "2020-12-01",
+            "action": "buy",
+            "message": "Bought 10 shares of SE at $100 from rick137 - 2020-12-01"
+          },
+          {
+            "date": "2020-12-01",
+            "action": "sell",
+            "message": "Sold 10 shares of SE at $350 to rick137 - 2020-12-01"
+          }
+        ]
+      },
+      {
+        "date": "2020-12-04",
+        "activities": [
+          {
+            "date": "2020-12-04",
+            "action": "buy",
+            "message": "Bought 10 shares of SE at $360 from rick137 - 2020-12-04"
+          }
+        ]
+      },
+      {
+        "date": "2020-12-05",
+        "activities": [
+          {
+            "date": "2020-12-05",
+            "action": "deposit",
+            "message": "Deposited $1210 to account: C-137-1001 - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "deposit",
+            "message": "Deposited $1210 to account: C-137-1001 - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "deposit",
+            "message": "Deposited $1210 to account: C-137-1001 - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "buy",
+            "message": "Bought 2 shares of MAXR at $100 from TheDonald - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "deposit",
+            "message": "Deposited $8000 to account: C-137-1001 - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "withdraw",
+            "message": "Withdrawn $8000 to account: C-137-1001 - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "deposit",
+            "message": "Deposited $8000 to account: C-137-1001 - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "buy",
+            "message": "Bought 2 shares of WMT at $150 from TheDonald - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "sell",
+            "message": "Sold 3 shares of SE at $400 to TheDonald - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "sell",
+            "message": "Sold 6 shares of SE at $400 to TheDonald - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "sell",
+            "message": "Sold 1 shares of SE at $400 to TheDonald - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "buy",
+            "message": "Bought 2 shares of NFLX at $500 from TheDonald - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "buy",
+            "message": "Bought 5 shares of SE at $450 from TheDonald - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "sell",
+            "message": "Sold 8 shares of SE at $800 to TheDonald - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "buy",
+            "message": "Bought 20 shares of MAXR at $5 from TheDonald - 2020-12-05"
+          }
+        ]
+      }
+    ],
+    "account": {
+      "accountName": "C-137-1001",
+      "cashBalance": 18930,
+      "investmentBalance": 1741.34,
+      "totalDeposit": 13230
+    },
+    "balanceGrowth": 0,
+    "openOrders": []
+  },
+  "morty137": {
+    "username": "morty137",
+    "password": "123456",
+    "name": "Morty Smith",
+    "watchlist": [
+      {
+        "symbol": "MAXR",
+        "quote": 23.94,
+        "name": "Maxar Technologies Inc.",
+        "volume": 0
+      }
+    ],
+    "eventList": [
+      {
+        "symbol": "SE",
+        "quote": "156.53",
+        "name": "Sea Limited",
+        "active": "Active",
+        "notified": true,
+        "notify_num": 8,
+        "message": "Alert: Sea Limited, (SE) price has increased by 8% or greater."
+      },
+      {
+        "symbol": "MAXR",
+        "quote": "23.94",
+        "name": "Maxar Technologies Inc.",
+        "active": "Active",
+        "notified": true,
+        "notify_num": 2,
+        "message": "Alert: Maxar Technologies Inc., (MAXR) price has increased by 2% or greater."
+      },
+      {
+        "symbol": "FB",
+        "quote": 272.43,
+        "name": "Facebook, Inc.",
+        "active": "Active",
+        "notified": true,
+        "notify_num": 4,
+        "message": "Alert: Facebook, Inc., (FB) price has increased by 4% or greater."
+      }
+    ],
+    "ownedStocks": [
+      {
+        "name": "Facebook, Inc.",
+        "quote": 272.43,
+        "total_cost": 2724.3,
+        "average_cost": 272.43,
+        "symbol": "FB",
+        "share": 10
+      }
+    ],
+    "activity": [],
+    "account": {
+      "accountName": 1002,
+      "cashBalance": 0,
+      "investmentBalance": 2724.3,
+      "totalDeposit": 2724.3
+    },
+    "balanceGrowth": "0",
+    "openOrders": []
+  },
+  "rick137": {
+    "username": "rick137",
+    "password": "123456",
+    "name": "Rick Sanchez",
+    "watchlist": [
+      {
+        "symbol": "AMD",
+        "quote": 77.99,
+        "name": "Advanced Micro Devices, Inc.",
+        "volume": 0
+      },
+      {
+        "symbol": "MAXR",
+        "quote": 14,
+        "name": "Maxar Technologies Inc.",
+        "volume": 23
+      },
+      {
+        "symbol": "FB",
+        "quote": 325,
+        "name": "Facebook, Inc.",
+        "volume": 0
+      }
+    ],
+    "eventList": [
+      {
+        "symbol": "AMD",
+        "quote": "600.99",
+        "name": "Advanced Micro Devices, Inc.",
+        "active": "Active",
+        "notified": true,
+        "notify_num": null,
+        "message": ""
+      },
+      {
+        "symbol": "TSLA",
+        "quote": "200.99",
+        "name": "Tesla Inc.",
+        "active": "Active",
+        "notified": false,
+        "notify_num": "12",
+        "message": ""
+      },
+      {
+        "symbol": "FB",
+        "quote": 325,
+        "name": "Facebook, Inc.",
+        "active": "Active",
+        "notified": false,
+        "notify_num": 5,
+        "message": ""
+      }
+    ],
+    "ownedStocks": [
+      {
+        "name": "Maxar Technologies Inc.",
+        "quote": 22,
+        "total_cost": 66,
+        "average_cost": 22,
+        "symbol": "MAXR",
+        "share": 3
+      }
+    ],
+    "activity": [
+      {
+        "date": "2020-11-29",
+        "activities": [
+          {
+            "date": "2020-11-29",
+            "action": "sell",
+            "message": "Sold 10 shares of SE at $200 to jerry137 - 2020-11-29"
+          },
+          {
+            "date": "2020-11-29",
+            "action": "buy",
+            "message": "Bought 10 shares of SE at $200 from jerry137 - 2020-11-29"
+          },
+          {
+            "date": "2020-11-29",
+            "action": "sell",
+            "message": "Sold 10 shares of SE at $160 to jerry137 - 2020-11-29"
+          }
+        ]
+      },
+      {
+        "date": "2020-11-30",
+        "activities": [
+          {
+            "date": "2020-11-30",
+            "action": "sell",
+            "message": "Sold 10 shares of SE at $200 to jerry137 - 2020-11-30"
+          },
+          {
+            "date": "2020-11-30",
+            "action": "buy",
+            "message": "Bought 10 shares of SE at $200 from jerry137 - 2020-11-30"
+          },
+          {
+            "date": "2020-11-30",
+            "action": "sell",
+            "message": "Sold 10 shares of SE at $160 to jerry137 - 2020-11-30"
+          }
+        ]
+      },
+      {
+        "date": "2020-12-01",
+        "activities": [
+          {
+            "date": "2020-12-01",
+            "action": "buy",
+            "message": "Bought 10 shares of SE at $200 from jerry137 - 2020-12-01"
+          },
+          {
+            "date": "2020-12-01",
+            "action": "sell",
+            "message": "Sold 10 shares of SE at $190 to jerry137 - 2020-12-01"
+          },
+          {
+            "date": "2020-12-01",
+            "action": "buy",
+            "message": "Bought 10 shares of SE at $200 from jerry137 - 2020-12-01"
+          },
+          {
+            "date": "2020-12-01",
+            "action": "sell",
+            "message": "Sold 5 shares of SE at $250 to jerry137 - 2020-12-01"
+          },
+          {
+            "date": "2020-12-01",
+            "action": "buy",
+            "message": "Bought 5 shares of SE at $200 from jerry137 - 2020-12-01"
+          },
+          {
+            "date": "2020-12-01",
+            "action": "sell",
+            "message": "Sold 10 shares of SE at $100 to jerry137 - 2020-12-01"
+          },
+          {
+            "date": "2020-12-01",
+            "action": "deposit",
+            "message": "Deposited $4000 to account: 1003 - 2020-12-01"
+          },
+          {
+            "date": "2020-12-01",
+            "action": "buy",
+            "message": "Bought 10 shares of SE at $350 from jerry137 - 2020-12-01"
+          }
+        ]
+      },
+      {
+        "date": "2020-12-04",
+        "activities": [
+          {
+            "date": "2020-12-04",
+            "action": "sell",
+            "message": "Sold 10 shares of SE at $360 to jerry137 - 2020-12-04"
+          }
+        ]
+      },
+      {
+        "date": "2020-12-05",
+        "activities": [
+          {
+            "date": "2020-12-05",
+            "action": "buy",
+            "message": "Bought 1 shares of MAXR at $22 from TheDonald - 2020-12-05"
+          }
+        ]
+      },
+      {
+        "date": "2021-01-16",
+        "activities": [
+          {
+            "date": "2021-01-16",
+            "action": "buy",
+            "message": "Bought 2 shares of MAXR at $22 from TheDonald - 2021-01-16"
+          }
+        ]
+      }
+    ],
+    "account": {
+      "accountName": 1003,
+      "cashBalance": 7184,
+      "investmentBalance": 43.92,
+      "totalDeposit": 8000
+    },
+    "balanceGrowth": "0",
+    "openOrders": []
+  },
+  "asd": {
+    "username": "asd",
+    "password": "123",
+    "session_id": "ae2d445a-5a8a-436b-994d-91b2ba887362",
+    "name": "asda",
+    "watchlist": [],
+    "eventList": [],
+    "ownedStocks": [],
+    "activity": [],
+    "account": {
+      "accountName": "Tax Free Savings Account",
+      "cashBalance": 0,
+      "investmentBalance": 0,
+      "totalDeposit": 0
+    },
+    "balanceGrowth": "0",
+    "openOrders": []
+  },
+  "ANTHONYZHU1114": {
+    "username": "ANTHONYZHU1114",
+    "password": "12121212",
+    "session_id": "8c00c492-c59d-4d5b-ab1b-b0bc64926a02",
+    "name": "Anthony Zhu",
+    "watchlist": [
+      {
+        "symbol": "SE",
+        "quote": 218.75,
+        "name": "Sea Limited",
+        "volume": 0
+      }
+    ],
+    "openOrders": [],
+    "eventList": [
+      {
+        "symbol": "SE",
+        "quote": 218.75,
+        "name": "Sea Limited",
+        "active": "Active",
+        "notified": true,
+        "notify_num": 20,
+        "message": "Alert: Sea Limited, (SE) price has increased by 20% or greater."
+      }
+    ],
+    "ownedStocks": [],
+    "activity": [
+      {
+        "date": "2020-12-04",
+        "activities": [
+          {
+            "date": "2020-12-04",
+            "action": "deposit",
+            "message": "Deposited $10 to account: Tax Free Savings Account - 2020-12-04"
+          },
+          {
+            "date": "2020-12-04",
+            "action": "deposit",
+            "message": "Deposited $10 to account: Tax Free Savings Account - 2020-12-04"
+          },
+          {
+            "date": "2020-12-04",
+            "action": "deposit",
+            "message": "Deposited $10 to account: Tax Free Savings Account - 2020-12-04"
+          },
+          {
+            "date": "2020-12-04",
+            "action": "deposit",
+            "message": "Deposited $10 to account: Tax Free Savings Account - 2020-12-04"
+          },
+          {
+            "date": "2020-12-04",
+            "action": "deposit",
+            "message": "Deposited $10 to account: Tax Free Savings Account - 2020-12-04"
+          },
+          {
+            "date": "2020-12-04",
+            "action": "deposit",
+            "message": "Deposited $10 to account: Tax Free Savings Account - 2020-12-04"
+          },
+          {
+            "date": "2020-12-04",
+            "action": "deposit",
+            "message": "Deposited $10 to account: Tax Free Savings Account - 2020-12-04"
+          },
+          {
+            "date": "2020-12-04",
+            "action": "deposit",
+            "message": "Deposited $10 to account: Tax Free Savings Account - 2020-12-04"
+          }
+        ]
+      }
+    ],
+    "account": {
+      "accountName": "Tax Free Savings Account",
+      "cashBalance": 80,
+      "investmentBalance": 0,
+      "totalDeposit": 80
+    },
+    "balanceGrowth": "0"
+  },
+  "robinhood": {
+    "username": "robinhood",
+    "password": "steal from the rich",
+    "session_id": "cde85da8-158e-4f60-9fdc-c10c63e71975",
+    "name": "Robin Hood",
+    "watchlist": [],
+    "openOrders": [],
+    "eventList": [],
+    "ownedStocks": [],
+    "activity": [
+      {
+        "date": "2020-12-04",
+        "activities": [
+          {
+            "date": "2020-12-04",
+            "action": "deposit",
+            "message": "Deposited $7 to account: Tax Free Savings Account - 2020-12-04"
+          },
+          {
+            "date": "2020-12-04",
+            "action": "deposit",
+            "message": "Deposited $7 to account: Tax Free Savings Account - 2020-12-04"
+          }
+        ]
+      }
+    ],
+    "account": {
+      "accountName": "Tax Free Savings Account",
+      "cashBalance": 14,
+      "investmentBalance": 0,
+      "totalDeposit": 14
+    },
+    "balanceGrowth": "0"
+  },
+  "TheDonald": {
+    "username": "TheDonald",
+    "password": "123",
+    "session_id": "70176565-a2cf-4228-858c-89dc85a61584",
+    "name": "Tronald Dump",
+    "watchlist": [
+      {
+        "symbol": "NFLX",
+        "quote": 566.67,
+        "name": "Netflix, Inc.",
+        "volume": 42
+      },
+      {
+        "symbol": "SE",
+        "quote": 492.42,
+        "name": "Sea Limited",
+        "volume": 33
+      },
+      {
+        "symbol": "WMT",
+        "quote": 150,
+        "name": "Walmart Inc.",
+        "volume": 5
+      }
+    ],
+    "openOrders": [
+      {
+        "name": "Sea Limited",
+        "quote": 360,
+        "symbol": "SE",
+        "share": 5,
+        "orderType": "buy",
+        "orderId": "9cb8f9c8-8c01-46f4-9a78-7924a41ea71a",
+        "username": "TheDonald",
+        "date": "2020-12-05",
+        "limitPrice": 160
+      },
+      {
+        "name": "Facebook, Inc.",
+        "quote": 272.43,
+        "symbol": "FB",
+        "share": 4,
+        "orderType": "sell",
+        "orderId": "3c0dec8e-7ba0-4959-a2d8-98329b3f11be",
+        "username": "TheDonald",
+        "date": "2020-12-05",
+        "limitPrice": 350
+      },
+      {
+        "name": "Sea Limited",
+        "quote": 378.95,
+        "symbol": "SE",
+        "share": 1,
+        "orderType": "sell",
+        "orderId": "be1b02f0-e027-4c26-8b62-4e68dd1b502a",
+        "username": "TheDonald",
+        "date": "2020-12-05",
+        "limitPrice": 450
+      }
+    ],
+    "eventList": [
+      {
+        "symbol": "SE",
+        "quote": 360,
+        "name": "Sea Limited",
+        "active": "Deactive",
+        "notified": false,
+        "notify_num": 74,
+        "message": ""
+      },
+      {
+        "symbol": "WMT",
+        "quote": 150,
+        "name": "Walmart Inc.",
+        "active": "Active",
+        "notified": false,
+        "notify_num": 10,
+        "message": ""
+      },
+      {
+        "symbol": "MAXR",
+        "quote": 74,
+        "name": "Maxar Technologies Inc.",
+        "active": "Deactive",
+        "notified": false,
+        "notify_num": -10,
+        "message": ""
+      }
+    ],
+    "ownedStocks": [
+      {
+        "name": "Facebook, Inc.",
+        "quote": 272.43,
+        "total_cost": 3424.3,
+        "average_cost": 342.43,
+        "symbol": "FB",
+        "share": 10
+      },
+      {
+        "name": "Maxar Technologies Inc.",
+        "quote": 23.94,
+        "total_cost": 518.2,
+        "average_cost": 18.50714285714286,
+        "symbol": "MAXR",
+        "share": 5
+      },
+      {
+        "name": "Netflix, Inc.",
+        "quote": 480.24,
+        "total_cost": 33209.6,
+        "average_cost": 873.9368421052632,
+        "symbol": "NFLX",
+        "share": 38
+      },
+      {
+        "name": "Walmart Inc.",
+        "quote": 145.56,
+        "total_cost": 1455.6,
+        "average_cost": 145.56,
+        "symbol": "WMT",
+        "share": 5
+      },
+      {
+        "name": "Sea Limited",
+        "quote": 400,
+        "total_cost": 10400,
+        "average_cost": 800,
+        "symbol": "SE",
+        "share": 10
+      }
+    ],
+    "activity": [
+      {
+        "date": "2020-12-05",
+        "activities": [
+          {
+            "date": "2020-12-05",
+            "action": "sell",
+            "message": "Sold 2 shares of MAXR at $100 to jerry137 - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "sell",
+            "message": "Sold 1 shares of MAXR at $22 to rick137 - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "sell",
+            "message": "Sold 9 shares of NFLX at $480 to dave123 - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "sell",
+            "message": "Sold 1 shares of NFLX at $480 to dave123 - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "buy",
+            "message": "Bought 10 shares of NFLX at $500 from dave123 - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "sell",
+            "message": "Sold 10 shares of NFLX at $300 to dave123 - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "deposit",
+            "message": "Deposited $50000 to account: Tax Free Savings Account - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "deposit",
+            "message": "Deposited $50000 to account: Tax Free Savings Account - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "buy",
+            "message": "Bought 10 shares of NFLX at $1000 from dave123 - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "sell",
+            "message": "Sold 2 shares of FB at $300 to dave123 - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "sell",
+            "message": "Sold 3 shares of WMT at $150 to dave123 - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "buy",
+            "message": "Bought 2 shares of FB at $350 from dave123 - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "sell",
+            "message": "Sold 2 shares of WMT at $150 to jerry137 - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "buy",
+            "message": "Bought 3 shares of SE at $400 from jerry137 - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "buy",
+            "message": "Bought 6 shares of SE at $400 from jerry137 - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "buy",
+            "message": "Bought 1 shares of SE at $400 from jerry137 - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "sell",
+            "message": "Sold 2 shares of NFLX at $500 to jerry137 - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "sell",
+            "message": "Sold 5 shares of SE at $450 to jerry137 - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "buy",
+            "message": "Bought 8 shares of SE at $800 from jerry137 - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "sell",
+            "message": "Sold 20 shares of MAXR at $5 to jerry137 - 2020-12-05"
+          }
+        ]
+      },
+      {
+        "date": "2020-12-06",
+        "activities": [
+          {
+            "date": "2020-12-06",
+            "action": "sell",
+            "message": "Sold 3 shares of SE at $450 to Voldemort - 2020-12-06"
+          }
+        ]
+      },
+      {
+        "date": "2021-01-16",
+        "activities": [
+          {
+            "date": "2021-01-16",
+            "action": "sell",
+            "message": "Sold 2 shares of MAXR at $22 to rick137 - 2021-01-16"
+          }
+        ]
+      }
+    ],
+    "account": {
+      "accountName": "Tax Free Savings Account",
+      "cashBalance": 93016,
+      "investmentBalance": 30492.36,
+      "totalDeposit": 129107.7
+    },
+    "balanceGrowth": "10"
+  },
+  "dave123": {
+    "username": "dave123",
+    "password": "123456",
+    "name": "Dave",
+    "watchlist": [],
+    "openOrders": [],
+    "eventList": [],
+    "ownedStocks": [
+      {
+        "name": "Walmart Inc.",
+        "quote": 150,
+        "total_cost": 450,
+        "average_cost": 150,
+        "symbol": "WMT",
+        "share": 3
+      }
+    ],
+    "activity": [
+      {
+        "date": "2020-12-05",
+        "activities": [
+          {
+            "date": "2020-12-05",
+            "action": "deposit",
+            "message": "Deposited $10000 to account: Tax Free Savings Account - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "buy",
+            "message": "Bought 9 shares of NFLX at $480 from TheDonald - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "buy",
+            "message": "Bought 1 shares of NFLX at $480 from TheDonald - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "sell",
+            "message": "Sold 10 shares of NFLX at $500 to TheDonald - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "buy",
+            "message": "Bought 10 shares of NFLX at $300 from TheDonald - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "sell",
+            "message": "Sold 10 shares of NFLX at $1000 to TheDonald - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "buy",
+            "message": "Bought 2 shares of FB at $300 from TheDonald - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "buy",
+            "message": "Bought 3 shares of WMT at $150 from TheDonald - 2020-12-05"
+          },
+          {
+            "date": "2020-12-05",
+            "action": "sell",
+            "message": "Sold 2 shares of FB at $350 to TheDonald - 2020-12-05"
+          }
+        ]
+      }
+    ],
+    "account": {
+      "accountName": "Tax Free Savings Account",
+      "cashBalance": 16850,
+      "investmentBalance": 450,
+      "totalDeposit": 10000
+    },
+    "balanceGrowth": "0"
+  }
+}
