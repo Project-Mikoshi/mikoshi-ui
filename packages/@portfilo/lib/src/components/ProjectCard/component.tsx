@@ -9,7 +9,7 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 import { Zoom } from '@material-ui/core'
 
-interface ProjectCardData {
+export interface ProjectCardData {
   title: string,
   subtitles: string
   imageUrl?: string,
