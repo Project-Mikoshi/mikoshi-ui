@@ -1,11 +1,13 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
+import './App.scss'
+import Button from 'components/Button/Button'
 
-function App() {
+function App () {
   return (
     <div className="App">
+      <Button />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
