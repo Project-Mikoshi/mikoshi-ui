@@ -32,7 +32,7 @@ export default function ProjectCard (props: {project: ProjectCardData}) {
           <Typography className='project-card-content-subtitles'>{project.subtitles}</Typography>
         </CardContent>
         <CardActions className='project-card-action'>
-          <Button onClick={project.action}>{buttonLabel}</Button>
+          <Button variant='contained' color='primary' onClick={project.action}>{buttonLabel}</Button>
         </CardActions>
       </Card>
     </Zoom>
