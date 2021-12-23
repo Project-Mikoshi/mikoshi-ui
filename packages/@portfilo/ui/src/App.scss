@@ -1,27 +1,11 @@
-$blue-1: #1DA1F2;
-$blue-2: #36C5F0;
-$red-1: #DB4437;
-$yellow-1: #F4B400;
-$green-1: #0F9D58;
+// styles - components
+@import "./components/nav-bar/style.scss";
+@import "./components/project-card/style.scss";
+
+// styles - routes/pages
+@import "./routes/project-card/style.scss";
+@import "./routes/dashboard/style.scss";
 
 body {
   background-color: aliceblue;
-  padding: 40px;
-}
-
-a {
-  text-decoration: none;
-  font-weight: 600;
-  font-size: medium;
-  color: $blue-1;
-
-  &:active, &:focus {
-    color: $blue-2;
-  }
-}
-
-.demo-app-bar {
-  position: relative;
-  align-items: center;
-  padding: 16px;
 }

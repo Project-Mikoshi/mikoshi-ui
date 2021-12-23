@@ -1,26 +1,32 @@
 import React from 'react'
-import './App.scss'
+import 'app.scss'
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from 'react-router-dom'
-import NavBar, { RouteData } from 'components/NavBar/component'
-import ProjectCardDemo from 'demo/ProjectCard/page'
-
-const demoRoutes: Array<RouteData> = [
-  {label: 'Home', route: '/'},
-  {label: 'Project Card Demo', route: 'project-card-demo'}
-]
+import NavBar from 'components/nav-bar/component'
+import ProjectCardDemo from 'routes/project-card/page'
+import Dashboard  from 'routes/dashboard/page'
+import { ROUTE } from 'constants/route'
+import { getCurrentRoute } from 'utils/route'
 
 export default function App () {
+  const {HOME, ABOUT, WORKS, CONTACT} = ROUTE
+  const [currentRoute, setCurrentRoute] = React.useState(getCurrentRoute() ?? ROUTE.HOME.route)
+
+  const onRouteChange = (newRoute: string) => setCurrentRoute(newRoute)
+
   return (
-    <div className="app">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <div className='app'>
+      <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap' />
       <Router>
-        <NavBar routes={demoRoutes} />
+        <NavBar routes={[HOME, ABOUT, WORKS, CONTACT]} currentRoute={currentRoute} onRouteChange={onRouteChange}/>
 
         <Switch>
+          <Route path='/home' >
+            <Dashboard onRouteChange={onRouteChange} />
+          </Route>
           <Route path='/project-card-demo'>
             <ProjectCardDemo />
           </Route>

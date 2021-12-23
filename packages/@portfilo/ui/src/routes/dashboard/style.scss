@@ -1,0 +1,20 @@
+.dashboard {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  top: 80px;
+
+  .avatar {
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+
+    &-name {
+      display: flex;
+    }
+  }
+}

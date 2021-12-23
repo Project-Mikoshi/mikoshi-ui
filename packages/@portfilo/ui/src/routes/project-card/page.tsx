@@ -1,6 +1,5 @@
 import React from 'react'
-import './style.scss'
-import PorjectCard, { ProjectCardData } from 'components/ProjectCard/component'
+import PorjectCard, { ProjectCardData } from 'components/project-card/component'
 
 const projects: Record<string, ProjectCardData> = {
   QuickIn : {
