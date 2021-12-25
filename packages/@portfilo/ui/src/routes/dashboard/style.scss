@@ -1,20 +1,20 @@
 .dashboard {
   position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
   top: 80px;
 
   .avatar {
+    overflow: hidden;
   }
 
   .intro {
-    display: flex;
-    flex-direction: column;
+    overflow: hidden;
 
     &-name {
       display: flex;
     }
+  }
+
+  .social-media {
+    margin-top: auto;
   }
 }

@@ -4,7 +4,8 @@ import {
 } from 'react-router-dom'
 import {
   Tabs,
-  Tab
+  Tab,
+  Slide
 } from '@mui/material'
 import { RouteData } from 'types/route'
 
@@ -12,17 +13,19 @@ export default function NavTabs (props: {routes: RouteData[], onRouteChange: (ro
   const { routes, currentRoute, onRouteChange } = props
 
   return (
-    <Tabs value={currentRoute} textColor='primary' indicatorColor='primary'>
-      {routes.map((route: RouteData) => (
-        <Tab
-          key={route.route}
-          value={route.route}
-          label={route.label}
-          component={Link}
-          to={route.route}
-          onClick={() => {onRouteChange(route.route)}}
-        />
-      ))}
-    </Tabs>
+    <Slide in={true} direction='left' timeout={2000}>
+      <Tabs value={currentRoute} textColor='secondary' indicatorColor='secondary'>
+        {routes.map((route: RouteData) => (
+          <Tab
+            key={route.route}
+            value={route.route}
+            label={route.label}
+            component={Link}
+            to={route.route}
+            onClick={() => {onRouteChange(route.route)}}
+          />
+        ))}
+      </Tabs>
+    </Slide>
   )
 }

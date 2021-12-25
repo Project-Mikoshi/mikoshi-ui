@@ -1,10 +1,10 @@
-// styles - components
-@import "./components/nav-bar/style.scss";
-@import "./components/project-card/style.scss";
-
 // styles - routes/pages
-@import "./routes/project-card/style.scss";
+@import "./routes/works/style.scss";
 @import "./routes/dashboard/style.scss";
+
+// styles - animation
+@import "./animation/photo-sketch.scss";
+@import "./animation/typewriter-text.scss";
 
 body {
   background-color: aliceblue;

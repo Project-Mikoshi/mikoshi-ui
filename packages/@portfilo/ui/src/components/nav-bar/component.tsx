@@ -1,7 +1,7 @@
 import React from 'react'
 import {
   AppBar,
-  Zoom,
+  Slide,
   Container,
   Typography,
   Box,
@@ -16,19 +16,19 @@ export default function NavBar (props: {routes: Array<RouteData>, onRouteChange:
   const { routes, currentRoute, onRouteChange } = props
 
   return (
-    <Zoom in={true}>
-      <AppBar className='nav-bar' color='transparent' position='fixed' >
+    <Slide in={true} direction='down'>
+      <AppBar color='primary' position='fixed' >
         <Container maxWidth='xl'>
           <Toolbar disableGutters>
             <Typography variant='h6' noWrap component='div' sx={{ mr: 2, display: {xs: 'none', md: 'flex'}}}>
               {AUTHOR_NAME}
             </Typography>
-            <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'flex', justifyContent: 'flex-end'}}}>
+            <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'flex'}, justifyContent: 'flex-end'}}>
               <NavTabs routes={routes} currentRoute={currentRoute} onRouteChange={onRouteChange} />
             </Box>
           </Toolbar>
         </Container>
       </AppBar>
-    </Zoom>
+    </Slide>
   )
 }

@@ -6,7 +6,7 @@ import {
   Route
 } from 'react-router-dom'
 import NavBar from 'components/nav-bar/component'
-import ProjectCardDemo from 'routes/project-card/page'
+import Projects from 'routes/projects/page'
 import Dashboard  from 'routes/dashboard/page'
 import { ROUTE } from 'constants/route'
 import { getCurrentRoute } from 'utils/route'
@@ -24,11 +24,11 @@ export default function App () {
         <NavBar routes={[HOME, ABOUT, WORKS, CONTACT]} currentRoute={currentRoute} onRouteChange={onRouteChange}/>
 
         <Switch>
-          <Route path='/home' >
+          <Route path='/about' >
             <Dashboard onRouteChange={onRouteChange} />
           </Route>
-          <Route path='/project-card-demo'>
-            <ProjectCardDemo />
+          <Route path='/projects'>
+            <Projects />
           </Route>
         </Switch>
       </Router>
