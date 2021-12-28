@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Grid, Box, Typography, Button } from '@mui/material'
 import SocialMediaButton from 'components/social-media-button/component'
+import ParticlesBackground from 'components/particle-effect/component'
 import { ROUTE } from 'constants/route'
 import { ReactComponent as PhotoSketchSVG} from 'static/sketch-photo.svg'
 
@@ -33,6 +34,8 @@ export default function Dashboard (props: {onRouteChange: (newRoute: string) => 
         <SocialMediaButton type='LinkedIn' />
         <SocialMediaButton type='github' />
       </Grid>
+
+      <ParticlesBackground />
     </Grid>
   )
 }

@@ -7,17 +7,19 @@ import {
   CardContent,
   CardMedia,
   Typography,
-  Grow
+  Grow,
+  Box
 } from '@mui/material'
 import { ProjectCardData } from 'types/project'
 
 export default function ProjectCard (props: {project: ProjectCardData}) {
   const { project } = props
+  const subtitleIcons = project.subtitles
 
   return (
     <Grow in={true} timeout={1000}>
       <Card sx={{height: '400px', width: '400px', overflow: 'hidden', display: 'flex', flexDirection: 'column'}}>
-        <CardActionArea onClick={project.action}>
+        <CardActionArea onClick={() => project.action(project.projectDemoUrl)}>
           <CardMedia
             className='project-card-media'
             component='img'
@@ -25,16 +27,16 @@ export default function ProjectCard (props: {project: ProjectCardData}) {
             title={project.title}
           />
         </CardActionArea>
-        <CardContent>
-          <Typography>
-            {project.description}
-          </Typography>
-          <Typography color='primary'>
-            {project.subtitles}
-          </Typography>
+        <CardContent sx={{display: 'flex', flexDirection:'column', justifyContent: 'space-between', height: '100%'}}>
+          <Typography variant='body1'>{project.description}</Typography>
+          <Box sx={{display: 'flex', justifyContent: 'space-evenly'}}>
+            {subtitleIcons.map((Icon, index: number) => (
+              <Icon key={index} style={{color: '#009eef', fontSize: '1.5rem'}}/>
+            ))}
+          </Box>
         </CardContent>
-        <CardActions sx={{justifyContent: 'center', marginTop: 'auto'}}>
-          <Button variant='contained' color='primary' onClick={project.action}>
+        <CardActions sx={{justifyContent: 'center'}}>
+          <Button variant='contained' color='primary' onClick={() => project.action(project.projectDemoUrl)}>
             {project.title}
           </Button>
         </CardActions>

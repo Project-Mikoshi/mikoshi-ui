@@ -1,10 +1,13 @@
 // styles - routes/pages
-@import "./routes/works/style.scss";
+@import "./routes/projects/style.scss";
 @import "./routes/dashboard/style.scss";
+@import "./routes/skills/style.scss";
+@import "./routes/contact/style.scss";
 
 // styles - animation
 @import "./animation/photo-sketch.scss";
 @import "./animation/typewriter-text.scss";
+@import "./animation/coding-laptop.scss";
 
 body {
   background-color: aliceblue;
