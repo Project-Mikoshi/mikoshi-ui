@@ -1,26 +1,15 @@
 import React from 'react'
-import { Paper, Slide, Typography, Fade, Container } from '@mui/material'
+import { Paper, Slide, Typography, Fade } from '@mui/material'
 import { ReactComponent as CodingLaptopSVG} from 'static/coding.svg'
 
 export default function ProgrammingLanguageCard (props: {language: string}) {
   const { language } = props
-
-  const Card: JSX.Element = renderCard(language)
-  return (
-    <Slide in={true} timeout={1000} direction='left'>
-      <Container>
-        <div className='coding-laptop start'>
-          <CodingLaptopSVG />
-        </div>
-        {Card}
-      </Container>
-    </Slide>
-  )
-}
-
-function renderCard (language: string): JSX.Element {
   if (!language || language === 'default') {
-    return (<div />)
+    return (
+      <Slide in={true} timeout={1000} direction='left' className='coding-laptop start'>
+        <CodingLaptopSVG />
+      </Slide>
+    )
   }
 
   return (

@@ -6,7 +6,7 @@ import {
   SiHtml5,
   SiPython,
   SiCplusplus,
-  SiHaskell
+  SiRacket
 } from 'react-icons/si'
 import { GrMysql } from 'react-icons/gr'
 import { CgPerformance } from 'react-icons/cg'
@@ -22,7 +22,7 @@ export enum Languages {
   PROLOG = 'Prolog',
   CPP = 'C++',
   PYTHON = 'Python',
-  HASKELL = 'Haskell',
+  SCHEME = 'Scheme',
   JAVA = 'Java'
 }
 
@@ -42,6 +42,6 @@ export const PROGRAMING_LANGUAGE_ICONS = [
   {icon: SiPython, name: Languages.PYTHON},
   {icon: SiCplusplus, name: Languages.CPP},
   {icon: DiProlog, name: Languages.PROLOG},
-  {icon: SiHaskell, name: Languages.HASKELL},
+  {icon: SiRacket, name: Languages.SCHEME},
   {icon: FaJava, name: Languages.JAVA}
 ]

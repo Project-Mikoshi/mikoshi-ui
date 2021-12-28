@@ -20,7 +20,7 @@ export default function NavBar (props: {routes: Array<RouteData>, onRouteChange:
       <AppBar color='primary' position='fixed' >
         <Container maxWidth='xl'>
           <Toolbar disableGutters>
-            <Typography variant='h6' noWrap component='div' sx={{ mr: 2, display: {xs: 'none', md: 'flex'}}}>
+            <Typography variant='h6' noWrap component='div' sx={{ mr: 2, display: {xs: 'none', sm: 'block', md: 'block'}}}>
               {AUTHOR_NAME}
             </Typography>
             <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'flex'}, justifyContent: 'flex-end'}}>

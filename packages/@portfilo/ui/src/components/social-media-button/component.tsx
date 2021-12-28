@@ -1,15 +1,10 @@
 import React from 'react'
 import { IconButton } from '@mui/material'
-import { LinkedIn, GitHub } from '@mui/icons-material'
-import { SOCIAL_MEDIAS } from 'constants/external-links'
+import { SOCIAL_MEDIAS, ICONS } from 'constants/social-media'
 
 export default function SocialMediaButton (props: {type: string}) {
   const type = props.type.toUpperCase()
-  const icons: Record<string, React.FunctionComponent> = {
-    GITHUB: GitHub,
-    LINKEDIN: LinkedIn
-  }
-  const IconComponent = icons[type]
+  const IconComponent = ICONS[type]
 
   return (
     <IconButton href={SOCIAL_MEDIAS[type]} target='_blank' sx={{'&:hover': {color: '#009eef'}}}>

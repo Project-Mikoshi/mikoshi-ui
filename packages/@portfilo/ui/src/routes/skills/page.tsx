@@ -1,14 +1,21 @@
 import React from 'react'
 import { Grid, Typography } from '@mui/material'
 import SkillCard from 'components/skill-card/component'
-import ProgrammingList from 'components/programming-list/component'
+import ProgrammingList from 'components/language-list/component'
 import LanguageDetailCard from 'components/language-detail-card/component'
 
 export default function Skills () {
   const TITLE = 'Technical Skills'
 
   const [language, setLanguage] = React.useState('default')
-  const handleLanguageSelection = (key: string) => setLanguage(key)
+  const handleLanguageSelection = (key: string) => {
+    if (key === language) {
+      setLanguage('default')
+      return
+    }
+
+    setLanguage(key)
+  }
 
   return (
     <Grid
@@ -22,16 +29,16 @@ export default function Skills () {
         alignItems: 'center'
       }}
     >
-      <Grid item xs={4}>
+      <Grid item xs={10} lg={4}>
         <Typography variant='h4' color='primary' fontWeight={600}>{TITLE}</Typography>
         <SkillCard skillKey='Performance' label='Performance Optimization' level={5} />
         <SkillCard skillKey='Troubleshooting' label='Troubleshooting and Solutions Deployment' level={5} />
         <SkillCard skillKey='Analysis' label='Analytical Thinking Skills' level={4.5} />
         <SkillCard skillKey='Software' label='Software Design and Development' level={4} />
+        <ProgrammingList action={handleLanguageSelection} selected={language} />
       </Grid>
 
-      <Grid item xs={4}>
-        <ProgrammingList action={handleLanguageSelection} selected={language} />
+      <Grid item xs={10} lg={4}>
         <LanguageDetailCard language={language} />
       </Grid>
     </Grid>

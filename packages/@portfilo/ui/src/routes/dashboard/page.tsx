@@ -10,7 +10,7 @@ export default function Dashboard (props: {onRouteChange: (newRoute: string) => 
   const { onRouteChange } = props
 
   return (
-    <Grid container className='dashboard' direction='row' justifyContent='space-evenly' alignItems='center' sx={{height: '80vh'}}>
+    <Grid container className='dashboard' direction='row' justifyContent='space-evenly' alignItems='center' sx={{height: '80vh', zoom: {xs: '50%', lg: '100%'}}}>
       <Grid item className='intro'>
         <Typography variant='h3'>Hi,</Typography>
 

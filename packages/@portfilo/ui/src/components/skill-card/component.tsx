@@ -1,5 +1,6 @@
 import React from 'react'
-import { Paper, Typography, Box, Slide, Rating } from '@mui/material'
+import { Paper, Typography, Box, Slide, Rating, Tooltip } from '@mui/material'
+import { Stars, StarBorder } from '@mui/icons-material'
 import { IconType } from 'react-icons'
 import { SKILLS } from 'constants/skills-languages'
 
@@ -10,8 +11,8 @@ export default function SkillCard (props: {skillKey: string, label: string, leve
 
   return (
     <Slide in={true} timeout={1000} direction='right'>
-      <Paper sx={
-        {
+      <Paper 
+        sx={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
@@ -19,18 +20,28 @@ export default function SkillCard (props: {skillKey: string, label: string, leve
           marginBottom: '10px',
           overflow: 'hidden',
           width: '100%'
-        }
-      }>
-        <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+        }}
+      >
+        <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', overflow: 'hidden'}}>
           <Box sx={{minWidth: '30px', display: 'flex', justifyContent: 'flex-start', columnGap: '5px'}}>
             {iconComponents.map((Icon: IconType, index: number) => (
               <Icon key={index} style={{color: '#009eef'}} />
             ))}
           </Box>
-          <Typography variant='body1'>{label}</Typography>
+          <Tooltip title={label}>
+            <Typography variant='body1' textOverflow='ellipsis' whiteSpace='nowrap' overflow='hidden'>{label}</Typography>
+          </Tooltip>
+          
         </Box>
 
-        <Rating value={level} defaultValue={0} precision={0.25} readOnly/>
+        <Rating
+          value={level}
+          defaultValue={0}
+          precision={0.25}
+          icon={<Stars fontSize='inherit' color='primary' />}
+          emptyIcon={<StarBorder fontSize='inherit' color='primary' />}
+          readOnly
+        />
 
       </Paper>
     </Slide>

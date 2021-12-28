@@ -1,14 +1,23 @@
-import UCLEI from "static/UCLEI.png"
-import SHOPPIES from "static/Shoppies.png"
-import QUICKIN from "static/QuickIn.png"
-import { ProjectCardData } from "types/project"
+import UCLEI from 'static/UCLEI.png'
+import SHOPPIES from 'static/Shoppies.png'
+import QUICKIN from 'static/QuickIn.png'
+import MCP from 'static/MCP.png'
+import { ProjectCardData } from 'types/project'
 import { FaReact, FaNodeJs } from 'react-icons/fa'
-import { SiMongodb } from 'react-icons/si'
+import { SiMongodb, SiEmberdotjs, SiSpring, SiSwagger, SiApachecassandra } from 'react-icons/si'
 
 export const PROJECTS: Record<string, ProjectCardData> = {
+  MCP: {
+    title: 'MCP',
+    description: 'Applications provide analytics, software control, and automation to optimize multi-layer network performance and supercharge network operations',
+    subtitles: [SiEmberdotjs, SiSpring, SiSwagger, SiApachecassandra],
+    imageUrl: MCP,
+    projectDemoUrl: 'https://www.ciena.com/products/manage-control-plan',
+    action: openDemo
+  },
   QuickIn : {
-    title: "QuickIn",
-    description: "A simple check-in app that simplfies the gathering of contact tracing information.",
+    title: 'QuickIn',
+    description: 'A simple check-in app that simplfies the gathering of contact tracing information',
     subtitles: [FaReact, FaNodeJs, SiMongodb],
     imageUrl: QUICKIN,
     projectDemoUrl: 'https://quickin.herokuapp.com/',
@@ -16,15 +25,15 @@ export const PROJECTS: Record<string, ProjectCardData> = {
   },
   UCLEI : {
     title: "UCLEI",
-    description: "A stock trading simulation website that provides a safe, easy-to-use sandbox environment for users to experience how stock market trading works.",
+    description: 'A stock trading simulation website that provides a safe, easy-to-use sandbox environment for users to experience how stock market trading works',
     subtitles: [FaReact, FaNodeJs, SiMongodb],
     imageUrl: UCLEI,
     projectDemoUrl: 'https://uclei.herokuapp.com/',
     action: openDemo
   },
   Shoppies : {
-    title: "The Shoppies",
-    description: "A web app that provides help to search movies via OMDB database and add to personal nomination list which can be export as a JSON file.",
+    title: 'The Shoppies',
+    description: 'A web app that provides help to search movies via OMDB database and add to personal nomination list which can be export as a JSON file.',
     subtitles: [FaReact],
     imageUrl: SHOPPIES,
     projectDemoUrl: 'https://anthony-y-zhu14.github.io/The-Shoppies/',
@@ -32,6 +41,7 @@ export const PROJECTS: Record<string, ProjectCardData> = {
   }
 }
 
+// not really a constant i guess...
 function openDemo (url: string) {
   window.open(url, '_blank')
 }
