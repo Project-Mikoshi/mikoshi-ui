@@ -7,7 +7,7 @@ export default function SocialMediaButton (props: {type: string}) {
   const IconComponent = ICONS[type]
 
   return (
-    <IconButton href={SOCIAL_MEDIAS[type]} target='_blank' sx={{'&:hover': {color: '#009eef'}}}>
+    <IconButton href={SOCIAL_MEDIAS[type]} target='_blank' rel='noopener' sx={{'&:hover': {color: '#009eef'}}}>
       <IconComponent />
     </IconButton>
   )

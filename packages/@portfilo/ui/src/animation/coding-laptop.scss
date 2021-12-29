@@ -1,5 +1,5 @@
 .coding-laptop {
-  $codeLines: 90;
+  $codeLines: 26;
 
   svg {
     height: auto;
@@ -11,7 +11,7 @@
     #CodeEditorWindow {
       display: block;
       animation: .5s ease-out 0s 1 normal forwards appOpen,
-        .5s ease-out #{$codeLines + 1}s 1 reverse forwards appOpen;
+        .5s ease-out infinite 1 reverse forwards appOpen;
       transform-origin: center center;
     }
     [id^="codeline"] {

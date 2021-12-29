@@ -9,7 +9,7 @@ import { SiMongodb, SiEmberdotjs, SiSpring, SiSwagger, SiApachecassandra } from 
 export const PROJECTS: Record<string, ProjectCardData> = {
   MCP: {
     title: 'MCP',
-    description: 'Applications provide analytics, software control, and automation to optimize multi-layer network performance and supercharge network operations',
+    description: 'A Manage, Control and Plan software that provides analytics, software control, and automation to optimize multi-layer network performance',
     subtitles: [SiEmberdotjs, SiSpring, SiSwagger, SiApachecassandra],
     imageUrl: MCP,
     projectDemoUrl: 'https://www.ciena.com/products/manage-control-plan',
