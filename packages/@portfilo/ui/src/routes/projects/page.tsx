@@ -8,13 +8,12 @@ export default function Projects () {
     <Grid
       container
       className='works'
-      spacing={6}
-      sx={{
-        height: '80vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
-      }}
+      spacing={4}
+      height='80vh'
+      display='flex'
+      flexWrap='wrap'
+      justifyContent='center'
+      alignItems='center'
     >
       {Object.keys(PROJECTS).map((project: string) => (
         <Grid item key={project}>

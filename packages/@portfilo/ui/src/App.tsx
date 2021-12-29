@@ -15,7 +15,7 @@ import { ROUTE } from 'constants/route'
 import { getCurrentRoute } from 'utils'
 
 export default function App () {
-  const {HOME, ABOUT, WORKS, CONTACT} = ROUTE
+  const {HOME, SKILLS, WORKS, CONTACT} = ROUTE
   const [currentRoute, setCurrentRoute] = React.useState(getCurrentRoute() ?? ROUTE.HOME.route)
 
   const onRouteChange = (newRoute: string) => setCurrentRoute(newRoute)
@@ -24,20 +24,20 @@ export default function App () {
     <div className='app'>
       <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap' />
       <Router>
-        <NavBar routes={[HOME, ABOUT, WORKS, CONTACT]} currentRoute={currentRoute} onRouteChange={onRouteChange}/>
+        <NavBar routes={[HOME, SKILLS, WORKS, CONTACT]} currentRoute={currentRoute} onRouteChange={onRouteChange}/>
 
         <Switch>
-          <Route exact path='/' render={() => (<Redirect to='/about' />)}></Route>
-          <Route path={['/about']} >
+          <Route exact path='/' render={() => (<Redirect to={ROUTE.HOME.route} />)} />
+          <Route path={[ROUTE.HOME.route]} >
             <Dashboard onRouteChange={onRouteChange} />
           </Route>
-          <Route path='/skills'>
+          <Route path={ROUTE.SKILLS.route}>
             <Skills />
           </Route>
-          <Route path='/projects'>
+          <Route path={ROUTE.WORKS.route}>
             <Projects />
           </Route>
-          <Route path='/contact'>
+          <Route path={ROUTE.CONTACT.route}>
             <Contact />
           </Route>
         </Switch>

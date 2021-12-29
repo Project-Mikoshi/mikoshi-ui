@@ -1,22 +1,46 @@
 .typewriter {
-  overflow: hidden;
-  border-right: .10em solid black; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: 
-    typing 3s steps(40, end),
-    blink-caret 0.75s step-end infinite;
+  width: max-content;
+  position: relative;
+  $typewriterSpeed: 6s;
+  $typewriterCharacters: 38;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &::before {
+    background: aliceblue;
+    animation: typewriter $typewriterSpeed steps($typewriterCharacters) 1s forwards;
+  }
+
+  &::after {
+    width: 0.125em;
+    background: black;
+    animation: typewriter $typewriterSpeed steps($typewriterCharacters) 1s forwards, blink 750ms steps($typewriterCharacters) infinite;
+  }
 }
 
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
 }
 
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: black; }
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

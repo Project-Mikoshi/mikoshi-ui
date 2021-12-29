@@ -16,10 +16,12 @@ export default function Dashboard (props: {onRouteChange: (newRoute: string) => 
 
         <Box className='intro-name'>
           <Typography variant='h3'>{'I\'m'}&nbsp;</Typography>
-          <Typography variant='h3' color='primary'>Anthony</Typography>
+          <Typography variant='h3' color='primary'>Anthony.</Typography>
         </Box>
 
-        <Typography className='typewriter' variant='h3'>A Software Developer and Web Designer</Typography>
+        <Typography className='typewriter' variant='h3'>A Software Developer and Web Designer.</Typography>
+
+        <br />
 
         <Button size='small' variant='contained' onClick={() => {onRouteChange(ROUTE.CONTACT.route)}} component={Link} to={ROUTE.CONTACT.route}>
           {ROUTE.CONTACT.label}

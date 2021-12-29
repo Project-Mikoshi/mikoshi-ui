@@ -14,7 +14,7 @@ export default function ProgrammingLanguageCard (props: {action: (key: string) =
           justifyContent: 'space-between',
           padding: '10px',
           marginBottom: '10px',
-          overflow: 'hidden',
+          overflow: 'auto',
           width: '100%'
         }
       }>
