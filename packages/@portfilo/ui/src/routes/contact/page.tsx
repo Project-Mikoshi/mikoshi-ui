@@ -25,6 +25,7 @@ export default function ContactPage () {
     setAlert('success')
     setAlertMessage(`Message has been sent, thank you!`)
     setOpen(true)
+    setMessage('')
   }
 
   return(         

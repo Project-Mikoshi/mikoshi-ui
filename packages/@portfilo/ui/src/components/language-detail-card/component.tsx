@@ -1,30 +1,33 @@
 import React from 'react'
-import { Paper, Slide, Typography, Fade } from '@mui/material'
-import { ReactComponent as CodingLaptopSVG} from 'static/coding.svg'
+import { Paper, Typography, Fade } from '@mui/material'
 import { PROGRAMMING_LANGUAGE_DESCRIPTIONS } from 'constants/skills-languages'
+
+const style = {
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: '40vw',
+  bgcolor: 'background.paper',
+  boxShadow: 24
+}
 
 export default function ProgrammingLanguageCard (props: {language: string}) {
   const { language } = props
   if (!language || language === 'default') {
-    return (
-      <Slide in={true} timeout={1000} direction='left' className='coding-laptop start'>
-        <CodingLaptopSVG />
-      </Slide>
-    )
+    return (<></>)
   }
 
   return (
-    <Fade in={true} timeout={1000}>
+    <Fade in={true}>
       <Paper
         sx={{
+          ...style,
+          position: 'absolute',
+          padding: '10px',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          justifyContent: 'center',
-          padding: '10px',
-          marginBottom: '10px',
-          overflow: 'hidden',
-          width: '100%'
+          justifyContent: 'center'
         }}
       >
         <Typography variant='h5' color='primary'>
