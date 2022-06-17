@@ -50,7 +50,7 @@ export const PROGRAMMING_LANGUAGE_DESCRIPTIONS: Record<string, string> = {
   [Languages.HTML5]: '',
   [Languages.CSS]: '',
   [Languages.JAVASCRIPT]: '',
-  [Languages.TYPESCRIPT]: 'I like it!',
+  [Languages.TYPESCRIPT]: '',
   [Languages.SQL]: '',
   [Languages.PROLOG]: '',
   [Languages.CPP]: '',
