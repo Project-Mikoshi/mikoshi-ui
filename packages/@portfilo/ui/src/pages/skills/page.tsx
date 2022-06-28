@@ -14,11 +14,10 @@ export default function Skills () {
     if (key === language || key === 'default') {
       setLanguage('default')
       toggleModal(false)
-      return
+    } else {
+      setLanguage(key)
+      toggleModal(true)
     }
-
-    setLanguage(key)
-    toggleModal(true)
   }
 
   return (

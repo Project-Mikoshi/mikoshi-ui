@@ -1,13 +1,16 @@
-// styles - routes/pages
-@import "./routes/projects/style.scss";
-@import "./routes/dashboard/style.scss";
-@import "./routes/skills/style.scss";
-@import "./routes/contact/style.scss";
+// base
+@import './styles/base';
 
-// styles - animation
-@import "./animation/photo-sketch.scss";
-@import "./animation/typewriter-text.scss";
-@import "./animation/coding-laptop.scss";
+/* styles - pages */
+@import "./pages/projects/style";
+@import "./pages/dashboard/style";
+@import "./pages/skills/style";
+@import "./pages/contact/style";
+
+/* styles - animation */
+@import "./animation/photo-sketch";
+@import "./animation/typewriter-text";
+@import "./animation/coding-laptop";
 
 body {
   background-color: aliceblue;

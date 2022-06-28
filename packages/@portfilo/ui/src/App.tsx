@@ -7,10 +7,10 @@ import {
   Redirect
 } from 'react-router-dom'
 import NavBar from 'components/nav-bar/component'
-import Projects from 'routes/projects/page'
-import Dashboard  from 'routes/dashboard/page'
-import Skills from 'routes/skills/page'
-import Contact from 'routes/contact/page'
+import Projects from 'pages/projects/page'
+import Dashboard  from 'pages/dashboard/page'
+import Skills from 'pages/skills/page'
+import Contact from 'pages/contact/page'
 import { ROUTE } from 'constants/route'
 import { getCurrentRoute } from 'utils'
 

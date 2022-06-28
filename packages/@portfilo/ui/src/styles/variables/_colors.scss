@@ -1,0 +1,62 @@
+/* NuForm Panes Color Stylesheet*/
+
+/*-- Base Colors --*/
+$blue: #4182fd;
+$blue-bright: #6297f8;
+$blue-dim: #3362b9;
+$indigo: #914ffb;
+$indigo-bright: #ad80f7;
+$indigo-dim: #7440c9;
+$purple: #c44ffb;
+$purple-bright: #cd75f7;
+$purple-dim: #a133d4;
+$pink: #eb539c;
+$pink-bright: #f588bd;
+$pink-dim: #ca3a80;
+$red: #e84c4d;
+$red-bright: #fd6565;
+$red-dim: #b63636;
+$orange: #fd7e14;
+$orange-bright: #ff9d4d;
+$orange-dim: #c26d29;
+$yellow: #edb13d;
+$yellow-bright: #ffd176;
+$yellow-dim: #a07622;
+$green: #21d37e;
+$green-bright: #37e792;
+$green-dim: #22945d;
+$teal: #20c997;
+$teal-bright: #57e4b9;
+$teal-dim: #26ac84;
+$cyan: #00cfdd;
+$cyan-bright: #54e4ee;
+$cyan-dim: #18aab4;
+$cream-gray: #486587;
+$cream-gray-bright: #607EA0;
+$cream-gray-dim: #394c62;
+
+// variants
+$white: #ffffff;
+$white-1: #f2f4f4;
+$white-2: #dfe3e7;
+$white-3: #c2cad1;
+$black: #000000;
+$navy: #57668D;
+$navy-1: #3D4B71;
+$navy-2: #57668D;
+$navy-3: #314064;
+$navy-4: #253152;
+$navy-5: #15203d;
+$navy-6: #1a233a;
+$blueberry: #BDD1F8;
+
+// others
+$transparent: transparent;
+
+/*-- Colors by Type --*/
+$primary: $blue;
+$secondary: $cream-gray-bright;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;

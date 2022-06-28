@@ -1,0 +1,12 @@
+// Variable definitions must come first
+@import 'variables/colors';
+@import 'variables/global-config.scss';
+
+//  Utils must come before rules definitions
+@import 'utils/utils.scss';
+
+// Rules
+@import 'rules/background.scss';
+@import 'rules/border.scss';
+@import 'rules/svg.scss';
+@import 'rules/typography.scss';
