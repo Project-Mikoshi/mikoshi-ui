@@ -1,6 +1,9 @@
 // base
 @import './styles/base';
 
+/* styles - components */
+@import './components/project-card/style';
+
 /* styles - pages */
 @import "./pages/projects/style";
 @import "./pages/dashboard/style";

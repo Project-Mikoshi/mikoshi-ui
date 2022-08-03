@@ -18,7 +18,7 @@ export default function ProjectCard (props: {project: ProjectCardData}) {
 
   return (
     <Grow in={true} timeout={1000}>
-      <Card sx={{height: '400px', width: '400px', overflow: 'hidden', display: 'flex', flexDirection: 'column'}}>
+      <Card className='project-card'>
         <CardActionArea onClick={() => project.action(project.projectDemoUrl)}>
           <CardMedia
             className='project-card-media'
@@ -27,15 +27,15 @@ export default function ProjectCard (props: {project: ProjectCardData}) {
             title={project.title}
           />
         </CardActionArea>
-        <CardContent sx={{display: 'flex', flexDirection:'column', justifyContent: 'space-between', height: '100%'}}>
+        <CardContent className='project-card-content'>
           <Typography variant='body1'>{project.description}</Typography>
-          <Box sx={{display: 'flex', justifyContent: 'space-evenly'}}>
+          <Box className='project-card-icons'>
             {subtitleIcons.map((Icon, index: number) => (
-              <Icon key={index} style={{color: '#009eef', fontSize: '1.5rem'}}/>
+              <Icon className='icon' key={index} />
             ))}
           </Box>
         </CardContent>
-        <CardActions sx={{justifyContent: 'center'}}>
+        <CardActions className='project-card-actions'>
           <Button variant='contained' color='primary' onClick={() => project.action(project.projectDemoUrl)}>
             {project.title}
           </Button>
