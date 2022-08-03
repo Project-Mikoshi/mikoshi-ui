@@ -1,38 +1,50 @@
 {
-	"name": "@portfilo/ui",
-	"version": "0.1.0",
-	"private": false,
-	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test",
-        "lint": "eslint . --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx",
-        "lint:fix": "eslint . --fix --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx"
-	},
-	"devDependencies": {
-        "@emotion/react": "^11.7.1",
-		"@emotion/styled": "^11.6.0",
-		"@mui/icons-material": "^5.2.5",
-		"@mui/material": "^5.2.5",
-		"node-sass": "^7.0.1",
-        "@mikoshi/styles": "^0.1.0",
-        "@mikoshi/core-components": "^0.1.0",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2",
-		"react-icons": "^4.3.1",
-		"react-router-dom": "^5.2.0",
-		"react-scripts": "4.0.3",
-		"react-tsparticles": "^1.37.6",
-		"sass": "^1.52.3",
-		"typescript": "^4.3.5",
-		"@types/jest": "^26.0.24",
-		"@types/node": "^12.20.19",
-		"@types/react": "^17.0.18",
-		"@types/react-dom": "^17.0.9",
-		"@types/react-router-dom": "^5.1.8",
-		"@typescript-eslint/eslint-plugin": "^4.29.1",
-		"@typescript-eslint/parser": "^4.29.1",
-		"eslint": "^7.32.0",
-		"eslint-plugin-react": "^7.24.0"
-	}
+  "name": "@portfilo/ui",
+  "version": "0.1.0",
+  "private": false,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "lint": "eslint . --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx",
+    "lint:fix": "eslint . --fix --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx"
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/icons-material": "^5.2.5",
+    "@mui/material": "^5.2.5",
+    "node-sass": "^7.0.1",
+    "@mikoshi/styles": "^0.1.0",
+    "@mikoshi/core-components": "^0.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-tsparticles": "^1.37.6",
+    "sass": "^1.52.3",
+    "typescript": "^4.3.5",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^12.20.19",
+    "@types/react": "^17.0.18",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-router-dom": "^5.1.8",
+    "@typescript-eslint/eslint-plugin": "^4.29.1",
+    "@typescript-eslint/parser": "^4.29.1",
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.24.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
