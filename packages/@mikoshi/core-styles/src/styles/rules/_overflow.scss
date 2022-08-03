@@ -1,0 +1,17 @@
+@include createRules((
+  // Both axes
+  p-overflow-visible: (overflow: visible),
+  p-overflow-hidden: (overflow: hidden),
+  p-overflow-scroll: (overflow: scroll),
+  p-overflow-auto: (overflow: auto),
+  p-overflow-initial: (overflow: initial),
+  p-overflow-inherit: (overflow: inherit),
+
+  // X axis
+  p-overflow-x-auto: (overflow-x: auto),
+  p-overflow-x-hidden: (overflow-x: hidden),
+
+  // Y axis
+  p-overflow-y-auto: (overflow-y: auto),
+  p-overflow-y-hidden: (overflow-y: hidden)
+));

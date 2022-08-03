@@ -1,0 +1,9 @@
+@include createRules((
+    p-shadow-none: (box-shadow: none)
+));
+
+@each $level, $blur-radius in $box-shadow-levels {
+    @include createRules((
+        p-shadow-#{$level}: (box-shadow: 0 0 $blur-radius $shadow)
+    ));
+}

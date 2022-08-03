@@ -1,0 +1,25 @@
+@include createRules((
+    p-flex: (display: flex),
+    p-flex-inline: (display: inline-flex),
+    
+    // Direction
+    p-flex-column: (flex-direction: column),
+    p-flex-column-reverse: (flex-direction: column-reverse),
+    p-flex-row: (flex-direction: row),
+    p-flex-row-reverse: (flex-direction: row-reverse),
+
+    // Alignment
+    p-flex-align-center: (align-items: center),
+    p-flex-align-self-center: (align-self: center),
+    p-flex-align-flex-end: (align-items: flex-end),
+    p-flex-justify-center: (justify-content: center),
+    p-flex-justify-start: (justify-content: flex-start),
+    p-flex-justify-end: (justify-content: flex-end),
+    p-flex-justify-around: (justify-content: space-around),
+    p-flex-justify-between: (justify-content: space-between),
+  
+    // Wrap
+    p-flex-wrap: (flex-wrap: wrap),
+    p-flex-nowrap: (flex-wrap: nowrap),
+    p-flex-wrap-reverse: (flex-wrap: wrap-reverse)
+));
