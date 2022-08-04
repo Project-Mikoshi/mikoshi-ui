@@ -1,5 +1,5 @@
 import React from 'react'
-import { Paper, Typography, Fade } from '@mui/material'
+import { Paper, Typography } from '@mui/material'
 import { PROGRAMMING_LANGUAGE_DESCRIPTIONS } from 'constants/skills-languages'
 
 const style = {
@@ -18,25 +18,23 @@ export default function ProgrammingLanguageCard (props: {language: string}) {
   }
 
   return (
-    <Fade in={true}>
-      <Paper
-        sx={{
-          ...style,
-          position: 'absolute',
-          padding: '10px',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center'
-        }}
-      >
-        <Typography variant='h5' color='primary'>
-          {language}
-        </Typography>
-        <Typography variant='body1'>
-          {PROGRAMMING_LANGUAGE_DESCRIPTIONS[language]}
-        </Typography>
-      </Paper>
-    </Fade>
+    <Paper
+      sx={{
+        ...style,
+        position: 'absolute',
+        padding: '10px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}
+    >
+      <Typography variant='h5' color='primary'>
+        {language}
+      </Typography>
+      <Typography variant='body1'>
+        {PROGRAMMING_LANGUAGE_DESCRIPTIONS[language]}
+      </Typography>
+    </Paper>
   )
 }

@@ -7,7 +7,7 @@
       "esnext"
     ],
     "outDir": "./dist/",
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -27,14 +27,6 @@
     "src/**/*.ts",
     "src/**/*.tsx"
   ],
-  "paths": {
-    "components/*": ["src/components/*"],
-    "utils/*": ["src/utils/*"],
-    "constants/*": ["src/constants/*"],
-    "types/*": ["src/types/*"],
-    "pages/*": ["Src/pages/*"],
-    "svgs/*": ["src/svgs/*"]
-    },
   "exclude": [
     "node_modules",
     "dist"

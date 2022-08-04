@@ -1,0 +1,42 @@
+{
+  "name": "@mikoshi/storybook",
+  "version": "0.0.1",
+  "description": "Storybook Playground for Mikoshi",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "start-storybook --quiet -p 6006",
+    "build:storybook": "rm -rf storybook-static && build-storybook --disable-telemetry",
+    "lint": "eslint . --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx",
+    "lint:fix": "eslint . --fix --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@mikoshi/core-components": "^0.1.0",
+    "@mikoshi/styles": "^0.1.0",
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-links": "^6.5.10",
+    "@storybook/builder-webpack4": "^6.5.10",
+    "@storybook/builder-webpack5": "^6.5.10",
+    "@storybook/manager-webpack4": "^6.5.10",
+    "@storybook/manager-webpack5": "^6.5.10",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.24.0",
+    "@storybook/react": "^6.5.10",
+    "@storybook/testing-library": "^0.0.13",
+    "babel-loader": "^8.2.3",
+    "typescript": "^4.7.4",
+    "webpack": "^5.73.0"
+  },
+  "nohoist": [
+    "**/@storybook/**"
+  ],
+  "dependencies": {
+    "sass": "^1.45.2",
+    "storybook-addon-themes": "^6.1.0"
+  }
+}

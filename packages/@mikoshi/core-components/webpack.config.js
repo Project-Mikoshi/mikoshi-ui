@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 const path = require('path')
 const tsTransformPaths = require('@zerollup/ts-transform-paths')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   entry: './src/index.ts',
@@ -20,21 +21,12 @@ module.exports = {
     },
     symlinks: true
   },
+  plugins: [
+    new MiniCssExtractPlugin()
+  ],
   externals: {
-    react: {
-      root: 'React',
-      commonjs2: 'react',
-      commonjs: 'react',
-      amd: 'react',
-      umd: 'react'
-    },
-    'react-dom': {
-      root: 'ReactDOM',
-      commonjs2: 'react-dom',
-      commonjs: 'react-dom',
-      amd: 'react-dom',
-      umd: 'react-dom'
-    }
+    'react': 'react',
+    'react-dom': 'react-dom'
   },
   module: {
     rules: [
@@ -58,16 +50,17 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
-          presets: ['@babel/preset-env', '@babel/preset-react']
+          presets: ['@babel/preset-env', '@babel/preset-react'],
+          compact: true
         }
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       }
     ]
   },

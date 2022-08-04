@@ -2,7 +2,7 @@
 @include generateColors('p-svg-fill', 'fill');
 
 @include createRules((
-    p-svg-fill-current: (fill: currentColor)
+    m-svg-fill-current: (fill: currentColor)
 ));
 
 // Stroke

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Typography, Modal, Slide } from '@mui/material'
+import { Grid, Typography, Modal } from '@mui/material'
 import SkillCard from 'components/skill-card/component'
 import ProgrammingList from 'components/language-list/component'
 import { ReactComponent as CodingLaptopSVG } from 'svgs/coding.svg'
@@ -40,9 +40,7 @@ export default function Skills () {
       </Grid>
 
       <Grid item xs={10} sm={10} md={10} lg={10} xl={4}>
-        <Slide in={true} timeout={1000} direction='left' className='coding-laptop start'>
-          <CodingLaptopSVG />
-        </Slide>
+        <CodingLaptopSVG />
       </Grid>
 
       <Modal open={launchModal} onClose={() => handleLanguageSelection('default')}>

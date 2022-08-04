@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import App from './App'
 import { createTheme, ThemeProvider, responsiveFontSizes } from '@mui/material'
 
@@ -16,17 +16,17 @@ const colorTheme = createTheme({
   }
 })
 
-let themes = createTheme({
+const themes = responsiveFontSizes(createTheme({
   palette: colorTheme.palette
-})
+}))
 
-themes = responsiveFontSizes(themes)
+const container = document.getElementById('root')
+const root = createRoot(container!)
 
-ReactDOM.render(
+root.render(
   <ThemeProvider theme={themes}>
     <React.StrictMode>
       <App />
     </React.StrictMode>
-  </ThemeProvider>,
-  document.getElementById('root')
+  </ThemeProvider>
 )

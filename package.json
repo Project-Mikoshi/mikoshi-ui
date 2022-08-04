@@ -1,12 +1,14 @@
 {
-    "name": "root",
-    "private": true,
-    "scripts": {
-        "build": "nx run-many --target=build --all",
-        "lint": "nx run-many --target=lint --all"
-    },
-    "devDependencies": {
-        "lerna": "^4.0.0",
-        "nx": "^14.4.3"
-    }
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "storybook": "npm run dev && (lerna run watch --parallel & nx start @mikoshi/storybook)",
+    "dev": "nx run-many --target=dev --all",
+    "build": "nx run-many --target=build --all",
+    "lint": "nx run-many --target=lint --all"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0",
+    "nx": "^14.4.3"
+  }
 }

@@ -1,9 +1,9 @@
 @for $i from 1 through 10 {
     @include createRules((
-      p-z-index-#{$i}: (z-index: $i)
+      m-z-index-#{$i}: (z-index: $i)
     ));
   }
   
   @include createRules((
-    p-z-index-max: (z-index: 99999)
+    m-z-index-max: (z-index: 99999)
   ));

@@ -1,5 +1,0 @@
-// Variable definitions first
-@import 'variables';
-
-// Output CSS declarations for all class definitions in the class map built by the variable import
-@include outputRules($class-map);

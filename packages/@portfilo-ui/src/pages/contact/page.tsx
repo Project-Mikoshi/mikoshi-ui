@@ -5,7 +5,6 @@ import {
   Paper,
   Snackbar,
   TextField,
-  Fade,
   Alert,
   Typography,
   Box,
@@ -29,29 +28,27 @@ export default function ContactPage () {
   }
 
   return(
-    <Fade in={true} timeout={1000}>
-      <Container className='contact' sx={{ height: '80vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <Paper sx={{ padding: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly', alignItems: 'center', width: '100%' }}>
-          <Box sx={{ marginRight: 'auto' }}>
-            <Typography variant='h6'>You can find me via these scoial medias: </Typography>
-            <Box>
-              <SocialMediaButton type='LinkedIn' />
-              <SocialMediaButton type='Github' />
-              <SocialMediaButton type='Facebook' />
-              <SocialMediaButton type='Instagram' />
-            </Box>
+    <Container className='contact' sx={{ height: '80vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <Paper sx={{ padding: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly', alignItems: 'center', width: '100%' }}>
+        <Box sx={{ marginRight: 'auto' }}>
+          <Typography variant='h6'>You can find me via these scoial medias: </Typography>
+          <Box>
+            <SocialMediaButton type='LinkedIn' />
+            <SocialMediaButton type='Github' />
+            <SocialMediaButton type='Facebook' />
+            <SocialMediaButton type='Instagram' />
           </Box>
-          <Box sx={{ width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly', alignItems: 'center' }}>
-            <br />
-            <TextField label={MESSAGE_PLACEHOLDER} value={message} onChange={(e)=>setMessage(e.target.value)} multiline rows={5} fullWidth />
-            <br />
-            <Button color='primary' variant='contained' disabled={!message} onClick={handleSend}>Send</Button>
-          </Box>
-        </Paper>
-        <Snackbar anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }} autoHideDuration={2000} open={open} onClose={() => setOpen(false)}>
-          <Alert severity={alert}>{alertMessage}</Alert>
-        </Snackbar>
-      </Container>
-    </Fade>
+        </Box>
+        <Box sx={{ width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly', alignItems: 'center' }}>
+          <br />
+          <TextField label={MESSAGE_PLACEHOLDER} value={message} onChange={(e)=>setMessage(e.target.value)} multiline rows={5} fullWidth />
+          <br />
+          <Button color='primary' variant='contained' disabled={!message} onClick={handleSend}>Send</Button>
+        </Box>
+      </Paper>
+      <Snackbar anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }} autoHideDuration={2000} open={open} onClose={() => setOpen(false)}>
+        <Alert severity={alert}>{alertMessage}</Alert>
+      </Snackbar>
+    </Container>
   )
 }
