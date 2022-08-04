@@ -5,13 +5,13 @@
  */
 
 import React from 'react'
-import { Container, Button } from '@mikoshi/core-components'
+import { AppBar, Container, Button } from '@mikoshi/core-components'
 
 export default {
-  title: 'Core/Button'
+  title: 'Core/App Bar'
 }
 
-const Template = () => {
+const Template = () => (
   // == Props ================================
 
   // == Hooks ================================
@@ -21,14 +21,17 @@ const Template = () => {
   // == Actions ==============================
 
   // == Template =============================
-
-  return (
-    <Container className='m-flex-justify-around m-flex-align-center'>
-      <Button variant='text'>Text</Button>
-      <Button variant='contained'>Contained</Button>
-      <Button variant='outlined'>Outlined</Button>
+  <AppBar>
+    <Container>
+      <h3>APP Bar</h3>
     </Container>
-  )
-}
+    <Container className='m-flex-justify-around m-flex-align-center'>
+      <Button>Dashboard</Button>
+      <Button>Report</Button>
+      <Button>Setting</Button>
+      <Button>Contact</Button>
+    </Container>
+  </AppBar>
+)
 
-export const ButtonDemo = Template.bind({})
+export const AppBarDemo = Template.bind({})
