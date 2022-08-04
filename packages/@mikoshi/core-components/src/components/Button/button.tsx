@@ -1,19 +1,19 @@
 import React, { FC } from 'react'
-import { AppBar as MuiAppBar } from '@mui/material'
+import { Button as MuiButton } from '@mui/material'
 
-interface AppBarProps {
+interface ButtonProps {
   color?: string,
-  position?: string,
+  variant?: string,
   className?: string,
   children?: React.ReactNode
 }
 
-export const AppBar: FC<AppBarProps> = (props) => {
+export const Button: FC<ButtonProps> = (props) => {
   // == Props ================================
   const {
     children,
+    variant = 'text',
     color = 'primary',
-    position = 'fixed',
     className = ''
   } = props
   // == Hooks ================================
@@ -24,8 +24,8 @@ export const AppBar: FC<AppBarProps> = (props) => {
 
   // == Template =============================
   return (
-    <MuiAppBar className={`mikoshi-app-bar ${className}`} color={color as any} position={position as any}>
+    <MuiButton className={`mikoshi-button ${className}`} color={color as any} variant={variant as any}>
       {children}
-    </MuiAppBar>
+    </MuiButton>
   )
 }

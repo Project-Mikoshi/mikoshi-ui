@@ -1,6 +1,10 @@
 @include createRules((
-  m-frost-glass-white: (
-    background: transparentize($color: $white, $amount: .5),
-    backdrop-filter: blur(10px)
+  m-frost-glass-light: (
+    backdrop-filter: blur(10px),
+    -webkit-backdrop-filter: blur(10px)
+  ),
+  m-frost-glass-dark: (
+    backdrop-filter: blur(10px),
+    -webkit-backdrop-filter: blur(10px)
   )
 ));

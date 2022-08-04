@@ -1,4 +1,6 @@
 .mikoshi-container {
-  width: 100%;
-  height: 100%;
+  &.MuiContainer-root {
+    @include rules('m-flex');
+    padding: 0;
+  }
 }

@@ -1,19 +1,16 @@
 import React, { FC } from 'react'
-import { AppBar as MuiAppBar } from '@mui/material'
+import { Paper as MuiPaper } from '@mui/material'
 
-interface AppBarProps {
-  color?: string,
-  position?: string,
+interface PaperProps {
+  maxWidth?: string,
   className?: string,
   children?: React.ReactNode
 }
 
-export const AppBar: FC<AppBarProps> = (props) => {
+export const Paper: FC<PaperProps> = (props) => {
   // == Props ================================
   const {
     children,
-    color = 'primary',
-    position = 'fixed',
     className = ''
   } = props
   // == Hooks ================================
@@ -24,8 +21,8 @@ export const AppBar: FC<AppBarProps> = (props) => {
 
   // == Template =============================
   return (
-    <MuiAppBar className={`mikoshi-app-bar ${className}`} color={color as any} position={position as any}>
+    <MuiPaper className={`mikoshi-paper ${className}`}>
       {children}
-    </MuiAppBar>
+    </MuiPaper>
   )
 }

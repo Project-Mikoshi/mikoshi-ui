@@ -1,0 +1,9 @@
+.mikoshi-paper {
+  &.MuiPaper-root {
+    @include rules('m-flex', 'm-frost-glass-light');
+
+    body.dark {
+      @include rules('m-frost-glass-dark');
+    }
+  }
+}

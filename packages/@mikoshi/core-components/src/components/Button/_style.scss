@@ -1,0 +1,13 @@
+.mikoshi-button {
+  &.MuiButtonBase-root {
+    @include rules('m-color-grey-1', 'm-frost-glass-light');
+
+    &.MuiButton-contained {
+      @include rules('m-color-white');
+    }
+
+    body.dark & {
+      @include rules('m-color-white', 'm-frost-glass-dark');
+    }
+  }
+}

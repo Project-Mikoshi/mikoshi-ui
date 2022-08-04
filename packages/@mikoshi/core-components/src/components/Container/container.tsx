@@ -11,7 +11,6 @@ export const Container: FC<ContainerProps> = (props) => {
   // == Props ================================
   const {
     children,
-    maxWidth,
     className = ''
   } = props
   // == Hooks ================================
@@ -22,7 +21,7 @@ export const Container: FC<ContainerProps> = (props) => {
 
   // == Template =============================
   return (
-    <MuiContainer className={`mikoshi-container ${className}`} maxWidth={maxWidth as any}>
+    <MuiContainer className={`mikoshi-container ${className}`}>
       {children}
     </MuiContainer>
   )

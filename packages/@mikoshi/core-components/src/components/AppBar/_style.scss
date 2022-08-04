@@ -1,4 +1,6 @@
 .mikoshi-app-bar {
-  @include rules('m-flex');
-  padding: 1rem;
+  &.MuiPaper-root {
+    @include rules('m-flex', 'm-flex-row');
+    padding: 1rem;
+  }
 }
