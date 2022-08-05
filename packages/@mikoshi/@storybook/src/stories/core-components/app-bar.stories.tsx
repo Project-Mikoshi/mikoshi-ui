@@ -1,17 +1,12 @@
-/**
- *
- *  Panes Badge Stories
- *
- */
-
 import React from 'react'
 import { AppBar, Container, Button } from '@mikoshi/core-components'
 
 export default {
-  title: 'Core/App Bar'
+  title: 'Core/App Bar',
+  component: AppBar
 }
 
-const Template = () => (
+const Template = () => {
   // == Props ================================
 
   // == Hooks ================================
@@ -19,19 +14,22 @@ const Template = () => (
   // == Functions ============================
 
   // == Actions ==============================
+  const onClick = () => {}
 
   // == Template =============================
-  <AppBar>
-    <Container>
-      <h3>APP Bar</h3>
-    </Container>
-    <Container className='m-flex-justify-around m-flex-align-center'>
-      <Button>Dashboard</Button>
-      <Button>Report</Button>
-      <Button>Setting</Button>
-      <Button>Contact</Button>
-    </Container>
-  </AppBar>
-)
+  return (
+    <AppBar>
+      <Container>
+        <h3>APP Bar</h3>
+      </Container>
+      <Container className='m-flex-justify-around m-flex-align-center'>
+        <Button onClick={onClick}>Dashboard</Button>
+        <Button onClick={onClick}>Report</Button>
+        <Button onClick={onClick}>Setting</Button>
+        <Button onClick={onClick}>Contact</Button>
+      </Container>
+    </AppBar>
+  )
+}
 
 export const AppBarDemo = Template.bind({})

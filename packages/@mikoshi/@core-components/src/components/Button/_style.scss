@@ -3,11 +3,7 @@
     @include rules('m-color-grey-1');
 
     &.MuiButton-contained {
-      @include rules('m-color-white', 'm-frost-glass-light');
-
-      body.dark & {
-        @include rules('m-frost-glass-dark');
-      }
+      @include rules('m-color-white');
     }
 
     body.dark & {

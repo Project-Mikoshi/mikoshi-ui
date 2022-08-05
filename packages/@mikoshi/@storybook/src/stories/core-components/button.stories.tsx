@@ -3,7 +3,6 @@
  *  Panes Badge Stories
  *
  */
-
 import React from 'react'
 import { Container, Button } from '@mikoshi/core-components'
 
