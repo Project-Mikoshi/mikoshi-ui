@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "storybook": "npm run dev && (lerna run watch --parallel & nx start @mikoshi/storybook)",
+    "app:portfilo": "npm run dev && (lerna run watch --parallel & nx start @portfilo/ui)",
     "dev": "nx run-many --target=dev --all",
     "build": "nx run-many --target=build --all",
     "lint": "nx run-many --target=lint --all"

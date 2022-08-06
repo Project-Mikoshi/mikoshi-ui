@@ -2,9 +2,9 @@ import React from 'react'
 import './App.scss'
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
-  Redirect
+  Navigate
 } from 'react-router-dom'
 import NavBar from 'components/nav-bar/component'
 import Projects from 'pages/projects/page'
@@ -26,21 +26,13 @@ export default function App () {
       <Router>
         <NavBar routes={[HOME, SKILLS, WORKS, CONTACT]} currentRoute={currentRoute} onRouteChange={onRouteChange}/>
 
-        <Switch>
-          <Route exact path='/' render={() => (<Redirect to={ROUTE.HOME.route} />)} />
-          <Route path={[ROUTE.HOME.route]} >
-            <Dashboard onRouteChange={onRouteChange} />
-          </Route>
-          <Route path={ROUTE.SKILLS.route}>
-            <Skills />
-          </Route>
-          <Route path={ROUTE.WORKS.route}>
-            <Projects />
-          </Route>
-          <Route path={ROUTE.CONTACT.route}>
-            <Contact />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path='/' element={<Navigate replace to={ROUTE.HOME.route} />} />
+          <Route path={ROUTE.HOME.route} element={<Dashboard onRouteChange={onRouteChange} />} />
+          <Route path={ROUTE.SKILLS.route} element={<Skills />} />
+          <Route path={ROUTE.WORKS.route} element={<Projects />} />
+          <Route path={ROUTE.CONTACT.route} element={<Contact />} />
+        </Routes>
       </Router>
     </div>
   )
