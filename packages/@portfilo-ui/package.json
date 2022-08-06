@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "scripts": {
     "start": "react-scripts start",
+    "eject": "react-scripts eject",
     "test": "react-scripts test",
     "lint": "eslint . --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx",
     "lint:fix": "eslint . --fix --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx"
