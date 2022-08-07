@@ -6,7 +6,7 @@ import { createTheme, ThemeProvider, responsiveFontSizes } from '@mui/material'
 const colorTheme = createTheme({
   palette:  {
     primary: {
-      main: '#009eef',
+      main: '#4182fd',
       contrastText: '#fff'
     },
     secondary: {

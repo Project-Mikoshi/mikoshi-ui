@@ -21,18 +21,20 @@
   }
 
   &-content {
-    @include rules("m-bg-lgrey-3", "m-color-black");
-    display: flex;
-    flex-direction: column;
+    @include rules("m-bg-lgrey-3", "m-color-grey-1", 'm-flex', 'm-flex-column');
     max-height: 60vh;
     border-radius: 0.6rem;
+    
+    &.MuiContainer-root {
+      padding: 0;
+    }
 
     body.dark & {
-      @include rules("m-bg-grey-1", "m-color-white");
+      @include rules("m-bg-night-2", "m-color-blueberry-1");
     }
 
     .mikoshi-modal-header {
-      @include rules("m-bg-lgrey-3");
+      @include rules("m-bg-blue-1", "m-color-white");
       border-top-left-radius: 0.6rem;
       border-top-right-radius: 0.6rem;
       display: flex;
@@ -42,7 +44,7 @@
       font-weight: 400;
         
       body.dark & {
-        @include rules("m-bg-grey-2", "m-color-blue-4");
+        @include rules("m-bg-blue-1", "m-color-white");
       }
     }
 
