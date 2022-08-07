@@ -1,0 +1,61 @@
+@import "ag-grid-community/styles/ag-grid.css";
+@import "ag-grid-community/styles/ag-theme-alpine.min.css";
+
+.mikoshi-data-grid {
+  @include rules("m-shadow-3");
+
+  .ag-row,
+  .ag-body-viewport {
+    @include rules("m-bg-lgrey-3", "m-color-grey-1");
+
+    body.dark & {
+      @include rules("m-bg-night-2", "m-color-blueberry-1");
+    }
+  }
+  .ag-paging-panel,
+  .ag-header-viewport {
+    @include rules("m-bg-blue-1", "m-color-white");
+
+    body.dark & {
+      @include rules("m-bg-blue-1");
+    }
+  }
+  .ag-header-row {
+    .ag-header-cell {
+      @include rules("m-border-grey-3", "m-color-white");
+      border-right-width: 0.5px;
+      border-right-style: solid;
+      border-left-width: 0.5px;
+      border-left-style: solid;
+
+      body.dark & {
+        @include rules("m-color-white", "m-border-blueberry-1");
+      }
+
+      .ag-header-cell-resize::after {
+        display: none;
+      }
+    }
+  }
+
+  .ag-row {
+    @include rules("m-border-grey-3");
+
+    .ag-cell {
+      @include rules("m-border-grey-3");
+      border: 0;
+      border-right-width: 0.5px;
+      border-right-style: solid;
+      border-left-width: 0.5px;
+      border-left-style: solid;
+
+      body.dark & {
+        @include rules("m-border-blueberry-1");
+      }
+    }
+
+    body.dark & {
+      @include rules("m-border-blueberry-1");
+    }
+  }
+}

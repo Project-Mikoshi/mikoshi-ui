@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppBar, Container, Button } from '@mikoshi/core-components'
+import { AppBar, Container, Button, Typography } from '@mikoshi/core-components'
 
 export default {
   title: 'Core/App Bar',
@@ -20,9 +20,9 @@ const Template = () => {
   return (
     <AppBar>
       <Container>
-        <h3>APP Bar</h3>
+        <Typography variant='h6'>App Bar</Typography>
       </Container>
-      <Container className='m-flex-justify-around m-flex-align-center'>
+      <Container className='m-flex-justify-end m-flex-align-center'>
         <Button onClick={onClick}>Dashboard</Button>
         <Button onClick={onClick}>Report</Button>
         <Button onClick={onClick}>Setting</Button>
