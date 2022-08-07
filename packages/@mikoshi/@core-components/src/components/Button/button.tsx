@@ -1,10 +1,12 @@
 import React, { FC } from 'react'
-import { Button as MuiButton } from '@mui/material'
+import { Button as MuiButton, SxProps } from '@mui/material'
 
-interface ButtonProps {
+export interface ButtonProps {
   onClick: () => void,
+  sx?: SxProps,
   color?: string,
   disableElevation?: boolean,
+  disabled?: boolean,
   size?: string,
   variant?: string,
   className?: string,
@@ -16,6 +18,8 @@ export const Button: FC<ButtonProps> = (props) => {
   const {
     onClick,
     children,
+    sx,
+    disabled = false,
     size = 'medium',
     disableElevation = false,
     variant = 'text',
@@ -37,6 +41,8 @@ export const Button: FC<ButtonProps> = (props) => {
       variant={variant as any}
       disableElevation={disableElevation}
       size={size as any}
+      sx={sx}
+      disabled={disabled}
     >
       {children}
     </MuiButton>

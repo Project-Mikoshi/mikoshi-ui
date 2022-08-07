@@ -1,8 +1,5 @@
 import React from 'react'
 import {
-  Button,
-  Container,
-  Paper,
   Snackbar,
   TextField,
   Alert,
@@ -10,6 +7,7 @@ import {
   Box,
   AlertColor
 } from '@mui/material'
+import { Button, Container, Paper } from '@mikoshi/core-components'
 import SocialMediaButton from 'components/social-media-button/component'
 
 export default function ContactPage () {

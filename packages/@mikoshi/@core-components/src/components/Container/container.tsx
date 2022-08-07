@@ -1,7 +1,8 @@
 import React, { FC } from 'react'
-import { Container as MuiContainer } from '@mui/material'
+import { Container as MuiContainer, SxProps } from '@mui/material'
 
 interface ContainerProps {
+  sx?: SxProps,
   maxWidth?: string,
   className?: string,
   children?: React.ReactNode
@@ -10,6 +11,8 @@ interface ContainerProps {
 export const Container: FC<ContainerProps> = (props) => {
   // == Props ================================
   const {
+    sx,
+    maxWidth,
     children,
     className = ''
   } = props
@@ -21,7 +24,7 @@ export const Container: FC<ContainerProps> = (props) => {
 
   // == Template =============================
   return (
-    <MuiContainer className={`mikoshi-container ${className}`}>
+    <MuiContainer className={`mikoshi-container ${className}`} maxWidth={maxWidth as any} sx={sx}>
       {children}
     </MuiContainer>
   )

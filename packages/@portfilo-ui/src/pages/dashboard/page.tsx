@@ -4,6 +4,7 @@ import { Grid, Box, Typography, Button } from '@mui/material'
 import SocialMediaButton from 'components/social-media-button/component'
 import ParticlesBackground from 'components/particle-effect/component'
 import { ROUTE } from 'constants/route'
+// @ts-expect-error
 import { ReactComponent as PhotoSketchSVG } from 'svgs/sketch-photo.svg'
 
 interface DashboardProps {

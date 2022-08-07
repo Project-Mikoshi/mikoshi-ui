@@ -2,6 +2,7 @@ import React from 'react'
 import { Grid, Typography, Modal } from '@mui/material'
 import SkillCard from 'components/skill-card/component'
 import ProgrammingList from 'components/language-list/component'
+// @ts-expect-error
 import { ReactComponent as CodingLaptopSVG } from 'svgs/coding.svg'
 import LanguageDetailCard from 'components/language-detail-card/component'
 

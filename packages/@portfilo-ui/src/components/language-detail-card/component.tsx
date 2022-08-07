@@ -1,5 +1,6 @@
 import React from 'react'
-import { Paper, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
+import { Paper } from '@mikoshi/core-components'
 import { PROGRAMMING_LANGUAGE_DESCRIPTIONS } from 'constants/skills-languages'
 
 const style = {

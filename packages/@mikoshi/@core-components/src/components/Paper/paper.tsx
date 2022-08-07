@@ -1,7 +1,8 @@
 import React, { FC } from 'react'
-import { Paper as MuiPaper } from '@mui/material'
+import { Paper as MuiPaper, SxProps } from '@mui/material'
 
 interface PaperProps {
+  sx?: SxProps,
   square?: boolean,
   elevation?: number,
   variant?: string,
@@ -14,6 +15,7 @@ export const Paper: FC<PaperProps> = (props) => {
   const {
     children,
     variant,
+    sx,
     square = false,
     elevation = 0,
     className = ''
@@ -26,7 +28,7 @@ export const Paper: FC<PaperProps> = (props) => {
 
   // == Template =============================
   return (
-    <MuiPaper className={`mikoshi-paper ${className}`} variant={variant as any} elevation={elevation} square={square}>
+    <MuiPaper className={`mikoshi-paper ${className}`} variant={variant as any} elevation={elevation} square={square} sx={sx}>
       {children}
     </MuiPaper>
   )

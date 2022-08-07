@@ -22,10 +22,8 @@ export default function App () {
 
   return (
     <div className='app'>
-      <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap' />
       <Router>
         <NavBar routes={[HOME, SKILLS, WORKS, CONTACT]} currentRoute={currentRoute} onRouteChange={onRouteChange}/>
-
         <Routes>
           <Route path='/' element={<Navigate replace to={ROUTE.HOME.route} />} />
           <Route path={ROUTE.HOME.route} element={<Dashboard onRouteChange={onRouteChange} />} />

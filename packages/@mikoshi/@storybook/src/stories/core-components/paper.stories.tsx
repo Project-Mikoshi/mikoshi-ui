@@ -47,4 +47,4 @@ const Template = (props: any) => {
   )
 }
 
-export const ButtonDemo = Template.bind({})
+export const PaperDemo = Template.bind({})

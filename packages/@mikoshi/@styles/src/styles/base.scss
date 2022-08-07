@@ -1,5 +1,12 @@
 // Variable definitions first
 @import 'variables';
+@import '@fontsource/roboto/300.css';
+@import '@fontsource/roboto/400.css';
+@import '@fontsource/roboto/500.css';
+@import '@fontsource/roboto/700.css';
+
+// Rules
+@import 'rules';
 
 // Output CSS declarations for all class definitions in the class map built by the variable import
 @include outputRules($class-map);

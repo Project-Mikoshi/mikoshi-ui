@@ -1,8 +1,3 @@
-/**
- *
- *  Panes Badge Stories
- *
- */
 import React from 'react'
 import { Container, Button } from '@mikoshi/core-components'
 
@@ -19,6 +14,10 @@ export default {
       control: { type: 'radio' }
     },
     disableElevation: {
+      options: [true, false],
+      control: { type: 'radio' }
+    },
+    disabled: {
       options: [true, false],
       control: { type: 'radio' }
     },

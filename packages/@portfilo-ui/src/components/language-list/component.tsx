@@ -1,5 +1,6 @@
 import React from 'react'
-import { Paper, IconButton, Tooltip } from '@mui/material'
+import { IconButton, Tooltip } from '@mui/material'
+import { Paper } from '@mikoshi/core-components'
 import { PROGRAMING_LANGUAGE_ICONS } from 'constants/skills-languages'
 
 interface ProgrammingLanguageCardProps {
