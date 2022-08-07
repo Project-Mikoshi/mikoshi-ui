@@ -1,1 +1,1 @@
-export { ConfirmationDialog } from "./confirmation-dialog"
+export { ConfirmationDialog } from './confirmation-dialog'
