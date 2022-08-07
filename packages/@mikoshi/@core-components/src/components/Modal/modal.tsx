@@ -45,7 +45,7 @@ export const Modal: FC<ModalProps> = (props) => {
       onAfterClose={onAfterClose}
       closeTimeoutMS={closeTimeOut}
     >
-      <Container className="mikoshi-modal-content">
+      <Container className="mikoshi-modal-content m-flex" maxWidth='sm' disableGutters={true}>
         {children}
       </Container>
     </ReactModal>

@@ -5,8 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "webpack --mode development",
-    "build": "rm -rf dist && webpack --mode production",
-    "watch": "webpack watch --mode development"
+    "build": "rm -rf dist && webpack --mode production"
   },
   "dependencies": {
     "@fontsource/roboto":"^4.5.7"

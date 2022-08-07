@@ -21,7 +21,7 @@ export const ModalBody: FC<ModalBodyProps> = (props) => {
 
   // == Template =============================
   return (
-    <Container className={`mikoshi-modal-body ${className}`}>
+    <Container className={`mikoshi-modal-body ${className}`} fixed disableGutters>
       {children}
     </Container>
   )

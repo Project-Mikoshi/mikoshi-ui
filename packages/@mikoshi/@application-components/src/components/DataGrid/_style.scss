@@ -2,7 +2,48 @@
 @import "ag-grid-community/styles/ag-theme-alpine.min.css";
 
 .mikoshi-data-grid {
-  @include rules("m-shadow-3");
+  @include rules("m-shadow-3", "m-flex-column");
+  height: 100%;
+  width: 100%;
+
+  .mikoshi-data-grid-header {
+    @include rules('m-flex-row', 'm-flex-align-center', "m-bg-blue-1", "m-color-white");
+
+    body.dark & {
+      @include rules("m-bg-blue-1");
+    }
+
+    .export-button {
+      margin-left: auto;
+    }
+  }
+
+  .ag-body-viewport {
+    &::-webkit-scrollbar-track {
+      @include rules('m-bg-inherit');
+    }
+  
+    &::-webkit-scrollbar {
+      width: 0.5rem;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      @include rules('m-bg-grey-3');
+      border-radius: 0.5rem;
+
+      &:hover {
+        @include rules('m-bg-grey-1');
+      }
+
+      body.dark & {
+        @include rules('m-bg-lgrey-1');
+
+        &:hover {
+          @include rules('m-bg-lgrey-3');
+        }
+      }
+    }
+  }
 
   .ag-row,
   .ag-body-viewport {
@@ -14,15 +55,15 @@
   }
   .ag-paging-panel,
   .ag-header-viewport {
-    @include rules("m-bg-blue-1", "m-color-white");
+    @include rules("m-bg-lgrey-4", "m-color-grey-1");
 
     body.dark & {
-      @include rules("m-bg-blue-1");
+      @include rules("m-bg-night-2", "m-color-blueberry-1");
     }
   }
   .ag-header-row {
     .ag-header-cell {
-      @include rules("m-border-grey-3", "m-color-white");
+      @include rules("m-border-grey-3", "m-color-grey-1");
       border-right-width: 0.5px;
       border-right-style: solid;
       border-left-width: 0.5px;

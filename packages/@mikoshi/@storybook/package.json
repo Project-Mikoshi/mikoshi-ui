@@ -5,7 +5,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "start": "start-storybook --quiet -p 6006",
+    "start": "start-storybook --quiet --disable-telemetry -p 6006",
     "build:storybook": "rm -rf storybook-static && build-storybook --disable-telemetry",
     "lint": "eslint . --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx",
     "lint:fix": "eslint . --fix --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx"

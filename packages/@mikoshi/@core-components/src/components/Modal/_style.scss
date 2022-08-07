@@ -21,13 +21,9 @@
   }
 
   &-content {
-    @include rules("m-bg-lgrey-3", "m-color-grey-1", 'm-flex', 'm-flex-column');
+    @include rules("m-bg-lgrey-3", "m-color-grey-1", 'm-flex-column');
     max-height: 60vh;
     border-radius: 0.6rem;
-    
-    &.MuiContainer-root {
-      padding: 0;
-    }
 
     body.dark & {
       @include rules("m-bg-night-2", "m-color-blueberry-1");
@@ -55,8 +51,7 @@
 
 
     .mikoshi-modal-footer {
-      display: flex;
-      align-items: center;
+      @include rules('m-flex-align-center');
       padding: 2rem;
       border-bottom-left-radius: 0.6rem;
       border-bottom-right-radius: 0.6rem;
