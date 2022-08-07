@@ -24,7 +24,7 @@ jobs:
       - name: PR Title Check
         uses: deepakputhraya/action-pr-title@master
         with:
-          regex: '(chore|feature|fix)+: #[0-9]+ - ([a-z])+'
+          regex: '(chore|feature|fix)+: ([a-z])+'
           allowed_prefixes: 'feature,fix,chore'
           disallowed_prefixes: 'feat/,hotfix'
           prefix_case_sensitive: false
