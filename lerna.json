@@ -1,6 +1,8 @@
 {
-  "packages": [
-    "packages/**"
-  ],
-  "version": "independent"
+    "lerna": "4.0.0",
+    "packages": [
+        "packages/**"
+    ],
+    "useNx": true,
+    "version": "independent"
 }

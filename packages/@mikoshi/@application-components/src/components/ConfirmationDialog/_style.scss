@@ -1,0 +1,21 @@
+.mikoshi-confirmation-dialog {
+  .mikoshi-confirmation-dialog-header {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+
+    .exit-button {
+      margin-left: auto;
+    }
+  }
+
+  .mikoshi-confirmation-dialog-footer {
+    @include rules('m-flex', 'm-flex-row', 'm-flex-align-center', 'm-flex-justify-end');
+      
+    .mikoshi-button {
+      &:not(:first-of-type) {
+        margin-left: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.mikoshi-app-bar {
+  &.MuiPaper-root {
+    @include rules('m-flex', 'm-flex-row');
+    padding: 1rem;
+
+    .mikoshi-button {
+      @include rules('m-color-white');
+    }
+  }
+}

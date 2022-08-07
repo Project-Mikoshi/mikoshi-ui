@@ -1,0 +1,14 @@
+//  Utils must come before rules definitions
+@import 'utils/utils';
+
+// Rules
+@import 'rules/background';
+@import 'rules/border';
+@import 'rules/svg';
+@import 'rules/typography';
+@import 'rules/flex';
+@import 'rules/opacity';
+@import 'rules/overflow';
+@import 'rules/z-index';
+@import 'rules/shadow';
+@import 'rules/glassmorphism';

@@ -1,0 +1,18 @@
+.dashboard {
+  position: relative;
+  top: 80px;
+
+  .avatar {
+    overflow: hidden;
+  }
+
+  .intro {
+    &-name {
+      display: flex;
+    }
+  }
+
+  .social-media {
+    margin-top: auto;
+  }
+}

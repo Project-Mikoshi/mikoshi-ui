@@ -1,0 +1,17 @@
+@include createRules((
+  // Both axes
+  m-overflow-visible: (overflow: visible),
+  m-overflow-hidden: (overflow: hidden),
+  m-overflow-scroll: (overflow: scroll),
+  m-overflow-auto: (overflow: auto),
+  m-overflow-initial: (overflow: initial),
+  m-overflow-inherit: (overflow: inherit),
+
+  // X axis
+  m-overflow-x-auto: (overflow-x: auto),
+  m-overflow-x-hidden: (overflow-x: hidden),
+
+  // Y axis
+  m-overflow-y-auto: (overflow-y: auto),
+  m-overflow-y-hidden: (overflow-y: hidden)
+));

@@ -1,0 +1,10 @@
+@include createRules((
+  m-frost-glass-light: (
+    backdrop-filter: blur(10px),
+    background: rgba($white, 0.4)
+  ),
+  m-frost-glass-dark: (
+    backdrop-filter: blur(10px),
+    background: rgba($black, 0.4)
+  )
+));
