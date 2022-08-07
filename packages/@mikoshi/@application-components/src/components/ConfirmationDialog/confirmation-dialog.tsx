@@ -1,5 +1,6 @@
 import { Modal, ModalBody, ModalHeader, ModalFooter, Button, IconButton, Typography } from '@mikoshi/core-components'
 import CloseIcon from '@mui/icons-material/Close'
+import { CONFIRM_BUTTON_LABEL, CANCEL_BUTTON_LABEL } from 'constants/confirmation-dialog'
 import React, { FC } from 'react'
 
 interface ConfirmationDialogProps {
@@ -25,9 +26,6 @@ export const ConfirmationDialog: FC<ConfirmationDialogProps> = (props) => {
     bindingElement = '#root',
     className = ''
   } = props
-
-  const CANCEL_BUTTON_LABEL = 'Cancel'
-  const CONFIRM_BUTTON_LABEL = 'Confirm'
 
   // == Hooks ================================
 
