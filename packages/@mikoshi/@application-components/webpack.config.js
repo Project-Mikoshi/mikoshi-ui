@@ -1,17 +1,23 @@
-/* eslint-disable no-undef */
-const path = require('path')
-const tsTransformPaths = require('@zerollup/ts-transform-paths')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+import path from 'path'
+import { fileURLToPath } from 'url'
+import tsTransformPaths from '@zerollup/ts-transform-paths'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
-module.exports = {
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
+export default {
   entry: './src/index.ts',
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
     library: {
-      type: 'commonjs'
+      type: 'module'
     }
   },
+  experiments: {
+    outputModule: true
+  },
+  devtool: false,
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     alias: {

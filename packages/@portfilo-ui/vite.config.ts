@@ -8,13 +8,5 @@ export default defineConfig({
     react(),
     tsconfigPaths(),
     svgr()
-  ],
-  optimizeDeps: {
-    include: ['@mikoshi/core-components']
-  },
-  build: {
-    commonjsOptions: {
-      include: [/@mikoshi\/core-components/, /node_modules/]
-    }
-  }
+  ]
 })
