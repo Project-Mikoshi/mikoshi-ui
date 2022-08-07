@@ -1,0 +1,11 @@
+# dependencies
+/node_modules/
+
+webpack.config.js
+
+# configs
+babel.config.js
+
+#compiled output
+/dist/
+/tmp/
