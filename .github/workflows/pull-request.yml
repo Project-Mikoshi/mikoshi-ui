@@ -48,7 +48,9 @@ jobs:
         env:
           cache-name: cache-node-modules
         with:
-          path: **/node_modules
+          path: |
+            **/node_modules
+            **/dist
           key: ${{ runner.os }}-${{ hashFiles('**/package.lock') }}
       #------------------------------------------------------------------------------
       # install
