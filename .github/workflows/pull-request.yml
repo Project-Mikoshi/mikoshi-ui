@@ -32,35 +32,38 @@ jobs:
           max_length: 80
           github_token: ${{ github.token }}
   #------------------------------------------------------------------------------
-  # check linting of source code
-  #------------------------------------------------------------------------------
-  lint:
-    needs: pull-request-title
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Lint check
-        run:  npm run lint
-  #------------------------------------------------------------------------------
-  # install depdencies
+  # build and test packages
   #------------------------------------------------------------------------------
   build:
     needs: pull-request-title
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3\
+      #------------------------------------------------------------------------------
+      # cache
+      #------------------------------------------------------------------------------
+      - name: Cache node modules
+        id: cache-npm
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: **/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/package.lock') }}
+      #------------------------------------------------------------------------------
+      # install
+      #------------------------------------------------------------------------------
       - name: Install depdencies
         run: |
           npm install
           npx lerna bootstrap
+      #------------------------------------------------------------------------------
+      # lint
+      #------------------------------------------------------------------------------
+      - name: Lint check
+        run:  npm run lint
+      #------------------------------------------------------------------------------
+      # build
+      #------------------------------------------------------------------------------
       - name: Build packages
         run:  npm run build
-      # Share artifact inside workflow
-      - name: Share artifact inside workflow
-        uses: actions/upload-artifact@v1
-        with:
-          name: artifact
-          path: build
-  #------------------------------------------------------------------------------
-  # build packages
-  #------------------------------------------------------------------------------
