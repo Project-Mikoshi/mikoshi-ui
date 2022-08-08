@@ -1,5 +1,6 @@
 import React from 'react'
-import { Grid, Typography, Modal } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
+import { ConfirmationDialog } from '@mikoshi/application-components'
 import SkillCard from 'components/skill-card/component'
 import ProgrammingList from 'components/language-list/component'
 // @ts-expect-error
@@ -9,16 +10,11 @@ import LanguageDetailCard from 'components/language-detail-card/component'
 export default function Skills () {
   const TITLE = 'Technical Skills'
 
-  const [language, setLanguage] = React.useState('default')
+  const [language, setLanguage] = React.useState('')
   const [launchModal, toggleModal] = React.useState(false)
   const handleLanguageSelection = (key: string) => {
-    if (key === language || key === 'default') {
-      setLanguage('default')
-      toggleModal(false)
-    } else {
-      setLanguage(key)
-      toggleModal(true)
-    }
+    setLanguage(key)
+    toggleModal(!launchModal)
   }
 
   return (
@@ -44,9 +40,9 @@ export default function Skills () {
         <CodingLaptopSVG />
       </Grid>
 
-      <Modal open={launchModal} onClose={() => handleLanguageSelection('default')}>
+      <ConfirmationDialog title={language} isOpen={launchModal} onCancel={() => handleLanguageSelection('')} onConfirm={() => {}}>
         <LanguageDetailCard language={language} />
-      </Modal>
+      </ConfirmationDialog>
     </Grid>
   )
 }

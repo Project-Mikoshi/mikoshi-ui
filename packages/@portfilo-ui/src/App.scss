@@ -1,4 +1,6 @@
 @import '@mikoshi/styles/src';
+@import '@mikoshi/core-components/style';
+@import '@mikoshi/application-components/style';
 
 @import 'components/project-card/style';
 
@@ -12,7 +14,7 @@
 @import 'animation/coding-laptop';
 
 body {
-  @include rules('m-bg-white');
+  @include rules('m-bg-lgrey-3');
 
   &.dark {
     @include rules('m-bg-night-2');

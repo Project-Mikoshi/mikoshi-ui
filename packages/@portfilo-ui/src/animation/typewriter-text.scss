@@ -15,7 +15,7 @@
   }
 
   &::before {
-    @include rules('m-bg-blue-3');
+    @include rules('m-bg-lgrey-3');
     animation: typewriter $typewriterSpeed steps($typewriterCharacters) 1s forwards;
   }
 
