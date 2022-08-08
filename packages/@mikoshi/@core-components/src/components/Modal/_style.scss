@@ -1,60 +1,75 @@
-.mikoshi-modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  right: auto;
-  bottom: auto;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-
-  &-overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.55);
-
-    body.dark & {
-      background-color: rgba(0,0,0,0.75);
-    }
-  }
-
-  &-content {
-    @include rules("m-bg-lgrey-3", "m-color-grey-1", 'm-flex-column');
-    max-height: 60vh;
-    border-radius: 0.6rem;
-
-    body.dark & {
-      @include rules("m-bg-night-2", "m-color-blueberry-1");
-    }
-
-    .mikoshi-modal-header {
-      @include rules("m-bg-blue-1", "m-color-white");
-      border-top-left-radius: 0.6rem;
-      border-top-right-radius: 0.6rem;
-      display: flex;
-      align-items: center;
-      padding: 0.8rem 1rem 0.8rem 1rem;
-      font-size: 0.9rem;
-      font-weight: 400;
-        
+.ReactModalPortal {
+  .mikoshi-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  
+    &-overlay {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: rgba(black, 0.55);
+  
       body.dark & {
-        @include rules("m-bg-blue-1", "m-color-white");
+        background-color: rgba(black, 0.75);
       }
     }
-
-    .mikoshi-modal-body {
-      padding: 2rem;
-      overflow: auto;
+  
+    &-content {
+      @include rules("m-bg-lgrey-3", "m-color-grey-1", 'm-flex-column');
+      max-height: 60vh;
+      border-radius: 0.6rem;
+  
+      body.dark & {
+        @include rules("m-bg-night-2", "m-color-blueberry-1");
+      }
+  
+      .mikoshi-modal-header {
+        @include rules("m-bg-blue-1", "m-color-white");
+        border-top-left-radius: 0.6rem;
+        border-top-right-radius: 0.6rem;
+        display: flex;
+        align-items: center;
+        padding: 0.8rem 1rem 0.8rem 1rem;
+        font-size: 0.9rem;
+        font-weight: 400;
+          
+        body.dark & {
+          @include rules("m-bg-blue-1", "m-color-white");
+        }
+      }
+  
+      .mikoshi-modal-body {
+        padding: 2rem;
+        overflow: auto;
+      }
+  
+  
+      .mikoshi-modal-footer {
+        @include rules('m-flex-align-center');
+        padding: 2rem;
+        border-bottom-left-radius: 0.6rem;
+        border-bottom-right-radius: 0.6rem;
+      }
     }
-
-
-    .mikoshi-modal-footer {
-      @include rules('m-flex-align-center');
-      padding: 2rem;
-      border-bottom-left-radius: 0.6rem;
-      border-bottom-right-radius: 0.6rem;
-    }
+  }
+  
+  .ReactModal__Overlay {
+    @include rules('m-animation-transition');
+    opacity: 0;
+  }
+  
+  .ReactModal__Overlay--after-open {
+    opacity: 1;
+  }
+  
+  .ReactModal__Overlay--before-close {
+    opacity: 0;
   }
 }

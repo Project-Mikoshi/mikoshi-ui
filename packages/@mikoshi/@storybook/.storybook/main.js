@@ -6,10 +6,7 @@ module.exports = {
     "storybook-addon-themes"
   ],
   core: {
-    builder: "webpack5",
-    options: {
-      lazyCompilation: true,
-    }
+    builder: "webpack5"
   },
   framework: "@storybook/react",
 }

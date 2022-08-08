@@ -43,7 +43,7 @@ export const ConfirmationDialog: FC<ConfirmationDialogProps> = (props) => {
       bindingElement={bindingElement}
     >
       <ModalHeader className="mikoshi-confirmation-dialog-header">
-        <Typography variant='p'>{title}</Typography>
+        <Typography variant='body1'>{title}</Typography>
         <IconButton className="exit-button" onClick={onCancel}>
           <CloseIcon />
         </IconButton>

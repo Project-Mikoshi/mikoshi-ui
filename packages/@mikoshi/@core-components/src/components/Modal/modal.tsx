@@ -23,7 +23,7 @@ export const Modal: FC<ModalProps> = (props) => {
     onAfterClose,
     className = '',
     bindingElement = '#root',
-    closeTimeOut = 100
+    closeTimeOut = 200
   } = props
 
   // == Hooks ================================
