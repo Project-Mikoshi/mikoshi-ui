@@ -1,7 +1,7 @@
 import React from 'react'
+import { Grid } from '@mui/material'
 import PorjectCard from 'components/project-card/component'
 import { PROJECTS } from 'constants/projects'
-import { Grid } from '@mui/material'
 
 export default function Projects () {
   return (

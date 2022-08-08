@@ -1,7 +1,7 @@
-import { Modal, ModalBody, ModalHeader, ModalFooter, Button, IconButton, Typography } from '@mikoshi/core-components'
+import { Button, IconButton, Modal, ModalBody, ModalFooter, ModalHeader, Typography } from '@mikoshi/core-components'
 import CloseIcon from '@mui/icons-material/Close'
-import { CONFIRM_BUTTON_LABEL, CANCEL_BUTTON_LABEL } from 'constants/confirmation-dialog'
 import React, { FC } from 'react'
+import { CANCEL_BUTTON_LABEL, CONFIRM_BUTTON_LABEL } from 'constants/confirmation-dialog'
 
 interface ConfirmationDialogProps {
     title: React.ReactNode,

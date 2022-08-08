@@ -1,6 +1,6 @@
-import { Container } from 'components/Container'
 import React, { FC, useEffect } from 'react'
 import ReactModal from 'react-modal'
+import { Container } from 'components/Container'
 
 interface ModalProps {
     isOpen: boolean,

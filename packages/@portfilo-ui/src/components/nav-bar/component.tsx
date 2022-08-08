@@ -4,8 +4,8 @@ import {
   Box,
   Toolbar
 } from '@mui/material'
-import NavTabs from 'components/nav-bar/nav-tabs/component'
 import { AppBar, Container } from '@mikoshi/core-components'
+import NavTabs from 'components/nav-bar/nav-tabs/component'
 import { RouteData } from 'types/route'
 
 const AUTHOR_NAME = 'Anthony Y. Zhu'
