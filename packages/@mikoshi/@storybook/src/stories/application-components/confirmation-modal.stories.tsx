@@ -18,7 +18,7 @@ const Template = () => {
   }
 
   const props = {
-    title: 'Modal title',
+    title: 'Confirmation Dialog Title',
     isOpen,
     onConfirm,
     onCancel: closeModal
@@ -28,8 +28,8 @@ const Template = () => {
     <Container>
       <Button onClick={openModal} variant='contained'>Launch dialog</Button>
       <ConfirmationDialog {...props}>
-        <Typography variant='h2'>A simple modal component</Typography>
-        <Typography variant='p' paragraph={true}>
+        <Typography variant='h6'>A simple modal component</Typography>
+        <Typography variant='body1' paragraph={true}>
           Lorem ipsum dolor sit amet,
           consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

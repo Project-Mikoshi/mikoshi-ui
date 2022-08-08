@@ -1,37 +1,58 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/recommended",
+    "plugin:react/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "import",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "no-trailing-spaces": "error",
+    "no-multiple-empty-lines": "error",
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "complexity": ["error", 8],
+    "comma-dangle": ["error"],
+    "semi": ["error", "never"],
+    "object-curly-spacing": ["error", "always"],
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "ignoreRestSiblings": true
+      }
     ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 12,
-        "sourceType": "module"
+    "import/order": "error",
+    // react
+    "react/display-name": "off",
+    "react/prop-types": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
     },
-    "plugins": [
-        "react",
-        "@typescript-eslint"
-    ],
-    "rules": {
-        "no-trailing-spaces": "error",
-        "no-multiple-empty-lines": "error",
-        "indent": ["error", 2],
-        "linebreak-style": ["error", "unix"],
-        "quotes": ["error", "single"],
-        "complexity": ["error", 8],
-        "comma-dangle": ["error"],
-        "semi": ["error", "never"],
-        "no-unused-vars": ["error",{"argsIgnorePattern": "^_", "ignoreRestSiblings": true}],
-        "object-curly-spacing": ["error", "always"],
-        // react
-        "react/display-name": "off",
-        "react/prop-types": "off"
-    }
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "moduleDirectory": ["node_modules/", "src/"]
+      }
+    },
+    "import/ignore": ["node_modules"]
+  }
 }

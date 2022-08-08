@@ -1,19 +1,22 @@
 {
   "name": "@mikoshi/styles",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "webpack --mode development",
     "build": "rm -rf dist && webpack --mode production",
-    "watch": "webpack watch --mode development"
+    "lint": "sass-lint -v -q",
+    "lint:fix": "sass-lint-auto-fix"
   },
   "dependencies": {
-    "@fontsource/roboto":"^4.5.7"
+    "@fontsource/roboto": "^4.5.7"
   },
   "devDependencies": {
     "css-loader": "^6.7.1",
     "sass": "^1.43.5",
+    "sass-lint": "^1.13.1",
+    "sass-lint-auto-fix": "^0.21.2",
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",
     "webpack": "^5.73.0",

@@ -1,0 +1,7 @@
+@include createRules(
+  (
+    m-animation-transition: (
+      transition: all .3s ease-in-out
+    )
+  )
+);

@@ -1,6 +1,6 @@
-import { Container } from 'components/Container'
 import React, { FC, useEffect } from 'react'
 import ReactModal from 'react-modal'
+import { Container } from 'components/Container'
 
 interface ModalProps {
     isOpen: boolean,
@@ -23,7 +23,7 @@ export const Modal: FC<ModalProps> = (props) => {
     onAfterClose,
     className = '',
     bindingElement = '#root',
-    closeTimeOut = 100
+    closeTimeOut = 200
   } = props
 
   // == Hooks ================================
@@ -45,7 +45,7 @@ export const Modal: FC<ModalProps> = (props) => {
       onAfterClose={onAfterClose}
       closeTimeoutMS={closeTimeOut}
     >
-      <Container className="mikoshi-modal-content">
+      <Container className="mikoshi-modal-content m-flex" maxWidth='sm' disableGutters={true}>
         {children}
       </Container>
     </ReactModal>

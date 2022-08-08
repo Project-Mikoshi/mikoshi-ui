@@ -1,9 +1,13 @@
 @for $i from 1 through 10 {
-    @include createRules((
+  @include createRules(
+    (
       m-z-index-#{$i}: (z-index: $i)
-    ));
-  }
-  
-  @include createRules((
+    )
+  );
+}
+
+@include createRules(
+  (
     m-z-index-max: (z-index: 99999)
-  ));
+  )
+);

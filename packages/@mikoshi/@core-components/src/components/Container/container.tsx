@@ -4,6 +4,9 @@ import { Container as MuiContainer, SxProps } from '@mui/material'
 interface ContainerProps {
   sx?: SxProps,
   maxWidth?: string,
+  flex?: boolean,
+  fixed?: boolean,
+  disableGutters?: boolean,
   className?: string,
   children?: React.ReactNode
 }
@@ -14,6 +17,9 @@ export const Container: FC<ContainerProps> = (props) => {
     sx,
     maxWidth,
     children,
+    flex = false,
+    fixed = false,
+    disableGutters = false,
     className = ''
   } = props
   // == Hooks ================================
@@ -24,7 +30,13 @@ export const Container: FC<ContainerProps> = (props) => {
 
   // == Template =============================
   return (
-    <MuiContainer className={`mikoshi-container ${className}`} maxWidth={maxWidth as any} sx={sx}>
+    <MuiContainer
+      className={`mikoshi-container ${flex ? 'm-flex' : ''} ${className}`}
+      maxWidth={maxWidth as any}
+      sx={sx}
+      disableGutters={disableGutters}
+      fixed={fixed}
+    >
       {children}
     </MuiContainer>
   )

@@ -22,7 +22,7 @@ const Template = () => {
       <Container>
         <Typography variant='h6'>App Bar</Typography>
       </Container>
-      <Container className='m-flex-justify-end m-flex-align-center'>
+      <Container className='m-flex-justify-end m-flex-align-center' flex>
         <Button onClick={onClick}>Dashboard</Button>
         <Button onClick={onClick}>Report</Button>
         <Button onClick={onClick}>Setting</Button>

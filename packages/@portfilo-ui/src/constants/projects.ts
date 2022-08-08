@@ -1,10 +1,10 @@
+import { FaReact, FaNodeJs } from 'react-icons/fa'
+import { SiMongodb, SiEmberdotjs, SiSpring, SiSwagger, SiApachecassandra } from 'react-icons/si'
 import UCLEI from 'svgs/UCLEI.png'
 import SHOPPIES from 'svgs/Shoppies.png'
 import QUICKIN from 'svgs/QuickIn.png'
 import MCP from 'svgs/MCP.png'
 import { ProjectCardData } from 'types/project'
-import { FaReact, FaNodeJs } from 'react-icons/fa'
-import { SiMongodb, SiEmberdotjs, SiSpring, SiSwagger, SiApachecassandra } from 'react-icons/si'
 
 export const PROJECTS: Record<string, ProjectCardData> = {
   MCP: {
