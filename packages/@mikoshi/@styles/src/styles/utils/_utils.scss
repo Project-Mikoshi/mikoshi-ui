@@ -28,9 +28,11 @@
 
 @mixin generateColors ($prefix, $attribute) {
   @each $name, $color in $colors {
-    @include createRules ((
-      '#{$prefix}-#{$name}': (#{$attribute}: $color)
-    ));
+    @include createRules (
+      (
+        '#{$prefix}-#{$name}': (#{$attribute}: $color)
+      )
+    );
 
     #{$prefix}-#{$name} {
       #{$attribute}: $color;

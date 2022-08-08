@@ -25,10 +25,12 @@ const Template = () => {
     <Container>
       <Button onClick={openModal}>Click me</Button>
       <Modal isOpen={isOpen} onClose={closeModal}>
-        <ModalHeader>Modal Title</ModalHeader>
+        <ModalHeader>
+          <Typography variant='body1'>Modal Title</Typography>
+        </ModalHeader>
         <ModalBody>
-          <Typography variant='h2'>A simple modal component</Typography>
-          <Typography variant='p' paragraph={true}>
+          <Typography variant='h6'>A simple modal component</Typography>
+          <Typography variant='body1' paragraph={true}>
             Lorem ipsum dolor sit amet,
             consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

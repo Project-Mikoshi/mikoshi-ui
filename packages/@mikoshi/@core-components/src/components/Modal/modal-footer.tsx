@@ -21,7 +21,7 @@ export const ModalFooter: FC<ModalFooterProps> = (props) => {
 
   // == Template =============================
   return (
-    <Container className={`mikoshi-modal-footer ${className}`}>
+    <Container className={`mikoshi-modal-footer ${className}`} disableGutters>
       {children}
     </Container>
   )

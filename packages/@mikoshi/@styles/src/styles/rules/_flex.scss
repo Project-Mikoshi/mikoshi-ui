@@ -1,7 +1,8 @@
-@include createRules((
+@include createRules(
+  (
     m-flex: (display: flex),
     m-flex-inline: (display: inline-flex),
-    
+
     // Direction
     m-flex-column: (flex-direction: column),
     m-flex-column-reverse: (flex-direction: column-reverse),
@@ -17,9 +18,10 @@
     m-flex-justify-end: (justify-content: flex-end),
     m-flex-justify-around: (justify-content: space-around),
     m-flex-justify-between: (justify-content: space-between),
-  
+
     // Wrap
     m-flex-wrap: (flex-wrap: wrap),
     m-flex-nowrap: (flex-wrap: nowrap),
     m-flex-wrap-reverse: (flex-wrap: wrap-reverse)
-));
+  )
+);
