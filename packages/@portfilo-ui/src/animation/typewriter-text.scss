@@ -6,7 +6,7 @@
 
   &::before,
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     right: 0;
@@ -15,13 +15,13 @@
   }
 
   &::before {
-    background: aliceblue;
+    @include rules('m-bg-blue-3');
     animation: typewriter $typewriterSpeed steps($typewriterCharacters) 1s forwards;
   }
 
   &::after {
-    width: 0.125em;
-    background: black;
+    @include rules('m-bg-black');
+    width: .125em;
     animation: typewriter $typewriterSpeed steps($typewriterCharacters) 1s forwards, blink 750ms steps($typewriterCharacters) infinite;
   }
 }

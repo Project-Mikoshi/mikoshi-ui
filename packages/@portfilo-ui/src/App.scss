@@ -1,19 +1,20 @@
-@import "@mikoshi/styles/src";
+@import '@mikoshi/styles/src';
 
-/* styles - components */
 @import 'components/project-card/style';
 
-/* styles - pages */
-@import "pages/projects/style";
-@import "pages/dashboard/style";
-@import "pages/skills/style";
-@import "pages/contact/style";
+@import 'pages/projects/style';
+@import 'pages/dashboard/style';
+@import 'pages/skills/style';
+@import 'pages/contact/style';
 
-/* styles - animation */
-@import "animation/photo-sketch";
-@import "animation/typewriter-text";
-@import "animation/coding-laptop";
+@import 'animation/photo-sketch';
+@import 'animation/typewriter-text';
+@import 'animation/coding-laptop';
 
 body {
-  background-color: aliceblue;
+  @include rules('m-bg-white');
+
+  &.dark {
+    @include rules('m-bg-night-2');
+  }
 }

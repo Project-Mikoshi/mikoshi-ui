@@ -8,12 +8,12 @@
   }
 
   &::-webkit-scrollbar {
-    width: 0.3rem;
+    width: .3rem;
   }
 
   &::-webkit-scrollbar-thumb {
     @include rules('m-bg-grey-3');
-    border-radius: 0.5rem;
+    border-radius: .5rem;
 
     &:hover {
       @include rules('m-bg-grey-1');

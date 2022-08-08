@@ -5,8 +5,8 @@
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint . --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx",
-    "lint:fix": "eslint . --fix --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx"
+    "lint": "sass-lint -v -q && eslint . --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx",
+    "lint:fix": "sass-lint-auto-fix && eslint . --fix --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx"
   },
   "devDependencies": {
     "@fontsource/roboto":"^4.5.7",
@@ -34,6 +34,8 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint": "^8.21.0",
     "eslint-plugin-react": "^7.30.1",
+    "sass-lint": "^1.13.1",
+    "sass-lint-auto-fix": "^0.21.2",
     "@vitejs/plugin-react": "^2.0.0",
     "vite-tsconfig-paths": "^3.5.0",
     "vite-plugin-svgr": "^2.2.1",
