@@ -7,6 +7,7 @@ import {
   Navigate
 } from 'react-router-dom'
 import NavBar from 'components/nav-bar/component'
+import ParticlesBackground from 'components/particle-effect/component'
 import Projects from 'pages/projects/page'
 import Dashboard  from 'pages/dashboard/page'
 import Skills from 'pages/skills/page'
@@ -24,6 +25,7 @@ export default function App () {
     <div className='app'>
       <Router>
         <NavBar routes={[HOME, SKILLS, WORKS, CONTACT]} currentRoute={currentRoute} onRouteChange={onRouteChange}/>
+        <ParticlesBackground />
         <Routes>
           <Route path='/' element={<Navigate replace to={ROUTE.HOME.route} />} />
           <Route path={ROUTE.HOME.route} element={<Dashboard onRouteChange={onRouteChange} />} />

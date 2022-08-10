@@ -1,6 +1,5 @@
 import React from 'react'
-import { IconButton, Tooltip } from '@mui/material'
-import { Paper } from '@mikoshi/core-components'
+import { Paper, Tooltip, IconButton, Color } from '@mikoshi/core-components'
 import { PROGRAMING_LANGUAGE_ICONS } from 'constants/skills-languages'
 
 interface ProgrammingLanguageCardProps {
@@ -25,12 +24,11 @@ export default function ProgrammingLanguageCard (props: ProgrammingLanguageCardP
     }>
       {PROGRAMING_LANGUAGE_ICONS.map((language, index: number) => {
         const { icon: Icon, name } = language
-        console.log(selected, name)
         return (
           <Tooltip title={name} key={index}>
             <IconButton
               key={index}
-              color={selected === name ? 'primary' : 'default'}
+              color={selected === name ? Color.PRIMARY : Color.INHERIT}
               onClick={() => action(name)} sx={{ '&:hover': { color: '#009eef' } }}
             >
               <Icon key={index} />

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Grid, Box, Typography, Button } from '@mui/material'
+import { Grid, Box } from '@mui/material'
+import { Typography, Button } from '@mikoshi/core-components'
 import SocialMediaButton from 'components/social-media-button/component'
-import ParticlesBackground from 'components/particle-effect/component'
 import { ROUTE } from 'constants/route'
 // @ts-expect-error
 import { ReactComponent as PhotoSketchSVG } from 'svgs/sketch-photo.svg'
@@ -17,18 +17,18 @@ export default function Dashboard (props: DashboardProps) {
   return (
     <Grid container className='dashboard' direction='row' justifyContent='space-evenly' alignItems='center' sx={{ height: '80vh', zoom: { xs: '50%', lg: '100%' } }}>
       <Grid item className='intro'>
-        <Typography variant='h3'>Hi,</Typography>
+        <Typography className='m-color-grey-1' variant='h3'>Hi,</Typography>
 
         <Box className='intro-name'>
-          <Typography variant='h3'>{'I\'m'}&nbsp;</Typography>
-          <Typography variant='h3' color='primary'>Anthony.</Typography>
+          <Typography className='m-color-grey-1' variant='h3'>{'I\'m'}&nbsp;</Typography>
+          <Typography className='m-color-primary' variant='h3'>Anthony.</Typography>
         </Box>
 
-        <Typography className='typewriter' variant='h3'>A Software Developer and Web Designer.</Typography>
+        <Typography className='typewriter m-color-grey-1' variant='h3'>A Software Developer and Web Designer.</Typography>
 
         <br />
 
-        <Button size='small' variant='contained' onClick={() => {onRouteChange(ROUTE.CONTACT.route)}} component={Link} to={ROUTE.CONTACT.route}>
+        <Button size={'small' as any} variant={'contained' as any} onClick={() => {onRouteChange(ROUTE.CONTACT.route)}} component={Link} to={ROUTE.CONTACT.route}>
           {ROUTE.CONTACT.label}
         </Button>
       </Grid>
@@ -41,8 +41,6 @@ export default function Dashboard (props: DashboardProps) {
         <SocialMediaButton type='LinkedIn' />
         <SocialMediaButton type='github' />
       </Grid>
-
-      <ParticlesBackground />
     </Grid>
   )
 }

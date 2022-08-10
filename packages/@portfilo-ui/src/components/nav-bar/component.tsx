@@ -1,10 +1,10 @@
 import React from 'react'
 import {
-  Typography,
   Box,
   Toolbar
 } from '@mui/material'
-import { AppBar, Container } from '@mikoshi/core-components'
+import { AppBar } from '@mikoshi/application-components'
+import { Container, Typography } from '@mikoshi/core-components'
 import NavTabs from 'components/nav-bar/nav-tabs/component'
 import { RouteData } from 'types/route'
 

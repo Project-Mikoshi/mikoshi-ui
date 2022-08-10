@@ -2,18 +2,19 @@
 @import 'ag-grid-community/styles/ag-theme-alpine.min.css';
 
 .mikoshi-data-grid {
-  @include rules('m-shadow-3', 'm-flex-column');
+  @include rules('m-shadow-5', 'm-flex-column');
   height: 100%;
   width: 100%;
 
   .mikoshi-data-grid-header {
-    @include rules('m-flex-row', 'm-flex-align-center', 'm-bg-blue-1', 'm-color-white');
-
-    body.dark & {
-      @include rules('m-bg-blue-1');
-    }
+    @include rules('m-flex-row', 'm-flex-align-center', 'm-frost-glass-blue-1', 'm-color-white', 'm-border-grey-5', 'm-border-solid');
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 0;
 
     .export-button {
+      @include rules('m-color-white');
       margin-left: auto;
     }
   }
@@ -47,19 +48,19 @@
 
   .ag-row,
   .ag-body-viewport {
-    @include rules('m-bg-lgrey-3', 'm-color-grey-1');
+    @include rules('m-frost-glass-lgrey-3', 'm-color-grey-1');
 
     body.dark & {
-      @include rules('m-bg-night-2', 'm-color-blueberry-1');
+      @include rules('m-frost-glass-night-2', 'm-color-blueberry-1');
     }
   }
 
   .ag-paging-panel,
   .ag-header-viewport {
-    @include rules('m-bg-lgrey-4', 'm-color-grey-1');
+    @include rules('m-frost-glass-lgrey-4', 'm-color-grey-1');
 
     body.dark & {
-      @include rules('m-bg-night-2', 'm-color-blueberry-1');
+      @include rules('m-frost-glass-night-2', 'm-color-blueberry-1');
     }
   }
 

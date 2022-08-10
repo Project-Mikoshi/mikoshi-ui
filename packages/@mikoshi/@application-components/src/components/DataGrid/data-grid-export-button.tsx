@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { FC, useState } from 'react'
-import { Button, Typography } from '@mikoshi/core-components'
+import { Button, Typography, Variant } from '@mikoshi/core-components'
 import { AgGridReact } from 'ag-grid-react'
 import { ConfirmationDialog } from 'components/ConfirmationDialog'
 
@@ -36,7 +36,7 @@ export const DataGridExportButton: FC<ExportButtonProps> = (props) => {
   // == Template =============================
   return (
     <>
-      <Button className={`export-button ${className}`} onClick={onClick} variant='container' disabled={disabled}>
+      <Button className={`export-button ${className}`} onClick={onClick} variant={Variant.TEXT} disabled={disabled}>
         Export
       </Button>
       <ConfirmationDialog title='Export Grid Data' isOpen={open} onCancel={onCancel} onConfirm={onExport}>

@@ -6,6 +6,9 @@ interface TypographyProps {
   align?: string,
   noWrap?: boolean,
   paragraph?: boolean,
+  textOverflow?: string,
+  whiteSpace?: string,
+  overflow?: string,
   variant?: string,
   component?: string
   className?: string,
@@ -21,6 +24,9 @@ export const Typography: FC<TypographyProps> = (props) => {
     noWrap,
     paragraph,
     component,
+    textOverflow,
+    whiteSpace,
+    overflow,
     className = ''
   } = props
   // == Hooks ================================
@@ -38,6 +44,9 @@ export const Typography: FC<TypographyProps> = (props) => {
       noWrap={noWrap}
       paragraph={paragraph}
       component={component as any}
+      whiteSpace={whiteSpace as any}
+      textOverflow={textOverflow}
+      overflow={overflow}
     >
       {children}
     </MuiTypography>
