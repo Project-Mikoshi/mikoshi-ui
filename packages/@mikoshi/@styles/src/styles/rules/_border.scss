@@ -1,2 +1,13 @@
 // Border color
-@include generateColors('m-border', 'border-color');
+@include generate-colors('m-border', 'border-color');
+
+@include create-rules(
+  (
+    m-border-solid: (
+      border-style: solid
+    ),
+    m-border-dashed: (
+      border-style: dashed
+    )
+  )
+);

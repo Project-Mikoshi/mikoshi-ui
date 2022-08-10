@@ -1,30 +1,33 @@
 import React, { FC } from 'react'
 import { Button as MuiButton, SxProps } from '@mui/material'
+import { Color, Size, Variant } from 'constants/generic'
 
-export interface ButtonProps {
-  onClick: () => void,
+type ButtonColor = Color.ERROR | Color.INFO | Color.INHERIT | Color.PRIMARY | Color.SECONDARY | Color.SUCCESS | Color.WARNING
+type ButtonVariant = Variant.CONTAINED | Variant.OUTLINED | Variant.TEXT
+type ButtonSize = Size.LARGE | Size.MEDIUM | Size.SMALL
+interface ButtonProps {
+  onClick?: () => void,
   sx?: SxProps,
-  color?: string,
+  color?:ButtonColor,
   disableElevation?: boolean,
   disabled?: boolean,
-  size?: string,
-  variant?: string,
+  size?: ButtonSize,
+  variant?: ButtonVariant,
+  component?: React.ForwardRefExoticComponent<any>
+  to?: string,
   className?: string,
   children?: React.ReactNode
 }
 
-export const Button: FC<ButtonProps> = (props) => {
+type ButtonRef = React.ForwardedRef<HTMLButtonElement>
+
+export const Button: FC<ButtonProps> = React.forwardRef((props, _ref: ButtonRef) => {
   // == Props ================================
   const {
-    onClick,
     children,
-    sx,
-    disabled = false,
-    size = 'medium',
-    disableElevation = false,
-    variant = 'text',
-    color = 'primary',
-    className = ''
+    color,
+    className = '',
+    ...otherProps
   } = props
   // == Hooks ================================
 
@@ -35,16 +38,10 @@ export const Button: FC<ButtonProps> = (props) => {
   // == Template =============================
   return (
     <MuiButton
-      className={`mikoshi-button ${className}`}
-      onClick={onClick}
-      color={color as any}
-      variant={variant as any}
-      disableElevation={disableElevation}
-      size={size as any}
-      sx={sx}
-      disabled={disabled}
+      className={`mikoshi-button m-bg-${color} ${className}`}
+      {...otherProps}
     >
       {children}
     </MuiButton>
   )
-}
+})

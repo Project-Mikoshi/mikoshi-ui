@@ -6,7 +6,8 @@
   "extends": [
     "eslint:recommended",
     "plugin:import/recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:storybook/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {

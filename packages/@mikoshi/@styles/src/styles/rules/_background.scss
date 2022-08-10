@@ -1,7 +1,7 @@
 //  Background colors
-@include generateColors('m-bg', 'background-color');
+@include generate-colors('m-bg', 'background-color');
 
-@include createRules(
+@include create-rules(
   (
     m-bg-gradient: (
       background: linear-gradient(-45deg, #d16e50, #7324ab, #23a6d5, #23d5ab)

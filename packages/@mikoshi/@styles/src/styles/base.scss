@@ -9,4 +9,4 @@
 @import 'rules';
 
 // Output CSS declarations for all class definitions in the class map built by the variable import
-@include outputRules($class-map);
+@include output-rules($class-map);

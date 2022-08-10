@@ -23,26 +23,24 @@
     }
 
     &-content {
-      @include rules('m-bg-lgrey-3', 'm-color-grey-1', 'm-flex-column');
+      @include rules('m-frost-glass-lgrey-3', 'm-color-grey-1', 'm-flex-column');
       max-height: 60vh;
       border-radius: .6rem;
 
       body.dark & {
-        @include rules('m-bg-night-2', 'm-color-blueberry-1');
+        @include rules('m-frost-glass-night-2', 'm-color-blueberry-1');
       }
 
       .mikoshi-modal-header {
-        @include rules('m-bg-blue-1', 'm-color-white');
+        @include rules('m-flex', 'm-flex-align-center', 'm-frost-glass-blue-1', 'm-color-grey-1');
         border-top-left-radius: .6rem;
         border-top-right-radius: .6rem;
-        display: flex;
-        align-items: center;
         padding: .8rem 1rem;
         font-size: .9rem;
         font-weight: 400;
 
         body.dark & {
-          @include rules('m-bg-blue-1', 'm-color-white');
+          @include rules('m-color-blueberry-1');
         }
       }
 

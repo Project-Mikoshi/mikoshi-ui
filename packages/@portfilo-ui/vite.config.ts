@@ -8,5 +8,19 @@ export default defineConfig({
     react(),
     tsconfigPaths(),
     svgr()
-  ]
+  ],
+  optimizeDeps: {
+    include: [
+      '@mikoshi/core-components',
+      '@mikoshi/application-components'
+    ]
+  },
+  server: {
+    port: 3000,
+    open: true
+  },
+  preview: {
+    port: 4200,
+    open: true
+  }
 })

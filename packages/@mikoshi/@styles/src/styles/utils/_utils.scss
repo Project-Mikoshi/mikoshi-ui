@@ -1,20 +1,20 @@
 // used to add CSS definitions to the global map
-@mixin createRules ($rule-map, $variant-defs: ()) {
+@mixin create-rules ($rule-map, $variant-defs: ()) {
   @each $name, $def in $rule-map {
     $class-map: map-merge($class-map, ($name: $def)) !global;
   }
 }
 
-@mixin outputDecls ($decls) {
+@mixin output-decls ($decls) {
   @each $prop, $value in $decls {
     #{$prop}: $value;
   }
 }
 
-@mixin outputRules ($rule-map) {
+@mixin output-rules ($rule-map) {
   @each $name, $def in $rule-map {
     .#{$name} {
-      @include outputDecls($def);
+      @include output-decls($def);
     }
   }
 }
@@ -22,13 +22,13 @@
 // Used in consuming apps to apply base rules in existing SASS files
 @mixin rules ($classes...) {
   @each $class in $classes {
-    @include outputDecls(map-get($class-map, $class));
+    @include output-decls(map-get($class-map, $class));
   }
 }
 
-@mixin generateColors ($prefix, $attribute) {
+@mixin generate-colors ($prefix, $attribute) {
   @each $name, $color in $colors {
-    @include createRules (
+    @include create-rules (
       (
         '#{$prefix}-#{$name}': (#{$attribute}: $color)
       )
