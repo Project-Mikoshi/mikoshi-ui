@@ -1,6 +1,7 @@
 import path from 'path'
 import { fileURLToPath } from 'url'
 import tsTransformPaths from '@zerollup/ts-transform-paths'
+import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -20,14 +21,9 @@ export default {
   devtool: false,
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
-    alias: {
-      components: path.resolve(__dirname, 'src/components'),
-      utils: path.resolve(__dirname, 'src/utils'),
-      constants: path.resolve(__dirname, 'src/constants'),
-      types: path.resolve(__dirname, 'src/types'),
-      svgs: path.join(__dirname, 'src/svgs')
-    },
-    symlinks: true
+    plugins: [
+      new TsconfigPathsPlugin()
+    ]
   },
   plugins: [
     new MiniCssExtractPlugin()
@@ -55,11 +51,10 @@ export default {
       },
       {
         test: /\.jsx$|\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: 'esbuild-loader',
         options: {
-          presets: ['@babel/preset-env', '@babel/preset-react'],
-          compact: true
+          loader: 'jsx',
+          target: 'es2016'
         }
       },
       {

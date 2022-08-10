@@ -1,4 +1,4 @@
-import { Button, IconButton, Modal, ModalBody, ModalFooter, ModalHeader, Typography } from '@mikoshi/core-components'
+import { Button, IconButton, Modal, ModalBody, ModalFooter, ModalHeader, Typography, Variant, Color } from '@mikoshi/core-components'
 import CloseIcon from '@mui/icons-material/Close'
 import React, { FC } from 'react'
 import { CANCEL_BUTTON_LABEL, CONFIRM_BUTTON_LABEL } from 'constants/confirmation-dialog'
@@ -52,8 +52,8 @@ export const ConfirmationDialog: FC<ConfirmationDialogProps> = (props) => {
         {children}
       </ModalBody>
       <ModalFooter className="mikoshi-confirmation-dialog-footer">
-        <Button variant='contained' onClick={onCancel}>{CANCEL_BUTTON_LABEL}</Button>
-        <Button variant='contained' onClick={onConfirm}>{CONFIRM_BUTTON_LABEL}</Button>
+        <Button variant={Variant.CONTAINED} color={Color.SECONDARY} onClick={onCancel}>{CANCEL_BUTTON_LABEL}</Button>
+        <Button variant={Variant.CONTAINED} color={Color.PRIMARY} onClick={onConfirm}>{CONFIRM_BUTTON_LABEL}</Button>
       </ModalFooter>
     </Modal>
   )

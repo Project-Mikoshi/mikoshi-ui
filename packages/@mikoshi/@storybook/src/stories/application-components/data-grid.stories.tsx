@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { DataGrid } from '@mikoshi/application-components'
 
 export default {
-  title: 'Application components/Data Grid',
+  title: 'Application/Data Grid',
   component: DataGrid,
   argTypes: {
     rowSelectionType: {

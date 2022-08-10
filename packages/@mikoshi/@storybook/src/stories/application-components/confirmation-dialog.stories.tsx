@@ -3,7 +3,7 @@ import { ConfirmationDialog } from '@mikoshi/application-components'
 import { Button, Container, Typography } from '@mikoshi/core-components'
 
 export default {
-  title: 'Application components/Confirmation Dialog',
+  title: 'Application/Confirmation Dialog',
   component: ConfirmationDialog
 }
 

@@ -7,7 +7,7 @@ import {
   Box,
   AlertColor
 } from '@mui/material'
-import { Button, Container, Paper } from '@mikoshi/core-components'
+import { Button, Container, Paper, Variant } from '@mikoshi/core-components'
 import SocialMediaButton from 'components/social-media-button/component'
 
 export default function ContactPage () {
@@ -41,7 +41,7 @@ export default function ContactPage () {
           <br />
           <TextField label={MESSAGE_PLACEHOLDER} value={message} onChange={(e)=>setMessage(e.target.value)} multiline rows={5} fullWidth />
           <br />
-          <Button color='primary' variant='contained' disabled={!message} onClick={handleSend}>Send</Button>
+          <Button variant={Variant.CONTAINED} disabled={!message} onClick={handleSend}>Send</Button>
         </Box>
       </Paper>
       <Snackbar anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }} autoHideDuration={2000} open={open} onClose={() => setOpen(false)}>

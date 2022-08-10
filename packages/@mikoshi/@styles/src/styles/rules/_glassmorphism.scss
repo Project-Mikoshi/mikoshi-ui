@@ -1,12 +1,25 @@
-@include createRules(
+@include create-rules(
   (
     m-frost-glass-light: (
-      backdrop-filter: blur(10px),
-      background: rgba($white, .4)
+      backdrop-filter: blur(2.5px),
+      background: rgba($lgrey-1, .6)
     ),
     m-frost-glass-dark: (
-      backdrop-filter: blur(10px),
-      background: rgba($black, .4)
+      backdrop-filter: blur(2.5px),
+      background: rgba($grey-1, .6)
     )
   )
 );
+
+@each $name, $color in $colors {
+  @if $color != 'inherit' {
+    @include create-rules (
+      (
+        'm-frost-glass-#{$name}': (
+          backdrop-filter: blur(2.53px),
+          background: rgba($color, .6)
+        )
+      )
+    );
+  }
+}
