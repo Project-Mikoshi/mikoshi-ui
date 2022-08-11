@@ -7,11 +7,12 @@ export default {
   argTypes: {
     rowSelectionType: {
       options: ['single', 'multiple'],
-      control: { type: 'select' }
+      control: 'inline-radio',
+      defaultValue: 'single'
     },
     suppressRowClickSelection: {
-      options: [true, false],
-      control: { type: 'radio' }
+      control: 'boolean',
+      defaultValue: false
     }
   }
 }

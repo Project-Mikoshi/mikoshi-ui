@@ -36,7 +36,8 @@
       "error",
       {
         "argsIgnorePattern": "^_",
-        "ignoreRestSiblings": true
+        "ignoreRestSiblings": true,
+        "args": "none"
       }
     ],
     "import/order": "error",

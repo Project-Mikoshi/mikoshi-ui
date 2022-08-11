@@ -1,18 +1,18 @@
 <svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="72 14 355 122"
-  preserveAspectRatio="xMidYMid"
+  xmlns='http://www.w3.org/2000/svg'
+  viewBox='72 14 355 122'
+  preserveAspectRatio='xMidYMid'
 >
 <defs>
-  <filter id="editing-jagged" x="-100%" y="-100%" width="300%" height="300%">
-    <feTurbulence result="turb" baseFrequency="0.1" numOctaves="1" seed="1"></feTurbulence>
-    <feDisplacementMap in="SourceGraphic" in2="turb" scale="10"></feDisplacementMap>
+  <filter id='editing-jagged' x='-100%' y='-100%' width='300%' height='300%'>
+    <feTurbulence result='turb' baseFrequency='0.1' numOctaves='1' seed='1'></feTurbulence>
+    <feDisplacementMap in='SourceGraphic' in2='turb' scale='10'></feDisplacementMap>
   </filter>
   </defs>
-    <g filter="url(#editing-jagged)">
-      <g transform="translate(127.1190015077591, 99)">
+    <g filter='url(#editing-jagged)'>
+      <g transform='translate(127.1190015077591, 99)'>
         <path
-          d="
+          d='
             M6.53 0L-0.83 0L10.75-42.24L24.13-42.24L27.07-18.11L38.98-42.24L50.18-42.24L51.33-10.62L51.33-10.62
             Q51.58-4.35 54.66-2.43L54.66-2.43L54.66-2.43Q53.95-1.15 51.90 0.06L51.90 0.06L51.90 0.06Q49.86 1.28 47.14 1.28L47.14 1.28
             L47.14 1.28Q44.42 1.28 42.82 0.51L42.82 0.51L42.82 0.51Q41.22-0.26 40.32-1.54L40.32-1.54L40.32-1.54Q38.72-3.84 38.72-8.26
@@ -58,7 +58,7 @@
             Q238.78-3.65 241.41-3.52ZM231.94-41.54L231.94-41.54L231.94-41.54Q231.94-44.03 234.02-45.38L234.02-45.38L234.02-45.38Q236.10-46.72 239.10-46.72
             L239.10-46.72L239.10-46.72Q242.11-46.72 243.94-45.38L243.94-45.38L243.94-45.38Q245.76-44.03 245.76-41.54L245.76-41.54L245.76-41.54
             Q245.76-39.04 243.74-37.76L243.74-37.76L243.74-37.76Q241.73-36.48 238.72-36.48L238.72-36.48L238.72-36.48Q235.71-36.48 233.82-37.76L233.82-37.76
-            L233.82-37.76Q231.94-39.04 231.94-41.54Z" fill="#444"
+            L233.82-37.76Q231.94-39.04 231.94-41.54Z' fill='#444'
           />
       </g>
     </g>

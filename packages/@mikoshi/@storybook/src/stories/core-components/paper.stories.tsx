@@ -7,15 +7,17 @@ export default {
   argTypes: {
     variant: {
       options: ['outlined'],
-      control: { type: 'select' }
+      control: 'inline-radio',
+      defaultValue: 'outlined'
     },
     elevation: {
       options: [1, 2, 3, 4, 6, 8, 12, 16, 24],
-      control: { type: 'select' }
+      control: 'inline-radio',
+      defaultValue: 1
     },
     square: {
-      options: [true, false],
-      control: { type: 'radio' }
+      control: 'boolean',
+      defaultValue: false
     }
   }
 }

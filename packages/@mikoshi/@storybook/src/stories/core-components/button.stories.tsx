@@ -7,19 +7,21 @@ export default {
   argTypes: {
     variant: {
       options: ['text', 'contained', 'outlined'],
-      control: { type: 'select' }
+      control: 'inline-radio',
+      defaultValue: 'contained'
     },
     size: {
       options: ['small', 'medium', 'large'],
-      control: { type: 'radio' }
+      control: 'inline-radio',
+      defaultValue: 'medium'
     },
     disableElevation: {
-      options: [true, false],
-      control: { type: 'radio' }
+      control: 'boolean',
+      defaultValue: false
     },
     disabled: {
-      options: [true, false],
-      control: { type: 'radio' }
+      control: 'boolean',
+      defaultValue: false
     },
     onClick: { action: 'clicked' }
   }
