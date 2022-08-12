@@ -11,6 +11,10 @@ module.exports = {
     'no-descending-specificity': null,
     'selector-class-pattern': null,
     'no-empty-source': null,
+    'selector-id-pattern': null,
+    'keyframes-name-pattern': null,
+    'annotation-no-unknown': null,
+    'max-line-length': 150,
 
     // block
     'block-no-empty': true,
@@ -31,11 +35,12 @@ module.exports = {
     // scss
     'scss/at-mixin-parentheses-space-before': 'always',
     'scss/no-global-function-names': null,
-    'scss/dollar-variable-empty-line-before': null
+    'scss/dollar-variable-empty-line-before': null,
+    'scss/dollar-variable-pattern': null
   },
   extends: [
     'stylelint-config-recommended',
-    'stylelint-config-standard-scss'
+    'stylelint-config-standard-scss',
 
   ],
   defaultSeverity: 'error'

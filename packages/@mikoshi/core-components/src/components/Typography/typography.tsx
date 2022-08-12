@@ -14,8 +14,9 @@ interface TypographyProps {
   className?: string,
   children?: React.ReactNode
 }
+type TypographyRef = React.ForwardedRef<HTMLElement>
 
-export const Typography: FC<TypographyProps> = (props) => {
+export const Typography: FC<TypographyProps> = React.forwardRef((props, ref: TypographyRef) => {
   // == Props ================================
   const {
     children,
@@ -27,7 +28,8 @@ export const Typography: FC<TypographyProps> = (props) => {
     textOverflow,
     whiteSpace,
     overflow,
-    className = ''
+    className = '',
+    ...otherProps
   } = props
   // == Hooks ================================
 
@@ -47,8 +49,9 @@ export const Typography: FC<TypographyProps> = (props) => {
       whiteSpace={whiteSpace as any}
       textOverflow={textOverflow}
       overflow={overflow}
+      {...otherProps}
     >
       {children}
     </MuiTypography>
   )
-}
+})

@@ -11,7 +11,9 @@ interface IconButtonProps {
   children?: React.ReactNode
 }
 
-export const IconButton: FC<IconButtonProps> = (props) => {
+type ButtonRef = React.ForwardedRef<HTMLButtonElement>
+
+export const IconButton: FC<IconButtonProps> = React.forwardRef((props, ref: ButtonRef) => {
   // == Props ================================
   const {
     onClick,
@@ -19,7 +21,8 @@ export const IconButton: FC<IconButtonProps> = (props) => {
     color,
     component,
     children,
-    className = ''
+    className = '',
+    ...otherProps
   } = props
   // == Hooks ================================
 
@@ -35,8 +38,9 @@ export const IconButton: FC<IconButtonProps> = (props) => {
       color={color}
       sx={sx}
       onClick={onClick}
+      {...otherProps}
     >
       {children}
     </MuiIconButton>
   )
-}
+})

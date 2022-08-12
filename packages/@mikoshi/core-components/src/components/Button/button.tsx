@@ -21,7 +21,7 @@ interface ButtonProps {
 
 type ButtonRef = React.ForwardedRef<HTMLButtonElement>
 
-export const Button: FC<ButtonProps> = React.forwardRef((props, _ref: ButtonRef) => {
+export const Button: FC<ButtonProps> = React.forwardRef((props, ref: ButtonRef) => {
   // == Props ================================
   const {
     children,
