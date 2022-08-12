@@ -18,8 +18,9 @@ jobs:
   #------------------------------------------------------------------------------
   # check the title of pull request
   #------------------------------------------------------------------------------
-  pull-request-title:
+  validate-pull-request:
     runs-on: ubuntu-latest
+    name: Verify Pull Request
     steps:
       - name: PR Title Check
         uses: deepakputhraya/action-pr-title@master
@@ -35,7 +36,8 @@ jobs:
   # build and test packages
   #------------------------------------------------------------------------------
   build:
-    needs: pull-request-title
+    name: Build Packages
+    needs: validate-pull-request
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

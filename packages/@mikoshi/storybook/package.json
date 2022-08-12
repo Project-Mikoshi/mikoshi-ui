@@ -1,0 +1,55 @@
+{
+  "name": "@mikoshi/storybook",
+  "version": "0.1.0",
+  "description": "Storybook Playground for Mikoshi",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "start-storybook --quiet --disable-telemetry -p 6006",
+    "build:storybook": "rm -rf storybook-static && build-storybook --disable-telemetry",
+    "lint": "npm-run-all --parallel lint:eslint lint:stylelint",
+    "lint:eslint": "eslint . --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx",
+    "lint:stylelint": "echo 'no scss files'",
+    "lint:fix": "eslint . --fix --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "@scaffold/eslint-config": "^0.1.0",
+    "@scaffold/typescript-config": "^0.1.0",
+    "@scaffold/stylelint-config": "^0.1.0",
+    "@babel/core": "^7.16.7",
+    "@mikoshi/application-components": "^0.2.0",
+    "@mikoshi/core-components": "^0.2.0",
+    "@mikoshi/styles": "^0.2.0",
+    "storybook-addon-turbo-build": "^1.1.0",
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-links": "^6.5.10",
+    "eslint-plugin-storybook": "^0.6.4",
+    "@storybook/builder-webpack4": "^6.5.10",
+    "@storybook/builder-webpack5": "^6.5.10",
+    "@storybook/manager-webpack4": "^6.5.10",
+    "@storybook/manager-webpack5": "^6.5.10",
+    "@storybook/react": "^6.5.10",
+    "@storybook/testing-library": "^0.0.13",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "babel-loader": "^8.2.3",
+    "eslint": "^8.21.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-react": "^7.30.1",
+    "stylelint": "^14.10.0",
+    "stylelint-config-recommended": "^9.0.0",
+    "stylelint-config-standard-scss": "^5.0.0",
+    "typescript": "^4.7.4",
+    "webpack": "^5.73.0"
+  },
+  "nohoist": [
+    "**/@storybook/**"
+  ],
+  "dependencies": {
+    "sass": "^1.45.2",
+    "storybook-addon-themes": "^6.1.0"
+  }
+}

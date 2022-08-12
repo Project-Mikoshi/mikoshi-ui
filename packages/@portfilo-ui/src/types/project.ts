@@ -6,5 +6,5 @@ export type ProjectCardData = {
   imageUrl: string,
   description: string,
   projectDemoUrl: string,
-  action: (_url: string) => void
+  action: (url: string) => void
 }
