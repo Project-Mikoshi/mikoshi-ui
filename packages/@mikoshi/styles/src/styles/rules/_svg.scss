@@ -1,0 +1,10 @@
+// Fill
+@include generate-colors('p-svg-fill', 'fill');
+@include create-rules(
+  (
+    m-svg-fill-current: (fill: currentColor)
+  )
+);
+
+// Stroke
+@include generate-colors('p-svg-stroke', 'stroke');
