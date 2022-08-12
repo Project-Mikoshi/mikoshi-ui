@@ -1,7 +1,7 @@
 // used to add CSS definitions to the global map
 @mixin create-rules ($rule-map, $variant-defs: ()) {
   @each $name, $def in $rule-map {
-    $class-map: map-merge($class-map, ($name: $def)) !global;
+    $class-map: map-merge($class-map, ($name: $def));
   }
 }
 

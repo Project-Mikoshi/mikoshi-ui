@@ -1,5 +1,4 @@
 import React, { FC } from 'react'
-// eslint-disable-next-line import/named
 import { AppBar as MuiAppBar,  SxProps } from '@mui/material'
 
 interface AppBarProps {

@@ -5,18 +5,20 @@
   "private": true,
   "scripts": {
     "dev": "webpack --mode development",
-    "build": "rm -rf dist && webpack --mode production",
-    "lint": "sass-lint -v -q",
-    "lint:fix": "sass-lint-auto-fix"
+    "build": "webpack --mode production",
+    "clean": "rm -rf dist",
+    "lint": "stylelint '**/*.scss'"
   },
   "dependencies": {
     "@fontsource/roboto": "^4.5.7"
   },
   "devDependencies": {
+    "@scaffold/stylelint-config": "^0.1.0",
     "css-loader": "^6.7.1",
     "sass": "^1.43.5",
-    "sass-lint": "^1.13.1",
-    "sass-lint-auto-fix": "^0.21.2",
+    "stylelint": "^14.10.0",
+    "stylelint-config-recommended": "^9.0.0",
+    "stylelint-config-standard-scss": "^5.0.0",
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",
     "webpack": "^5.73.0",

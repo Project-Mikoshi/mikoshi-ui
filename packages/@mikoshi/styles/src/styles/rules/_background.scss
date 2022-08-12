@@ -1,6 +1,5 @@
 //  Background colors
 @include generate-colors('m-bg', 'background-color');
-
 @include create-rules(
   (
     m-bg-gradient: (

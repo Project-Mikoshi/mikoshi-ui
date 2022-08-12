@@ -1,6 +1,5 @@
 // Fill
 @include generate-colors('p-svg-fill', 'fill');
-
 @include create-rules(
   (
     m-svg-fill-current: (fill: currentColor)
