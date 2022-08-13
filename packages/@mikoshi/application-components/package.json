@@ -17,8 +17,7 @@
   "scripts": {
     "dev": "vite build",
     "build": "vite build",
-    "test": "vitest --ui",
-    "coverage": "vitest run --coverage",
+    "test": "vitest run",
     "watch": "vite build --watch",
     "clean": "rm -rf dist",
     "lint": "npm-run-all --parallel lint:eslint lint:stylelint",
