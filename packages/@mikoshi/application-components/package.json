@@ -26,8 +26,6 @@
     "lint:fix": "eslint . --fix --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.0",
-    "@emotion/styled": "^11.10.0",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.10.0",
     "ag-grid-community": "^28.0.2",
