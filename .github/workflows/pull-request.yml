@@ -47,7 +47,7 @@ jobs:
       - name: Install depdencies
         run: |
           npm install
-          npx lerna bootstrap
+          npx lerna bootstrap --hoist
       #------------------------------------------------------------------------------
       # build
       #------------------------------------------------------------------------------

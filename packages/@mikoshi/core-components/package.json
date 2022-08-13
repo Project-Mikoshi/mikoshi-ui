@@ -22,6 +22,7 @@
     "lint:fix": "eslint . --fix --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.10.0",
@@ -35,12 +36,12 @@
     "@fontsource/roboto": "^4.5.7",
     "@mikoshi/styles": "^0.2.0",
     "@types/lodash": "^4.14.182",
-    "@types/node": "^18.0.4",
+    "@types/node": "^18.6.4",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@types/react-modal": "^3.13.1",
-    "@typescript-eslint/eslint-plugin": "^5.30.6",
-    "@typescript-eslint/parser": "^5.30.6",
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "@typescript-eslint/parser": "^5.33.0",
     "@zerollup/ts-transform-paths": "^1.7.18",
     "eslint": "^8.21.0",
     "eslint-plugin-import": "^2.26.0",
