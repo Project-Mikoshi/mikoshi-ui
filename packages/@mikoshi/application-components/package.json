@@ -4,20 +4,17 @@
   "type": "module",
   "source": "src/index.ts",
   "main": "dist/index.cjs",
-  "module": "./dist/index.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
-    ".": {
-      "import": "./dist/index.cjs",
-      "require": "./dist/index.umd.cjs"
-    },
+    ".": "./dist/index.cjs",
     "./style": "./dist/style.css"
   },
   "private": true,
   "scripts": {
     "dev": "vite build",
     "build": "vite build",
-    "test": "vitest run",
+    "test": "vitest",
     "watch": "vite build --watch",
     "clean": "rm -rf dist",
     "lint": "npm-run-all --parallel lint:eslint lint:stylelint",
@@ -47,7 +44,9 @@
     "@types/lodash": "^4.14.182",
     "@types/node": "^18.0.4",
     "@types/react": "^18.0.15",
+    "@rollup/plugin-typescript": "^8.3.4",
     "@types/react-dom": "^18.0.6",
+    "@zerollup/ts-transform-paths": "^1.7.18",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
     "eslint": "^8.21.0",
@@ -64,8 +63,6 @@
     "stylelint-config-standard-scss": "^5.0.0",
     "typescript": "^4.7.4",
     "vite": "^3.0.7",
-    "typescript-transform-paths": "^3.3.1",
-    "vite-plugin-dts": "^1.4.1",
     "vite-tsconfig-paths": "^3.5.0",
     "@vitejs/plugin-react": "^2.0.0"
   },
