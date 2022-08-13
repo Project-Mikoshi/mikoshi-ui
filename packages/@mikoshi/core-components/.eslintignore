@@ -2,6 +2,7 @@
 /node_modules/
 
 webpack.config.js
+vite.config.ts
 
 # configs
 babel.config.js
