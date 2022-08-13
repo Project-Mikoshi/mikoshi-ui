@@ -3,17 +3,21 @@
   "version": "0.2.0",
   "type": "module",
   "source": "src/index.ts",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "dist/index.d.ts",
   "exports": {
-    ".": "./dist/index.js",
-    "./src": "./src/index.ts",
-    "./style": "./dist/main.css"
+    ".": {
+      "import": "./dist/index.cjs",
+      "require": "./dist/index.umd.cjs"
+    },
+    "./style": "./dist/style.css"
   },
   "private": true,
   "scripts": {
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
-    "watch": "webpack watch --mode development",
+    "dev": "vite build",
+    "build": "vite build",
+    "watch": "vite build --watch",
     "clean": "rm -rf dist",
     "lint": "npm-run-all --parallel lint:eslint lint:stylelint",
     "lint:eslint": "eslint . --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx",
@@ -21,8 +25,10 @@
     "lint:fix": "eslint . --fix --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
     "@mui/icons-material": "^5.8.4",
-    "@mui/material": "^5.9.3",
+    "@mui/material": "^5.10.0",
     "react-modal": "^3.15.1"
   },
   "devDependencies": {
@@ -30,7 +36,6 @@
     "@scaffold/eslint-config": "^0.1.0",
     "@scaffold/typescript-config": "^0.1.0",
     "@scaffold/stylelint-config": "^0.1.0",
-    "@babel/core": "^7.18.6",
     "@fontsource/roboto": "^4.5.7",
     "@mikoshi/styles": "^0.2.0",
     "@types/lodash": "^4.14.182",
@@ -41,27 +46,22 @@
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
     "@zerollup/ts-transform-paths": "^1.7.18",
-    "css-loader": "^6.7.1",
     "eslint": "^8.21.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-react": "^7.30.1",
-    "html-loader": "^3.1.2",
     "lodash": "^4.17.21",
-    "mini-css-extract-plugin": "^2.6.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.54.3",
     "stylelint": "^14.10.0",
     "stylelint-config-recommended": "^9.0.0",
     "stylelint-config-standard-scss": "^5.0.0",
-    "sass-loader": "^13.0.2",
-    "style-loader": "^3.3.1",
-    "ts-loader": "^9.3.1",
-    "tsconfig-paths-webpack-plugin": "^4.0.0",
-    "esbuild-loader": "^2.19.0",
     "typescript": "^4.7.4",
-    "webpack": "^5.73.0",
-    "webpack-cli": "^4.10.0"
+    "vite": "^3.0.7",
+    "typescript-transform-paths": "^3.3.1",
+    "vite-plugin-dts": "^1.4.1",
+    "vite-tsconfig-paths": "^3.5.0",
+    "@vitejs/plugin-react": "^2.0.0"
   },
   "peerDependencies": {
     "react": ">=18.2.0",

@@ -1,15 +1,15 @@
 import './style.scss'
 
-export { Container } from 'components/Container'
-export { Button, IconButton } from 'components/Button'
-export { Paper } from 'components/Paper'
-export { Typography } from 'components/Typography'
+export { Container } from './components/Container'
+export { Button, IconButton } from './components/Button'
+export { Paper } from './components/Paper'
+export { Typography } from './components/Typography'
 export {
   Modal,
   ModalBody,
   ModalFooter,
   ModalHeader
-} from 'components/Modal'
-export { Tooltip } from 'components/Tooltip'
+} from './components/Modal'
+export { Tooltip } from './components/Tooltip'
 
-export * from 'constants/index'
+export { Color, Variant, Size } from './constants/generic'
