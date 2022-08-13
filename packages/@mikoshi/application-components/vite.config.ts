@@ -12,7 +12,8 @@ export default defineConfig(() => ({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      formats: ['cjs', 'es'],
+      formats: ['umd', 'es'],
+      name: 'index',
       fileName: 'index'
     },
     rollupOptions: {

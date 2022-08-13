@@ -3,11 +3,11 @@
   "version": "0.2.0",
   "type": "module",
   "source": "src/index.ts",
-  "main": "dist/index.cjs",
+  "main": "dist/index.umd.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
-    ".": "./dist/index.cjs",
+    ".": "./dist/index.umd.cjs",
     "./style": "./dist/style.css"
   },
   "private": true,

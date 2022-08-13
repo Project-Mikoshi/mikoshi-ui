@@ -3,18 +3,18 @@
   "version": "0.2.0",
   "type": "module",
   "source": "src/index.ts",
-  "main": "dist/index.cjs",
+  "main": "dist/index.umd.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
-    ".": "./dist/index.cjs",
+    ".": "./dist/index.umd.cjs",
     "./style": "./dist/style.css"
   },
   "private": true,
   "scripts": {
     "dev": "vite build",
     "build": "vite build",
-    "test": "vitest",
+    "test": "vitest run",
     "watch": "vite build --watch",
     "clean": "rm -rf dist",
     "lint": "npm-run-all --parallel lint:eslint lint:stylelint",
