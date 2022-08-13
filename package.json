@@ -6,8 +6,8 @@
     "dev": "nx run-many --target=dev --all",
     "build": "nx run-many --target=build --all",
     "clean": "nx run-many --target=clean --all",
-    "test": "nx affected --target=test --base=develop --head=HEAD",
-    "lint": "nx affected --target=lint --base=develop --head=HEAD"
+    "test": "nx run-many --target=test --all",
+    "lint": "nx run-many--target=lint --all"
   },
   "devDependencies": {
     "lerna": "^5.4.0",
