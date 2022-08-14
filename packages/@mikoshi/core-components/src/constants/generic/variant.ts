@@ -1,6 +1,6 @@
-/* eslint-disable no-unused-vars */
-export enum Variant {
-  TEXT = 'text',
-  OUTLINED = 'outlined',
-  CONTAINED = 'contained'
+export const VARIANTS: Record<string, string> = {
+  TEXT: 'text',
+  OUTLINED: 'outlined',
+  CONTAINED: 'contained'
 }
+

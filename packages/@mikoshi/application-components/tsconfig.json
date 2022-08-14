@@ -1,21 +1,22 @@
 {
   "extends": "@scaffold/typescript-config/tsconfig.json",
   "compilerOptions": {
-    "target": "ES2020",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
+    "types": ["vitest"],
     "outDir": "./dist/",
     "baseUrl": ".",
     "paths": {
+      "@mikoshi/application-components": ["src"],
       "components/*": ["src/components/*"],
       "utils/*": ["src/utils/*"],
       "constants/*": ["src/constants/*"],
       "svgs/*": ["src/svgs/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "test/**/*.ts", "test/**/*.tsx"],
   "exclude": ["node_modules", "dist"]
 }

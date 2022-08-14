@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import { Container } from 'components/Container'
+import { Scroll } from 'components/Scroll'
 
 interface ModalBodyProps {
     className?: string,
@@ -21,8 +22,10 @@ export const ModalBody: FC<ModalBodyProps> = (props) => {
 
   // == Template =============================
   return (
-    <Container className={`mikoshi-modal-body ${className}`} fixed disableGutters>
-      {children}
-    </Container>
+    <Scroll>
+      <Container className={`mikoshi-modal-body ${className}`} fixed disableGutters>
+        {children}
+      </Container>
+    </Scroll>
   )
 }

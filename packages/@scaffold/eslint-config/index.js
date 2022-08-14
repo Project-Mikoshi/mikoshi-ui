@@ -40,6 +40,7 @@ module.exports = {
       }
     ],
     'import/order': 'error',
+    'import/no-unresolved': 'off',
     // react
     'react/display-name': 'off',
     'react/prop-types': 'off'

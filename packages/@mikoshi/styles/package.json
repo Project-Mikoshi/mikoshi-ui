@@ -15,7 +15,7 @@
   "devDependencies": {
     "@scaffold/stylelint-config": "^0.1.0",
     "css-loader": "^6.7.1",
-    "sass": "^1.43.5",
+    "sass": "^1.54.3",
     "stylelint": "^14.10.0",
     "stylelint-config-recommended": "^9.0.0",
     "stylelint-config-standard-scss": "^5.0.0",

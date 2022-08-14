@@ -4,14 +4,16 @@
     @include rules('m-flex', 'm-flex-row', 'm-frost-glass-blue-1', 'm-color-grey-1');
     padding: 1rem;
 
-    body.dark & {
+    body.dark &,
+    .app[data-theme='dark'] & {
       @include rules('m-color-white');
     }
 
     .mikoshi-button {
       @include rules('m-color-grey-1');
 
-      body.dark & {
+      body.dark &,
+      .app[data-theme='dark'] & {
         @include rules('m-color-white');
       }
     }

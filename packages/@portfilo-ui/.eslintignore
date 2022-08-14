@@ -5,6 +5,7 @@ webpack.config.js
 
 # configs
 babel.config.js
+vite.config.ts
 
 #compiled output
 /dist/

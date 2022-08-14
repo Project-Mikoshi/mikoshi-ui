@@ -1,0 +1,34 @@
+@import 'react-perfect-scrollbar/dist/css/styles.css';
+
+.mikoshi-scroll {
+  .ps__rail-x,
+  .ps__rail-y {
+    @include rules('m-bg-transparent');
+
+    &:hover {
+      @include rules('m-bg-transparent');
+    }
+
+    &.ps--clicking {
+      @include rules('m-bg-transparent');
+    }
+  }
+
+  .ps__thumb-x,
+  .ps__thumb-y {
+    @include rules('m-bg-grey-3');
+
+    &:hover {
+      @include rules('m-bg-grey-1');
+    }
+
+    body.dark &,
+    .app[data-theme='dark'] & {
+      @include rules('m-bg-lgrey-1');
+
+      &:hover {
+        @include rules('m-bg-lgrey-3');
+      }
+    }
+  }
+}

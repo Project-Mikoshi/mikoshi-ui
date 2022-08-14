@@ -1,18 +1,22 @@
 .dashboard {
-  position: relative;
-  top: 80px;
+  @include rules('m-flex', 'm-height-100', 'm-width-100');
 
   .avatar {
-    overflow: hidden;
+    @include rules('m-overflow-hidden');
+
+    .sketch-photo {
+      @include rules('m-svg-fill-grey-1');
+
+      body.dark &,
+      .app[data-theme='dark'] & {
+        @include rules('m-svg-fill-grey-2');
+      }
+    }
   }
 
   .intro {
     &-name {
-      display: flex;
+      @include rules('m-flex');
     }
-  }
-
-  .social-media {
-    margin-top: auto;
   }
 }

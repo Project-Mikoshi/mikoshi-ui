@@ -17,7 +17,8 @@
       left: 0;
       background-color: rgba(#000, .55);
 
-      body.dark & {
+      body.dark &,
+      .app[data-theme='dark'] & {
         background-color: rgba(#000, .75);
       }
     }
@@ -27,7 +28,8 @@
       max-height: 60vh;
       border-radius: .6rem;
 
-      body.dark & {
+      body.dark &,
+      .app[data-theme='dark'] & {
         @include rules('m-frost-glass-night-2', 'm-color-blueberry-1');
       }
 
@@ -39,19 +41,19 @@
         font-size: .9rem;
         font-weight: 400;
 
-        body.dark & {
+        body.dark &,
+        .app[data-theme='dark'] & {
           @include rules('m-color-blueberry-1');
         }
       }
 
       .mikoshi-modal-body {
-        padding: 2rem;
-        overflow: auto;
+        padding: 1rem;
       }
 
       .mikoshi-modal-footer {
         @include rules('m-flex-align-center');
-        padding: 2rem;
+        padding: 1rem;
         border-bottom-left-radius: .6rem;
         border-bottom-right-radius: .6rem;
       }
