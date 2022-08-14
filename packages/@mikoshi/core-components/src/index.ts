@@ -12,5 +12,6 @@ export {
   ModalHeader
 } from 'components/Modal'
 export { Tooltip } from 'components/Tooltip'
+export { Scroll } from 'components/Scroll'
 
 export { COLORS, VARIANTS, SIZES } from 'constants/generic'

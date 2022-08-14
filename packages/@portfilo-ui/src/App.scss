@@ -10,6 +10,7 @@
 html,
 body,
 #root {
+  @include rules('m-height-100', 'm-width-100');
   margin: 0;
 }
 

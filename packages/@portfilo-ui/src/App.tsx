@@ -6,6 +6,7 @@ import {
   Route,
   Navigate
 } from 'react-router-dom'
+import { Scroll } from '@mikoshi/core-components'
 import { NavBar } from 'components/nav-bar/component'
 import ParticlesBackground from 'components/particle-effect/component'
 import { Projects } from 'pages/projects/page'
@@ -41,13 +42,13 @@ export const App = () => {
           theme={theme}
         />
         <ParticlesBackground />
-        <div className='outlet'>
+        <Scroll className='outlet'>
           <Routes>
             <Route path='/' element={<Navigate replace to={ROUTE.HOME.route} />} />
             <Route path={ROUTE.HOME.route} element={<Dashboard onRouteChange={onRouteChange} />} />
             <Route path={ROUTE.PROJECTS.route} element={<Projects />} />
           </Routes>
-        </div>
+        </Scroll>
       </Router>
     </div>
   )

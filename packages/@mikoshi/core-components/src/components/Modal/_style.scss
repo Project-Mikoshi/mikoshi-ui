@@ -45,13 +45,12 @@
       }
 
       .mikoshi-modal-body {
-        padding: 2rem;
-        overflow: auto;
+        padding: 1rem;
       }
 
       .mikoshi-modal-footer {
         @include rules('m-flex-align-center');
-        padding: 2rem;
+        padding: 1rem;
         border-bottom-left-radius: .6rem;
         border-bottom-right-radius: .6rem;
       }
