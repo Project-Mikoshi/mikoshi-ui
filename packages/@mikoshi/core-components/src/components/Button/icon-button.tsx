@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { IconButton as MuiIconButton, SxProps } from '@mui/material'
-import { Color } from 'constants/generic'
+import { Color } from 'types/button'
 
 interface IconButtonProps {
   onClick: () => void,

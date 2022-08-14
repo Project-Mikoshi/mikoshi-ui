@@ -1,9 +1,8 @@
 import React from 'react'
-import { Container, Button, Typography } from '@mikoshi/core-components'
-import { AppBar } from '@mikoshi/application-components'
+import { AppBar, Container, Button, Typography } from '@mikoshi/core-components'
 
 export default {
-  title: 'Application/App Bar',
+  title: 'Core/App Bar',
   component: AppBar
 }
 

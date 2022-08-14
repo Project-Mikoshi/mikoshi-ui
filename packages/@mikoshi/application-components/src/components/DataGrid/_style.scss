@@ -43,7 +43,8 @@
         @include rules('m-bg-grey-1');
       }
 
-      body.dark & {
+      body.dark &,
+      .app[data-theme='dark'] & {
         @include rules('m-bg-lgrey-1');
 
         &:hover {
@@ -57,7 +58,8 @@
   .ag-body-viewport {
     @include rules('m-frost-glass-lgrey-3', 'm-color-grey-1');
 
-    body.dark & {
+    body.dark &,
+    .app[data-theme='dark'] & {
       @include rules('m-frost-glass-night-2', 'm-color-blueberry-1');
     }
   }
@@ -66,7 +68,8 @@
   .ag-header-viewport {
     @include rules('m-frost-glass-lgrey-4', 'm-color-grey-1');
 
-    body.dark & {
+    body.dark &,
+    .app[data-theme='dark'] & {
       @include rules('m-frost-glass-night-2', 'm-color-blueberry-1');
     }
   }
@@ -79,7 +82,8 @@
       border-left-width: .5px;
       border-left-style: solid;
 
-      body.dark & {
+      body.dark &,
+      .app[data-theme='dark'] & {
         @include rules('m-color-white', 'm-border-blueberry-1');
       }
 
@@ -102,12 +106,14 @@
       border-left-width: .5px;
       border-left-style: solid;
 
-      body.dark & {
+      body.dark &,
+      .app[data-theme='dark'] & {
         @include rules('m-border-blueberry-1');
       }
     }
 
-    body.dark & {
+    body.dark &,
+    .app[data-theme='dark'] & {
       @include rules('m-border-blueberry-1');
     }
   }

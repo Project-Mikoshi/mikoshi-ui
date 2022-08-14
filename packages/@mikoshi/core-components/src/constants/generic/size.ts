@@ -1,6 +1,5 @@
-/* eslint-disable no-unused-vars */
-export enum Size {
-  SMALL = 'small',
-  MEDIUM = 'medium',
-  LARGE = 'large'
+export const SIZES: Record<string, string> = {
+  SMALL: 'small',
+  MEDIUM: 'medium',
+  LARGE: 'large'
 }

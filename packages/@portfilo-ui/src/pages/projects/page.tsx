@@ -1,25 +1,70 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Grid } from '@mui/material'
-import PorjectCard from 'components/project-card/component'
+import { Container, Typography } from '@mikoshi/core-components'
+import { ConfirmationDialog } from '@mikoshi/application-components'
 import { PROJECTS } from 'constants/projects'
+import PorjectCard from 'components/project-card/component'
+import SkillCard from 'components/skill-card/component'
+import ProgrammingList from 'components/language-list/component'
+import LanguageDetailCard from 'components/language-detail-card/component'
 
-export default function Projects () {
+export const Projects = () => {
+  // == Props ================================
+  const TITLE = 'Technical Skills'
+
+  // == Hooks ================================
+  const [language, setLanguage] = useState('')
+  const [launchModal, toggleModal] = useState(false)
+
+  // == Functions ============================
+
+  // == Actions ==============================
+  const handleLanguageSelection = (key: string) => {
+    setLanguage(key)
+    toggleModal(!launchModal)
+  }
+
+  // == Template =============================
   return (
-    <Grid
-      container
-      className='works'
-      spacing={4}
-      height='80vh'
-      display='flex'
-      flexWrap='wrap'
-      justifyContent='center'
-      alignItems='center'
-    >
-      {Object.keys(PROJECTS).map((project: string) => (
-        <Grid item key={project}>
-          <PorjectCard key={project} project={PROJECTS[project]} />
+    <Container className='projects' disableGutters flex>
+      <Grid
+        container
+        className='project-cards'
+        spacing={2}
+        padding={2}
+        display='flex'
+        flexWrap='wrap'
+        justifyContent='center'
+        alignItems='center'
+      >
+        {Object.keys(PROJECTS).map((project: string) => (
+          <Grid item key={project}>
+            <PorjectCard key={project} project={PROJECTS[project]} />
+          </Grid>
+        ))}
+      </Grid>
+      <Grid
+        container
+        className='skills'
+        spacing={2}
+        padding={2}
+        display='flex'
+        justifyContent='space-evenly'
+        alignItems='center'
+      >
+        <Grid item xs={10}>
+          <Typography variant='h4' color='primary' fontWeight={600}>{TITLE}</Typography>
+          <SkillCard skillKey='Performance' label='Performance Optimization' level={5} />
+          <SkillCard skillKey='Troubleshooting' label='Troubleshooting and Solutions Deployment' level={5} />
+          <SkillCard skillKey='Analysis' label='Analytical Thinking Skills' level={4.5} />
+          <SkillCard skillKey='Software' label='Software Design and Development' level={4} />
+          <ProgrammingList action={handleLanguageSelection} selected={language} />
         </Grid>
-      ))}
-    </Grid>
+        <ConfirmationDialog title={language} isOpen={launchModal} onCancel={() => handleLanguageSelection('')} onConfirm={() => {}}>
+          <LanguageDetailCard language={language} />
+        </ConfirmationDialog>
+      </Grid>
+    </Container>
   )
 }
+

@@ -1,0 +1,8 @@
+.mikoshi-typography {
+  @include rules('m-color-grey-1');
+
+  body.dark &,
+  .app[data-theme='dark'] & {
+    @include rules('m-color-white');
+  }
+}
