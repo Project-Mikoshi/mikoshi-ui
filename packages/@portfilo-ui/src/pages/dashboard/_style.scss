@@ -7,6 +7,7 @@
     .sketch-photo {
       @include rules('m-svg-fill-grey-1');
 
+      body.dark &,
       .app[data-theme='dark'] & {
         @include rules('m-svg-fill-grey-2');
       }

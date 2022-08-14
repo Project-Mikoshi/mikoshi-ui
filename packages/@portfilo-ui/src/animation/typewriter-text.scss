@@ -18,6 +18,7 @@
     @include rules('m-bg-lgrey-3');
     animation: typewriter $typewriterSpeed steps($typewriterCharacters) 1s forwards;
 
+    body.dark &,
     .app[data-theme='dark'] & {
       @include rules('m-bg-night-1');
     }
