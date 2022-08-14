@@ -27,6 +27,7 @@ export default defineConfig(() => ({
       },
       plugins: [
         typescript({
+          exclude: ['test/**/*.ts', 'test/**/*.tsx'],
           transformers: {
             afterDeclarations: [
               // @ts-expect-error

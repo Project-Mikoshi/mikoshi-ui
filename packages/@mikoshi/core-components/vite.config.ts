@@ -7,7 +7,7 @@ import typescript from '@rollup/plugin-typescript'
 import tsTransformPaths from '@zerollup/ts-transform-paths'
 
 // @ts-expect-error
-const __dirname = typeof __dirname !== 'undefined'? __dirname : path.dirname(fileURLToPath(import.meta.url))
+const __dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig(() => ({
   build: {
@@ -27,6 +27,7 @@ export default defineConfig(() => ({
       },
       plugins: [
         typescript({
+          exclude: ['test/**/*.ts', 'test/**/*.tsx'],
           transformers: {
             afterDeclarations: [
               // @ts-expect-error

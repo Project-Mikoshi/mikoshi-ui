@@ -3,7 +3,7 @@
   &.MuiPaper-root {
     @include rules('m-flex', 'm-frost-glass-light', 'm-color-black');
 
-    body.dark & {
+    .app[data-theme='dark'] & {
       @include rules('m-frost-glass-dark', 'm-color-white');
     }
   }

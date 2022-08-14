@@ -1,5 +1,6 @@
 import './style.scss'
 
+export { AppBar } from 'components/AppBar'
 export { Container } from 'components/Container'
 export { Button, IconButton } from 'components/Button'
 export { Paper } from 'components/Paper'
@@ -12,4 +13,4 @@ export {
 } from 'components/Modal'
 export { Tooltip } from 'components/Tooltip'
 
-export { Color, Variant, Size } from 'constants/generic'
+export { COLORS, VARIANTS, SIZES } from 'constants/generic'

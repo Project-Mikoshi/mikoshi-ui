@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.scss'
 import {
   BrowserRouter as Router,
@@ -6,33 +6,48 @@ import {
   Route,
   Navigate
 } from 'react-router-dom'
-import NavBar from 'components/nav-bar/component'
+import { NavBar } from 'components/nav-bar/component'
 import ParticlesBackground from 'components/particle-effect/component'
-import Projects from 'pages/projects/page'
-import Dashboard  from 'pages/dashboard/page'
-import Skills from 'pages/skills/page'
-import Contact from 'pages/contact/page'
+import { Projects } from 'pages/projects/page'
+import { Dashboard } from 'pages/dashboard/page'
 import { ROUTE } from 'constants/route'
 import { getCurrentRoute } from 'utils'
+import { Theme } from 'types/theme'
 
-export default function App () {
-  const { HOME, SKILLS, WORKS, CONTACT } = ROUTE
-  const [currentRoute, setCurrentRoute] = React.useState(getCurrentRoute() ?? ROUTE.HOME.route)
 
-  const onRouteChange = (newRoute: string) => setCurrentRoute(newRoute)
+export const App = () => {
+  // == Props ================================
+  const { HOME, PROJECTS } = ROUTE
 
+  // == Hooks ================================
+  const [route, setRoute] = useState(getCurrentRoute() ?? ROUTE.HOME.route)
+  const [theme, setTheme] = useState('light' as Theme)
+
+  // == Functions ============================
+
+  // == Actions ==============================
+  const onRouteChange = (newRoute: string) => setRoute(newRoute)
+  const onThemeChange = (newTheme: Theme) => setTheme(newTheme)
+
+  // == Template =============================
   return (
-    <div className='app'>
+    <div className='app' data-theme={theme}>
       <Router>
-        <NavBar routes={[HOME, SKILLS, WORKS, CONTACT]} currentRoute={currentRoute} onRouteChange={onRouteChange}/>
+        <NavBar
+          routes={[HOME, PROJECTS]}
+          currentRoute={route}
+          onRouteChange={onRouteChange}
+          onThemeChange={onThemeChange}
+          theme={theme}
+        />
         <ParticlesBackground />
-        <Routes>
-          <Route path='/' element={<Navigate replace to={ROUTE.HOME.route} />} />
-          <Route path={ROUTE.HOME.route} element={<Dashboard onRouteChange={onRouteChange} />} />
-          <Route path={ROUTE.SKILLS.route} element={<Skills />} />
-          <Route path={ROUTE.WORKS.route} element={<Projects />} />
-          <Route path={ROUTE.CONTACT.route} element={<Contact />} />
-        </Routes>
+        <div className='outlet'>
+          <Routes>
+            <Route path='/' element={<Navigate replace to={ROUTE.HOME.route} />} />
+            <Route path={ROUTE.HOME.route} element={<Dashboard onRouteChange={onRouteChange} />} />
+            <Route path={ROUTE.PROJECTS.route} element={<Projects />} />
+          </Routes>
+        </div>
       </Router>
     </div>
   )

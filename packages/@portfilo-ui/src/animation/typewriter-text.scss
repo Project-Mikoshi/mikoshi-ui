@@ -1,8 +1,8 @@
 .typewriter {
   width: max-content;
   position: relative;
-  $typewriterSpeed: 6s;
-  $typewriterCharacters: 38;
+  $typewriterSpeed: 5s;
+  $typewriterCharacters: 30;
 
   &::before,
   &::after {
@@ -17,10 +17,14 @@
   &::before {
     @include rules('m-bg-lgrey-3');
     animation: typewriter $typewriterSpeed steps($typewriterCharacters) 1s forwards;
+
+    .app[data-theme='dark'] & {
+      @include rules('m-bg-night-1');
+    }
   }
 
   &::after {
-    @include rules('m-bg-black');
+    @include rules('m-bg-grey-1');
     width: .125em;
     animation: typewriter $typewriterSpeed steps($typewriterCharacters) 1s forwards, blink 750ms steps($typewriterCharacters) infinite;
   }

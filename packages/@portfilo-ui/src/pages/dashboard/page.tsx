@@ -1,21 +1,31 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { Link } from 'react-router-dom'
 import { Grid, Box } from '@mui/material'
 import { Typography, Button } from '@mikoshi/core-components'
-import SocialMediaButton from 'components/social-media-button/component'
-import { ROUTE } from 'constants/route'
 // @ts-expect-error
 import { ReactComponent as PhotoSketchSVG } from 'svgs/sketch-photo.svg'
+import SocialMediaButton from 'components/social-media-button/component'
+import { ROUTE } from 'constants/route'
 
 interface DashboardProps {
-    onRouteChange: (_newRoute: string) => void
+    onRouteChange: (newRoute: string) => void
 }
 
-export default function Dashboard (props: DashboardProps) {
+export const Dashboard: FC<DashboardProps> = (props: DashboardProps) => {
+  // == Props ================================
   const { onRouteChange } = props
+  const { PROJECTS } = ROUTE
 
+  // == Hooks ================================
+
+  // == Functions ============================
+
+  // == Actions ==============================
+  const transitionToProject = () => onRouteChange(PROJECTS.route)
+
+  // == Template =============================
   return (
-    <Grid container className='dashboard' direction='row' justifyContent='space-evenly' alignItems='center' sx={{ height: '80vh', zoom: { xs: '50%', lg: '100%' } }}>
+    <Grid container className='dashboard' direction='row' justifyContent='center' alignItems='center' padding={2}>
       <Grid item className='intro'>
         <Typography className='m-color-grey-1' variant='h3'>Hi,</Typography>
 
@@ -28,18 +38,20 @@ export default function Dashboard (props: DashboardProps) {
 
         <br />
 
-        <Button size={'small' as any} variant={'contained' as any} onClick={() => {onRouteChange(ROUTE.CONTACT.route)}} component={Link} to={ROUTE.CONTACT.route}>
-          {ROUTE.CONTACT.label}
+        <Button size='small' variant='contained' onClick={transitionToProject} component={Link} to={PROJECTS.route}>
+          Check out my projects
         </Button>
       </Grid>
 
-      <Grid item className='avatar' sx={{}}>
+      <Grid item className='avatar'>
         <PhotoSketchSVG />
       </Grid>
 
       <Grid item className='social-media' xs={10}>
         <SocialMediaButton type='LinkedIn' />
-        <SocialMediaButton type='github' />
+        <SocialMediaButton type='Github' />
+        <SocialMediaButton type='Facebook' />
+        <SocialMediaButton type='Instagram' />
       </Grid>
     </Grid>
   )

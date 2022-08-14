@@ -19,7 +19,7 @@
       @include rules('m-bg-grey-1');
     }
 
-    body.dark & {
+    .app[data-theme='dark'] & {
       @include rules('m-bg-lgrey-1');
 
       &:hover {

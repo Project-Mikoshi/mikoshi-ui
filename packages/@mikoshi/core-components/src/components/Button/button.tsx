@@ -1,18 +1,15 @@
 import React, { FC } from 'react'
 import { Button as MuiButton, SxProps } from '@mui/material'
-import { Color, Size, Variant } from 'constants/generic'
+import { Color, Size, Variant } from 'types/button'
 
-type ButtonColor = Color.ERROR | Color.INFO | Color.INHERIT | Color.PRIMARY | Color.SECONDARY | Color.SUCCESS | Color.WARNING
-type ButtonVariant = Variant.CONTAINED | Variant.OUTLINED | Variant.TEXT
-type ButtonSize = Size.LARGE | Size.MEDIUM | Size.SMALL
 interface ButtonProps {
   onClick?: () => void,
   sx?: SxProps,
-  color?:ButtonColor,
+  color?: Color,
   disableElevation?: boolean,
   disabled?: boolean,
-  size?: ButtonSize,
-  variant?: ButtonVariant,
+  size?: Size,
+  variant?: Variant,
   component?: React.ForwardRefExoticComponent<any>
   to?: string,
   className?: string,
@@ -39,6 +36,7 @@ export const Button: FC<ButtonProps> = React.forwardRef((props, ref: ButtonRef) 
   return (
     <MuiButton
       className={`mikoshi-button m-bg-${color} ${className}`}
+      color='primary'
       {...otherProps}
     >
       {children}

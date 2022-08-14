@@ -5,6 +5,8 @@ interface TypographyProps {
   sx?: SxProps,
   align?: string,
   noWrap?: boolean,
+  color?: 'primary' | 'secondary',
+  fontWeight?: number,
   paragraph?: boolean,
   textOverflow?: string,
   whiteSpace?: string,
@@ -28,6 +30,8 @@ export const Typography: FC<TypographyProps> = React.forwardRef((props, ref: Typ
     textOverflow,
     whiteSpace,
     overflow,
+    color,
+    fontWeight,
     className = '',
     ...otherProps
   } = props
@@ -49,6 +53,8 @@ export const Typography: FC<TypographyProps> = React.forwardRef((props, ref: Typ
       whiteSpace={whiteSpace as any}
       textOverflow={textOverflow}
       overflow={overflow}
+      color={color}
+      fontWeight={fontWeight}
       {...otherProps}
     >
       {children}

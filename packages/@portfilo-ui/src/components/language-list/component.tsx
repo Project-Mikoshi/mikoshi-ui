@@ -1,5 +1,5 @@
 import React from 'react'
-import { Paper, Tooltip, IconButton, Color } from '@mikoshi/core-components'
+import { Paper, Tooltip, IconButton } from '@mikoshi/core-components'
 import { PROGRAMING_LANGUAGE_ICONS } from 'constants/skills-languages'
 
 interface ProgrammingLanguageCardProps {
@@ -28,7 +28,7 @@ export default function ProgrammingLanguageCard (props: ProgrammingLanguageCardP
           <Tooltip title={name} key={index}>
             <IconButton
               key={index}
-              color={selected === name ? Color.PRIMARY : Color.INHERIT}
+              color={selected === name ? 'primary' : 'inherit'}
               onClick={() => action(name)} sx={{ '&:hover': { color: '#009eef' } }}
             >
               <Icon key={index} />

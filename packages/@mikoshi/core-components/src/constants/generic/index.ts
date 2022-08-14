@@ -1,3 +1,3 @@
-export { Color } from 'constants/generic/color'
-export { Size } from 'constants/generic/size'
-export { Variant } from 'constants/generic/variant'
+export { COLORS } from 'constants/generic/color'
+export { SIZES } from 'constants/generic/size'
+export { VARIANTS } from 'constants/generic/variant'
