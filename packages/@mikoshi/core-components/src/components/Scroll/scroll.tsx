@@ -1,4 +1,5 @@
-import React, { FC } from 'react'
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 import PerfectScrollbar from 'react-perfect-scrollbar'
 
 interface ScrollProps {
@@ -6,23 +7,52 @@ interface ScrollProps {
   children?: React.ReactNode
 }
 
-export const Scroll: FC<ScrollProps> = (props) => {
-  // == Props ================================
-  const {
-    children,
-    className = ''
-  } = props
+export class Scroll extends Component<ScrollProps> {
+  // == Constructor ==========================
+  constructor(props: ScrollProps) {
+    super(props)
+  }
 
-  // == Hooks ================================
+  // == Props ================================
+  container: Element | Text | null | undefined = null
+  resizeObserver: ResizeObserver | null | undefined= null
+  ref: PerfectScrollbar | null = null
+
+  // == Lifecycle Hooks ======================
+  componentDidMount () {
+    // eslint-disable-next-line react/no-find-dom-node
+    this.container = ReactDOM.findDOMNode(this)
+
+    if (window.ResizeObserver && this.container) {
+      this.resizeObserver = new ResizeObserver(this.updatePerfectScroll.bind(this))
+      this.resizeObserver.observe(this.container.parentElement as Element)
+      this.resizeObserver.observe(this.container.firstChild as Element)
+    }
+  }
+
+  componentWillUnmount () {
+    if (this.resizeObserver) {
+      this.resizeObserver.disconnect()
+    }
+  }
 
   // == Functions ============================
+  updatePerfectScroll () {
+    this.ref?.updateScroll()
+  }
+
+  setScrollBarRef (ref: PerfectScrollbar | null) {
+    this.ref = ref
+  }
 
   // == Actions ==============================
 
   // == Template =============================
-  return (
-    <PerfectScrollbar className={`mikoshi-scroll ${className}`}>
-      {children}
-    </PerfectScrollbar>
-  )
+  render() {
+    return (
+      <PerfectScrollbar className={`mikoshi-scroll ${this.props.className ?? ''}`} ref={(ref) => this.setScrollBarRef(ref)}>
+        {this.props.children}
+      </PerfectScrollbar>
+    )
+  }
 }
