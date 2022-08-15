@@ -3,9 +3,9 @@ import {
   Box,
   Toolbar,
   FormControlLabel,
-  FormGroup,
-  Switch
+  FormGroup
 } from '@mui/material'
+import { DarkModeSwitch } from '@mikoshi/application-components'
 import { AppBar, Container, Typography } from '@mikoshi/core-components'
 import NavTabs from 'components/nav-tabs/component'
 import { RouteData } from 'types/route'
@@ -46,7 +46,7 @@ export const NavBar: FC<NavBarProps> = (props) => {
             <NavTabs routes={routes} currentRoute={currentRoute} onRouteChange={onRouteChange} />
           </Box>
           <FormGroup>
-            <FormControlLabel control={<Switch checked={theme === 'dark'} onChange={handleDarkModeToggle}/>} label="Dark Mode"/>
+            <FormControlLabel control={<DarkModeSwitch checked={theme === 'dark'} onChange={handleDarkModeToggle}/>} label=""/>
           </FormGroup>
         </Toolbar>
       </Container>

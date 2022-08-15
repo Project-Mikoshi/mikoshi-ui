@@ -4,15 +4,15 @@ import React, { FC } from 'react'
 import { CANCEL_BUTTON_LABEL, CONFIRM_BUTTON_LABEL } from 'constants/confirmation-dialog'
 
 interface ConfirmationDialogProps {
-    title: React.ReactNode,
-    isOpen: boolean,
-    onConfirm: () => void
-    onCancel: () => void,
-    onAfterClose?: () => void,
-    className?: string,
-    closeTimeOut?: number,
-    children?: React.ReactNode,
-    bindingElement?: any
+  title: React.ReactNode,
+  isOpen: boolean,
+  onConfirm: () => void
+  onCancel: () => void,
+  onAfterClose?: () => void,
+  className?: string,
+  closeTimeOut?: number,
+  children?: React.ReactNode,
+  bindingElement?: any
 }
 
 export const ConfirmationDialog: FC<ConfirmationDialogProps> = (props) => {

@@ -13,5 +13,6 @@ export {
 } from 'components/Modal'
 export { Tooltip } from 'components/Tooltip'
 export { Scroll } from 'components/Scroll'
+export { Switch } from 'components/Switch'
 
 export { COLORS, VARIANTS, SIZES } from 'constants/generic'
