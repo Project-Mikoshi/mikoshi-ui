@@ -4,7 +4,7 @@ import { describe, it, expect } from 'vitest'
 import { ConfirmationDialog } from '@mikoshi/application-components'
 import '@testing-library/jest-dom'
 
-describe('components/application/app-bar', () => {
+describe('components/application/confirmation-dialog', () => {
   it('should render', () => {
     const props = {
       isOpen: true,

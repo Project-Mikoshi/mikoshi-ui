@@ -25,7 +25,17 @@ export const Dashboard: FC<DashboardProps> = (props: DashboardProps) => {
 
   // == Template =============================
   return (
-    <Grid container className='dashboard' direction='row' justifyContent='center' alignItems='center' padding={2}>
+    <Grid
+      container
+      className='dashboard'
+      padding={2}
+      sx={{
+        zoom: { xs: '40%', sm: '60%', md: '80%', lg: '100%' },
+        direction: 'row',
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}
+    >
       <Grid item className='intro'>
         <Typography className='m-color-grey-1' variant='h3'>Hi,</Typography>
 

@@ -2,7 +2,7 @@
   "name": "@portfilo/ui",
   "version": "0.2.0",
   "scripts": {
-    "start": "vite serve",
+    "start": "vite serve --force --host",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "npm-run-all --parallel lint:eslint lint:stylelint",

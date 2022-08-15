@@ -2,16 +2,16 @@ import React, { FC } from 'react'
 import {
   Box,
   Toolbar,
-  FormControlLabel,
-  FormGroup,
-  Switch
+  SxProps
 } from '@mui/material'
+import { DarkModeSwitch } from '@mikoshi/application-components'
 import { AppBar, Container, Typography } from '@mikoshi/core-components'
 import NavTabs from 'components/nav-tabs/component'
 import { RouteData } from 'types/route'
 import { Theme } from 'types/theme'
 
 interface NavBarProps {
+  sx?: SxProps,
   routes: Array<RouteData>,
   theme?: Theme,
   onRouteChange: (route: string) => void,
@@ -21,7 +21,7 @@ interface NavBarProps {
 
 export const NavBar: FC<NavBarProps> = (props) => {
   // == Props ================================
-  const { routes, currentRoute, onRouteChange, onThemeChange, theme } = props
+  const { routes, currentRoute, onRouteChange, onThemeChange, theme, sx } = props
   const AUTHOR_NAME = 'Anthony Y. Zhu'
 
   // == Hooks ================================
@@ -36,7 +36,11 @@ export const NavBar: FC<NavBarProps> = (props) => {
 
   // == Template =============================
   return (
-    <AppBar color='primary' position='sticky' >
+    <AppBar
+      color='primary'
+      position='sticky'
+      sx={sx}
+    >
       <Container maxWidth='xl'>
         <Toolbar disableGutters>
           <Typography variant='h6' sx={{ mr: 2, display: { xs: 'none', sm: 'block', md: 'block' } }}>
@@ -45,9 +49,7 @@ export const NavBar: FC<NavBarProps> = (props) => {
           <Box sx={ { flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
             <NavTabs routes={routes} currentRoute={currentRoute} onRouteChange={onRouteChange} />
           </Box>
-          <FormGroup>
-            <FormControlLabel control={<Switch checked={theme === 'dark'} onChange={handleDarkModeToggle}/>} label="Dark Mode"/>
-          </FormGroup>
+          <DarkModeSwitch checked={theme === 'dark'} onChange={handleDarkModeToggle} />
         </Toolbar>
       </Container>
     </AppBar>
