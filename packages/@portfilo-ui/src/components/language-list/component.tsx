@@ -1,5 +1,5 @@
 import React from 'react'
-import { Paper, Tooltip, IconButton } from '@mikoshi/core-components'
+import { Paper, Tooltip, IconButton, Scroll, Container } from '@mikoshi/core-components'
 import { PROGRAMING_LANGUAGE_ICONS } from 'constants/skills-languages'
 
 interface ProgrammingLanguageCardProps {
@@ -8,24 +8,17 @@ interface ProgrammingLanguageCardProps {
 }
 
 export default function ProgrammingLanguageCard (props: ProgrammingLanguageCardProps) {
+  // == Props ================================
   const { action, selected } = props
+  // == Hooks ================================
 
-  return (
-    <Paper sx={
-      {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        padding: '10px',
-        marginBottom: '10px',
-        overflow: 'auto',
-        width: '100%'
-      }
-    }>
-      {PROGRAMING_LANGUAGE_ICONS.map((language, index: number) => {
-        const { icon: Icon, name } = language
-        return (
-          <Tooltip title={name} key={index}>
+  // == Functions ============================
+  function getProgrammingLanguageIcons () {
+    return PROGRAMING_LANGUAGE_ICONS.map((language, index: number) => {
+      const { icon: Icon, name } = language
+      return (
+        <Tooltip title={name} key={index}>
+          <div>
             <IconButton
               key={index}
               color={selected === name ? 'primary' : 'inherit'}
@@ -33,9 +26,29 @@ export default function ProgrammingLanguageCard (props: ProgrammingLanguageCardP
             >
               <Icon key={index} />
             </IconButton>
-          </Tooltip>
-        )
-      })}
+          </div>
+        </Tooltip>
+      )
+    })
+  }
+
+  // == Actions ==============================
+
+  // == Template =============================
+  return (
+    <Paper sx={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      padding: '10px',
+      overflow: 'auto',
+      width: '100%'
+    }}>
+      <Scroll>
+        <Container flex disableGutters className='m-flex-justify-around'>
+          {getProgrammingLanguageIcons()}
+        </Container>
+      </Scroll>
     </Paper>
   )
 }

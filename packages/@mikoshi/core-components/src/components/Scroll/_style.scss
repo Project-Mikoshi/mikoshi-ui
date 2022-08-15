@@ -1,6 +1,8 @@
 @import 'react-perfect-scrollbar/dist/css/styles.css';
 
 .mikoshi-scroll {
+  @include rules('m-height-100', 'm-width-100');
+
   .ps__rail-x,
   .ps__rail-y {
     @include rules('m-bg-transparent');

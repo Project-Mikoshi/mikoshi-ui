@@ -1,3 +1,6 @@
 .mikoshi-button {
-  @include rules('m-opacity-80');
+  &.MuiButtonBase-root {
+    @include rules('m-opacity-80');
+    text-transform: none;
+  }
 }

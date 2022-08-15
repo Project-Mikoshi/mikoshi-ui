@@ -1,9 +1,8 @@
 .dashboard {
   @include rules('m-flex', 'm-height-100', 'm-width-100');
+  min-width: fit-content;
 
   .avatar {
-    @include rules('m-overflow-hidden');
-
     .sketch-photo {
       @include rules('m-svg-fill-grey-1');
 
