@@ -1,6 +1,7 @@
 // sass-lint:disable class-name-format, no-color-literals
 .ReactModalPortal {
   .mikoshi-modal {
+    @include rules('m-shadow-5');
     position: absolute;
     top: 50%;
     left: 50%;

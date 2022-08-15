@@ -32,7 +32,7 @@ const Template = (props: any) => {
     <Paper className='m-flex-justify-center m-flex-align-center' sx={{ padding: 12 }}>
       <Container className='m-flex-column m-flex-justify-center m-flex-align-center' flex>
         <Tooltip title="Tooltip Text" {...props}>
-          <Button>Press Me</Button>
+          <Button variant='contained'>Press Me</Button>
         </Tooltip>
       </Container>
     </Paper>

@@ -13,8 +13,7 @@ export default defineConfig(() => ({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      formats: ['umd', 'es'],
-      name: 'index',
+      formats: ['es'],
       fileName: 'index'
     },
     rollupOptions: {
