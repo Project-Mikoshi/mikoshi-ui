@@ -33,6 +33,7 @@ export const DarkModeSwitch: FC<DarkModeSwitchProps> = (props) => {
       size='medium'
       checked={checked}
       onChange={onChange}
+      data-testid='mikoshi-dark-mode-switch'
     />
   )
 }

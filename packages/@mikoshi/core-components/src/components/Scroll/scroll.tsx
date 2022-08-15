@@ -50,7 +50,7 @@ export class Scroll extends Component<ScrollProps> {
   // == Template =============================
   render() {
     return (
-      <PerfectScrollbar className={`mikoshi-scroll ${this.props.className ?? ''}`} ref={(ref) => this.setScrollBarRef(ref)}>
+      <PerfectScrollbar className={`mikoshi-scroll ${this.props.className ?? ''}`} ref={(ref) => this.setScrollBarRef(ref)} data-testid='mikoshi-scroll'>
         {this.props.children}
       </PerfectScrollbar>
     )

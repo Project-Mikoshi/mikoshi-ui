@@ -1,9 +1,7 @@
 import React, { FC } from 'react'
 import {
   Box,
-  Toolbar,
-  FormControlLabel,
-  FormGroup
+  Toolbar
 } from '@mui/material'
 import { DarkModeSwitch } from '@mikoshi/application-components'
 import { AppBar, Container, Typography } from '@mikoshi/core-components'
@@ -45,9 +43,7 @@ export const NavBar: FC<NavBarProps> = (props) => {
           <Box sx={ { flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
             <NavTabs routes={routes} currentRoute={currentRoute} onRouteChange={onRouteChange} />
           </Box>
-          <FormGroup>
-            <FormControlLabel control={<DarkModeSwitch checked={theme === 'dark'} onChange={handleDarkModeToggle}/>} label=""/>
-          </FormGroup>
+          <DarkModeSwitch checked={theme === 'dark'} onChange={handleDarkModeToggle} />
         </Toolbar>
       </Container>
     </AppBar>

@@ -44,6 +44,7 @@ export const Modal: FC<ModalProps> = (props) => {
       onRequestClose={onClose}
       onAfterClose={onAfterClose}
       closeTimeoutMS={closeTimeOut}
+      ariaHideApp={false}
     >
       <Container className="mikoshi-modal-content m-flex" maxWidth='sm' disableGutters={true}>
         {children}
