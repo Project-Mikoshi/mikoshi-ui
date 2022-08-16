@@ -4,15 +4,17 @@ import { DataGrid } from '@mikoshi/application-components'
 export default {
   title: 'Application/Data Grid',
   component: DataGrid,
+  args: {
+    rowSelectionType: 'single',
+    suppressRowClickSelection: false
+  },
   argTypes: {
     rowSelectionType: {
       options: ['single', 'multiple'],
-      control: 'inline-radio',
-      defaultValue: 'single'
+      control: 'inline-radio'
     },
     suppressRowClickSelection: {
-      control: 'boolean',
-      defaultValue: false
+      control: 'boolean'
     }
   }
 }

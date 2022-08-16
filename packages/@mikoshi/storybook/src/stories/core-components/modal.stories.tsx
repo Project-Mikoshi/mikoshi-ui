@@ -23,7 +23,7 @@ const Template = () => {
 
   return (
     <Container>
-      <Button onClick={openModal}>Click me</Button>
+      <Button variant='contained' onClick={openModal}>Launch Modal</Button>
       <Modal isOpen={isOpen} onClose={closeModal}>
         <ModalHeader>
           <Typography variant='body1'>Modal Title</Typography>

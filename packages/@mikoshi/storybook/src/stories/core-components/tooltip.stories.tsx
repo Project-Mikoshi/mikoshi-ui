@@ -4,15 +4,17 @@ import { Container, Paper, Button, Tooltip } from '@mikoshi/core-components'
 export default {
   title: 'Core/Tooltip',
   component: Tooltip,
+  args: {
+    placement: 'bottom',
+    arrow: false
+  },
   argTypes: {
     placement: {
       options: ['bottom-end', 'bottom-start', 'bottom', 'left-end', 'left-start', 'left', 'right-end', 'right-start', 'right', 'top-end', 'top-start', 'top'],
-      control: 'inline-radio',
-      defaultValue: 'bottom'
+      control: 'inline-radio'
     },
     arrow: {
-      control: 'boolean',
-      defaultValue: false
+      control: 'boolean'
     }
   }
 }
@@ -32,7 +34,7 @@ const Template = (props: any) => {
     <Paper className='m-flex-justify-center m-flex-align-center' sx={{ padding: 12 }}>
       <Container className='m-flex-column m-flex-justify-center m-flex-align-center' flex>
         <Tooltip title="Tooltip Text" {...props}>
-          <Button>Press Me</Button>
+          <Button variant='contained'>Press Me</Button>
         </Tooltip>
       </Container>
     </Paper>

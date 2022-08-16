@@ -3,6 +3,7 @@ export const DEFAULT_GRID_OPTIONS: Record<string, any> = {
   animateRows: true,
   pagination: true,
   enableCellChangeFlash: true,
+  suppressHorizontalScroll: true,
   defaultColDef: {
     filter: true,
     sortable: true,

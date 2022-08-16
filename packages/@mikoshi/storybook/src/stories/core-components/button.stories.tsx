@@ -4,24 +4,26 @@ import { Container, Button } from '@mikoshi/core-components'
 export default {
   title: 'Core/Button',
   component: Button,
+  args: {
+    variant: 'contained',
+    size: 'medium',
+    disableElevation: false,
+    disabled: false
+  },
   argTypes: {
     variant: {
       options: ['text', 'contained', 'outlined'],
-      control: 'inline-radio',
-      defaultValue: 'contained'
+      control: 'inline-radio'
     },
     size: {
       options: ['small', 'medium', 'large'],
-      control: 'inline-radio',
-      defaultValue: 'medium'
+      control: 'inline-radio'
     },
     disableElevation: {
-      control: 'boolean',
-      defaultValue: false
+      control: 'boolean'
     },
     disabled: {
-      control: 'boolean',
-      defaultValue: false
+      control: 'boolean'
     },
     onClick: { action: 'clicked' }
   }

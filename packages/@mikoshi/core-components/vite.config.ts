@@ -13,16 +13,21 @@ export default defineConfig(() => ({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      formats: ['umd', 'es'],
-      name: 'index',
+      formats: ['es'],
       fileName: 'index'
     },
+    sourcemap: true,
     rollupOptions: {
       external: ['react', 'react-dom'],
       output: {
         globals: {
           react: 'react',
           'react-dom': 'react-dom'
+        },
+        manualChunks: (id) => {
+          if (id.includes('node_modules')) {
+            return 'vendor'
+          }
         }
       },
       plugins: [

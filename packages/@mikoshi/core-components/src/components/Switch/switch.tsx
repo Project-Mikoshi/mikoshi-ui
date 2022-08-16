@@ -29,6 +29,14 @@ export const Switch: FC<SwitchProps> = React.forwardRef((props, ref) => {
 
   // == Template =============================
   return (
-    <MuiSwitch className={`mikoshi-switch ${className}`} size={size} disabled={disabled} checkedIcon={checkedIcon} icon={unCheckedicon} {...otherProps} />
+    <MuiSwitch
+      className={`mikoshi-switch ${className}`}
+      size={size}
+      disabled={disabled}
+      checkedIcon={checkedIcon}
+      icon={unCheckedicon}
+      data-testid='mikoshi-switch'
+      {...otherProps}
+    />
   )
 })

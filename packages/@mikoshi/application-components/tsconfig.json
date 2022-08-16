@@ -10,7 +10,7 @@
     "outDir": "./dist/",
     "baseUrl": ".",
     "paths": {
-      "@mikoshi/application-components": ["src"],
+      "@mikoshi/application-components": ["dist/index.js"],
       "components/*": ["src/components/*"],
       "utils/*": ["src/utils/*"],
       "constants/*": ["src/constants/*"],

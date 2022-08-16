@@ -3,11 +3,11 @@
   "version": "0.2.0",
   "type": "module",
   "source": "src/index.ts",
-  "main": "dist/index.umd.cjs",
+  "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
-    ".": "./dist/index.umd.cjs",
+    ".": "./dist/index.js",
     "./style": "./dist/style.css"
   },
   "private": true,
@@ -23,6 +23,8 @@
     "lint:fix": "eslint . --fix --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx"
   },
   "dependencies": {
+    "@emotion/styled": "^11.10.0",
+    "@mui/icons-material": "^5.8.4",
     "ag-grid-community": "^28.0.2",
     "ag-grid-react": "^28.0.0"
   },

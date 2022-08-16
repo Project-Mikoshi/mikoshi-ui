@@ -3,11 +3,10 @@ module.exports = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
-    'storybook-addon-themes',
-    'storybook-addon-turbo-build'
+    'storybook-addon-themes'
   ],
   core: {
-    builder: 'webpack5'
+    builder: '@storybook/builder-vite'
   },
-  framework: '@storybook/react',
+  framework: '@storybook/react'
 }

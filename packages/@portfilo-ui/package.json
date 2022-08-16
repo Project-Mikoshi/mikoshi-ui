@@ -2,9 +2,10 @@
   "name": "@portfilo/ui",
   "version": "0.2.0",
   "scripts": {
-    "start": "vite serve --force --host",
+    "start": "vite serve --force",
     "build": "vite build",
     "preview": "vite preview",
+    "clean": "rm -rf dist",
     "lint": "npm-run-all --parallel lint:eslint lint:stylelint",
     "lint:eslint": "eslint . --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx",
     "lint:stylelint": "stylelint '**/*.scss'",
