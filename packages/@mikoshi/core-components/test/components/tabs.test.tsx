@@ -4,7 +4,7 @@ import { describe, it, expect } from 'vitest'
 import { Tabs, Tab } from '@mikoshi/core-components'
 import '@testing-library/jest-dom'
 
-describe('components/application/app-bar', () => {
+describe('components/application/tabs', () => {
   it('should render', () => {
     const TABS = [
       { value: 1, label: 'Tab 1' },
