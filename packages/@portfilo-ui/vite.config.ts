@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig, splitVendorChunkPlugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import tsconfigPaths from 'vite-tsconfig-paths'
 import svgr from 'vite-plugin-svgr'
@@ -7,7 +7,8 @@ export default defineConfig({
   plugins: [
     react(),
     tsconfigPaths(),
-    svgr()
+    svgr(),
+    splitVendorChunkPlugin()
   ],
   optimizeDeps: {
     include: [
@@ -16,16 +17,7 @@ export default defineConfig({
     ]
   },
   build: {
-    sourcemap: true,
-    rollupOptions: {
-      output: {
-        manualChunks: (id) => {
-          if (id.includes('node_modules')) {
-            return 'vendor'
-          }
-        }
-      }
-    }
+    sourcemap: true
   },
   server: {
     port: 3000,
