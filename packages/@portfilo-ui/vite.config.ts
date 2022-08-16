@@ -16,6 +16,7 @@ export default defineConfig({
     ]
   },
   build: {
+    sourcemap: true,
     rollupOptions: {
       output: {
         manualChunks: (id) => {
@@ -28,10 +29,12 @@ export default defineConfig({
   },
   server: {
     port: 3000,
-    open: true
+    open: true,
+    host: true
   },
   preview: {
     port: 4200,
-    open: true
+    open: true,
+    host: true
   }
 })

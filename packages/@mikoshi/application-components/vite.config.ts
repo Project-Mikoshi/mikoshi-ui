@@ -16,12 +16,18 @@ export default defineConfig(() => ({
       formats: ['es'],
       fileName: 'index'
     },
+    sourcemap: true,
     rollupOptions: {
       external: ['react', 'react-dom'],
       output: {
         globals: {
           react: 'react',
           'react-dom': 'react-dom'
+        },
+        manualChunks: (id) => {
+          if (id.includes('node_modules')) {
+            return 'vendor'
+          }
         }
       },
       plugins: [
