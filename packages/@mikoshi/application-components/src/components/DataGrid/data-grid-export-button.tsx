@@ -2,7 +2,7 @@
 import React, { FC, useState } from 'react'
 import { Button, Typography } from '@mikoshi/core-components'
 import { AgGridReact } from 'ag-grid-react'
-import { ConfirmationDialog } from 'components/ConfirmationDialog'
+import { ConfirmationDialog } from 'components/Dialog'
 
 
 export interface ExportButtonProps {

@@ -1,11 +1,6 @@
 import React from 'react'
-import {
-  Link
-} from 'react-router-dom'
-import {
-  Tabs,
-  Tab
-} from '@mui/material'
+import { Link } from 'react-router-dom'
+import { Tabs, Tab } from '@mikoshi/core-components'
 import { RouteData } from 'types/route'
 
 interface NavTabsProps {
@@ -18,7 +13,7 @@ export default function NavTabs (props: NavTabsProps) {
   const { routes, currentRoute, onRouteChange } = props
 
   return (
-    <Tabs value={currentRoute} textColor='secondary' indicatorColor='secondary'>
+    <Tabs selectedTab={currentRoute}>
       {routes.map((route: RouteData) => (
         <Tab
           key={route.route}

@@ -1,0 +1,20 @@
+.mikoshi-tabs {
+  .mikoshi-tab {
+    @include rules('m-color-grey-1', 'm-opacity-100');
+    border-radius: 1rem;
+
+    body.dark &,
+    .app[data-theme='dark'] & {
+      @include rules('m-color-white');
+    }
+  }
+
+  .MuiTabs-indicator {
+    @include rules('m-bg-grey-1');
+
+    body.dark &,
+    .app[data-theme='dark'] & {
+      @include rules('m-bg-white');
+    }
+  }
+}

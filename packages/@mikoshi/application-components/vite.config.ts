@@ -23,11 +23,6 @@ export default defineConfig(() => ({
         globals: {
           react: 'react',
           'react-dom': 'react-dom'
-        },
-        manualChunks: (id) => {
-          if (id.includes('node_modules')) {
-            return 'vendor'
-          }
         }
       },
       plugins: [
