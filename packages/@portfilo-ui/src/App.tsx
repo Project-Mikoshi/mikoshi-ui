@@ -25,10 +25,23 @@ export const App = () => {
   const [theme, setTheme] = useState('light' as Theme)
 
   // == Functions ============================
+  function updateBodyTheme (newTheme: Theme) {
+    const bodyClassList = document.body.classList
+    const theme = ['dark', 'light']
+
+    theme.forEach(theme => {
+      bodyClassList.remove(theme)
+    })
+
+    bodyClassList.add(newTheme)
+  }
 
   // == Actions ==============================
   const onRouteChange = (newRoute: string) => setRoute(newRoute)
-  const onThemeChange = (newTheme: Theme) => setTheme(newTheme)
+  const onThemeChange = (newTheme: Theme) => {
+    updateBodyTheme(newTheme)
+    setTheme(newTheme)
+  }
 
   // == Template =============================
   return (

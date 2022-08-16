@@ -28,8 +28,8 @@ const Template = () => {
 
   // == Template =============================
   return (
-    <Scroll>
-      <Paper>
+    <Paper className='m-height-100 m-width-100 m-overflow-hidden'>
+      <Scroll>
         <Container className='m-flex-column' flex>
           <Typography variant='h6'>A simple modal component</Typography>
           <Typography variant='body1' paragraph={true}>
@@ -40,8 +40,8 @@ const Template = () => {
             <Button onClick={removeContent}>Reset</Button>
           </Container>
         </Container>
-      </Paper>
-    </Scroll>
+      </Scroll>
+    </Paper>
   )
 }
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Grid } from '@mui/material'
 import { Container, Typography } from '@mikoshi/core-components'
-import { ConfirmationDialog } from '@mikoshi/application-components'
+import { SimpleDialog } from '@mikoshi/application-components'
 import { PROJECTS } from 'constants/projects'
 import PorjectCard from 'components/project-card/component'
 import SkillCard from 'components/skill-card/component'
@@ -19,9 +19,17 @@ export const Projects = () => {
   // == Functions ============================
 
   // == Actions ==============================
-  const handleLanguageSelection = (key: string) => {
+  function handleLanguageSelection (key: string) {
     setLanguage(key)
-    toggleModal(!launchModal)
+  }
+
+  function selectLanguage (language: string) {
+    handleLanguageSelection(language)
+    toggleModal(true)
+  }
+
+  function closeModal () {
+    toggleModal(false)
   }
 
   // == Template =============================
@@ -58,11 +66,11 @@ export const Projects = () => {
           <SkillCard skillKey='Troubleshooting' label='Troubleshooting and Solutions Deployment' level={5} />
           <SkillCard skillKey='Analysis' label='Analytical Thinking Skills' level={4.5} />
           <SkillCard skillKey='Software' label='Software Design and Development' level={4} />
-          <ProgrammingList action={handleLanguageSelection} selected={language} />
+          <ProgrammingList action={selectLanguage} selected={language} />
         </Grid>
-        <ConfirmationDialog title={language} isOpen={launchModal} onCancel={() => handleLanguageSelection('')} onConfirm={() => {}}>
+        <SimpleDialog title={language} isOpen={launchModal} onCancel={closeModal} onAfterClose={() => handleLanguageSelection('')}>
           <LanguageDetailCard language={language} />
-        </ConfirmationDialog>
+        </SimpleDialog>
       </Grid>
     </Container>
   )

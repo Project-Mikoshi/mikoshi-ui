@@ -4,20 +4,22 @@ import { Container, Paper } from '@mikoshi/core-components'
 export default {
   title: 'Core/Paper',
   component: Paper,
+  args: {
+    variant: 'outlined',
+    elevation: 1,
+    square: false
+  },
   argTypes: {
     variant: {
       options: ['outlined'],
-      control: 'inline-radio',
-      defaultValue: 'outlined'
+      control: 'inline-radio'
     },
     elevation: {
       options: [1, 2, 3, 4, 6, 8, 12, 16, 24],
-      control: 'inline-radio',
-      defaultValue: 1
+      control: 'inline-radio'
     },
     square: {
-      control: 'boolean',
-      defaultValue: false
+      control: 'boolean'
     }
   }
 }
