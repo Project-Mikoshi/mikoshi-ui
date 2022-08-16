@@ -51,7 +51,6 @@ jobs:
       #------------------------------------------------------------------------------
       # deploy storybook
       #------------------------------------------------------------------------------
-      - name: Deploy Storybook
       - uses: chromaui/action@v1
         with:
           workingDir: ./packages/@mikoshi/storybook
