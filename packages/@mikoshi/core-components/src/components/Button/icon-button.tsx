@@ -6,6 +6,8 @@ interface IconButtonProps {
   onClick: () => void,
   sx?: SxProps,
   color?: Color,
+  href?: string,
+  target?: string,
   component?: string,
   className?: string,
   children?: React.ReactNode
@@ -33,9 +35,8 @@ export const IconButton: FC<IconButtonProps> = React.forwardRef((props, ref: But
   // == Template =============================
   return (
     <MuiIconButton
-      className={`mikoshi-icon-button ${className}`}
+      className={`mikoshi-icon-button ${color} ${className}`}
       component={component as any}
-      color={color}
       sx={sx}
       onClick={onClick}
       {...otherProps}

@@ -22,7 +22,7 @@ export const Button: FC<ButtonProps> = React.forwardRef((props, ref: ButtonRef) 
   // == Props ================================
   const {
     children,
-    color,
+    color = 'primary',
     className = '',
     ...otherProps
   } = props
@@ -35,7 +35,7 @@ export const Button: FC<ButtonProps> = React.forwardRef((props, ref: ButtonRef) 
   // == Template =============================
   return (
     <MuiButton
-      className={`mikoshi-button m-bg-${color} ${className}`}
+      className={`mikoshi-button ${color} ${className}`}
       color='primary'
       {...otherProps}
     >

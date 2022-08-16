@@ -15,7 +15,6 @@ import { ROUTE } from 'constants/route'
 import { getCurrentRoute } from 'utils'
 import { Theme } from 'types/theme'
 
-
 export const App = () => {
   // == Props ================================
   const { HOME, PROJECTS } = ROUTE

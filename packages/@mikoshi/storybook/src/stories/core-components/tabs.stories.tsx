@@ -24,7 +24,8 @@ const Template = () => {
     { value: 1, label: 'Tab 1' },
     { value: 2, label: 'Tab 2' },
     { value: 3, label: 'Tab 3' },
-    { value: 4, label: 'Tab 4' }
+    { value: 4, label: 'Tab 4' },
+    { value: 5, label: 'Tab 5' }
   ]
 
   return (

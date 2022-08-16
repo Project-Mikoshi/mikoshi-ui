@@ -1,5 +1,5 @@
 import React from 'react'
-import { IconButton } from '@mui/material'
+import { IconButton } from '@mikoshi/core-components'
 import { SOCIAL_MEDIAS, ICONS } from 'constants/social-media'
 
 export default function SocialMediaButton (props: {type: string}) {
