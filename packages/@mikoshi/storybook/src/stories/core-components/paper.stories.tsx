@@ -5,15 +5,10 @@ export default {
   title: 'Core/Paper',
   component: Paper,
   args: {
-    variant: 'outlined',
     elevation: 1,
     square: false
   },
   argTypes: {
-    variant: {
-      options: ['outlined'],
-      control: 'inline-radio'
-    },
     elevation: {
       options: [1, 2, 3, 4, 6, 8, 12, 16, 24],
       control: 'inline-radio'

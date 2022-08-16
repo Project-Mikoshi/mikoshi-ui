@@ -6,6 +6,7 @@ export { Button, IconButton } from 'components/Button'
 export { Loading } from 'components/Loading'
 export { Paper } from 'components/Paper'
 export { Typography } from 'components/Typography'
+export { Tabs, Tab } from 'components/Tabs'
 export {
   Modal,
   ModalBody,

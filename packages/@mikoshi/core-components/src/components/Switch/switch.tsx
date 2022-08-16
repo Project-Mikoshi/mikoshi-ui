@@ -4,9 +4,9 @@ import CircleIcon from '@mui/icons-material/Circle'
 
 interface SwitchProps extends MuiSwitchProps {
   size?: 'small' | 'medium',
-  checkedIcon?: React.ReactNode;
+  checkedIcon?: React.ReactNode,
   unCheckedicon?: React.ReactNode,
-  disabled?: boolean;
+  disabled?: boolean,
   className?: string
 }
 

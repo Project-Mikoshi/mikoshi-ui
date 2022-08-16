@@ -38,7 +38,6 @@ const Template = (props: any) => {
   // == Actions ==============================
 
   // == Template =============================
-
   return (
     <Paper className='m-width-100 m-height-100 m-flex m-flex-justify-center m-flex-align-center'>
       <Container flex className='m-flex-column m-width-100 m-height-100 m-flex m-flex-justify-center m-flex-align-center'>
