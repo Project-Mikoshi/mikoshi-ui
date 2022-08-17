@@ -1,9 +1,7 @@
 <h1 align="center">Mikoshi</h1>
 
 [![CI](https://github.com/anthony-y-zhu14/MikoshiUI/actions/workflows/CI.yml/badge.svg)](https://github.com/anthony-y-zhu14/MikoshiUI/actions/workflows/CI.yml)
-
-[![CD](https://github.com/anthony-y-zhu14/MikoshiUI/actions/workflows/CD.yml/badge.svg)](https://github.com/anthony-y-zhu14/MikoshiUI/actions/workflows/CD.yml)
-
+[![CD](https://github.com/anthony-y-zhu14/MikoshiUI/actions/workflows/CD.yml/badge.svg?branch=master)](https://github.com/anthony-y-zhu14/MikoshiUI/actions/workflows/CD.yml)
 
 **Mikoshi** contains foundational React UI component libraries for shipping new features faster.
 
@@ -13,6 +11,8 @@
 
 - @mikoshi/styles is a collection of sass mixins and utilities that serves as a unified style reference across the components and applications
 
+## Demo
+[Storybook - Chromatic](https://62fc0f7c0d92b3b43bd42f5d-aftsqdiujd.chromatic.com)
 
 ## Development
 
