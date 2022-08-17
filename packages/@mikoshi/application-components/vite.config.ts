@@ -16,7 +16,6 @@ export default defineConfig(() => ({
       formats: ['es'],
       fileName: 'index'
     },
-    sourcemap: true,
     rollupOptions: {
       external: ['react', 'react-dom'],
       output: {

@@ -1,3 +1,4 @@
+import '@mikoshi/styles/style'
 import '@mikoshi/core-components/style'
 import '@mikoshi/application-components/style'
 
