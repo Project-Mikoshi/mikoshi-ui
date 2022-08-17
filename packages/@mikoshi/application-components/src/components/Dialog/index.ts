@@ -1,2 +1,2 @@
-export { ConfirmationDialog } from './confirmation-dialog'
-export { SimpleDialog } from './simple-dialog'
+export { ConfirmationDialog } from './ConfirmationDialog'
+export { SimpleDialog } from './SimpleDialog'

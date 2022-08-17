@@ -7,10 +7,10 @@ import {
   Navigate
 } from 'react-router-dom'
 import { Scroll } from '@mikoshi/core-components'
-import { NavBar } from 'components/nav-bar/component'
-import ParticlesBackground from 'components/particle-effect/component'
-import { Projects } from 'pages/projects/page'
-import { Dashboard } from 'pages/dashboard/page'
+import { NavBar } from 'components/NavBar'
+import { ParticleEffectBackground } from 'components/ParticleEffectBackground'
+import { Projects } from 'pages/Projects/Projects'
+import { Dashboard } from 'pages/Dashboard/Dashboard'
 import { ROUTE } from 'constants/route'
 import { getCurrentRoute } from 'utils'
 import { Theme } from 'types/theme'
@@ -56,7 +56,7 @@ export const App = () => {
             zoom: { xs: '40%', sm: '60%', md: '80%', lg: '100%' }
           }}
         />
-        <ParticlesBackground />
+        <ParticleEffectBackground />
         <Scroll className='outlet'>
           <Routes>
             <Route path='/' element={<Navigate replace to={ROUTE.HOME.route} />} />

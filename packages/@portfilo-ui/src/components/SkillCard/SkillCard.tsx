@@ -5,7 +5,7 @@ import { Paper, Typography } from '@mikoshi/core-components'
 import { IconType } from 'react-icons'
 import { SKILLS } from 'constants/skills-languages'
 
-export default function SkillCard (props: {skillKey: string, label: string, level: number}) {
+export const SkillCard = (props: {skillKey: string, label: string, level: number}) => {
   const { skillKey, label, level } = props
 
   const iconComponents = SKILLS[skillKey.toUpperCase()] ?? []

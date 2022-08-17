@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { Paper, Tooltip, IconButton, Scroll, Container } from '@mikoshi/core-components'
 import { PROGRAMING_LANGUAGE_ICONS } from 'constants/skills-languages'
 
-interface ProgrammingLanguageCardProps {
+interface LanguageListProps {
     action: (_name: string) => void,
     selected?: string
 }
 
-export default function ProgrammingLanguageCard (props: ProgrammingLanguageCardProps) {
+export const LanguageList: FC<LanguageListProps> = (props) => {
   // == Props ================================
   const { action, selected } = props
   // == Hooks ================================

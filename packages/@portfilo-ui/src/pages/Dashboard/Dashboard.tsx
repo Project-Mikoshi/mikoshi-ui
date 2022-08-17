@@ -4,7 +4,7 @@ import { Grid, Box } from '@mui/material'
 import { Typography, Button } from '@mikoshi/core-components'
 // @ts-expect-error
 import { ReactComponent as PhotoSketchSVG } from 'svgs/sketch-photo.svg'
-import SocialMediaButton from 'components/social-media-button/component'
+import { SocialMediaButton } from 'components/SocialMediaButton'
 import { ROUTE } from 'constants/route'
 
 interface DashboardProps {

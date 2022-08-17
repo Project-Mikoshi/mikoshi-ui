@@ -10,15 +10,6 @@ export default defineConfig({
     svgr(),
     splitVendorChunkPlugin()
   ],
-  optimizeDeps: {
-    include: [
-      '@mikoshi/core-components',
-      '@mikoshi/application-components'
-    ]
-  },
-  build: {
-    sourcemap: true
-  },
   server: {
     port: 3000,
     open: true,

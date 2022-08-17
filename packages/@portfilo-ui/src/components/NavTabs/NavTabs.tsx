@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { Link } from 'react-router-dom'
 import { Tabs, Tab } from '@mikoshi/core-components'
 import { RouteData } from 'types/route'
@@ -9,7 +9,7 @@ interface NavTabsProps {
     currentRoute?: string
 }
 
-export default function NavTabs (props: NavTabsProps) {
+export const NavTabs: FC<NavTabsProps> = (props: NavTabsProps) => {
   const { routes, currentRoute, onRouteChange } = props
 
   return (

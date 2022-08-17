@@ -1,1 +1,1 @@
-export { DarkModeSwitch } from './dark-mode-switch'
+export { DarkModeSwitch } from './DarkModeSwitch'

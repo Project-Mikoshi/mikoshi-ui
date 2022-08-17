@@ -2,7 +2,7 @@ import React from 'react'
 import { Typography } from '@mikoshi/core-components'
 import { PROGRAMMING_LANGUAGE_DESCRIPTIONS } from 'constants/skills-languages'
 
-export default function ProgrammingLanguageCard (props: {language: string}) {
+export const LanguageDetailCard = (props: {language: string}) => {
   const { language } = props
   if (!language || language === 'default') {
     return (<></>)
