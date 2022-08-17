@@ -12,7 +12,7 @@ import {
 } from '@mui/material'
 import { ProjectCardData } from 'types/project'
 
-export default function ProjectCard (props: {project: ProjectCardData}) {
+export const ProjectCard = (props: {project: ProjectCardData}) => {
   const { project } = props
   const subtitleIcons = project.subtitles
 

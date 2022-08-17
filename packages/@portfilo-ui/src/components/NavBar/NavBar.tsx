@@ -6,7 +6,7 @@ import {
 } from '@mui/material'
 import { DarkModeSwitch } from '@mikoshi/application-components'
 import { AppBar, Container, Typography } from '@mikoshi/core-components'
-import NavTabs from 'components/nav-tabs/component'
+import { NavTabs } from 'components/NavTabs'
 import { RouteData } from 'types/route'
 import { Theme } from 'types/theme'
 

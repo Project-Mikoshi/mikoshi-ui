@@ -4,7 +4,7 @@ import { loadFull } from 'tsparticles'
 import { Engine } from 'tsparticles-engine'
 import { OPTIONS } from 'constants/particles-options'
 
-export default function ParticleBackground () {
+export const ParticleEffectBackground = () => {
   // == Props ================================
 
   // == Hooks ================================

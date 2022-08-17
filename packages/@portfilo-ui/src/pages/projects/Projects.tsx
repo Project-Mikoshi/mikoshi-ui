@@ -3,10 +3,10 @@ import { Grid } from '@mui/material'
 import { Container, Typography } from '@mikoshi/core-components'
 import { SimpleDialog } from '@mikoshi/application-components'
 import { PROJECTS } from 'constants/projects'
-import PorjectCard from 'components/project-card/component'
-import SkillCard from 'components/skill-card/component'
-import ProgrammingList from 'components/language-list/component'
-import LanguageDetailCard from 'components/language-detail-card/component'
+import { ProjectCard } from 'components/ProjectCard'
+import { SkillCard } from 'components/SkillCard'
+import { LanguageList as ProgrammingList } from 'components/LanguageList'
+import { LanguageDetailCard } from 'components/LanguageDetailCard'
 
 export const Projects = () => {
   // == Props ================================
@@ -47,7 +47,7 @@ export const Projects = () => {
       >
         {Object.keys(PROJECTS).map((project: string) => (
           <Grid item key={project}>
-            <PorjectCard key={project} project={PROJECTS[project]} />
+            <ProjectCard key={project} project={PROJECTS[project]} />
           </Grid>
         ))}
       </Grid>
