@@ -2,8 +2,8 @@
 import React, { FC, useRef } from 'react'
 import { Container } from '@mikoshi/core-components'
 import { AgGridReact, AgReactUiProps } from 'ag-grid-react'
-import { DataGridHeader } from './data-grid-header'
-import { DataGridExportButton } from './data-grid-export-button'
+import { DataGridHeader } from './DataGridHeader'
+import { DataGridExportButton } from './DataGridExportButton'
 import { DEFAULT_GRID_OPTIONS } from 'constants/data-grid'
 
 export interface DataGridProps extends AgReactUiProps {

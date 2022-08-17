@@ -1,5 +1,5 @@
-export { Modal } from './modal'
-export { ModalHeader } from './modal-header'
-export { ModalFooter } from './modal-footer'
-export { ModalBody } from './modal-body'
+export { Modal } from './Modal'
+export { ModalHeader } from './ModalHeader'
+export { ModalFooter } from './ModalFooter'
+export { ModalBody } from './ModalBody'
 
