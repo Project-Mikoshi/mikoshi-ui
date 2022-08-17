@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "storybook": "npm run dev && nx start @mikoshi/storybook",
+    "deploy:storybook": "nx run @mikoshi/storybook:chromatic",
     "dev": "nx run-many --target=dev --all",
     "build": "nx run-many --target=build --all",
     "clean": "nx run-many --target=clean --all",

@@ -51,9 +51,5 @@ jobs:
       #------------------------------------------------------------------------------
       # deploy storybook
       #------------------------------------------------------------------------------
-      - uses: chromaui/action@v1
-        with:
-          workingDir: ./packages/@mikoshi/storybook
-          storybookBuildDir: dist
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Deploy storybook
+        run: npm run deploy:storybook

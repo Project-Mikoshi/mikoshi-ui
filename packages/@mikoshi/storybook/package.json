@@ -7,6 +7,7 @@
   "scripts": {
     "start": "start-storybook --quiet --disable-telemetry -p 6006",
     "build": "build-storybook --disable-telemetry --output-dir dist/",
+    "chromatic": "npx chromatic --project-token=CHROMATIC_PROJECT_TOKEN --storybook-build-dir=dist --exit-once-uploaded",
     "clean": "rm -rf dist",
     "lint": "npm-run-all --parallel lint:eslint lint:stylelint",
     "lint:eslint": "eslint . --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx",
