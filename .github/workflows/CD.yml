@@ -49,27 +49,8 @@ jobs:
       - name: Intergation and unit tests
         run:  npm run test
       #------------------------------------------------------------------------------
-      # artifacts
+      # deploy storybook
       #------------------------------------------------------------------------------
-      - name: Archive node modules and build artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: artifacts
-          path: |
-            packages/**/dist/
-            !node_modules
-  #----------------------------------------------------------------------------------
-  # deploy storybook
-  #----------------------------------------------------------------------------------
-  storybook:
-    runs-on: ubuntu-latest
-    name: Deploy Storybook
-    needs: build
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/download-artifact@v3
-        with:
-          name: artifacts
       - uses: chromaui/action@v1
         with:
           workingDir: ./packages/@mikoshi/storybook

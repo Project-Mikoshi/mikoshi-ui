@@ -1,6 +1,9 @@
 <h1 align="center">Mikoshi</h1>
 
-[![CI/CD](https://github.com/anthony-y-zhu14/Dathedian/actions/workflows/pull-request.yml/badge.svg)](https://github.com/anthony-y-zhu14/Dathedian/actions/workflows/pull-request.yml)
+[![CI](https://github.com/anthony-y-zhu14/MikoshiUI/actions/workflows/CI.yml/badge.svg)](https://github.com/anthony-y-zhu14/MikoshiUI/actions/workflows/CI.yml)
+
+[![CD](https://github.com/anthony-y-zhu14/MikoshiUI/actions/workflows/CD.yml/badge.svg)](https://github.com/anthony-y-zhu14/MikoshiUI/actions/workflows/CD.yml)
+
 
 **Mikoshi** contains foundational React UI component libraries for shipping new features faster.
 
