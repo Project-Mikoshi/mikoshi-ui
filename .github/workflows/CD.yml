@@ -52,6 +52,4 @@ jobs:
       # deploy storybook
       #------------------------------------------------------------------------------
       - name: Deploy storybook
-        env:
-          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-        run: npm run deploy:storybook
+        run: npm run deploy:storybook -- --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }} --exit-once-uploaded
