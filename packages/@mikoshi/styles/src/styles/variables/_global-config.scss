@@ -1,6 +1,21 @@
 // Global class map, used to facilitate the rules mixin for consuming apps
 $class-map: ();
 
+// Number of iterations for each base setting
+$base-iterations: 8;
+
+// Base spacing unit used to scale margins, padding
+$spacing-scale: .4rem;
+
+// Base width used to scale borders
+$border-width-scale: 1px;
+
+// Border radius scale
+$border-rdius-scale: .2rem;
+
+// Mao of style 'sides' and abbreviations
+$sides: ('t': 'top', 'r': 'right', 'b': 'bottom', 'l': 'left');
+
 // box-shadow offset and radius series to represent different level
 $box-shadow-levels: (
   (1, 2px),

@@ -1,0 +1,8 @@
+@include create-rules(
+  (
+    m-pointer-events-auto: (pointer-events: auto),
+    m-pointer-events-none: (pointer-events: none),
+    m-pointer-events-initial: (pointer-events: initial),
+    m-pointer-events-inherit: (pointer-events: inherit)
+  )
+)

@@ -29,7 +29,7 @@
     &.primary {
       @include rules('m-color-primary');
     }
-  
+
     &.secondary {
       @include rules('m-color-secondary');
     }
@@ -45,7 +45,7 @@
       &.primary {
         @include rules('m-color-primary');
       }
-    
+
       &.secondary {
         @include rules('m-color-secondary');
       }

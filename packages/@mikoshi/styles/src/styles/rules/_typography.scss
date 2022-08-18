@@ -1,2 +1,11 @@
 // Text colors
 @include generate-colors('m-color', 'color');
+@include create-rules(
+  (
+    m-text-ellipsis: (
+      white-space: nowrap,
+      overflow: hidden,
+      text-overflow: ellipsis
+    )
+  )
+);
