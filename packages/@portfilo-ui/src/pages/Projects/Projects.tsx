@@ -1,7 +1,7 @@
 import React, { useState, useEffect, FC } from 'react'
 import { Grid } from '@mui/material'
 import { useLocation } from 'react-router-dom'
-import { Container, Typography } from '@mikoshi/core-components'
+import { Container } from '@mikoshi/core-components'
 import { SimpleDialog } from '@mikoshi/application-components'
 import { PROJECTS } from 'constants/projects'
 import { ProjectCard } from 'components/ProjectCard'
@@ -16,7 +16,6 @@ interface ProjectsProps {
 export const Projects: FC<ProjectsProps> = (props) => {
   // == Props ================================
   const { onRouteChange } = props
-  const TITLE = 'Technical Skills'
 
   // == Hooks ================================
   const route = useLocation()
@@ -72,7 +71,6 @@ export const Projects: FC<ProjectsProps> = (props) => {
         alignItems='center'
       >
         <Grid item xs={10}>
-          <Typography variant='h4' color='primary' fontWeight={600}>{TITLE}</Typography>
           <SkillCard skillKey='Performance' label='Performance Optimization' level={5} />
           <SkillCard skillKey='Troubleshooting' label='Troubleshooting and Solutions Deployment' level={5} />
           <SkillCard skillKey='Analysis' label='Analytical Thinking Skills' level={4.5} />

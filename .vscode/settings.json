@@ -1,5 +1,10 @@
 {
   "git.ignoreLimitWarning": true,
   "editor.tabSize": 2,
-  "eslint.workingDirectories": [{ "mode": "auto" }]
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "svg.preview.background": "custom"
 }

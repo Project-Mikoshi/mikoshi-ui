@@ -3,11 +3,11 @@ import {
   Card,
   CardHeader,
   CardActionArea,
-  CardFooter,
   CardContent,
   CardMedia,
   Typography,
-  IconButton
+  IconButton,
+  Tooltip
 } from '@mikoshi/core-components'
 import { ProjectCardData } from 'types/project'
 import { ICONS } from 'constants/social-media'
@@ -25,7 +25,16 @@ export const ProjectCard = (props: {project: ProjectCardData}) => {
   // == Template =============================
   return (
     <Card className='project-card'>
-      <CardHeader title={project.title} />
+      <CardHeader
+        title={project.title}
+        avatar={
+          <Tooltip title='Check out source code'>
+            <IconButton href={project.projectRepoUrl} target='_blank' disabled={!project.projectRepoUrl}>
+              <ICONS.GITHUB />
+            </IconButton>
+          </Tooltip>
+        }
+      />
       <CardActionArea href={project.projectDemoUrl} target='_blank'>
         <CardMedia
           className='project-card-media'
@@ -37,13 +46,6 @@ export const ProjectCard = (props: {project: ProjectCardData}) => {
       <CardContent className='project-card-content'>
         <Typography variant='body1'>{project.description}</Typography>
       </CardContent>
-      {project.projectRepoUrl && (
-        <CardFooter className='project-card-actions'>
-          <IconButton href={project.projectRepoUrl} target='_blank'>
-            <ICONS.GITHUB />
-          </IconButton>
-        </CardFooter>
-      )}
     </Card>
   )
 }

@@ -1,18 +1,18 @@
 import { FaReact, FaNodeJs } from 'react-icons/fa'
-import { SiMongodb, SiEmberdotjs, SiSpring, SiSwagger, SiApachecassandra } from 'react-icons/si'
+import { SiMongodb } from 'react-icons/si'
 import UCLEI from 'svgs/UCLEI.png'
 import SHOPPIES from 'svgs/Shoppies.png'
 import QUICKIN from 'svgs/QuickIn.png'
-import MCP from 'svgs/MCP.png'
-import { ProjectCardData } from 'types/project'
+import Mikoshi from 'svgs/Mikoshi.svg'
+import { type ProjectCardData } from 'types/project'
 
 export const PROJECTS: Record<string, ProjectCardData> = {
-  MCP: {
-    title: 'MCP',
-    description: 'A Manage, Control and Plan software that provides analytics, software control, and automation to optimize multi-layer network performance',
-    subtitles: [SiEmberdotjs, SiSpring, SiSwagger, SiApachecassandra],
-    imageUrl: MCP,
-    projectDemoUrl: 'https://www.ciena.com/products/manage-control-plan'
+  MIKOSHI: {
+    title: 'Mikoshi',
+    description: 'A comprehensive library of react ui components that features Google\'s Material Design system and Glassmorphism',
+    imageUrl: Mikoshi,
+    projectDemoUrl: 'https://62fc0f7c0d92b3b43bd42f5d-aftsqdiujd.chromatic.com/',
+    projectRepoUrl: 'https://github.com/anthony-y-zhu14/MikoshiUI'
   },
   QuickIn : {
     title: 'QuickIn',

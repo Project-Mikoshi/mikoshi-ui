@@ -4,6 +4,7 @@ import { CardHeader as MuiCardHeader, SxProps } from '@mui/material'
 interface CardHeaderProps {
   title?: React.ReactNode,
   subTitle?: React.ReactNode,
+  avatar?: React.ReactNode,
   sx?: SxProps,
   className?: string
 }
@@ -14,6 +15,7 @@ export const CardHeader: FC<CardHeaderProps> = (props) => {
     sx,
     title,
     subTitle,
+    avatar,
     className = ''
   } = props
 
@@ -27,6 +29,7 @@ export const CardHeader: FC<CardHeaderProps> = (props) => {
   return (
     <MuiCardHeader
       className={`mikoshi-card-header ${className}`}
+      avatar={avatar}
       sx={sx}
       title={title}
       subheader={subTitle}
