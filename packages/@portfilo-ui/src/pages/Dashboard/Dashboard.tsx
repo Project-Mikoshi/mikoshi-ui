@@ -1,5 +1,5 @@
-import React, { FC } from 'react'
-import { Link } from 'react-router-dom'
+import React, { FC, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { Grid, Box } from '@mui/material'
 import { Typography, Button } from '@mikoshi/core-components'
 // @ts-expect-error
@@ -17,6 +17,11 @@ export const Dashboard: FC<DashboardProps> = (props: DashboardProps) => {
   const { PROJECTS } = ROUTE
 
   // == Hooks ================================
+  const route = useLocation()
+
+  useEffect(() => {
+    onRouteChange(route.pathname)
+  }, [route.pathname])
 
   // == Functions ============================
 

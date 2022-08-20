@@ -3,6 +3,14 @@ import './style.scss'
 export { AppBar } from 'components/AppBar'
 export { Container } from 'components/Container'
 export { Button, IconButton } from 'components/Button'
+export {
+  Card,
+  CardHeader,
+  CardActionArea,
+  CardFooter,
+  CardMedia,
+  CardContent
+} from 'components/Card'
 export { Loading } from 'components/Loading'
 export { Paper } from 'components/Paper'
 export { Typography } from 'components/Typography'

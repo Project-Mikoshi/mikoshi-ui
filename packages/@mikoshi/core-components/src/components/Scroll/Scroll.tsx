@@ -28,6 +28,8 @@ export class Scroll extends Component<ScrollProps> {
       this.resizeObserver.observe(this.container.parentElement as Element)
       this.resizeObserver.observe(this.container.firstChild as Element)
     }
+
+    this.updatePerfectScroll()
   }
 
   componentWillUnmount () {

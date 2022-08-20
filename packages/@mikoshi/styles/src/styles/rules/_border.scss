@@ -14,12 +14,7 @@
 @each $key, $side in $sides {
   @include create-rules(
     (
-      f-border-#{$key}: (border-#{$side}: 1px solid)
-    )
-  );
-  @include create-rules(
-    (
-      f-border-#{$key}-#{$i}: (border-#{$side}: #{$i}px solid)
+      m-border-#{$key}: (border-#{$side}: 1px solid)
     )
   );
 }

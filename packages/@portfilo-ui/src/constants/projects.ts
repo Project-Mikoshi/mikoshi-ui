@@ -12,8 +12,7 @@ export const PROJECTS: Record<string, ProjectCardData> = {
     description: 'A Manage, Control and Plan software that provides analytics, software control, and automation to optimize multi-layer network performance',
     subtitles: [SiEmberdotjs, SiSpring, SiSwagger, SiApachecassandra],
     imageUrl: MCP,
-    projectDemoUrl: 'https://www.ciena.com/products/manage-control-plan',
-    action: openDemo
+    projectDemoUrl: 'https://www.ciena.com/products/manage-control-plan'
   },
   QuickIn : {
     title: 'QuickIn',
@@ -21,7 +20,7 @@ export const PROJECTS: Record<string, ProjectCardData> = {
     subtitles: [FaReact, FaNodeJs, SiMongodb],
     imageUrl: QUICKIN,
     projectDemoUrl: 'https://quickin.herokuapp.com/',
-    action: openDemo
+    projectRepoUrl: 'https://github.com/anthony-y-zhu14/QuickIn'
   },
   UCLEI : {
     title: 'UCLEI',
@@ -29,7 +28,7 @@ export const PROJECTS: Record<string, ProjectCardData> = {
     subtitles: [FaReact, FaNodeJs, SiMongodb],
     imageUrl: UCLEI,
     projectDemoUrl: 'https://uclei.herokuapp.com/',
-    action: openDemo
+    projectRepoUrl: 'https://github.com/anthony-y-zhu14/UCLEI'
   },
   Shoppies : {
     title: 'The Shoppies',
@@ -37,11 +36,6 @@ export const PROJECTS: Record<string, ProjectCardData> = {
     subtitles: [FaReact],
     imageUrl: SHOPPIES,
     projectDemoUrl: 'https://anthony-y-zhu14.github.io/The-Shoppies/',
-    action: openDemo
+    projectRepoUrl: 'https://github.com/anthony-y-zhu14/Shoppies'
   }
-}
-
-// not really a constant i guess...
-function openDemo (url: string) {
-  window.open(url, '_blank')
 }

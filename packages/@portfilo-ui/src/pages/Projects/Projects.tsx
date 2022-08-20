@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, FC } from 'react'
 import { Grid } from '@mui/material'
+import { useLocation } from 'react-router-dom'
 import { Container, Typography } from '@mikoshi/core-components'
 import { SimpleDialog } from '@mikoshi/application-components'
 import { PROJECTS } from 'constants/projects'
@@ -8,13 +9,23 @@ import { SkillCard } from 'components/SkillCard'
 import { LanguageList as ProgrammingList } from 'components/LanguageList'
 import { LanguageDetailCard } from 'components/LanguageDetailCard'
 
-export const Projects = () => {
+interface ProjectsProps {
+  onRouteChange: (newRoute: string) => void
+}
+
+export const Projects: FC<ProjectsProps> = (props) => {
   // == Props ================================
+  const { onRouteChange } = props
   const TITLE = 'Technical Skills'
 
   // == Hooks ================================
+  const route = useLocation()
   const [language, setLanguage] = useState('')
   const [launchModal, toggleModal] = useState(false)
+
+  useEffect(() => {
+    onRouteChange(route.pathname)
+  }, [route.pathname])
 
   // == Functions ============================
 

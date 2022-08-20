@@ -21,12 +21,12 @@
     @include rules('m-bg-grey-3');
 
     &:hover {
-      @include rules('m-bg-grey-1');
+      @include rules('m-bg-grey-4');
     }
 
     body.dark &,
     .app[data-theme='dark'] & {
-      @include rules('m-bg-lgrey-1');
+      @include rules('m-bg-lgrey-2');
 
       &:hover {
         @include rules('m-bg-lgrey-3');

@@ -1,24 +1,22 @@
 import React, { FC } from 'react'
-import { AppBar as MuiAppBar,  SxProps } from '@mui/material'
-import { Color, Position } from 'types/app-bar'
+import { Card as MuiCard, SxProps } from '@mui/material'
 
-interface AppBarProps {
+interface CardProps {
   sx?: SxProps,
-  color?: Color,
-  position?: Position,
+  raised?: boolean,
   className?: string,
   children?: React.ReactNode
 }
 
-export const AppBar: FC<AppBarProps> = (props) => {
+export const Card: FC<CardProps> = (props) => {
   // == Props ================================
   const {
-    children,
     sx,
-    color = 'primary',
-    position = 'fixed',
+    raised = false,
+    children,
     className = ''
   } = props
+
   // == Hooks ================================
 
   // == Functions ============================
@@ -27,8 +25,12 @@ export const AppBar: FC<AppBarProps> = (props) => {
 
   // == Template =============================
   return (
-    <MuiAppBar className={`mikoshi-app-bar ${color} ${className}`} position={position} sx={sx}>
+    <MuiCard
+      className={`mikoshi-card ${className}`}
+      sx={sx}
+      raised={raised}
+    >
       {children}
-    </MuiAppBar>
+    </MuiCard>
   )
 }

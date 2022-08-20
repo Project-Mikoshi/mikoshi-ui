@@ -22,6 +22,9 @@
     // Wrap
     m-flex-wrap: (flex-wrap: wrap),
     m-flex-nowrap: (flex-wrap: nowrap),
-    m-flex-wrap-reverse: (flex-wrap: wrap-reverse)
+    m-flex-wrap-reverse: (flex-wrap: wrap-reverse),
+
+    // grow-shrink
+    m-flex-1: (flex: 1)
   )
 );

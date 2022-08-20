@@ -1,46 +1,49 @@
 import React from 'react'
-import Button from '@mui/material/Button'
-import Card from '@mui/material/Card'
 import {
+  Card,
+  CardHeader,
   CardActionArea,
-  CardActions,
+  CardFooter,
   CardContent,
   CardMedia,
   Typography,
-  Grow,
-  Box
-} from '@mui/material'
+  IconButton
+} from '@mikoshi/core-components'
 import { ProjectCardData } from 'types/project'
+import { ICONS } from 'constants/social-media'
 
 export const ProjectCard = (props: {project: ProjectCardData}) => {
+  // == Props ================================
   const { project } = props
-  const subtitleIcons = project.subtitles
 
+  // == Hooks ================================
+
+  // == Functions ============================
+
+  // == Actions ==============================
+
+  // == Template =============================
   return (
-    <Grow in={true} timeout={1000}>
-      <Card className='project-card'>
-        <CardActionArea onClick={() => project.action(project.projectDemoUrl)}>
-          <CardMedia
-            className='project-card-media'
-            component='img'
-            image={project.imageUrl}
-            title={project.title}
-          />
-        </CardActionArea>
-        <CardContent className='project-card-content'>
-          <Typography variant='body1'>{project.description}</Typography>
-          <Box className='project-card-icons'>
-            {subtitleIcons.map((Icon, index: number) => (
-              <Icon className='icon' key={index} />
-            ))}
-          </Box>
-        </CardContent>
-        <CardActions className='project-card-actions'>
-          <Button variant='contained' color='primary' onClick={() => project.action(project.projectDemoUrl)}>
-            {project.title}
-          </Button>
-        </CardActions>
-      </Card>
-    </Grow>
+    <Card className='project-card'>
+      <CardHeader title={project.title} />
+      <CardActionArea href={project.projectDemoUrl} target='_blank'>
+        <CardMedia
+          className='project-card-media'
+          component='img'
+          image={project.imageUrl}
+          title={project.title}
+        />
+      </CardActionArea>
+      <CardContent className='project-card-content'>
+        <Typography variant='body1'>{project.description}</Typography>
+      </CardContent>
+      {project.projectRepoUrl && (
+        <CardFooter className='project-card-actions'>
+          <IconButton href={project.projectRepoUrl} target='_blank'>
+            <ICONS.GITHUB />
+          </IconButton>
+        </CardFooter>
+      )}
+    </Card>
   )
 }
