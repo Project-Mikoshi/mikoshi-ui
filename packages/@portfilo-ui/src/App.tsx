@@ -33,14 +33,12 @@ export const App = () => {
     })
 
     bodyClassList.add(newTheme)
+    setTheme(newTheme)
   }
 
   // == Actions ==============================
   const onRouteChange = (newRoute: string) => setRoute(newRoute)
-  const onThemeChange = (newTheme: Theme) => {
-    updateBodyTheme(newTheme)
-    setTheme(newTheme)
-  }
+  const onThemeChange = (newTheme: Theme) => updateBodyTheme(newTheme)
 
   // == Template =============================
   return (
@@ -61,7 +59,7 @@ export const App = () => {
           <Routes>
             <Route path='/' element={<Navigate replace to={ROUTE.HOME.route} />} />
             <Route path={ROUTE.HOME.route} element={<Dashboard onRouteChange={onRouteChange} />} />
-            <Route path={ROUTE.PROJECTS.route} element={<Projects />} />
+            <Route path={ROUTE.PROJECTS.route} element={<Projects onRouteChange={onRouteChange}/>} />
           </Routes>
         </Scroll>
       </Router>

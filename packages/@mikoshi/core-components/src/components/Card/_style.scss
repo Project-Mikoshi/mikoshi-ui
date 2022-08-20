@@ -1,0 +1,27 @@
+.mikoshi-card {
+  &.MuiPaper-root {
+    @include rules('m-flex', 'm-flex-column', 'm-frost-glass-light', 'm-color-white');
+
+    body.dark &,
+    .app[data-theme='dark'] & {
+      @include rules('m-frost-glass-dark');
+    }
+
+    .mikoshi-card-header {
+      @include rules('m-padding-2', 'm-frost-glass-primary');
+    }
+
+    .mikoshi-card-content {
+      @include rules('m-flex-1', 'm-overflow-hidden');
+    }
+
+    .mikoshi-card-action-area {
+      @include rules('m-width-100');
+      height: 50%;
+
+      .mikoshi-card-media {
+        @include rules('m-height-100', 'm-width-100');
+      }
+    }
+  }
+}

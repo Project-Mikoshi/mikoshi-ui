@@ -1,5 +1,4 @@
-import { FC } from 'react'
-import { LinkedIn, GitHub, Facebook, Instagram } from '@mui/icons-material'
+import { LinkedIn, GitHub, Facebook, Instagram, SvgIconComponent } from '@mui/icons-material'
 
 export const SOCIAL_MEDIAS: Record<string, string> = {
   LINKEDIN: 'https://www.linkedin.com/in/anthony-y-zhu/',
@@ -8,7 +7,7 @@ export const SOCIAL_MEDIAS: Record<string, string> = {
   INSTAGRAM: 'https://www.instagram.com/anthony_stardust/'
 }
 
-export const ICONS: Record<string, FC> = {
+export const ICONS: Record<string, SvgIconComponent> = {
   GITHUB: GitHub,
   LINKEDIN: LinkedIn,
   FACEBOOK: Facebook,

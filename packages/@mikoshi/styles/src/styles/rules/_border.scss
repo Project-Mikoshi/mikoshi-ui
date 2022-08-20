@@ -10,3 +10,20 @@
     )
   )
 );
+
+@each $key, $side in $sides {
+  @include create-rules(
+    (
+      m-border-#{$key}: (border-#{$side}: 1px solid)
+    )
+  );
+}
+
+@for $i from 0 through $base-iterations {
+  @include create-rules(
+    (
+      m-border-w-#{$i}: (border-width: $i * $border-width-scale),
+      m-border-radius-#{$i}: (border-radius: $i * $border-rdius-scale)
+    )
+  );
+}

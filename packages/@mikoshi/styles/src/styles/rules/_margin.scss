@@ -1,0 +1,46 @@
+@for $i from 0 through $base-iterations {
+  @include create-rules(
+    (
+      m-margin-#{$i}: (margin: ($spacing-scale * $i))
+    ),
+    (
+      m-margin-x-#{$i}: (
+        margin-right: ($spacing-scale * $i),
+        margin-left: ($spacing-scale * $i)
+      ),
+      m-margin-y-#{$i}: (
+        margin-top: ($spacing-scale * $i),
+        margin-bottom: ($spacing-scale * $i)
+      )
+    )
+  );
+
+  @each $key, $side in $sides {
+    @include create-rules(
+      (
+        m-margin-#{$key}-#{$i}: (margin-#{$side}: ($spacing-scale * $i))
+      )
+    );
+  }
+}
+
+@each $key, $side in $sides {
+  @include create-rules(
+    (
+      m-margin-#{$key}-auto: (margin-#{$side}: auto)
+    )
+  );
+}
+
+@include create-rules(
+  (
+    m-margin-x-auto: (
+      margin-right: auto,
+      margin-left: auto
+    ),
+    m-margin-y-auto: (
+      margin-top: auto,
+      margin-bottom: auto
+    )
+  )
+);

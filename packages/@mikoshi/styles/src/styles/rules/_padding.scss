@@ -1,0 +1,25 @@
+@for $i from 0 through $base-iterations {
+  @include create-rules(
+    (
+      m-padding-#{$i}: (padding: ($spacing-scale * $i))
+    ),
+    (
+      m-padding-x-#{$i}: (
+        padding-right: ($spacing-scale * $i),
+        padding-left: ($spacing-scale * $i)
+      ),
+      m-padding-y-#{$i}: (
+        padding-top: ($spacing-scale * $i),
+        padding-bottom: ($spacing-scale * $i)
+      )
+    )
+  );
+
+  @each $key, $side in $sides {
+    @include create-rules(
+      (
+        m-padding-#{$key}-#{$i}: (padding-#{$side}: ($spacing-scale * $i))
+      )
+    );
+  }
+}

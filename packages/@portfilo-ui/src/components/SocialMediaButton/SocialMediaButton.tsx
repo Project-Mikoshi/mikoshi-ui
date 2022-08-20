@@ -7,7 +7,7 @@ export const SocialMediaButton = (props: {type: string}) => {
   const IconComponent = ICONS[type]
 
   return (
-    <IconButton href={SOCIAL_MEDIAS[type]} target='_blank' onClick={() => {}} sx={{ '&:hover': { color: '#009eef' } }}>
+    <IconButton href={SOCIAL_MEDIAS[type]} target='_blank'>
       <IconComponent />
     </IconButton>
   )

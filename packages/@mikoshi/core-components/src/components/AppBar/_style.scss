@@ -1,8 +1,16 @@
 // sass-lint:disable class-name-format
 .mikoshi-app-bar {
   &.MuiPaper-root {
-    @include rules('m-flex', 'm-flex-row', 'm-frost-glass-blue-1', 'm-color-grey-1');
+    @include rules('m-flex', 'm-flex-row', 'm-frost-glass-primary', 'm-color-grey-1', 'm-flex-justify-center', 'm-flex-align-center');
     padding: 1rem;
+
+    &.primary {
+      @include rules('m-frost-glass-primary');
+    }
+
+    &.secondary {
+      @include rules('m-frost-glass-secondary');
+    }
 
     body.dark &,
     .app[data-theme='dark'] & {

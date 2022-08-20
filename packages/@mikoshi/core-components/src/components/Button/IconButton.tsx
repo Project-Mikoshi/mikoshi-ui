@@ -3,7 +3,7 @@ import { IconButton as MuiIconButton, SxProps } from '@mui/material'
 import { Color } from 'types/button'
 
 interface IconButtonProps {
-  onClick: () => void,
+  onClick?: () => void,
   sx?: SxProps,
   color?: Color,
   href?: string,

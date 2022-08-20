@@ -1,24 +1,22 @@
 import React, { FC } from 'react'
-import { AppBar as MuiAppBar,  SxProps } from '@mui/material'
-import { Color, Position } from 'types/app-bar'
+import { CardActions as MuiCardActions, SxProps } from '@mui/material'
 
-interface AppBarProps {
+interface CardFooterProps {
   sx?: SxProps,
-  color?: Color,
-  position?: Position,
+  disableSpacing?: boolean,
   className?: string,
   children?: React.ReactNode
 }
 
-export const AppBar: FC<AppBarProps> = (props) => {
+export const CardFooter: FC<CardFooterProps> = (props) => {
   // == Props ================================
   const {
     children,
     sx,
-    color = 'primary',
-    position = 'fixed',
+    disableSpacing = false,
     className = ''
   } = props
+
   // == Hooks ================================
 
   // == Functions ============================
@@ -27,8 +25,8 @@ export const AppBar: FC<AppBarProps> = (props) => {
 
   // == Template =============================
   return (
-    <MuiAppBar className={`mikoshi-app-bar ${color} ${className}`} position={position} sx={sx}>
+    <MuiCardActions className={`mikoshi-card-footer ${className}`} sx={sx} disableSpacing={disableSpacing}>
       {children}
-    </MuiAppBar>
+    </MuiCardActions>
   )
 }
