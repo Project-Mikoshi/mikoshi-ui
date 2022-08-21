@@ -1,0 +1,34 @@
+.mikoshi-button {
+  &.MuiButtonBase-root {
+    @include rules('m-color-grey-1');
+    text-transform: none;
+
+    body.dark &,
+    .app[data-theme='dark'] & {
+      @include rules('m-color-white');
+    }
+
+    &.MuiButton-contained {
+      @include rules('m-opacity-80', 'm-color-white');
+
+      &.primary {
+        @include rules('m-bg-primary');
+      }
+
+      &.secondary {
+        @include rules('m-bg-secondary');
+      }
+    }
+
+    &.MuiButton-text,
+    &.MuiButton-outlined {
+      &.primary {
+        @include rules('m-color-primary');
+      }
+
+      &.secondary {
+        @include rules('m-color-secondary');
+      }
+    }
+  }
+}

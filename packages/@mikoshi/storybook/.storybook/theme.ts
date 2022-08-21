@@ -1,4 +1,5 @@
-import { create } from '@storybook/theming';
+import { create } from '@storybook/theming'
+// @ts-expect-error
 import logo from './logo.svg'
 
 export default create({

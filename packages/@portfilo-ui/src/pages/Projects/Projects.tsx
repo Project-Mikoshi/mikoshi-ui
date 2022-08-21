@@ -1,7 +1,6 @@
 import React, { useState, useEffect, FC } from 'react'
 import { Grid } from '@mui/material'
 import { useLocation } from 'react-router-dom'
-import { Container } from '@mikoshi/core-components'
 import { SimpleDialog } from '@mikoshi/application-components'
 import { PROJECTS } from 'constants/projects'
 import { ProjectCard } from 'components/ProjectCard'
@@ -16,6 +15,10 @@ interface ProjectsProps {
 export const Projects: FC<ProjectsProps> = (props) => {
   // == Props ================================
   const { onRouteChange } = props
+  const CARD_SIZE = {
+    xl: 500,
+    xs: 400
+  }
 
   // == Hooks ================================
   const route = useLocation()
@@ -44,32 +47,17 @@ export const Projects: FC<ProjectsProps> = (props) => {
 
   // == Template =============================
   return (
-    <Container className='projects' disableGutters flex>
-      <Grid
-        container
-        className='project-cards'
-        spacing={2}
-        padding={2}
-        display='flex'
-        flexWrap='wrap'
-        justifyContent='center'
-        alignItems='center'
-      >
+    <Grid className='projects' container justifyContent='center'>
+
+      <Grid className='cards' container spacing={2} padding={2} xl={8} lg={10} md={12} sm={12} xs={12}>
         {Object.keys(PROJECTS).map((project: string) => (
-          <Grid item key={project}>
+          <Grid item key={project} sx={{ height: CARD_SIZE, width: CARD_SIZE }}>
             <ProjectCard key={project} project={PROJECTS[project]} />
           </Grid>
         ))}
       </Grid>
-      <Grid
-        container
-        className='skills'
-        spacing={2}
-        padding={2}
-        display='flex'
-        justifyContent='space-evenly'
-        alignItems='center'
-      >
+
+      <Grid className='skills' container spacing={2} padding={2} xl={4} lg={8} md={10} sm={10} xs={12}>
         <Grid item xs={10}>
           <SkillCard skillKey='Performance' label='Performance Optimization' level={5} />
           <SkillCard skillKey='Troubleshooting' label='Troubleshooting and Solutions Deployment' level={5} />
@@ -81,7 +69,8 @@ export const Projects: FC<ProjectsProps> = (props) => {
           <LanguageDetailCard language={language} />
         </SimpleDialog>
       </Grid>
-    </Container>
+
+    </Grid>
   )
 }
 

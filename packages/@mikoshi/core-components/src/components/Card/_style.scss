@@ -13,6 +13,12 @@
 
     .mikoshi-card-content {
       @include rules('m-flex-1', 'm-overflow-hidden');
+
+      &.MuiCardContent-root {
+        &:last-child {
+          @include rules('m-padding-b-1');
+        }
+      }
     }
 
     .mikoshi-card-action-area {

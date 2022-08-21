@@ -8,7 +8,7 @@ export default {
 }
 
 const Template = () => {
-  const [checked, setCheck] = useState(false)
+  const [checked, setCheck] = useState(true)
 
   const toggleTheme = () => {
     setCheck(!checked)
@@ -17,13 +17,13 @@ const Template = () => {
   const text = checked ? 'Dark Mode Enabled' : 'Light Mode Enabled'
 
   return (
-    <div className={`app m-height-100 m-width-100 ${checked ? 'm-bg-night-2' : 'm-bg-lgrey-1'}`} data-theme={`${checked ? 'dark' : 'light'}`}>
+    <div className={`app m-height-100 m-width-100 ${checked ? 'm-bg-night-2' : 'm-bg-lgrey-4'}`} data-theme={`${checked ? 'dark' : 'light'}`}>
       <Container>
-        <Typography variant='h6'>{text}</Typography>
+        <Typography variant='h6' color='primary'>{text}</Typography>
         <DarkModeSwitch onChange={toggleTheme} checked={checked} />
       </Container>
     </div>
   )
 }
 
-export const ConfirmationDialogDemo = Template.bind({})
+export const DarkModeSwitchgDemo = Template.bind({})

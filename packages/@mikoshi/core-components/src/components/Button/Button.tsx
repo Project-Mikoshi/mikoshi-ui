@@ -16,13 +16,11 @@ interface ButtonProps {
   children?: React.ReactNode
 }
 
-type ButtonRef = React.ForwardedRef<HTMLButtonElement>
-
-export const Button: FC<ButtonProps> = React.forwardRef((props, ref: ButtonRef) => {
+export const Button: FC<ButtonProps> = React.forwardRef((props, ref) => {
   // == Props ================================
   const {
     children,
-    color = 'primary',
+    color = 'inherit',
     className = '',
     ...otherProps
   } = props
@@ -36,7 +34,6 @@ export const Button: FC<ButtonProps> = React.forwardRef((props, ref: ButtonRef) 
   return (
     <MuiButton
       className={`mikoshi-button ${color} ${className}`}
-      color='primary'
       {...otherProps}
     >
       {children}

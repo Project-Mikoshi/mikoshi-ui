@@ -18,7 +18,7 @@ export const LanguageList: FC<LanguageListProps> = (props) => {
       const { icon: Icon, name } = language
       return (
         <Tooltip title={name} key={index}>
-          <div>
+          <Container flex disableGutters>
             <IconButton
               key={index}
               color={selected === name ? 'primary' : 'inherit'}
@@ -26,7 +26,7 @@ export const LanguageList: FC<LanguageListProps> = (props) => {
             >
               <Icon key={index} />
             </IconButton>
-          </div>
+          </Container>
         </Tooltip>
       )
     })
