@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { Grid, Box } from '@mui/material'
 import { Typography, Button } from '@mikoshi/core-components'
 // @ts-expect-error
-import { ReactComponent as PhotoSketchSVG } from 'svgs/sketch-photo.svg'
+import { ReactComponent as PhotoSketchSVG } from 'svgs/Silhouette.svg'
 import { SocialMediaButton } from 'components/SocialMediaButton'
 import { ROUTE } from 'constants/route'
 

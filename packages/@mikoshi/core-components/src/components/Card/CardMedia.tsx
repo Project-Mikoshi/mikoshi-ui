@@ -2,6 +2,7 @@ import React, { ElementType, FC } from 'react'
 import { CardMedia as MuiCardMedia, SxProps } from '@mui/material'
 
 interface CardMediaProps {
+  height?: number,
   sx?: SxProps,
   image?: string,
   title?: string,
@@ -19,6 +20,7 @@ export const CardMedia: FC<CardMediaProps> = (props) => {
     image,
     src,
     title,
+    height,
     component = 'img',
     className = ''
   } = props
@@ -31,7 +33,7 @@ export const CardMedia: FC<CardMediaProps> = (props) => {
 
   // == Template =============================
   return (
-    <MuiCardMedia className={`mikoshi-card-media ${className}`} title={title} sx={sx} image={image} src={src} component={component}>
+    <MuiCardMedia className={`mikoshi-card-media ${className}`} title={title} sx={sx} image={image} src={src} component={component} height={height}>
       {children}
     </MuiCardMedia>
   )

@@ -111,3 +111,43 @@ $colors: (
   'transparent': transparent,
   'inherit': inherit
 );
+
+$font-xxxl: 45px;
+$font-xxl: 36px;
+$font-xl: 29px;
+$font-l: 23px;
+$font-ml: 20px;
+$font-m: 16px;
+$font-s: 14px;
+$font-xs: 12px;
+$font-xxs: 10px;
+
+$font-sizes: (
+  'xxxl': $font-xxxl,
+  'xxl': $font-xxl,
+  'xl': $font-xl,
+  'l': $font-l,
+  'ml': $font-ml,
+  'm': $font-m,
+  's': $font-s,
+  'xs': $font-xs,
+  'xxs': $font-xxs
+);
+
+$font-weight-bolder: 900;
+$font-weight-bold: 700;
+$font-weight-medium: 500;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+$font-weight-very-light: 200;
+$font-weight-thin: 100;
+
+$font-weights: (
+  'bolder': $font-weight-bolder,
+  'bold': $font-weight-bold,
+  'medium': $font-weight-medium,
+  'regular': $font-weight-regular,
+  'light': $font-weight-light,
+  'very-light': $font-weight-very-light,
+  'thin': $font-weight-thin
+);

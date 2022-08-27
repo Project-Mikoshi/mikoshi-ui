@@ -9,3 +9,17 @@
     )
   )
 );
+
+// Size
+@each $key, $size in $font-sizes {
+  @include create-rules((
+    m-font-size-#{$key}: (font-size: $size)
+  ));
+}
+
+// Weight
+@each $key, $weight in $font-weights {
+  @include create-rules((
+    m-font-weight-#{$key}: (font-weight: $weight)
+  ));
+}

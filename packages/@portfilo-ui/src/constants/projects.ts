@@ -1,8 +1,8 @@
 import { FaReact, FaNodeJs } from 'react-icons/fa'
 import { SiMongodb } from 'react-icons/si'
-import UCLEI from 'svgs/UCLEI.png'
-import SHOPPIES from 'svgs/Shoppies.png'
-import QUICKIN from 'svgs/QuickIn.png'
+import UCLEI from 'svgs/UCLEI.svg'
+import SHOPPIES from 'svgs/Shoppies.svg'
+import QUICKIN from 'svgs/QuickIn.svg'
 import Mikoshi from 'svgs/Mikoshi.svg'
 import { type ProjectCardData } from 'types/project'
 
