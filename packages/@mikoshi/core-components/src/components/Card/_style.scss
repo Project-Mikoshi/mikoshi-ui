@@ -14,6 +14,7 @@
       body.dark &,
       .app[data-theme='dark'] & {
         @include rules('m-frost-glass-dark', 'm-color-white');
+        border: 0;
       }
     }
 
