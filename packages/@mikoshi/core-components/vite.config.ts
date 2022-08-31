@@ -3,8 +3,7 @@ import path from 'path'
 import { defineConfig, splitVendorChunkPlugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import tsconfigPaths from 'vite-tsconfig-paths'
-import typescript from '@rollup/plugin-typescript'
-import tsTransformPaths from '@zerollup/ts-transform-paths'
+import dts from 'vite-plugin-dts'
 
 // @ts-expect-error
 const __dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileURLToPath(import.meta.url))
@@ -17,24 +16,25 @@ export default defineConfig(() => ({
       fileName: 'index'
     },
     rollupOptions: {
-      external: ['react', 'react-dom'],
-      plugins: [
-        typescript({
-          exclude: ['test/**/*.ts', 'test/**/*.tsx'],
-          transformers: {
-            afterDeclarations: [
-              // @ts-expect-error
-              { type: 'program', factory: (program) => tsTransformPaths(program).afterDeclarations }
-            ]
-          }
-        })
-      ]
+      external: ['react', 'react-dom']
+    }
+  },
+  resolve: {
+    alias: {
+      'components': path.resolve(__dirname, 'src/components'),
+      'utils': path.resolve(__dirname, 'src/utils'),
+      'constants': path.resolve(__dirname, 'src/constants'),
+      'types': path.resolve(__dirname, 'src/types'),
+      'svgs': path.resolve(__dirname, 'src/svgs')
     }
   },
   plugins: [
     react(),
     tsconfigPaths(),
-    splitVendorChunkPlugin()
+    splitVendorChunkPlugin(),
+    dts({
+      entryRoot: 'src'
+    })
   ],
   test: {
     environment: 'jsdom',
