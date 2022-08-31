@@ -1,17 +1,17 @@
 {
   "name": "@mikoshi/styles",
-  "type": "module",
   "version": "0.2.0",
   "private": true,
+  "type": "module",
   "exports": {
     ".": "./dist/style.css",
     "./mixins": "./src/mixins.scss",
     "./style": "./dist/style.css"
   },
   "scripts": {
-    "dev": "npm run build",
     "build": "vite build",
     "clean": "rm -rf dist",
+    "dev": "npm run build",
     "lint": "stylelint '**/*.scss'"
   },
   "dependencies": {

@@ -1,4 +1,6 @@
-export const OPTIONS = {
+import { RecursivePartial, IOptions } from 'tsparticles-engine'
+
+export const OPTIONS: RecursivePartial<IOptions> = {
   fpsLimit: 60,
   particles: {
     color: {
@@ -19,9 +21,9 @@ export const OPTIONS = {
     number: {
       density: {
         enable: true,
-        area: 800
+        area: 1000
       },
-      value: 25
+      value: 20
     },
     opacity: {
       value: 0.5
@@ -34,5 +36,35 @@ export const OPTIONS = {
       value: 5
     }
   },
-  detectRetina: true
+  detectRetina: true,
+  themes: [
+    {
+      name: 'light',
+      default: {
+        value: true,
+        mode: 'light'
+      },
+      options: {
+        particles: {
+          color: {
+            value: '#414141'
+          }
+        }
+      }
+    },
+    {
+      name: 'dark',
+      default: {
+        value: true,
+        mode: 'dark'
+      },
+      options: {
+        particles: {
+          color: {
+            value: '#fff'
+          }
+        }
+      }
+    }
+  ]
 }
