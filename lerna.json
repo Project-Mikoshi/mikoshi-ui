@@ -3,6 +3,7 @@
   "packages": [
       "packages/**"
   ],
+  "changelogPreset": "angular",
   "command": {
     "version": {
       "conventionalCommits": true,
