@@ -58,7 +58,7 @@ jobs:
             **/node_modules
             packages/**/dist/
             !packages/**/node_modules/dist/
-          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-mikoshi
       
       #------------------------------------------------------------------------------
       # lint
@@ -95,8 +95,9 @@ jobs:
           path: |
             node_modules
             **/node_modules
-            ${{ steps.build-packages.outputs.dir }}
-          key: ${{ runner.os }}-${{ hashFiles('**/package.json') }}
+            packages/**/dist/
+            !packages/**/node_modules/dist/
+          key: ${{ runner.os }}-mikoshi
 
       #------------------------------------------------------------------------------
       # publish packages
