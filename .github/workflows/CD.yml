@@ -14,21 +14,22 @@ on:
 # Define application permissions & version
 #------------------------------------------------------------------------------------
 permissions: write-all
+
 #------------------------------------------------------------------------------------
 # Workflow jobs (Linux only)
 #------------------------------------------------------------------------------------
 jobs:
   #----------------------------------------------------------------------------------
-  # Publish packages and deploy apps
+  # build and test packages
   #----------------------------------------------------------------------------------
-  publish:
-    name: Publish packages and deploy apps
-    if: github.event.pull_request.merged == true
+  build:
+    name: Build and Test Packages
+    needs: validate-pull-request
     runs-on: ubuntu-latest
+    env:
+          NODE_OPTIONS: "--max_old_space_size=4096"
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
       #------------------------------------------------------------------------------
       # install
       #------------------------------------------------------------------------------
@@ -36,6 +37,7 @@ jobs:
         run: |
           npm install
           npx lerna bootstrap
+
       #------------------------------------------------------------------------------
       # build
       #------------------------------------------------------------------------------
@@ -43,16 +45,60 @@ jobs:
         env:
           NODE_OPTIONS: "--max_old_space_size=4096"
         run:  npm run build
+
+      #------------------------------------------------------------------------------
+      # cache build
+      #------------------------------------------------------------------------------
+      - name: Cache build
+        id: cache-build
+        uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+            **/node_modules
+            packages/**/dist/
+            !packages/**/node_modules/dist/
+          key: ${{ runner.os }}-mikoshi
+      
       #------------------------------------------------------------------------------
       # lint
       #------------------------------------------------------------------------------
       - name: Lint check
         run:  npm run lint
+
       #------------------------------------------------------------------------------
       # test
       #------------------------------------------------------------------------------
       - name: Intergation and unit tests
         run:  npm run test
+
+  #----------------------------------------------------------------------------------
+  # Publish packages and deploy apps
+  #----------------------------------------------------------------------------------
+  publish:
+    name: Publish packages and deploy apps
+    if: github.event.pull_request.merged == true
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      #------------------------------------------------------------------------------
+      # retrieve cache
+      #------------------------------------------------------------------------------
+      - name: Retrieve cached build
+        id: cache-build
+        uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+            **/node_modules
+            packages/**/dist/
+            !packages/**/node_modules/dist/
+          key: ${{ runner.os }}-mikoshi
+
       #------------------------------------------------------------------------------
       # publish packages
       #------------------------------------------------------------------------------

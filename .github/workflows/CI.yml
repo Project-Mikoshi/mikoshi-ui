@@ -7,10 +7,12 @@ on:
   pull_request:
     types: [opened, edited, synchronize, reopened, ready_for_review]
     paths-ignore: [doc/**]
+
 #------------------------------------------------------------------------------------
 # Define application permissions & version
 #------------------------------------------------------------------------------------
 permissions: read-all
+
 #------------------------------------------------------------------------------------
 # Workflow jobs (Linux only)
 #------------------------------------------------------------------------------------
@@ -32,17 +34,19 @@ jobs:
           min_length: 10
           max_length: 80
           github_token: ${{ github.token }}
+
   #----------------------------------------------------------------------------------
-  # build and test packages
+  # build
   #----------------------------------------------------------------------------------
   build:
-    name: Build and Test Packages
+    name: Build packages
     needs: validate-pull-request
     runs-on: ubuntu-latest
     env:
           NODE_OPTIONS: "--max_old_space_size=4096"
     steps:
       - uses: actions/checkout@v3
+
       #------------------------------------------------------------------------------
       # install
       #------------------------------------------------------------------------------
@@ -50,6 +54,7 @@ jobs:
         run: |
           npm install
           npx lerna bootstrap
+
       #------------------------------------------------------------------------------
       # build
       #------------------------------------------------------------------------------
@@ -57,13 +62,69 @@ jobs:
         env:
           NODE_OPTIONS: "--max_old_space_size=4096"
         run:  npm run build
+
       #------------------------------------------------------------------------------
-      # lint
+      # cache build
       #------------------------------------------------------------------------------
-      - name: Lint check
-        run:  npm run lint
+      - name: Cache build
+        id: cache-build
+        uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+            **/node_modules
+            packages/**/dist/
+            !packages/**/node_modules/dist/
+          key: ${{ runner.os }}-mikoshi
+  
+  #------------------------------------------------------------------------------
+  # lint
+  #------------------------------------------------------------------------------
+  lint:
+    runs-on: ubuntu-latest
+    name: Lint check
+    needs: build
+    steps:
+      - uses: actions/checkout@v3
+
       #------------------------------------------------------------------------------
-      # test
+      # retrieve cache
       #------------------------------------------------------------------------------
-      - name: Intergation and unit tests
-        run:  npm run test
+      - name: Retrieve cached build
+        id: cache-build
+        uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+            **/node_modules
+            packages/**/dist/
+            !packages/**/node_modules/dist/
+          key: ${{ runner.os }}-mikoshi
+
+      - run:  npm run lint
+
+  #------------------------------------------------------------------------------
+  # test
+  #------------------------------------------------------------------------------
+  test:
+    runs-on: ubuntu-latest
+    name: Intergation and unit tests
+    needs: build
+    steps:
+      - uses: actions/checkout@v3
+
+      #------------------------------------------------------------------------------
+      # retrieve cache
+      #------------------------------------------------------------------------------
+      - name: Retrieve cached build
+        id: cache-build
+        uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+            **/node_modules
+            packages/**/dist/
+            !packages/**/node_modules/dist/
+          key: ${{ runner.os }}-mikoshi
+
+      - run:  npm run test
