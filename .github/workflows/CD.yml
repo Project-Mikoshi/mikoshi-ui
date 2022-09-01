@@ -19,10 +19,10 @@ permissions: read-all
 #------------------------------------------------------------------------------------
 jobs:
   #----------------------------------------------------------------------------------
-  # build and test packages
+  # Publish packages and deploy apps
   #----------------------------------------------------------------------------------
-  build:
-    name: Build and Test Packages
+  publish:
+    name: Publish packages and deploy apps
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -63,7 +63,7 @@ jobs:
           git config user.email "${{ github.actor}}@users.noreply.github.com"
           npm set @anthony-y-zhu14:registry=https://npm.pkg.github.com/anthony-y-zhu14
           npm set "//npm.pkg.github.com/:_authToken=${{ secrets.PERSONAL_ACCESS_TOKEN }}"
-          npx lerna version --amend --no-git-tag-version --yes --create-release github
+          npx lerna version --no-git-tag-version --yes --create-release github
           npx lerna publish from-git --yes
 
       #------------------------------------------------------------------------------
