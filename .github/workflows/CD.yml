@@ -63,7 +63,7 @@ jobs:
           git config user.email "${{ github.actor}}@users.noreply.github.com"
           npm set @anthony-y-zhu14:registry=https://npm.pkg.github.com/anthony-y-zhu14
           npm set "//npm.pkg.github.com/:_authToken=${{ secrets.PERSONAL_ACCESS_TOKEN }}"
-          npx lerna version --conventional-commits --conventional-graduate --yes
+          npx lerna version --amend --conventional-commits --conventional-graduate --yes
           npx lerna publish from-git --yes
 
       #------------------------------------------------------------------------------
