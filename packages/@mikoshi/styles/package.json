@@ -1,7 +1,11 @@
 {
   "name": "@mikoshi/styles",
   "version": "0.2.0",
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anthony-y-zhu14/MikoshiUI.git",
+    "directory": "packages/@mikoshi/styles"
+  },
   "type": "module",
   "exports": {
     ".": "./dist/style.css",

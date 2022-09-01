@@ -2,6 +2,11 @@
   "name": "@mikoshi/storybook",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anthony-y-zhu14/MikoshiUI.git",
+    "directory": "packages/@mikoshi/storybook"
+  },
   "description": "Storybook Playground for Mikoshi",
   "main": "index.js",
   "scripts": {

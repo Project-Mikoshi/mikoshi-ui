@@ -6,5 +6,5 @@
 
 # Checklists
 
-- [ ] Manually tested
-- [ ] Unit/Integration/Acceptance tested (as needed)
+- [x] Manually tested
+- [x] Unit/Integration/Acceptance tested (as needed)

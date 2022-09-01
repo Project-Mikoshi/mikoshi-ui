@@ -1,6 +1,11 @@
 {
   "name": "@portfilo/ui",
   "version": "0.2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anthony-y-zhu14/MikoshiUI.git",
+    "directory": "packages/@portfilo-ui"
+  },
   "scripts": {
     "start": "vite serve",
     "build": "vite build",
