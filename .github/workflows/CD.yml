@@ -66,8 +66,7 @@ jobs:
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor}}@users.noreply.github.com"
           git commit -am "automatic version bump"
-          git push
-
+          git push --force
           npx lerna publish from-git --no-private --yes
 
       #------------------------------------------------------------------------------
