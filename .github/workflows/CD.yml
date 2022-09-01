@@ -13,7 +13,7 @@ on:
 #------------------------------------------------------------------------------------
 # Define application permissions & version
 #------------------------------------------------------------------------------------
-permissions: read-all
+permissions: write-all
 #------------------------------------------------------------------------------------
 # Workflow jobs (Linux only)
 #------------------------------------------------------------------------------------
@@ -60,11 +60,14 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         run: |
-          git config user.name "${{ github.actor }}"
-          git config user.email "${{ github.actor}}@users.noreply.github.com"
           npm set @anthony-y-zhu14:registry=https://npm.pkg.github.com/anthony-y-zhu14
           npm set "//npm.pkg.github.com/:_authToken=${{ secrets.PERSONAL_ACCESS_TOKEN }}"
-          npx lerna version --yes
+          npx lerna version --no-git-tag-version --amend --yes
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor}}@users.noreply.github.com"
+          git commit -am "automatic version bump"
+          git push
+
           npx lerna publish from-git --no-private --yes
 
       #------------------------------------------------------------------------------
