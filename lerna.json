@@ -3,6 +3,12 @@
   "packages": [
       "packages/**"
   ],
+  "command": {
+    "version": {
+      "conventionalCommits": true,
+      "message": "chore: publish %v"
+    }
+  },
   "useNx": true,
   "version": "independent"
 }
