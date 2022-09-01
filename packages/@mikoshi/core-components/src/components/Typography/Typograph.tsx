@@ -16,9 +16,8 @@ interface TypographyProps {
   className?: string,
   children?: React.ReactNode
 }
-type TypographyRef = React.ForwardedRef<HTMLElement>
 
-export const Typography: FC<TypographyProps> = React.forwardRef((props, ref: TypographyRef) => {
+export const Typography: FC<TypographyProps> = React.forwardRef((props, ref) => {
   // == Props ================================
   const {
     children,
@@ -44,7 +43,7 @@ export const Typography: FC<TypographyProps> = React.forwardRef((props, ref: Typ
   // == Template =============================
   return (
     <MuiTypography
-      className={`mikoshi-typography ${className}`}
+      className={`mikoshi-typography ${color} ${className}`}
       variant={variant as any}
       align={align as any}
       noWrap={noWrap}
@@ -53,7 +52,6 @@ export const Typography: FC<TypographyProps> = React.forwardRef((props, ref: Typ
       whiteSpace={whiteSpace as any}
       textOverflow={textOverflow}
       overflow={overflow}
-      color={color}
       fontWeight={fontWeight}
       {...otherProps}
     >

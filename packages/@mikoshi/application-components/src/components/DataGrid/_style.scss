@@ -77,20 +77,10 @@
   .ag-header-row {
     .ag-header-cell {
       @include rules('m-border-grey-3', 'm-color-grey-1');
-      border-right-width: .5px;
-      border-right-style: solid;
-      border-left-width: .5px;
-      border-left-style: solid;
 
       body.dark &,
       .app[data-theme='dark'] & {
         @include rules('m-color-white', 'm-border-blueberry-1');
-      }
-
-      .ag-header-cell-resize {
-        &::after {
-          display: none;
-        }
       }
     }
   }
@@ -99,17 +89,7 @@
     @include rules('m-border-grey-3');
 
     .ag-cell {
-      @include rules('m-border-grey-3');
       border: 0;
-      border-right-width: .5px;
-      border-right-style: solid;
-      border-left-width: .5px;
-      border-left-style: solid;
-
-      body.dark &,
-      .app[data-theme='dark'] & {
-        @include rules('m-border-blueberry-1');
-      }
     }
 
     body.dark &,

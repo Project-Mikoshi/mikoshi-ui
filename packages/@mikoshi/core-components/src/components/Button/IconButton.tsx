@@ -4,6 +4,7 @@ import { Color } from 'types/button'
 
 interface IconButtonProps {
   onClick?: () => void,
+  disabled?: boolean,
   sx?: SxProps,
   color?: Color,
   href?: string,
@@ -23,6 +24,7 @@ export const IconButton: FC<IconButtonProps> = React.forwardRef((props, ref: But
     color,
     component,
     children,
+    disabled = false,
     className = '',
     ...otherProps
   } = props
@@ -36,6 +38,7 @@ export const IconButton: FC<IconButtonProps> = React.forwardRef((props, ref: But
   return (
     <MuiIconButton
       className={`mikoshi-icon-button ${color} ${className}`}
+      disabled={disabled}
       component={component as any}
       sx={sx}
       onClick={onClick}

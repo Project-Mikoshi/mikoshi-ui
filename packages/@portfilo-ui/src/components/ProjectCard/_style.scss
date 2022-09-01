@@ -1,14 +1,11 @@
 .project-card {
-  @include rules('m-animation-fade');
-  height: 400px;
-  width: 400px;
+  @include rules('m-animation-fade', 'm-height-100', 'm-wdith-100');
 
   &-content {
-    display: flex;
-    flex-direction: column;
+    @include rules('m-flex', 'm-flex-column');
   }
 
   &-actions {
-    justify-content: center;
+    @include rules('m-flex', 'm-flex-justify-center');
   }
 }

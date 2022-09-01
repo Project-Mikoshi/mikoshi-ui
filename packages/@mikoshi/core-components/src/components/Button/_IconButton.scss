@@ -1,0 +1,34 @@
+.mikoshi-icon-button {
+  &.MuiButtonBase-root {
+    @include rules('m-color-grey-1');
+
+    &.primary {
+      @include rules('m-color-primary');
+    }
+
+    &.secondary {
+      @include rules('m-color-secondary');
+    }
+
+    &:hover {
+      @include rules('m-color-primary');
+    }
+
+    body.dark &,
+    .app[data-theme='dark'] & {
+      @include rules('m-color-white');
+
+      &.primary {
+        @include rules('m-color-primary');
+      }
+
+      &.secondary {
+        @include rules('m-color-secondary');
+      }
+
+      &:hover {
+        @include rules('m-color-primary');
+      }
+    }
+  }
+}

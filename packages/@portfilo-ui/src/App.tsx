@@ -54,7 +54,7 @@ export const App = () => {
             zoom: { xs: '40%', sm: '60%', md: '80%', lg: '100%' }
           }}
         />
-        <ParticleEffectBackground />
+        <ParticleEffectBackground theme={theme} />
         <Scroll className='outlet'>
           <Routes>
             <Route path='/' element={<Navigate replace to={ROUTE.HOME.route} />} />

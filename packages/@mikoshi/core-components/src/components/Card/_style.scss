@@ -8,19 +8,31 @@
     }
 
     .mikoshi-card-header {
-      @include rules('m-padding-2', 'm-frost-glass-primary');
+      @include rules('m-padding-2', 'm-frost-glass-light', 'm-color-grey-1', 'm-font-weight-bold', 'm-font-size-m');
+      border: 0;
+
+      body.dark &,
+      .app[data-theme='dark'] & {
+        @include rules('m-frost-glass-dark', 'm-color-white');
+        border: 0;
+      }
     }
 
     .mikoshi-card-content {
       @include rules('m-flex-1', 'm-overflow-hidden');
+
+      &.MuiCardContent-root {
+        &:last-child {
+          @include rules('m-padding-b-1');
+        }
+      }
     }
 
     .mikoshi-card-action-area {
       @include rules('m-width-100');
-      height: 50%;
 
       .mikoshi-card-media {
-        @include rules('m-height-100', 'm-width-100');
+        @include rules('m-width-100');
       }
     }
   }

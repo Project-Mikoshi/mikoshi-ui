@@ -38,7 +38,8 @@ export const ProjectCard = (props: {project: ProjectCardData}) => {
       <CardActionArea href={project.projectDemoUrl} target='_blank'>
         <CardMedia
           className='project-card-media'
-          component='img'
+          component='svg'
+          height={200}
           image={project.imageUrl}
           title={project.title}
         />

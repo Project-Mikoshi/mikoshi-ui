@@ -1,3 +1,11 @@
 .projects {
-  @include rules('m-width-100', 'm-height-100', 'm-flex', 'm-flex-column');
+  @include rules('m-width-100', 'm-height-100');
+
+  .cards {
+    @include rules('m-flex', 'm-flex-align-center', 'm-flex-justify-center', 'm-flex-align-content-center');
+  }
+
+  .skills {
+    @include rules('m-flex', 'm-flex-align-center', 'm-flex-justify-center');
+  }
 }
