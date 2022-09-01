@@ -51,6 +51,16 @@ jobs:
       - name: Intergation and unit tests
         run:  npm run test
       #------------------------------------------------------------------------------
+      # publish packages
+      #------------------------------------------------------------------------------
+      - name: Publish packages
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_AUTOMATION_TOKEN }}
+        run: |
+          lerna publish from-package --yes --no-verify-access
+
+      #------------------------------------------------------------------------------
       # deploy storybook
       #------------------------------------------------------------------------------
       - name: Deploy storybook
