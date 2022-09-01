@@ -36,10 +36,10 @@ jobs:
           github_token: ${{ github.token }}
 
   #----------------------------------------------------------------------------------
-  # build and test packages
+  # build
   #----------------------------------------------------------------------------------
   build:
-    name: Build and Test Packages
+    name: Build packages
     needs: validate-pull-request
     runs-on: ubuntu-latest
     env:
@@ -64,13 +64,65 @@ jobs:
         run:  npm run build
 
       #------------------------------------------------------------------------------
-      # lint
+      # cache build
       #------------------------------------------------------------------------------
-      - name: Lint check
-        run:  npm run lint
+      - name: Cache build
+        id: cache-build
+        uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+            **/node_modules
+            packages/**/dist/
+            !packages/**/node_modules/dist/
+          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+  
+  #------------------------------------------------------------------------------
+  # lint
+  #------------------------------------------------------------------------------
+  lint:
+    runs-on: ubuntu-latest
+    name: Lint check
+    needs: build
+    steps:
+      - uses: actions/checkout@v3
 
       #------------------------------------------------------------------------------
-      # test
+      # retrieve cache
       #------------------------------------------------------------------------------
-      - name: Intergation and unit tests
-        run:  npm run test
+      - name: Retrieve cached build
+        id: cache-build
+        uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+            **/node_modules
+            ${{ steps.build-packages.outputs.dir }}
+          key: ${{ runner.os }}-${{ hashFiles('**/package.json') }}
+
+      - run:  npm run lint
+
+  #------------------------------------------------------------------------------
+  # test
+  #------------------------------------------------------------------------------
+  test:
+    runs-on: ubuntu-latest
+    name: Intergation and unit tests
+    needs: build
+    steps:
+      - uses: actions/checkout@v3
+
+      #------------------------------------------------------------------------------
+      # retrieve cache
+      #------------------------------------------------------------------------------
+      - name: Retrieve cached build
+        id: cache-build
+        uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+            **/node_modules
+            ${{ steps.build-packages.outputs.dir }}
+          key: ${{ runner.os }}-${{ hashFiles('**/package.json') }}
+
+      - run:  npm run test

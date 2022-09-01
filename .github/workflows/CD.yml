@@ -42,7 +42,6 @@ jobs:
       # build
       #------------------------------------------------------------------------------
       - name: Build packages
-        id: build-packages
         env:
           NODE_OPTIONS: "--max_old_space_size=4096"
         run:  npm run build
@@ -57,7 +56,8 @@ jobs:
           path: |
             node_modules
             **/node_modules
-            ${{ steps.build-packages.outputs.dir }}
+            packages/**/dist/
+            !packages/**/node_modules/dist/
           key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
       
       #------------------------------------------------------------------------------
