@@ -124,15 +124,20 @@ jobs:
           key: ${{ runner.os }}-mikoshi
 
       #------------------------------------------------------------------------------
+      # setup credentials
+      #------------------------------------------------------------------------------
+      - name: Setup credentials
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor}}@users.noreply.github.com"
+
+      #------------------------------------------------------------------------------
       # Bump package versions base on commit label 
       #------------------------------------------------------------------------------
       - name: Bump package versions base on commit label 
         env:
           GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-        run: |
-          git config user.name "${{ github.actor }}"
-          git config user.email "${{ github.actor}}@users.noreply.github.com"
-          npx lerna version --yes --conventional-commits --create-release github --message "[skip ci] automatic version bump"
+        run: npx lerna version --yes --conventional-commits --create-release github --message "[skip ci] automatic version bump"
 
   #----------------------------------------------------------------------------------
   # Publish packages
@@ -168,8 +173,8 @@ jobs:
           GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         run: |
           npm set @anthony-y-zhu14:registry=https://npm.pkg.github.com
-          npm set "//npm.pkg.github.com/:_authToken=${{ secrets.PERSONAL_ACCESS_TOKEN }}"
-          npx lerna publish from-package --no-private --yes
+          npm set "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}"
+          npx lerna publish from-package --no-verify-access --no-private --yes
 
   #----------------------------------------------------------------------------------
   # Deploy apps
