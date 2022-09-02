@@ -169,7 +169,7 @@ jobs:
         run: |
           npm set @anthony-y-zhu14:registry=https://npm.pkg.github.com
           npm set "//npm.pkg.github.com/:_authToken=${{ secrets.PERSONAL_ACCESS_TOKEN }}"
-          npx lerna publish from-git --no-private --yes
+          npx lerna publish from-package --no-private --yes
 
   #----------------------------------------------------------------------------------
   # Deploy apps
