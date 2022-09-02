@@ -1,6 +1,7 @@
 {
   "name": "@scaffold/eslint-config",
   "version": "0.1.2",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/anthony-y-zhu14/MikoshiUI.git",
