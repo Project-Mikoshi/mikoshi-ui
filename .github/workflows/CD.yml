@@ -140,12 +140,7 @@ jobs:
       # Push changes 
       #------------------------------------------------------------------------------
       - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          branch: ${{ github.ref }}
-          github_url: "https://github.com/anthony-y-zhu14/MikoshiUI.git"
-          force_with_lease: true
+        run: git push
 
   #----------------------------------------------------------------------------------
   # Publish packages
