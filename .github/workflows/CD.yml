@@ -134,7 +134,7 @@ jobs:
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor}}@users.noreply.github.com"
           git commit -am "[skip ci] automatic version bump"
-          git push https://${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/<redacted> HEAD:master --force
+          git push https://${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/anthony-y-zhu14/MikoshiUI.git HEAD:master --force
 
   #----------------------------------------------------------------------------------
   # Publish packages
