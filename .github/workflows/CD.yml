@@ -106,7 +106,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          persist-credentials: false
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           fetch-depth: 0
 
       #------------------------------------------------------------------------------
@@ -139,10 +139,7 @@ jobs:
       # Push changes 
       #------------------------------------------------------------------------------
       - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          branch: ${{ github.ref }}
+        run: git push --force-with-lease
 
   #----------------------------------------------------------------------------------
   # Publish packages
