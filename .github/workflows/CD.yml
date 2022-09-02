@@ -39,9 +39,9 @@ jobs:
           npx lerna bootstrap
 
       #------------------------------------------------------------------------------
-      # build
+      # build packges and apps
       #------------------------------------------------------------------------------
-      - name: Build packages
+      - name: Build packages and apps
         env:
           NODE_OPTIONS: "--max_old_space_size=4096"
         run:  npm run build
@@ -106,6 +106,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
+          persist-credentials: false
           fetch-depth: 0
 
       #------------------------------------------------------------------------------
@@ -133,7 +134,15 @@ jobs:
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor}}@users.noreply.github.com"
           git commit -am "[skip ci] automatic version bump"
-          git push https://${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/anthony-y-zhu14/MikoshiUI.git HEAD:master --force
+
+      #------------------------------------------------------------------------------
+      # Push changes 
+      #------------------------------------------------------------------------------
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          branch: ${{ github.ref }}
 
   #----------------------------------------------------------------------------------
   # Publish packages
