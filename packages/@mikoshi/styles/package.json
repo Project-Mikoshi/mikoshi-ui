@@ -1,6 +1,6 @@
 {
   "name": "@mikoshi/styles",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/anthony-y-zhu14/MikoshiUI.git",
@@ -22,7 +22,7 @@
     "@fontsource/roboto": "^4.5.7"
   },
   "devDependencies": {
-    "@scaffold/stylelint-config": "^0.1.2",
+    "@scaffold/stylelint-config": "^0.1.3",
     "css-loader": "^6.7.1",
     "sass": "^1.54.3",
     "stylelint": "^14.10.0",
