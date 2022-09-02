@@ -132,13 +132,7 @@ jobs:
         run: |
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor}}@users.noreply.github.com"
-          npx lerna version --yes --amend --conventional-commits --create-release github --message "[skip ci] automatic version bump" 
-
-      #------------------------------------------------------------------------------
-      # Push changes 
-      #------------------------------------------------------------------------------
-      - name: Push changes
-        run: git push
+          npx lerna version --yes --conventional-commits --create-release github --message "[skip ci] automatic version bump"
 
   #----------------------------------------------------------------------------------
   # Publish packages
