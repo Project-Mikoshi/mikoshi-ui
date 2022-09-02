@@ -36,10 +36,10 @@ jobs:
           github_token: ${{ github.token }}
 
   #----------------------------------------------------------------------------------
-  # build
+  # build packges and apps
   #----------------------------------------------------------------------------------
   build:
-    name: Build packages
+    name: Build packages and apps
     needs: validate-pull-request
     runs-on: ubuntu-latest
     env:

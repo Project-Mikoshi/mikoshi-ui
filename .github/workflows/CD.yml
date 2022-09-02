@@ -4,8 +4,7 @@
 name: Deployments
 
 on:
-  pull_request:
-    types: [closed]
+  push:
     branches:
       - master
       - 'releases/**'
@@ -20,12 +19,12 @@ permissions: write-all
 #------------------------------------------------------------------------------------
 jobs:
   #----------------------------------------------------------------------------------
-  # build and test packages
+  # build packages and apps
   #----------------------------------------------------------------------------------
   build:
-    name: Build and Test Packages
+    name: Build packages and apps
+    if: "!contains(github.event.commits[0].message, '[skip ci]')"
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
     env:
           NODE_OPTIONS: "--max_old_space_size=4096"
     steps:
@@ -135,7 +134,7 @@ jobs:
           npx lerna version --no-git-tag-version --amend --yes
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor}}@users.noreply.github.com"
-          git commit -am "automatic version bump"
+          git commit -am "[skip ci] automatic version bump"
           git push --force
           npx lerna publish from-git --no-private --yes
 
