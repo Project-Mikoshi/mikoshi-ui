@@ -97,11 +97,50 @@ jobs:
         run:  npm run test
 
   #----------------------------------------------------------------------------------
+  # Bump version
+  #----------------------------------------------------------------------------------
+  version:
+    name: Bump version
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      #------------------------------------------------------------------------------
+      # retrieve cache
+      #------------------------------------------------------------------------------
+      - name: Retrieve cached build
+        id: cache-build
+        uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+            **/node_modules
+            packages/**/dist/
+            !packages/**/node_modules/dist/
+          key: ${{ runner.os }}-mikoshi
+
+      #------------------------------------------------------------------------------
+      # publish packages
+      #------------------------------------------------------------------------------
+      - name: Publish packages
+        env:
+          GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        run: |
+          npx lerna version --no-git-tag-version --amend --yes
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor}}@users.noreply.github.com"
+          git commit -am "[skip ci] automatic version bump"
+          git push
+
+  #----------------------------------------------------------------------------------
   # Publish packages
   #----------------------------------------------------------------------------------
   publish:
     name: Publish packages
-    needs: build
+    needs: version
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -131,11 +170,6 @@ jobs:
         run: |
           npm set @anthony-y-zhu14:registry=https://npm.pkg.github.com/anthony-y-zhu14
           npm set "//npm.pkg.github.com/:_authToken=${{ secrets.PERSONAL_ACCESS_TOKEN }}"
-          npx lerna version --no-git-tag-version --amend --yes
-          git config user.name "${{ github.actor }}"
-          git config user.email "${{ github.actor}}@users.noreply.github.com"
-          git commit -am "[skip ci] automatic version bump"
-          git push --force
           npx lerna publish from-git --no-private --yes
 
   #----------------------------------------------------------------------------------
@@ -143,7 +177,7 @@ jobs:
   #----------------------------------------------------------------------------------
   deploy:
     name: Deploy apps
-    needs: build
+    needs: version
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
