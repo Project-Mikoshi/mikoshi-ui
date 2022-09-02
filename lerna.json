@@ -3,15 +3,6 @@
   "packages": [
       "packages/**"
   ],
-  "changelogPreset": "angular",
-  "command": {
-    "version": {
-      "conventionalCommits": true,
-      "createRelease": "github",
-      "allowBranch": "master",
-      "message": "chore: publish %v"
-    }
-  },
   "useNx": true,
   "version": "independent"
 }

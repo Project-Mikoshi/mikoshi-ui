@@ -132,7 +132,7 @@ jobs:
         run: |
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor}}@users.noreply.github.com"
-          npx lerna version --no-push --yes
+          npx lerna version --ammend --conventional-commits --create-release github --yes
           git commit -am "[skip ci] automatic version bump"
 
       #------------------------------------------------------------------------------
@@ -174,7 +174,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         run: |
-          npm set @anthony-y-zhu14:registry=https://npm.pkg.github.com/anthony-y-zhu14
+          npm set @anthony-y-zhu14:registry=https://npm.pkg.github.com
           npm set "//npm.pkg.github.com/:_authToken=${{ secrets.PERSONAL_ACCESS_TOKEN }}"
           npx lerna publish from-git --no-private --yes
 
