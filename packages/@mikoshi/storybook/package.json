@@ -1,6 +1,6 @@
 {
   "name": "@mikoshi/storybook",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "repository": {
     "type": "git",
@@ -20,12 +20,12 @@
     "lint:fix": "eslint . --fix --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx"
   },
   "devDependencies": {
-    "@mikoshi/application-components": "^0.2.1",
-    "@mikoshi/core-components": "^0.2.1",
-    "@mikoshi/styles": "^0.2.1",
-    "@scaffold/eslint-config": "^0.1.1",
-    "@scaffold/stylelint-config": "^0.1.1",
-    "@scaffold/typescript-config": "^0.1.1",
+    "@mikoshi/application-components": "^0.2.2",
+    "@mikoshi/core-components": "^0.2.2",
+    "@mikoshi/styles": "^0.2.2",
+    "@scaffold/eslint-config": "^0.1.2",
+    "@scaffold/stylelint-config": "^0.1.2",
+    "@scaffold/typescript-config": "^0.1.2",
     "@storybook/addon-actions": "^6.5.10",
     "@storybook/addon-essentials": "^6.5.10",
     "@storybook/addon-links": "^6.5.10",
