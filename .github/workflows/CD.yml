@@ -25,6 +25,7 @@ jobs:
   build:
     name: Build and Test Packages
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
     env:
           NODE_OPTIONS: "--max_old_space_size=4096"
     steps:
@@ -59,7 +60,31 @@ jobs:
             packages/**/dist/
             !packages/**/node_modules/dist/
           key: ${{ runner.os }}-mikoshi
-      
+
+  #----------------------------------------------------------------------------------
+  # Test and lint of the build
+  #----------------------------------------------------------------------------------
+  test:
+    name: Test and lint of the build
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      #------------------------------------------------------------------------------
+      # retrieve cache
+      #------------------------------------------------------------------------------
+      - name: Retrieve cached build
+        id: cache-build
+        uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+            **/node_modules
+            packages/**/dist/
+            !packages/**/node_modules/dist/
+          key: ${{ runner.os }}-mikoshi
+
       #------------------------------------------------------------------------------
       # lint
       #------------------------------------------------------------------------------
@@ -73,11 +98,10 @@ jobs:
         run:  npm run test
 
   #----------------------------------------------------------------------------------
-  # Publish packages and deploy apps
+  # Publish packages
   #----------------------------------------------------------------------------------
   publish:
-    name: Publish packages and deploy apps
-    if: github.event.pull_request.merged == true
+    name: Publish packages
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -114,6 +138,32 @@ jobs:
           git commit -am "automatic version bump"
           git push --force
           npx lerna publish from-git --no-private --yes
+
+  #----------------------------------------------------------------------------------
+  # Deploy apps
+  #----------------------------------------------------------------------------------
+  deploy:
+    name: Deploy apps
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      #------------------------------------------------------------------------------
+      # retrieve cache
+      #------------------------------------------------------------------------------
+      - name: Retrieve cached build
+        id: cache-build
+        uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+            **/node_modules
+            packages/**/dist/
+            !packages/**/node_modules/dist/
+          key: ${{ runner.os }}-mikoshi
 
       #------------------------------------------------------------------------------
       # deploy storybook
