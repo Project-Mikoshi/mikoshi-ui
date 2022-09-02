@@ -107,6 +107,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
       #------------------------------------------------------------------------------
       # retrieve cache
@@ -123,9 +124,9 @@ jobs:
           key: ${{ runner.os }}-mikoshi
 
       #------------------------------------------------------------------------------
-      # publish packages
+      # Bump package versions base on commit label 
       #------------------------------------------------------------------------------
-      - name: Publish packages
+      - name: Bump package versions base on commit label 
         env:
           GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         run: |
@@ -133,7 +134,7 @@ jobs:
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor}}@users.noreply.github.com"
           git commit -am "[skip ci] automatic version bump"
-          git push
+          git push https://${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/<redacted> HEAD:master --force
 
   #----------------------------------------------------------------------------------
   # Publish packages
