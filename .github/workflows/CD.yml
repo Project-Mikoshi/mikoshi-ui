@@ -130,7 +130,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         run: |
-          npx lerna version --no-git-tag-version --amend --yes
+          npx lerna version --amend --yes
           git config --local user.name "anthony-y-zhu14"
           git config --local user.email "anthony-y-zhu14@users.noreply.github.com"
           git commit -am "[skip ci] automatic version bump"
