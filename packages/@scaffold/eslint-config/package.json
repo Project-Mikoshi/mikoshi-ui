@@ -1,23 +1,23 @@
 {
   "name": "@scaffold/eslint-config",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/anthony-y-zhu14/MikoshiUI.git",
     "directory": "packages/@scaffold/eslint-config"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "@typescript-eslint/parser": "^5.33.0",
     "eslint": "^8.21.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-react": "^7.30.1",
-    "@typescript-eslint/eslint-plugin": "^5.33.0",
-    "@typescript-eslint/parser": "^5.33.0"
+    "eslint-plugin-react": "^7.30.1"
   },
   "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": ">=5.33.0",
+    "@typescript-eslint/parser": ">=5.30.6",
     "eslint": ">=8.21.0",
     "eslint-plugin-import": ">=2.26.0",
-    "eslint-plugin-react": ">=7.30.1",
-    "@typescript-eslint/eslint-plugin": ">=5.33.0",
-    "@typescript-eslint/parser": ">=5.30.6"
+    "eslint-plugin-react": ">=7.30.1"
   }
 }
