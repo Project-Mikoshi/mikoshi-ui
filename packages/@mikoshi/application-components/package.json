@@ -1,6 +1,6 @@
 {
   "name": "@mikoshi/application-components",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "repository": {
     "type": "git",
     "url": "https://github.com/anthony-y-zhu14/MikoshiUI.git",
@@ -33,7 +33,7 @@
     "ag-grid-react": "^28.0.0"
   },
   "devDependencies": {
-    "@mikoshi/core-components": "^0.2.3",
+    "@mikoshi/core-components": "^0.2.4",
     "@mikoshi/styles": "^0.2.3",
     "@scaffold/eslint-config": "^0.1.3",
     "@scaffold/stylelint-config": "^0.1.3",

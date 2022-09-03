@@ -1,6 +1,6 @@
 {
   "name": "@mikoshi/storybook",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": true,
   "repository": {
     "type": "git",
@@ -20,8 +20,8 @@
     "lint:fix": "eslint . --fix --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx"
   },
   "devDependencies": {
-    "@mikoshi/application-components": "^0.2.3",
-    "@mikoshi/core-components": "^0.2.3",
+    "@mikoshi/application-components": "^0.2.4",
+    "@mikoshi/core-components": "^0.2.4",
     "@mikoshi/styles": "^0.2.3",
     "@scaffold/eslint-config": "^0.1.3",
     "@scaffold/stylelint-config": "^0.1.3",

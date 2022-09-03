@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.4](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@mikoshi/application-components@0.2.3...@mikoshi/application-components@0.2.4) (2022-09-03)
+
+
+### Bug Fixes
+
+* update forward ref iml in multiple components ([#28](https://github.com/anthony-y-zhu14/MikoshiUI/issues/28)) ([7dabfaa](https://github.com/anthony-y-zhu14/MikoshiUI/commit/7dabfaadc0fd01104e6affc610b4677bf1e0010a))
+
+
+
+
+
 ## [0.2.3](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@mikoshi/application-components@0.2.2...@mikoshi/application-components@0.2.3) (2022-09-02)
 
 **Note:** Version bump only for package @mikoshi/application-components
