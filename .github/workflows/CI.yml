@@ -82,7 +82,7 @@ jobs:
   #------------------------------------------------------------------------------
   lint:
     runs-on: ubuntu-latest
-    name: Lint check
+    name: Source code lint check
     needs: build
     steps:
       - uses: actions/checkout@v3
