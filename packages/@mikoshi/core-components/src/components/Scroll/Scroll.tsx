@@ -15,7 +15,7 @@ export class Scroll extends Component<ScrollProps> {
 
   // == Props ================================
   container: Element | Text | null | undefined = null
-  resizeObserver: ResizeObserver | null | undefined= null
+  resizeObserver: ResizeObserver | null | undefined = null
   ref: PerfectScrollbar | null = null
 
   // == Lifecycle Hooks ======================

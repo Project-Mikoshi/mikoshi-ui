@@ -31,8 +31,7 @@ export const Typography: FC<TypographyProps> = React.forwardRef((props, ref) => 
     overflow,
     color,
     fontWeight,
-    className = '',
-    ...otherProps
+    className = ''
   } = props
   // == Hooks ================================
 
@@ -43,6 +42,7 @@ export const Typography: FC<TypographyProps> = React.forwardRef((props, ref) => 
   // == Template =============================
   return (
     <MuiTypography
+      {...props}
       className={`mikoshi-typography ${color} ${className}`}
       variant={variant as any}
       align={align as any}
@@ -53,7 +53,7 @@ export const Typography: FC<TypographyProps> = React.forwardRef((props, ref) => 
       textOverflow={textOverflow}
       overflow={overflow}
       fontWeight={fontWeight}
-      {...otherProps}
+      ref={ref}
     >
       {children}
     </MuiTypography>

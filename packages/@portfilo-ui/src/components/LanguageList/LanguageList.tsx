@@ -17,17 +17,17 @@ export const LanguageList: FC<LanguageListProps> = (props) => {
     return PROGRAMING_LANGUAGE_ICONS.map((language, index: number) => {
       const { icon: Icon, name } = language
       return (
-        <Tooltip title={name} key={index}>
-          <Container flex disableGutters>
+        <Container flex disableGutters key={index}>
+          <Tooltip title={name}>
             <IconButton
               key={index}
               color={selected === name ? 'primary' : 'inherit'}
-              onClick={() => action(name)} sx={{ '&:hover': { color: '#009eef' } }}
+              onClick={() => action(name)}
             >
               <Icon key={index} />
             </IconButton>
-          </Container>
-        </Tooltip>
+          </Tooltip>
+        </Container>
       )
     })
   }

@@ -5,8 +5,9 @@ export const Tooltip: FC<TooltipProps> = React.forwardRef((props, ref) => {
   // == Props ================================
   const {
     children,
-    ...otherProps
+    title
   } = props
+
   // == Hooks ================================
 
   // == Functions ============================
@@ -15,7 +16,7 @@ export const Tooltip: FC<TooltipProps> = React.forwardRef((props, ref) => {
 
   // == Template =============================
   return (
-    <MuiTooltip {...otherProps}>
+    <MuiTooltip title={title} ref={ref}>
       {children}
     </MuiTooltip>
   )

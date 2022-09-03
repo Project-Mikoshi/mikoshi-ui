@@ -50,9 +50,6 @@ export const App = () => {
           onRouteChange={onRouteChange}
           onThemeChange={onThemeChange}
           theme={theme}
-          sx={{
-            zoom: { xs: '40%', sm: '60%', md: '80%', lg: '100%' }
-          }}
         />
         <ParticleEffectBackground theme={theme} />
         <Scroll className='outlet'>

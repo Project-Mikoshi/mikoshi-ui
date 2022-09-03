@@ -17,8 +17,7 @@ export const Switch: FC<SwitchProps> = React.forwardRef((props, ref) => {
     unCheckedicon = <CircleIcon fontSize='inherit' />,
     className = '',
     size = 'small',
-    disabled = false,
-    ...otherProps
+    disabled = false
   } = props
 
   // == Hooks ================================
@@ -30,13 +29,14 @@ export const Switch: FC<SwitchProps> = React.forwardRef((props, ref) => {
   // == Template =============================
   return (
     <MuiSwitch
+      {...props}
       className={`mikoshi-switch ${className}`}
       size={size}
       disabled={disabled}
       checkedIcon={checkedIcon}
       icon={unCheckedicon}
       data-testid='mikoshi-switch'
-      {...otherProps}
+      ref={ref}
     />
   )
 })
