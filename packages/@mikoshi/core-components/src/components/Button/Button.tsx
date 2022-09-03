@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { Button as MuiButton, SxProps } from '@mui/material'
-import { Color, Size, Variant } from 'types/button'
+import { type Color, type Size, type Variant, type ButtonRef } from 'types/button'
 
 interface ButtonProps {
   onClick?: () => void,
@@ -16,13 +16,12 @@ interface ButtonProps {
   children?: React.ReactNode
 }
 
-export const Button: FC<ButtonProps> = React.forwardRef((props, ref) => {
+export const Button: FC<ButtonProps> = React.forwardRef((props, ref: ButtonRef) => {
   // == Props ================================
   const {
     children,
     color = 'inherit',
-    className = '',
-    ...otherProps
+    className = ''
   } = props
   // == Hooks ================================
 
@@ -33,8 +32,9 @@ export const Button: FC<ButtonProps> = React.forwardRef((props, ref) => {
   // == Template =============================
   return (
     <MuiButton
+      {...props}
       className={`mikoshi-button ${color} ${className}`}
-      {...otherProps}
+      ref={ref}
     >
       {children}
     </MuiButton>

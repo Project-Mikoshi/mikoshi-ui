@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { IconButton as MuiIconButton, SxProps } from '@mui/material'
-import { Color } from 'types/button'
+import { type Color, type ButtonRef } from 'types/button'
 
 interface IconButtonProps {
   onClick?: () => void,
@@ -9,12 +9,9 @@ interface IconButtonProps {
   color?: Color,
   href?: string,
   target?: string,
-  component?: string,
   className?: string,
   children?: React.ReactNode
 }
-
-type ButtonRef = React.ForwardedRef<HTMLButtonElement>
 
 export const IconButton: FC<IconButtonProps> = React.forwardRef((props, ref: ButtonRef) => {
   // == Props ================================
@@ -22,11 +19,9 @@ export const IconButton: FC<IconButtonProps> = React.forwardRef((props, ref: But
     onClick,
     sx,
     color,
-    component,
     children,
     disabled = false,
-    className = '',
-    ...otherProps
+    className = ''
   } = props
   // == Hooks ================================
 
@@ -37,12 +32,12 @@ export const IconButton: FC<IconButtonProps> = React.forwardRef((props, ref: But
   // == Template =============================
   return (
     <MuiIconButton
+      {...props}
       className={`mikoshi-icon-button ${color} ${className}`}
       disabled={disabled}
-      component={component as any}
       sx={sx}
       onClick={onClick}
-      {...otherProps}
+      ref={ref}
     >
       {children}
     </MuiIconButton>

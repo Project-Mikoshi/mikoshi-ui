@@ -38,6 +38,7 @@ export const Tab: FC<TabProps> = React.forwardRef((props, ref) => {
   // == Template =============================
   return (
     <MuiTab
+      {...props}
       className={`mikoshi-tab ${className}`}
       value={value}
       disabled={disabled}
@@ -48,6 +49,7 @@ export const Tab: FC<TabProps> = React.forwardRef((props, ref) => {
       component={component}
       to={to}
       onClick={onClick}
+      ref={ref}
     />
   )
 })
