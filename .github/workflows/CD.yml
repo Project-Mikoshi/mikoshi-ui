@@ -7,7 +7,6 @@ on:
   push:
     branches:
       - master
-      - 'releases/**'
 
 #------------------------------------------------------------------------------------
 # Define application permissions & version
@@ -150,6 +149,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          ref: 'master'
 
       #------------------------------------------------------------------------------
       # setup node
