@@ -14,7 +14,7 @@ describe('components/application/tabs', () => {
     ]
 
     render(
-      <Tabs selectedTab={TABS[0].value}>
+      <Tabs selected={TABS[0].value}>
         {TABS.map((tab, index) => (
           <Tab key={index} value={tab.value} label={tab.label} />
         ))}

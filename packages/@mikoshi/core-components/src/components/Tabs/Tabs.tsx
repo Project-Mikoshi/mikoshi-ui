@@ -6,7 +6,7 @@ interface TabsProps {
   indicatorColor?: 'primary' | 'secondary',
   orientation?: 'horizontal' | 'vertical',
   variant?: 'fullWidth' | 'scrollable' | 'standard',
-  selectedTab?: number | string,
+  selected?: number | string,
   children?: React.ReactNode,
   className?: string
 }
@@ -15,7 +15,7 @@ export const Tabs: FC<TabsProps> = React.forwardRef((props, ref: ButtonRef) => {
   // == Props ================================
   const {
     children,
-    selectedTab,
+    selected,
     indicatorColor = 'secondary',
     orientation = 'horizontal',
     variant = 'standard',
@@ -33,7 +33,7 @@ export const Tabs: FC<TabsProps> = React.forwardRef((props, ref: ButtonRef) => {
     <MuiTabs
       {...props}
       className={`mikoshi-tabs ${className}`}
-      value={selectedTab}
+      value={selected}
       indicatorColor={indicatorColor}
       orientation={orientation}
       variant={variant}
