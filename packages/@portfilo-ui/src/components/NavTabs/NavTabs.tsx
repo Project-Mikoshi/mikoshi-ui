@@ -13,7 +13,7 @@ export const NavTabs: FC<NavTabsProps> = (props: NavTabsProps) => {
   const { routes, currentRoute, onRouteChange } = props
 
   return (
-    <Tabs selectedTab={currentRoute}>
+    <Tabs selected={currentRoute}>
       {routes.map((route: RouteData) => (
         <Tab
           key={route.route}

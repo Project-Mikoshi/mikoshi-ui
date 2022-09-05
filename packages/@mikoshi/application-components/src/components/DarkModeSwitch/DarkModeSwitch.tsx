@@ -1,4 +1,4 @@
-import { Switch } from '@mikoshi/core-components'
+import { Switch, Tooltip } from '@mikoshi/core-components'
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined'
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined'
 import React, { FC } from 'react'
@@ -17,6 +17,8 @@ export const DarkModeSwitch: FC<DarkModeSwitchProps> = (props) => {
     className = ''
   } = props
 
+  const tooltipText = checked ? 'Swtich to light mode' : 'Swtich to dark mode'
+
   // == Hooks ================================
 
   // == Functions ============================
@@ -26,14 +28,16 @@ export const DarkModeSwitch: FC<DarkModeSwitchProps> = (props) => {
   // == Template =============================
 
   return (
-    <Switch
-      className={`mikoshi-dark-mode-switch ${className}`}
-      checkedIcon={<DarkModeOutlinedIcon fontSize='medium' />}
-      unCheckedicon={<LightModeOutlinedIcon fontSize='medium' />}
-      size='medium'
-      checked={checked}
-      onChange={onChange}
-      data-testid='mikoshi-dark-mode-switch'
-    />
+    <Tooltip title={tooltipText}>
+      <Switch
+        className={`mikoshi-dark-mode-switch ${className}`}
+        checkedIcon={<DarkModeOutlinedIcon fontSize='medium' />}
+        uncheckedIcon={<LightModeOutlinedIcon fontSize='medium' />}
+        size='medium'
+        checked={checked}
+        onChange={onChange}
+        data-testid='mikoshi-dark-mode-switch'
+      />
+    </Tooltip>
   )
 }

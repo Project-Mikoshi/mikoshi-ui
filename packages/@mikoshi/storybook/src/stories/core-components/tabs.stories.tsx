@@ -33,7 +33,7 @@ const Template = () => {
       <Container>
         <Typography variant='h6'>Tabs Demo</Typography>
       </Container>
-      <Tabs selectedTab={selectedTab} className='m-flex-justify-end m-flex-align-center'>
+      <Tabs selected={selectedTab} className='m-flex-justify-end m-flex-align-center'>
         {TABS.map((tab, index) => (
           <Tab key={index} value={tab.value} label={tab.label} onClick={() => onTabSelection(tab.value)} />
         ))}

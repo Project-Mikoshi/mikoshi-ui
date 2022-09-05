@@ -11,7 +11,7 @@
     "dev": "nx run-many --target=dev --all",
     "build": "nx run-many --target=build --all",
     "clean": "nx run-many --target=clean --all",
-    "test": "nx run-many --target=test --all",
+    "test": "nx run-many --verbose --target=test --all -- --coverage",
     "lint": "nx run-many --target=lint --all"
   },
   "devDependencies": {
