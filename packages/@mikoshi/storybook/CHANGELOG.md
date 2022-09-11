@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@mikoshi/storybook@0.2.1...@mikoshi/storybook@0.2.2) (2022-09-11)
+
+**Note:** Version bump only for package @mikoshi/storybook
+
+
+
+
+
 ## [0.2.1](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@mikoshi/storybook@0.2.0...@mikoshi/storybook@0.2.1) (2022-09-11)
 
 **Note:** Version bump only for package @mikoshi/storybook

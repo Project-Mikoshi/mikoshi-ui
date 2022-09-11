@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@mikoshi/styles@0.3.0...@mikoshi/styles@0.3.1) (2022-09-11)
+
+
+### Bug Fixes
+
+* fix cache and re-publish ([de9ac8d](https://github.com/anthony-y-zhu14/MikoshiUI/commit/de9ac8d0f0ae14049ecc919f3eee7044ddf46842))
+
+
+
+
+
 # [0.3.0](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@mikoshi/styles@0.2.3...@mikoshi/styles@0.3.0) (2022-09-05)
 
 
