@@ -1,5 +1,4 @@
 import './style.scss'
-
 export { AppBar } from 'components/AppBar'
 export { Container } from 'components/Container'
 export { Button, IconButton } from 'components/Button'
@@ -24,5 +23,4 @@ export {
 export { Tooltip } from 'components/Tooltip'
 export { Scroll } from 'components/Scroll'
 export { Switch } from 'components/Switch'
-
 export { COLORS, VARIANTS, SIZES } from 'constants/generic'

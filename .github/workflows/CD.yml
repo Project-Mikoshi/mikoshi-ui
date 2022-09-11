@@ -57,7 +57,7 @@ jobs:
             **/node_modules
             packages/**/dist/
             !packages/**/node_modules/dist/
-          key: ${{ runner.os }}-mikoshi-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
 
   #----------------------------------------------------------------------------------
   # Test and lint of the build
@@ -81,7 +81,7 @@ jobs:
             **/node_modules
             packages/**/dist/
             !packages/**/node_modules/dist/
-          key: ${{ runner.os }}-mikoshi-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
 
       #------------------------------------------------------------------------------
       # lint
@@ -120,7 +120,7 @@ jobs:
             **/node_modules
             packages/**/dist/
             !packages/**/node_modules/dist/
-          key: ${{ runner.os }}-mikoshi-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
 
       #------------------------------------------------------------------------------
       # setup credentials
@@ -172,7 +172,7 @@ jobs:
             **/node_modules
             packages/**/dist/
             !packages/**/node_modules/dist/
-          key: ${{ runner.os }}-mikoshi-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
 
       #------------------------------------------------------------------------------
       # setup npm
@@ -213,7 +213,7 @@ jobs:
             **/node_modules
             packages/**/dist/
             !packages/**/node_modules/dist/
-          key: ${{ runner.os }}-mikoshi-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
 
       #------------------------------------------------------------------------------
       # deploy storybook

@@ -75,7 +75,7 @@ jobs:
             **/node_modules
             packages/**/dist/
             !packages/**/node_modules/dist/
-          key: ${{ runner.os }}-mikoshi-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
   
   #------------------------------------------------------------------------------
   # lint
@@ -99,7 +99,7 @@ jobs:
             **/node_modules
             packages/**/dist/
             !packages/**/node_modules/dist/
-          key: ${{ runner.os }}-mikoshi-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
 
       - run:  npm run lint
 
@@ -125,6 +125,6 @@ jobs:
             **/node_modules
             packages/**/dist/
             !packages/**/node_modules/dist/
-          key: ${{ runner.os }}-mikoshi-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
 
       - run:  npm run test
