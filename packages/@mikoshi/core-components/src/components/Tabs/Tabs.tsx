@@ -15,7 +15,7 @@ export const Tabs: FC<TabsProps> = React.forwardRef((props, ref: ButtonRef) => {
   // == Props ================================
   const {
     children,
-    selected,
+    selected = 0,
     indicatorColor = 'secondary',
     orientation = 'horizontal',
     variant = 'standard',
