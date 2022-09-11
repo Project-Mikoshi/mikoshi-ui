@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@portfilo/ui@0.3.0...@portfilo/ui@0.4.0) (2022-09-11)
+
+
+### Features
+
+* update build config and fix tab value warning ([#30](https://github.com/anthony-y-zhu14/MikoshiUI/issues/30)) ([a714bdc](https://github.com/anthony-y-zhu14/MikoshiUI/commit/a714bdc9a9e317746171c534a0a4227480204f00))
+
+
+
+
+
 # [0.3.0](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@portfilo/ui@0.2.4...@portfilo/ui@0.3.0) (2022-09-05)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@mikoshi/core-components",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/anthony-y-zhu14/MikoshiUI.git",
@@ -68,10 +68,10 @@
     "vitest": "^0.23.1"
   },
   "peerDependencies": {
-    "react": ">=18.2.0",
-    "react-dom": ">=18.2.0",
     "@emotion/react": ">=11.10.4",
-    "@emotion/styled": ">=11.10.4"
+    "@emotion/styled": ">=11.10.4",
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0"
   },
   "publishConfig": {
     "access": "public"
