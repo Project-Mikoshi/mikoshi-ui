@@ -1,0 +1,18 @@
+.mikoshi-toggle-button {
+  &.MuiButtonBase-root {
+    @include rules('m-color-grey-1');
+
+    body.dark &,
+    .app[data-theme='dark'] & {
+      @include rules('m-color-white');
+    }
+
+    &.Mui-selected {
+      @include rules('m-color-white', 'm-frost-glass-primary');
+
+      &:hover {
+        @include rules('m-bg-primary');
+      }
+    }
+  }
+}
