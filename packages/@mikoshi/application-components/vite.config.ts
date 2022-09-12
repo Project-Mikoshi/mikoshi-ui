@@ -15,7 +15,6 @@ export default defineConfig(() => ({
       formats: ['es'],
       fileName: 'index'
     },
-    ssr: true,
     sourcemap: 'inline',
     rollupOptions: {
       external: ['react', 'react-dom', '@emotion/react', '@emotion/styled']
