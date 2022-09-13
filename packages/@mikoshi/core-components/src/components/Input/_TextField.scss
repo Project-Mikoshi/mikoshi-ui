@@ -1,0 +1,20 @@
+.mikoshi-text-field {
+  .MuiInputBase-root,
+  .MuiInputLabel-root {
+    @include rules('m-color-grey-1');
+
+    body.dark &,
+    .app[data-theme='dark'] & {
+      @include rules('m-color-white');
+    }
+  }
+
+  .MuiOutlinedInput-notchedOutline {
+    @include rules('m-border-grey-1');
+
+    body.dark &,
+    .app[data-theme='dark'] & {
+      @include rules('m-border-white');
+    }
+  }
+}
