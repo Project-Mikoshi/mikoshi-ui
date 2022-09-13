@@ -6,7 +6,7 @@ module.exports = {
     'storybook-addon-themes'
   ],
   core: {
-    builder: '@storybook/builder-vite'
+    builder: 'webpack5'
   },
   framework: '@storybook/react'
 }
