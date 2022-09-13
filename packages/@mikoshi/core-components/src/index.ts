@@ -11,7 +11,7 @@ export {
   CardContent
 } from 'components/Card'
 export { Loading } from 'components/Loading'
-export { InputBase } from 'components/Input'
+export { InputBase, TextField } from 'components/Input'
 export { Paper } from 'components/Paper'
 export { Typography } from 'components/Typography'
 export { Tabs, Tab } from 'components/Tabs'
