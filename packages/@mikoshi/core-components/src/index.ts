@@ -24,4 +24,5 @@ export {
 export { Tooltip } from 'components/Tooltip'
 export { Scroll } from 'components/Scroll'
 export { Switch } from 'components/Switch'
+export { List, ListItem, ListItemButton, ListItemIcon, ListItemText } from 'components/List'
 export { COLORS, VARIANTS, SIZES } from 'constants/generic'

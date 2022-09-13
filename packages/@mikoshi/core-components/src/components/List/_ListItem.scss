@@ -1,0 +1,31 @@
+.mikoshi-list-item {
+  &.MuiListItem-root {
+    @include rules('m-color-grey-1');
+
+    body.dark &,
+    .app[data-theme='dark'] & {
+      @include rules('m-color-white');
+    }
+
+    .mikoshi-list-item-icon {
+      @include rules('m-color-grey-1');
+
+      body.dark &,
+      .app[data-theme='dark'] & {
+        @include rules('m-color-white');
+      }
+    }
+
+    .mikoshi-list-item-text {
+      .MuiListItemText-secondary,
+      .MuiListItemText-primary {
+        @include rules('m-color-grey-1');
+
+        body.dark &,
+        .app[data-theme='dark'] & {
+          @include rules('m-color-white');
+        }
+      }
+    }
+  }
+}
