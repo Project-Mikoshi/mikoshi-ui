@@ -3,12 +3,12 @@
     m-frost-glass-light: (
       backdrop-filter: blur(2.5px),
       background: rgba($lgrey-1, .6),
-      border: 1px solid rgba($grey-1, .18)
+      border: .6px solid rgba($grey-1, .18)
     ),
     m-frost-glass-dark: (
       backdrop-filter: blur(2.5px),
       background: rgba($grey-1, .6),
-      border: 1px solid rgba($lgrey-1, .18)
+      border: .6px solid rgba($lgrey-1, .18)
     )
   )
 );
@@ -20,7 +20,7 @@
         'm-frost-glass-#{$name}': (
           backdrop-filter: blur(2.53px),
           background: rgba($color, .6),
-          border: 1px solid rgba($color, .18)
+          border: .6px solid rgba($color, .18)
         )
       )
     );

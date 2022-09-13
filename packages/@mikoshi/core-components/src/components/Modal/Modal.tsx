@@ -27,7 +27,11 @@ export const Modal: FC<ModalProps> = (props) => {
   } = props
 
   // == Hooks ================================
-  useEffect(() => ReactModal.setAppElement(bindingElement), [])
+  useEffect(() => {
+    if (typeof(window) !== 'undefined') {
+      ReactModal.setAppElement(bindingElement)
+    }
+  }, [])
 
   // == Functions ============================
 
