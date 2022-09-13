@@ -17,7 +17,7 @@ export default defineConfig(() => ({
     },
     sourcemap: 'inline',
     rollupOptions: {
-      external: ['react', 'react-dom', '@emotion/react', '@emotion/styled']
+      external: ['react', 'react-dom', '@emotion/react']
     }
   },
   resolve: {
