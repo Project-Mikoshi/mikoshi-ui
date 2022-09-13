@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@mikoshi/styles@0.3.1...@mikoshi/styles@0.4.0) (2022-09-13)
+
+
+### Features
+
+* add more component and support ssr ([#31](https://github.com/anthony-y-zhu14/MikoshiUI/issues/31)) ([d012e49](https://github.com/anthony-y-zhu14/MikoshiUI/commit/d012e496802cc3d8753e8bd3eed2b53177951228))
+
+
+
+
+
 ## [0.3.1](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@mikoshi/styles@0.3.0...@mikoshi/styles@0.3.1) (2022-09-11)
 
 
