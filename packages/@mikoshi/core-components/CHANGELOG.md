@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@mikoshi/core-components@0.5.0...@mikoshi/core-components@0.6.0) (2022-09-13)
+
+
+### Features
+
+* add list components ([#32](https://github.com/anthony-y-zhu14/MikoshiUI/issues/32)) ([c84e183](https://github.com/anthony-y-zhu14/MikoshiUI/commit/c84e183d553f7436fa6ca67fe4106264f148c23b))
+
+
+
+
+
 # [0.5.0](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@mikoshi/core-components@0.4.1...@mikoshi/core-components@0.5.0) (2022-09-13)
 
 

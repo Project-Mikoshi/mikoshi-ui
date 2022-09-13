@@ -1,6 +1,6 @@
 {
   "name": "@mikoshi/storybook",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "private": true,
   "repository": {
     "type": "git",
@@ -20,8 +20,10 @@
     "lint:fix": "eslint . --fix --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx"
   },
   "devDependencies": {
-    "@mikoshi/application-components": "^0.5.0",
-    "@mikoshi/core-components": "^0.5.0",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mikoshi/application-components": "^0.5.1",
+    "@mikoshi/core-components": "^0.6.0",
     "@mikoshi/styles": "^0.4.0",
     "@mui/icons-material": "^5.10.3",
     "@scaffold/eslint-config": "^0.2.0",
@@ -34,8 +36,6 @@
     "@storybook/manager-webpack5": "^6.5.11",
     "@storybook/react": "^6.5.11",
     "@types/react": "^18.0.20",
-    "@emotion/styled": "^11.10.4",
-    "@emotion/react": "^11.10.4",
     "@types/react-dom": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",
