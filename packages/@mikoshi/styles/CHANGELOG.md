@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@mikoshi/styles@0.4.0...@mikoshi/styles@0.5.0) (2022-09-15)
+
+
+### Features
+
+* add menu and accordion components ([#33](https://github.com/anthony-y-zhu14/MikoshiUI/issues/33)) ([141b72b](https://github.com/anthony-y-zhu14/MikoshiUI/commit/141b72b00f74050966cf7dfe0a003ec9c620a835))
+
+
+
+
+
 # [0.4.0](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@mikoshi/styles@0.3.1...@mikoshi/styles@0.4.0) (2022-09-13)
 
 
