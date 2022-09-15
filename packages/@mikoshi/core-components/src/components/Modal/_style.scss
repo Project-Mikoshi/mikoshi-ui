@@ -12,6 +12,7 @@
     border-radius: .6rem;
 
     &-overlay {
+      @include rules('m-z-index-max');
       position: fixed;
       top: 0;
       bottom: 0;
