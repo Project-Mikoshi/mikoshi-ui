@@ -1,5 +1,6 @@
 import './style.scss'
 export { AppBar } from 'components/AppBar'
+export { Accordion, AccordionDetails, AccordionSummary } from 'components/Accordion'
 export { Container } from 'components/Container'
 export { Button, IconButton, ToggleButton } from 'components/Button'
 export {
@@ -15,6 +16,7 @@ export { InputBase, TextField } from 'components/Input'
 export { Paper } from 'components/Paper'
 export { Typography } from 'components/Typography'
 export { Tabs, Tab } from 'components/Tabs'
+export { Menu, MenuItem } from 'components/Menu'
 export {
   Modal,
   ModalBody,

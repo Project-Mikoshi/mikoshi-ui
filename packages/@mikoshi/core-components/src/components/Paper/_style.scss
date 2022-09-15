@@ -1,7 +1,7 @@
 // sass-lint:disable class-name-format
 .mikoshi-paper {
   &.MuiPaper-root {
-    @include rules('m-flex', 'm-frost-glass-light', 'm-color-black');
+    @include rules('m-frost-glass-light', 'm-color-grey-1');
 
     body.dark &,
     .app[data-theme='dark'] & {

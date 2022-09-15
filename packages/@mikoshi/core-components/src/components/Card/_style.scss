@@ -8,7 +8,7 @@
     }
 
     .mikoshi-card-header {
-      @include rules('m-padding-2', 'm-frost-glass-light', 'm-color-grey-1', 'm-font-weight-bold', 'm-font-size-m');
+      @include rules('m-padding-2', 'm-frost-glass-lgrey-2', 'm-color-grey-1', 'm-font-weight-bold', 'm-font-size-m');
       border: 0;
 
       body.dark &,
