@@ -1,0 +1,21 @@
+.mikoshi-accordion {
+  &.MuiPaper-root {
+    @include rules('m-frost-glass-light');
+
+    body.dark &,
+    .app[data-theme='dark'] & {
+      @include rules('m-frost-glass-dark');
+    }
+
+    .mikoshi-accordion-summary {
+      .MuiAccordionSummary-expandIconWrapper {
+        @include rules('m-color-grey-1');
+
+        body.dark &,
+        .app[data-theme='dark'] & {
+          @include rules('m-color-white');
+        }
+      }
+    }
+  }
+}

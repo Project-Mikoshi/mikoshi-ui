@@ -27,13 +27,13 @@
     }
 
     &-content {
-      @include rules('m-frost-glass-lgrey-3', 'm-color-grey-1', 'm-flex-column');
+      @include rules('m-frost-glass-light', 'm-color-grey-1', 'm-flex-column');
       max-height: 60vh;
       border-radius: .6rem;
 
       body.dark &,
       .app[data-theme='dark'] & {
-        @include rules('m-frost-glass-night-2', 'm-color-blueberry-1');
+        @include rules('m-frost-glass-dark', 'm-color-white');
       }
 
       .mikoshi-modal-header {
@@ -46,7 +46,7 @@
 
         body.dark &,
         .app[data-theme='dark'] & {
-          @include rules('m-color-blueberry-1');
+          @include rules('m-color-white');
         }
       }
 
