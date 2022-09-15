@@ -1,6 +1,6 @@
 {
   "name": "@mikoshi/storybook",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "repository": {
     "type": "git",
@@ -22,8 +22,8 @@
   "devDependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
-    "@mikoshi/application-components": "^0.5.1",
-    "@mikoshi/core-components": "^0.6.0",
+    "@mikoshi/application-components": "^0.5.2",
+    "@mikoshi/core-components": "^0.6.1",
     "@mikoshi/styles": "^0.4.0",
     "@mui/icons-material": "^5.10.3",
     "@scaffold/eslint-config": "^0.2.0",

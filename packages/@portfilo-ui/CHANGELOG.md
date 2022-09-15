@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.4](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@portfilo/ui@0.4.3...@portfilo/ui@0.4.4) (2022-09-15)
+
+**Note:** Version bump only for package @portfilo/ui
+
+
+
+
+
 ## [0.4.3](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@portfilo/ui@0.4.2...@portfilo/ui@0.4.3) (2022-09-13)
 
 **Note:** Version bump only for package @portfilo/ui

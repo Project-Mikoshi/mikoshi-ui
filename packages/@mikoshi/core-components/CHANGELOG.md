@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.1](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@mikoshi/core-components@0.6.0...@mikoshi/core-components@0.6.1) (2022-09-15)
+
+
+### Bug Fixes
+
+* increate z-index of modal ([af0b3e6](https://github.com/anthony-y-zhu14/MikoshiUI/commit/af0b3e6b339e68fcb119cc473774f8e0f5ff9d6e))
+
+
+
+
+
 # [0.6.0](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@mikoshi/core-components@0.5.0...@mikoshi/core-components@0.6.0) (2022-09-13)
 
 
