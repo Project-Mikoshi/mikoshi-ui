@@ -5,7 +5,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/anthony-y-zhu14/MikoshiUI.git",
-    "directory": "packages/@portfilo-ui"
+    "directory": "apps/@portfilo"
   },
   "scripts": {
     "start": "vite serve",

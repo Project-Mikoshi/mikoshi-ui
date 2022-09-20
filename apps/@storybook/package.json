@@ -5,7 +5,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/anthony-y-zhu14/MikoshiUI.git",
-    "directory": "packages/@mikoshi/storybook"
+    "directory": "apps/@storybook"
   },
   "description": "Storybook Playground for Mikoshi",
   "main": "index.js",
