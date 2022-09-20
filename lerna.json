@@ -1,7 +1,8 @@
 {
   "lerna": "5.5.0",
   "packages": [
-      "packages/**"
+      "packages/**",
+      "apps/**"
   ],
   "useNx": true,
   "version": "independent"
