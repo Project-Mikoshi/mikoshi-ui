@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2022-09-20)
+
+
+### Features
+
+* project structure refactor ([#34](https://github.com/anthony-y-zhu14/MikoshiUI/issues/34)) ([e5b330a](https://github.com/anthony-y-zhu14/MikoshiUI/commit/e5b330aa42c3c0ea13b0c5d953ddce951da1fba2))
+
+
+
+
+
 ## [0.4.5](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@portfilo/ui@0.4.4...@portfilo/ui@0.4.5) (2022-09-15)
 
 **Note:** Version bump only for package @portfilo/ui
