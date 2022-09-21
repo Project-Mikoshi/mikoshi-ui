@@ -219,4 +219,4 @@ jobs:
       # deploy storybook
       #------------------------------------------------------------------------------
       - name: Deploy storybook
-        run: npm run deploy:storybook -- --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }} --exit-once-uploaded
+        run: npx nx run @mikoshi/storybook:chromatic -- --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }} --exit-once-uploaded
