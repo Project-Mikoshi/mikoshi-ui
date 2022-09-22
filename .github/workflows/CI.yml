@@ -73,6 +73,8 @@ jobs:
           path: |
             node_modules
             **/node_modules
+            apps/**/dist/
+            !apps/**/node_modules/dist/
             packages/**/dist/
             !packages/**/node_modules/dist/
           key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
@@ -97,6 +99,8 @@ jobs:
           path: |
             node_modules
             **/node_modules
+            apps/**/dist/
+            !apps/**/node_modules/dist/
             packages/**/dist/
             !packages/**/node_modules/dist/
           key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
@@ -123,6 +127,8 @@ jobs:
           path: |
             node_modules
             **/node_modules
+            apps/**/dist/
+            !apps/**/node_modules/dist/
             packages/**/dist/
             !packages/**/node_modules/dist/
           key: ${{ runner.os }}-mikoshi-${{ github.run_id }}

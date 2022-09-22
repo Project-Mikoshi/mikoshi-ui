@@ -10,15 +10,3 @@
 - @mikoshi/application-components is a libaray of higher level components as building block for applications
 
 - @mikoshi/styles is a collection of sass mixins and utilities that serves as a unified style reference across the components and applications
-
-## Demo
-[Storybook - Chromatic](https://62fc0f7c0d92b3b43bd42f5d-aftsqdiujd.chromatic.com)
-
-## Development
-
-### Storybook
-
-```sh
-lerna bootstrap
-npm run storybook
-```
