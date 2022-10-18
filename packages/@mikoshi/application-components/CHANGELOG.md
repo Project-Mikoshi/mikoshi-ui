@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@mikoshi/application-components@0.6.0...@mikoshi/application-components@0.7.0) (2022-10-18)
+
+
+### Features
+
+* update all non-major dependencies ([#35](https://github.com/anthony-y-zhu14/MikoshiUI/issues/35)) ([8a2d0e5](https://github.com/anthony-y-zhu14/MikoshiUI/commit/8a2d0e50805a7fa79b78b89807ea2a5568cb1ff0))
+
+
+
+
+
 # [0.6.0](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@mikoshi/application-components@0.5.3...@mikoshi/application-components@0.6.0) (2022-09-20)
 
 
