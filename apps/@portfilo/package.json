@@ -23,8 +23,8 @@
     "@mikoshi/application-components": "^0.6.0",
     "@mikoshi/core-components": "^0.8.0",
     "@mikoshi/styles": "^0.6.0",
-    "@mui/icons-material": "^5.10.3",
-    "@mui/material": "^5.10.3",
+    "@mui/icons-material": "^5.10.9",
+    "@mui/material": "^5.10.9",
     "@scaffold/eslint-config": "^0.2.0",
     "@scaffold/stylelint-config": "^0.1.3",
     "@scaffold/typescript-config": "^0.3.0",
@@ -51,9 +51,9 @@
     "stylelint-config-recommended": "^9.0.0",
     "stylelint-config-standard-scss": "^5.0.0",
     "tsparticles": "^2.3.1",
-    "typescript": "^4.8.3",
-    "vite": "^3.1.3",
+    "typescript": "^4.8.4",
+    "vite": "^3.1.7",
     "vite-plugin-svgr": "^2.2.1",
-    "vite-tsconfig-paths": "^3.5.0"
+    "vite-tsconfig-paths": "^3.5.1"
   }
 }
