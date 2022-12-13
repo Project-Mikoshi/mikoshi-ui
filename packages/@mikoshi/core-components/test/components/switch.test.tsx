@@ -4,7 +4,7 @@ import { describe, it, expect } from 'vitest'
 import { Switch } from '@mikoshi/core-components'
 import '@testing-library/jest-dom'
 
-describe('components/application/switch', () => {
+describe('components/core/switch', () => {
   it('should render', () => {
     render(<Switch />)
 

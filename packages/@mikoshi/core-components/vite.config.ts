@@ -15,8 +15,9 @@ export default defineConfig(() => ({
       formats: ['es'],
       fileName: 'index'
     },
+    sourcemap: true,
     rollupOptions: {
-      external: ['react', 'react-dom', '@emotion/react']
+      external: ['react', 'react-dom', '@emotion/react', '@emotion/styled', '@mui/material', '@mui/icons-material']
     }
   },
   resolve: {
@@ -38,9 +39,6 @@ export default defineConfig(() => ({
   ],
   test: {
     environment: 'jsdom',
-    globals: true,
-    deps: {
-      inline: true
-    }
+    globals: true
   }
 }))

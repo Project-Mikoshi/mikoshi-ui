@@ -4,7 +4,7 @@ import { describe, it, expect } from 'vitest'
 import { AppBar } from '@mikoshi/core-components'
 import '@testing-library/jest-dom'
 
-describe('components/application/app-bar', () => {
+describe('components/core/app-bar', () => {
   it('should render', () => {
     render(<AppBar>app bar</AppBar>)
 
