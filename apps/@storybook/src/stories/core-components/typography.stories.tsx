@@ -1,5 +1,5 @@
 import React from 'react'
-import { Paper, Container, Typography } from '@mikoshi/core-components'
+import { Paper, Container, Typography } from '@mikoshi/components/core'
 
 export default {
   title: 'Core/Typography',

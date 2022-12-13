@@ -6,7 +6,7 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText
-} from '@mikoshi/core-components'
+} from '@mikoshi/components/core'
 import { InboxOutlined, DraftsOutlined } from '@mui/icons-material'
 
 export default {

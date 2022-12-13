@@ -32,7 +32,7 @@ jobs:
           disallowed_prefixes: 'feat/,hotfix'
           prefix_case_sensitive: false
           min_length: 10
-          max_length: 80
+          max_length: 120
           github_token: ${{ github.token }}
 
   #----------------------------------------------------------------------------------
@@ -50,7 +50,7 @@ jobs:
       #------------------------------------------------------------------------------
       # install
       #------------------------------------------------------------------------------
-      - name: Install depdencies
+      - name: Install dependencies
         run: |
           npm install
           npx lerna bootstrap
@@ -74,6 +74,7 @@ jobs:
             node_modules
             **/node_modules
             apps/**/dist/
+            apps/**/.next/
             !apps/**/node_modules/dist/
             packages/**/dist/
             !packages/**/node_modules/dist/
@@ -100,6 +101,7 @@ jobs:
             node_modules
             **/node_modules
             apps/**/dist/
+            apps/**/.next/
             !apps/**/node_modules/dist/
             packages/**/dist/
             !packages/**/node_modules/dist/
@@ -112,7 +114,7 @@ jobs:
   #------------------------------------------------------------------------------
   test:
     runs-on: ubuntu-latest
-    name: Intergation and unit tests
+    name: Integration and unit tests
     needs: build
     steps:
       - uses: actions/checkout@v3
@@ -128,6 +130,7 @@ jobs:
             node_modules
             **/node_modules
             apps/**/dist/
+            apps/**/.next/
             !apps/**/node_modules/dist/
             packages/**/dist/
             !packages/**/node_modules/dist/

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Button } from '@mikoshi/core-components'
+import { Container, Button } from '@mikoshi/components/core'
 
 export default {
   title: 'Core/Button',
