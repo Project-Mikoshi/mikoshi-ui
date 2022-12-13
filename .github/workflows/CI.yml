@@ -32,7 +32,7 @@ jobs:
           disallowed_prefixes: 'feat/,hotfix'
           prefix_case_sensitive: false
           min_length: 10
-          max_length: 80
+          max_length: 120
           github_token: ${{ github.token }}
 
   #----------------------------------------------------------------------------------
