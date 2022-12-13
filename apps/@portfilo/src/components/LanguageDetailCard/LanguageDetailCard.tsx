@@ -1,6 +1,6 @@
 import React from 'react'
-import { Typography } from '@mikoshi/core-components'
-import { PROGRAMMING_LANGUAGE_DESCRIPTIONS } from 'constants/skills-languages'
+import { Typography } from '@mikoshi/components/core'
+import { PROGRAMMING_LANGUAGE_DESCRIPTIONS } from '@/constants/skills-languages'
 
 export const LanguageDetailCard = (props: {language: string}) => {
   const { language } = props

@@ -2,7 +2,7 @@ import React, { FC, useCallback } from 'react'
 import Particles from 'react-tsparticles'
 import { loadFull } from 'tsparticles'
 import { Engine, Container } from 'tsparticles-engine'
-import { OPTIONS } from 'constants/particles-options'
+import { OPTIONS } from '@/constants/particles-options'
 
 interface ParticleEffectBackgroundProps {
   theme?: 'dark' | 'light'

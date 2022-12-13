@@ -31,7 +31,6 @@ export const Tabs: FC<TabsProps> = React.forwardRef((props, ref: ButtonRef) => {
   // == Template =============================
   return (
     <MuiTabs
-      {...props}
       className={`mikoshi-tabs ${className}`}
       value={selected}
       indicatorColor={indicatorColor}

@@ -1,33 +1,23 @@
-import React, { useState, useEffect, FC } from 'react'
+import React, { useState } from 'react'
 import { Grid } from '@mui/material'
-import { useLocation } from 'react-router-dom'
-import { SimpleDialog } from '@mikoshi/application-components'
-import { PROJECTS } from 'constants/projects'
-import { ProjectCard } from 'components/ProjectCard'
-import { SkillCard } from 'components/SkillCard'
-import { LanguageList as ProgrammingList } from 'components/LanguageList'
-import { LanguageDetailCard } from 'components/LanguageDetailCard'
+import { SimpleDialog } from '@mikoshi/components/specialized'
+import { PROJECTS } from '@/constants/projects'
+import { ProjectCard } from '@/components/ProjectCard'
+import { SkillCard } from '@/components/SkillCard'
+import { LanguageList as ProgrammingList } from '@/components/LanguageList'
+import { LanguageDetailCard } from '@/components/LanguageDetailCard'
 
-interface ProjectsProps {
-  onRouteChange: (newRoute: string) => void
-}
-
-export const Projects: FC<ProjectsProps> = (props) => {
+export default function Projects () {
   // == Props ================================
-  const { onRouteChange } = props
   const CARD_SIZE = {
     xl: 500,
     xs: 400
   }
 
   // == Hooks ================================
-  const route = useLocation()
   const [language, setLanguage] = useState('')
   const [launchModal, toggleModal] = useState(false)
 
-  useEffect(() => {
-    onRouteChange(route.pathname)
-  }, [route.pathname])
 
   // == Functions ============================
 
@@ -65,7 +55,13 @@ export const Projects: FC<ProjectsProps> = (props) => {
           <SkillCard skillKey='Software' label='Software Design and Development' level={4} />
           <ProgrammingList action={selectLanguage} selected={language} />
         </Grid>
-        <SimpleDialog title={language} isOpen={launchModal} onCancel={closeModal} onAfterClose={() => handleLanguageSelection('')}>
+        <SimpleDialog
+          title={language}
+          isOpen={launchModal}
+          onCancel={closeModal}
+          onAfterClose={() => handleLanguageSelection('')}
+          bindingElement='#__next'
+        >
           <LanguageDetailCard language={language} />
         </SimpleDialog>
       </Grid>

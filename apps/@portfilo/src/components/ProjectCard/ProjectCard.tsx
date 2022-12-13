@@ -8,9 +8,9 @@ import {
   Typography,
   IconButton,
   Tooltip
-} from '@mikoshi/core-components'
-import { ProjectCardData } from 'types/project'
-import { ICONS } from 'constants/social-media'
+} from '@mikoshi/components/core'
+import { ProjectCardData } from '@/types/project'
+import { ICONS } from '@/constants/social-media'
 
 export const ProjectCard = (props: {project: ProjectCardData}) => {
   // == Props ================================

@@ -1,32 +1,20 @@
-import React, { FC, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import React from 'react'
 import { Grid, Box } from '@mui/material'
-import { Typography, Button } from '@mikoshi/core-components'
-// @ts-expect-error
-import { ReactComponent as PhotoSketchSVG } from 'svgs/Silhouette.svg'
-import { SocialMediaButton } from 'components/SocialMediaButton'
-import { ROUTE } from 'constants/route'
+import { Typography, Button } from '@mikoshi/components/core'
+import Link from 'next/link'
+import { Silhouette } from '@/components/Silhouette'
+import { SocialMediaButton } from '@/components/SocialMediaButton'
+import { ROUTE } from '@/constants/route'
 
-interface DashboardProps {
-    onRouteChange: (newRoute: string) => void
-}
-
-export const Dashboard: FC<DashboardProps> = (props: DashboardProps) => {
+export default function Dashboard () {
   // == Props ================================
-  const { onRouteChange } = props
   const { PROJECTS } = ROUTE
 
   // == Hooks ================================
-  const route = useLocation()
-
-  useEffect(() => {
-    onRouteChange(route.pathname)
-  }, [route.pathname])
 
   // == Functions ============================
 
   // == Actions ==============================
-  const transitionToProject = () => onRouteChange(PROJECTS.route)
 
   // == Template =============================
   return (
@@ -53,13 +41,15 @@ export const Dashboard: FC<DashboardProps> = (props: DashboardProps) => {
 
         <br />
 
-        <Button size='small' variant='contained' onClick={transitionToProject} component={Link} to={PROJECTS.route}>
-          Check out my projects
+        <Button size='small' variant='contained'>
+          <Link href={PROJECTS.route}>
+              Check out my projects
+          </Link>
         </Button>
       </Grid>
 
       <Grid item className='avatar'>
-        <PhotoSketchSVG />
+        <Silhouette />
       </Grid>
 
       <Grid item className='social-media' xs={10}>

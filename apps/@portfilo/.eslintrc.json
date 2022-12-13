@@ -1,5 +1,6 @@
 {
   "extends": [
-    "@scaffold/eslint-config"
+    "@scaffold/eslint-config",
+    "plugin:@next/next/recommended"
   ]
 }

@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
-import { Paper, Tooltip, IconButton, Scroll, Container } from '@mikoshi/core-components'
-import { PROGRAMING_LANGUAGE_ICONS } from 'constants/skills-languages'
+import { Paper, Tooltip, IconButton, Scroll, Container } from '@mikoshi/components/core'
+import { PROGRAMING_LANGUAGE_ICONS } from '@/constants/skills-languages'
 
 interface LanguageListProps {
     action: (_name: string) => void,

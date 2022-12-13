@@ -23,7 +23,7 @@ export const OPTIONS: RecursivePartial<IOptions> = {
         enable: true,
         area: 1000
       },
-      value: 20
+      value: 5
     },
     opacity: {
       value: 0.5

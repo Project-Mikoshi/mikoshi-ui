@@ -1,6 +1,6 @@
 import React from 'react'
-import { IconButton } from '@mikoshi/core-components'
-import { SOCIAL_MEDIAS, ICONS } from 'constants/social-media'
+import { IconButton } from '@mikoshi/components/core'
+import { SOCIAL_MEDIAS, ICONS } from '@/constants/social-media'
 
 export const SocialMediaButton = (props: {type: string}) => {
   const type = props.type.toUpperCase()

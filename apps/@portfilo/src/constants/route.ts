@@ -1,4 +1,4 @@
 export const ROUTE = {
-  HOME: { label: 'About', route: '/about' },
+  HOME: { label: 'About', route: '/' },
   PROJECTS: { label: 'Projects', route: '/projects' }
 }

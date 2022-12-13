@@ -1,9 +1,9 @@
 import React from 'react'
 import { Box, Rating, Tooltip } from '@mui/material'
 import { Stars, StarBorder } from '@mui/icons-material'
-import { Paper, Typography } from '@mikoshi/core-components'
+import { Paper, Typography } from '@mikoshi/components/core'
 import { IconType } from 'react-icons'
-import { SKILLS } from 'constants/skills-languages'
+import { SKILLS } from '@/constants/skills-languages'
 
 export const SkillCard = (props: {skillKey: string, label: string, level: number}) => {
   const { skillKey, label, level } = props

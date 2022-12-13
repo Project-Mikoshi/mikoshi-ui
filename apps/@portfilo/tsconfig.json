@@ -6,18 +6,33 @@
       "dom.iterable",
       "esnext"
     ],
-    "types": ["vite/client"],
     "outDir": "./dist/",
     "baseUrl": ".",
     "paths": {
-      "components/*": ["src/components/*"],
-      "pages/*": ["src/pages/*"],
-      "utils/*": ["src/utils/*"],
-      "utils": ["src/utils/index"],
-      "constants/*": ["src/constants/*"],
-      "types/*": ["src/types/*"],
-      "svgs/*": ["src/svgs/*"]
-    }
+      "@/components/*": [
+        "src/components/*"
+      ],
+      "@/pages/*": [
+        "src/pages/*"
+      ],
+      "@?utils/*": [
+        "src/utils/*"
+      ],
+      "@/utils": [
+        "src/utils/index"
+      ],
+      "@/constants/*": [
+        "src/constants/*"
+      ],
+      "@/types/*": [
+        "src/types/*"
+      ],
+      "@/svgs/*": [
+        "src/svgs/*"
+      ]
+    },
+    "incremental": true,
+    "jsx": "preserve"
   },
   "include": [
     "src/**/*.ts",
