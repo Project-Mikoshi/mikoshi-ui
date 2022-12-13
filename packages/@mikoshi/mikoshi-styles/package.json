@@ -4,7 +4,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/anthony-y-zhu14/MikoshiUI.git",
-    "directory": "packages/@mikoshi/styles"
+    "directory": "packages/@mikoshi/mikoshi-styles"
   },
   "type": "module",
   "exports": {
@@ -23,12 +23,11 @@
   },
   "devDependencies": {
     "@scaffold/stylelint-config": "^0.1.3",
-    "css-loader": "^6.7.1",
-    "sass": "^1.55.0",
-    "stylelint": "^14.13.0",
+    "sass": "^1.56.1",
+    "stylelint": "^14.16.0",
     "stylelint-config-recommended": "^9.0.0",
-    "stylelint-config-standard-scss": "^5.0.0",
-    "vite": "^3.1.7"
+    "stylelint-config-standard-scss": "^6.1.0",
+    "vite": "^4.0.1"
   },
   "publishConfig": {
     "access": "public"
