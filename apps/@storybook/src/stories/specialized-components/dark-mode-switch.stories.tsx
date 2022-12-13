@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { DarkModeSwitch } from '@mikoshi/application-components'
-import { Container, Typography } from '@mikoshi/core-components'
+import { DarkModeSwitch } from '@mikoshi/components/specialized'
+import { Container, Typography } from '@mikoshi/components/core'
 
 export default {
-  title: 'Application/Dark Mode Switch',
+  title: 'Specialized/Dark Mode Switch',
   component: DarkModeSwitch
 }
 

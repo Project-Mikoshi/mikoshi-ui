@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AppBar, Container, Typography, Tabs, Tab } from '@mikoshi/core-components'
+import { AppBar, Container, Typography, Tabs, Tab } from '@mikoshi/components/core'
 
 export default {
   title: 'Core/Tabs',

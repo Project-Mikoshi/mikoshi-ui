@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
 import {
-  Modal,
-  ModalBody,
-  ModalHeader,
-  ModalFooter,
   Container,
   Button,
   Typography
-} from '@mikoshi/core-components'
+} from '@mikoshi/components/core'
+import {
+  Modal,
+  ModalBody,
+  ModalHeader,
+  ModalFooter
+} from '@mikoshi/components/specialized'
 
 export default {
-  title: 'Core/Modal',
+  title: 'Specialized/Modal',
   component: Modal
 }
 

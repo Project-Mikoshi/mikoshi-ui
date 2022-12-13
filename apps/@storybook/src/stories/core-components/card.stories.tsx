@@ -9,7 +9,7 @@ import {
   CardFooter,
   CardMedia,
   Typography
-} from '@mikoshi/core-components'
+} from '@mikoshi/components/core'
 // @ts-expect-error
 import LizardImg from '../../asset/contemplative-reptile.jpeg'
 

@@ -6,5 +6,19 @@
       "mode": "auto"
     }
   ],
-  "svg.preview.background": "custom"
+  "svg.preview.background": "custom",
+  "cSpell.words": [
+    "fontsource",
+    "lgrey",
+    "mikoshi",
+    "Profilo",
+    "QUICKIN",
+    "roboto",
+    "SHOPPIES",
+    "stylelint",
+    "svgr",
+    "svgs",
+    "tsparticles",
+    "UCLEI"
+  ]
 }

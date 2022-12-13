@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { ConfirmationDialog, SimpleDialog } from '@mikoshi/application-components'
-import { Button, Container, Typography } from '@mikoshi/core-components'
+import { ConfirmationDialog, SimpleDialog } from '@mikoshi/components/specialized'
+import { Button, Container, Typography } from '@mikoshi/components/core'
 
 export default {
-  title: 'Application/Dialog',
+  title: 'Specialized/Dialog',
   component: ConfirmationDialog
 }
 

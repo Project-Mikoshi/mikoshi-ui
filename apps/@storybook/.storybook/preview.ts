@@ -1,6 +1,5 @@
 import '@mikoshi/styles/style'
-import '@mikoshi/core-components/style'
-import '@mikoshi/application-components/style'
+import '@mikoshi/components/style'
 import { Parameters } from '@storybook/addons'
 
 export const parameters: Parameters = {

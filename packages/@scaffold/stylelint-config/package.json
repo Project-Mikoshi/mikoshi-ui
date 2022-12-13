@@ -8,13 +8,13 @@
     "directory": "packages/@scaffold/stylelint-config"
   },
   "devDependencies": {
-    "stylelint": "^14.10.0",
+    "stylelint": "^14.16.0",
     "stylelint-config-recommended": "^9.0.0",
-    "stylelint-config-standard-scss": "^5.0.0"
+    "stylelint-config-standard-scss": "^6.1.0"
   },
   "peerDependencies": {
-    "stylelint": ">=14.10.0",
+    "stylelint": ">=14.16.0",
     "stylelint-config-recommended": ">=9.0.0",
-    "stylelint-config-standard-scss": ">=5.0.0"
+    "stylelint-config-standard-scss": ">=6.1.0"
   }
 }
