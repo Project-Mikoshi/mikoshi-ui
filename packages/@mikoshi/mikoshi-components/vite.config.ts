@@ -19,7 +19,7 @@ export default defineConfig(() => ({
     },
     sourcemap: true,
     rollupOptions: {
-      external: ['react', 'react-dom', '@emotion/react', '@emotion/styled', '@mui/material', '@mui/icons-material']
+      external: ['react', 'react-dom', '@emotion/react', '@mui/material', '@mui/icons-material']
     }
   },
   resolve: {
