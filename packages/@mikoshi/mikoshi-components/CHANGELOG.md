@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@mikoshi/components@0.2.0...@mikoshi/components@0.2.1) (2023-02-21)
+
+
+### Bug Fixes
+
+* update build config to address nextjs issue ([#38](https://github.com/anthony-y-zhu14/MikoshiUI/issues/38)) ([82ed169](https://github.com/anthony-y-zhu14/MikoshiUI/commit/82ed169236f9db9a7fc4f2a64e5d76f62bf7b8fe))
+
+
+
+
+
 # [0.2.0](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@mikoshi/components@0.1.0...@mikoshi/components@0.2.0) (2023-02-21)
 
 
