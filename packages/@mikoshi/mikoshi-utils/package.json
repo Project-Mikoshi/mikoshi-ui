@@ -1,6 +1,6 @@
 {
   "name": "@mikoshi/utils",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/anthony-y-zhu14/MikoshiUI.git",
@@ -31,12 +31,12 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-react": "^7.31.11",
     "lodash": "^4.17.21",
+    "pluralize": "^8.0.0",
     "typescript": "^4.9.4",
     "vite": "^4.1.3",
     "vite-plugin-dts": "^2.0.0-beta.3",
     "vite-tsconfig-paths": "^4.0.5",
-    "vitest": "^0.26.2",
-    "pluralize": "^8.0.0"
+    "vitest": "^0.26.2"
   },
   "publishConfig": {
     "access": "public"

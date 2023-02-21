@@ -1,6 +1,6 @@
 {
   "name": "@anthony/portfolio",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "private": true,
   "repository": {
     "type": "git",
@@ -20,8 +20,8 @@
   "devDependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
-    "@mikoshi/components": "^0.1.0",
-    "@mikoshi/styles": "^0.8.0",
+    "@mikoshi/components": "^0.2.0",
+    "@mikoshi/styles": "^0.9.0",
     "@mui/icons-material": "^5.11.9",
     "@mui/material": "^5.11.10",
     "@next/eslint-plugin-next": "^13.0.6",

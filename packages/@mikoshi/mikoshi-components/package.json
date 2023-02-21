@@ -1,6 +1,6 @@
 {
   "name": "@mikoshi/components",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/anthony-y-zhu14/MikoshiUI.git",
@@ -41,7 +41,7 @@
   "devDependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
-    "@mikoshi/styles": "^0.8.0",
+    "@mikoshi/styles": "^0.9.0",
     "@mui/icons-material": "^5.11.9",
     "@mui/material": "^5.11.10",
     "@scaffold/eslint-config": "^0.3.0",
