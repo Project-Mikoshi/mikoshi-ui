@@ -1,0 +1,20 @@
+{
+  "extends": "@scaffold/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "types": ["vitest"],
+    "outDir": "./dist/",
+    "baseUrl": ".",
+    "paths": {
+      "@/utils/*": ["src/utils/*"],
+      "@/constants/*": ["src/constants/*"],
+      "@/types/*": ["src/types/*"],
+    }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}
