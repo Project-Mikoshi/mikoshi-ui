@@ -1,0 +1,44 @@
+{
+  "name": "@mikoshi/utils",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anthony-y-zhu14/MikoshiUI.git",
+    "directory": "packages/@mikoshi/mikoshi-utils"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "vite build",
+    "build": "vite build",
+    "test": "vitest run",
+    "watch": "vite build --watch",
+    "clean": "rm -rf dist",
+    "lint": "eslint . --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx",
+    "lint:fix": "eslint . --fix --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx"
+  },
+  "devDependencies": {
+    "@scaffold/eslint-config": "^0.3.0",
+    "@scaffold/typescript-config": "^0.5.0",
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^18.11.13",
+    "@types/pluralize": "^0.0.29",
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
+    "@typescript-eslint/parser": "^5.46.1",
+    "eslint": "^8.29.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-react": "^7.31.11",
+    "lodash": "^4.17.21",
+    "typescript": "^4.9.4",
+    "vite": "^4.1.3",
+    "vite-plugin-dts": "^2.0.0-beta.3",
+    "vite-tsconfig-paths": "^4.0.5",
+    "vitest": "^0.26.2",
+    "pluralize": "^8.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
