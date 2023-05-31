@@ -8,9 +8,9 @@
     "directory": "packages/@scaffold/typescript-config"
   },
   "devDependencies": {
-    "typescript": "^4.9.4"
+    "typescript": "^5.0.4"
   },
   "peerDependencies": {
-    "typescript": ">=4.9.4"
+    "typescript": ">=5.0.4"
   }
 }
