@@ -14,7 +14,7 @@
     "lint": "nx run-many --target=lint --all"
   },
   "devDependencies": {
-    "lerna": "^6.6.1",
-    "nx": "^16.0.3"
+    "lerna": "^6.6.2",
+    "nx": "^16.3.0"
   }
 }
