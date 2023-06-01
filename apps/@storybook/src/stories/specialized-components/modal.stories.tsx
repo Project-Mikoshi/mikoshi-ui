@@ -26,7 +26,7 @@ const Template = () => {
   return (
     <Container>
       <Button variant='contained' onClick={openModal}>Launch Modal</Button>
-      <Modal isOpen={isOpen} onClose={closeModal}>
+      <Modal isOpen={isOpen} onClose={closeModal} bindingElement='#storybook-root'>
         <ModalHeader>
           <Typography variant='body1'>Modal Title</Typography>
         </ModalHeader>

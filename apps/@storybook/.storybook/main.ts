@@ -11,10 +11,18 @@ export default {
     'storybook-addon-themes'
   ],
 
+  core: {
+    builder: '@storybook/builder-vite'
+  },
+
+  typescript: {
+    reactDocgen: false
+  },
+
   framework: '@storybook/react-vite',
 
   async viteFinal(config, options) {
     // Add your configuration here
     return config
   }
-} as StorybookConfig
+} satisfies StorybookConfig

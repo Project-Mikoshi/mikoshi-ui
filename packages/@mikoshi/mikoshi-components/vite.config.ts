@@ -4,10 +4,12 @@ import { defineConfig, splitVendorChunkPlugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import tsconfigPaths from 'vite-tsconfig-paths'
 import dts from 'vite-plugin-dts'
+import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 
 // @ts-expect-error
 const __dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileURLToPath(import.meta.url))
 
+// @ts-expect-error
 export default defineConfig(() => ({
   build: {
     lib: {
@@ -17,9 +19,10 @@ export default defineConfig(() => ({
       },
       formats: ['es']
     },
-    sourcemap: true,
     rollupOptions: {
-      external: ['react', 'react-dom', '@emotion/react', '@mui/material', '@mui/icons-material']
+      plugins: [
+        peerDepsExternal()
+      ]
     }
   },
   resolve: {
