@@ -32,12 +32,21 @@
       ]
     },
     "incremental": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
-    "vite.config.ts"
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "vite.config.ts",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
