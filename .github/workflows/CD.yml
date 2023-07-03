@@ -28,6 +28,9 @@ jobs:
           NODE_OPTIONS: "--max_old_space_size=4096"
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
 
       #------------------------------------------------------------------------------
       # install
@@ -162,10 +165,10 @@ jobs:
       #------------------------------------------------------------------------------
       # setup node
       #------------------------------------------------------------------------------
-      - name: Set node version to 16.x
+      - name: Set node version to 20.x
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 20.x
           registry-url: https://registry.npmjs.org/
 
       #------------------------------------------------------------------------------
