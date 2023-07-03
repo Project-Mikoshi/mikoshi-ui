@@ -5,6 +5,10 @@
     "type": "git",
     "url": "https://github.com/anthony-y-zhu14/MikoshiUI.git"
   },
+  "workspaces": [
+    "packages/**",
+    "apps/**"
+  ],
   "scripts": {
     "storybook": "npm run dev && nx start @mikoshi/storybook",
     "dev": "nx run-many --target=dev --all",

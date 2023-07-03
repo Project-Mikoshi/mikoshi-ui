@@ -22,7 +22,7 @@ jobs:
   #----------------------------------------------------------------------------------
   build:
     name: Build packages and apps
-    if: "!contains(github.event.commits[0].message, '[skip ci]')"
+    if: ${{ contains(github.event.head_commit.message, '[skip ci]') }}
     runs-on: ubuntu-latest
     env:
           NODE_OPTIONS: "--max_old_space_size=4096"
@@ -35,7 +35,6 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
-          npx lerna bootstrap
 
       #------------------------------------------------------------------------------
       # build packages and apps
