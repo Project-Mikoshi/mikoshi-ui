@@ -27,7 +27,7 @@ jobs:
       - name: Verify pull request title match standard
         uses: deepakputhraya/action-pr-title@master
         with:
-          regex: '(chore|feat|fix)+: ([a-z])+'
+          regex: '(chore|fix|feat|feat(breaking))+: ([a-z])+'
           allowed_prefixes: 'feat,fix,chore'
           disallowed_prefixes: 'feat/,hotfix'
           prefix_case_sensitive: false
