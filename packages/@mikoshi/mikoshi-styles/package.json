@@ -19,15 +19,15 @@
     "lint": "stylelint '**/*.scss'"
   },
   "dependencies": {
-    "@fontsource/roboto": "^5.0.2"
+    "@fontsource/roboto": "^5.0.8"
   },
   "devDependencies": {
     "@scaffold/stylelint-config": "^0.2.0",
-    "sass": "^1.62.1",
-    "stylelint": "^15.6.2",
-    "stylelint-config-recommended": "^12.0.0",
-    "stylelint-config-standard-scss": "^9.0.0",
-    "vite": "^4.3.9"
+    "sass": "^1.69.5",
+    "vite": "^5.0.10",
+    "stylelint": "^16.0.2",
+    "stylelint-config-recommended": "^14.0.0",
+    "stylelint-config-standard-scss": "^12.0.0"
   },
   "publishConfig": {
     "access": "public"

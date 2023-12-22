@@ -14,6 +14,7 @@ dist
 testenv
 storybook-static
 .next
+.nx
 
 # misc
 **/.DS_Store
