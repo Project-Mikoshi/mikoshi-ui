@@ -1,1 +1,0 @@
-export { LanguageDetailCard } from './LanguageDetailCard'
