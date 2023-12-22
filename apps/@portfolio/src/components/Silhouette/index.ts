@@ -1,1 +1,0 @@
-export { Silhouette } from './Silhouette'

@@ -5,6 +5,10 @@
     "type": "git",
     "url": "https://github.com/anthony-y-zhu14/MikoshiUI.git"
   },
+  "workspaces": [
+    "packages/**",
+    "apps/**"
+  ],
   "scripts": {
     "storybook": "npm run dev && nx start @mikoshi/storybook",
     "dev": "nx run-many --target=dev --all",
@@ -14,7 +18,7 @@
     "lint": "nx run-many --target=lint --all"
   },
   "devDependencies": {
-    "lerna": "^6.5.1",
-    "nx": "^15.7.2"
+    "lerna": "^8.0.1",
+    "nx": "^17.2.6"
   }
 }

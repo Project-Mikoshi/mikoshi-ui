@@ -4,33 +4,35 @@ import { defineConfig, splitVendorChunkPlugin } from 'vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
 import dts from 'vite-plugin-dts'
 
-// @ts-expect-error
-const __dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileURLToPath(import.meta.url))
+export default defineConfig(() => {
+  // eslint-disable-next-line no-undef
+  const DIRECTORY_NAME = typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileURLToPath(import.meta.url))
 
-export default defineConfig(() => ({
-  build: {
-    lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'),
-      fileName: 'index',
-      formats: ['es']
+  return {
+    build: {
+      lib: {
+        entry: path.resolve(DIRECTORY_NAME, 'src/index.ts'),
+        fileName: 'index',
+        formats: ['es']
+      },
+      sourcemap: true
     },
-    sourcemap: true
-  },
-  resolve: {
-    alias: {
-      '@/utils': path.resolve(__dirname, 'src/utils'),
-      '@/constants': path.resolve(__dirname, 'src/constants'),
-      '@/types': path.resolve(__dirname, 'src/types')
+    resolve: {
+      alias: {
+        '@/utils': path.resolve(DIRECTORY_NAME, 'src/utils'),
+        '@/constants': path.resolve(DIRECTORY_NAME, 'src/constants'),
+        '@/types': path.resolve(DIRECTORY_NAME, 'src/types')
+      }
+    },
+    plugins: [
+      tsconfigPaths(),
+      splitVendorChunkPlugin(),
+      dts({
+        entryRoot: 'src'
+      })
+    ],
+    test: {
+      globals: true
     }
-  },
-  plugins: [
-    tsconfigPaths(),
-    splitVendorChunkPlugin(),
-    dts({
-      entryRoot: 'src'
-    })
-  ],
-  test: {
-    globals: true
   }
-}))
+})

@@ -8,17 +8,17 @@
     "directory": "packages/@scaffold/eslint-config"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.46.0",
-    "@typescript-eslint/parser": "^5.46.0",
-    "eslint": "^8.29.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-react": "^7.31.11"
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-react": "^7.33.2"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": ">=5.46.0",
-    "@typescript-eslint/parser": ">=5.46.0",
-    "eslint": ">=8.29.0",
-    "eslint-plugin-import": ">=2.26.0",
-    "eslint-plugin-react": ">=7.31.11"
+    "@typescript-eslint/eslint-plugin": ">=6.15.0",
+    "@typescript-eslint/parser": ">=6.15.0",
+    "eslint": ">=8.56.0",
+    "eslint-plugin-import": ">=2.29.1",
+    "eslint-plugin-react": ">=7.33.2"
   }
 }

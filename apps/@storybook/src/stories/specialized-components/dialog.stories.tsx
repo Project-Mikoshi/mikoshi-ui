@@ -26,6 +26,7 @@ const ConfirmationDialogTemplate = () => {
   // == Template =============================
   const args = {
     title: 'Confirmation Dialog Title',
+    bindingElement: '#storybook-root',
     isOpen,
     onConfirm,
     onCancel: closeModal
@@ -65,6 +66,7 @@ const SimpleDialogTemplate = () => {
   // == Template =============================
   const args = {
     title: 'Simple Dialog Title',
+    bindingElement: '#storybook-root',
     isOpen,
     onCancel: closeModal
   }

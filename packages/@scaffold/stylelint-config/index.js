@@ -1,27 +1,17 @@
 module.exports = {
   rules: {
     //general
-    indentation: 2,
-    'max-empty-lines': 1,
     'max-nesting-depth': 4,
-    'no-eol-whitespace': true,
-    'number-leading-zero': 'never',
-    'property-case': 'lower',
-    'string-quotes': 'single',
     'no-descending-specificity': null,
     'selector-class-pattern': null,
     'no-empty-source': null,
     'selector-id-pattern': null,
     'keyframes-name-pattern': null,
     'annotation-no-unknown': null,
-    'max-line-length': 150,
 
     // block
     'block-no-empty': true,
-    'block-opening-brace-space-before': 'always',
-    'block-closing-brace-newline-after': 'always',
 
-    'color-hex-case': 'lower',
     'color-no-invalid-hex': true,
     //units
     'unit-no-unknown': true,
@@ -41,7 +31,6 @@ module.exports = {
   extends: [
     'stylelint-config-recommended',
     'stylelint-config-standard-scss',
-
   ],
   defaultSeverity: 'error'
 }
