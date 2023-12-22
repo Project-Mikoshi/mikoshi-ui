@@ -6,8 +6,8 @@
     "url": "https://github.com/anthony-y-zhu14/MikoshiUI.git",
     "directory": "packages/@mikoshi/mikoshi-components"
   },
-  "type": "module",
   "sideEffects": false,
+  "type": "module",
   "exports": {
     "./core": "./dist/core.js",
     "./specialized": "./dist/specialized.js",

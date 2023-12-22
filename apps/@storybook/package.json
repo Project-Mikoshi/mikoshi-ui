@@ -2,12 +2,12 @@
   "name": "@mikoshi/storybook",
   "version": "0.9.0",
   "private": true,
+  "description": "Storybook Playground for Mikoshi",
   "repository": {
     "type": "git",
     "url": "https://github.com/anthony-y-zhu14/MikoshiUI.git",
     "directory": "apps/@storybook"
   },
-  "description": "Storybook Playground for Mikoshi",
   "main": "index.js",
   "scripts": {
     "start": "storybook dev --quiet --disable-telemetry -p 6006",
