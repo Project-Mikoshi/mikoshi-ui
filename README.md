@@ -1,4 +1,20 @@
-# Project Mikoshi
+<!-- markdownlint-disable-next-line -->
+<p align="center">
+  <a
+    href="https://mui.com/core/"
+    rel="noopener"
+    target="_blank"
+  >
+    <img
+      width="300"
+      height="300"
+      src="apps/@storybook/.storybook/logo.svg"
+      alt="Project Mikoshi"
+    >
+  </a>
+</p>
+<!-- markdownlint-disable-next-line -->
+<h1 align="center">Project Mikoshi</h1>
 
 [![CI](https://github.com/anthony-y-zhu14/MikoshiUI/actions/workflows/CI.yml/badge.svg)](https://github.com/anthony-y-zhu14/MikoshiUI/actions/workflows/CI.yml)
 [![CD](https://github.com/anthony-y-zhu14/MikoshiUI/actions/workflows/CD.yml/badge.svg?branch=master)](https://github.com/anthony-y-zhu14/MikoshiUI/actions/workflows/CD.yml)
@@ -16,7 +32,11 @@
 
 ## Packages
 
-![@mikoshi/components](https://img.shields.io/npm/v/%40mikoshi/components?logo=npm&label=%40mikoshi%2Fcomponents&labelColor=ba000d&color=2196f3)
-![@mikoshi/styles](https://img.shields.io/npm/v/%40mikoshi/styles?logo=npm&label=%40mikoshi%2Fstyles&labelColor=1565c0&color=2196f3)
-![@mikoshi/utils](https://img.shields.io/npm/v/%40mikoshi/utils?logo=npm&label=%40mikoshi%2Futils&labelColor=7b1fa2&color=2196f3)
+[![@mikoshi/components](https://img.shields.io/npm/v/%40mikoshi/components?logo=npm&label=%40mikoshi%2Fcomponents&labelColor=ba000d&color=2196f3)](https://www.npmjs.com/package/@mikoshi/components)
+[![@mikoshi/styles](https://img.shields.io/npm/v/%40mikoshi/styles?logo=npm&label=%40mikoshi%2Fstyles&labelColor=1565c0&color=2196f3)](https://www.npmjs.com/package/@mikoshi/styles)
+[![@mikoshi/utils](https://img.shields.io/npm/v/%40mikoshi/utils?logo=npm&label=%40mikoshi%2Futils&labelColor=7b1fa2&color=2196f3)](https://www.npmjs.com/package/@mikoshi/utils)
 
+## License
+
+This project is licensed under the terms of the
+[MIT license](/LICENSE).
