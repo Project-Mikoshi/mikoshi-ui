@@ -10,15 +10,17 @@
     "apps/**"
   ],
   "scripts": {
-    "storybook": "npm run dev && nx start @mikoshi/storybook",
-    "dev": "nx run-many --target=dev --all",
     "build": "nx run-many --target=build --all",
     "clean": "nx run-many --target=clean --all",
-    "test": "nx run-many --verbose --target=test --all",
-    "lint": "nx run-many --target=lint --all"
+    "dev": "nx run-many --target=dev --all",
+    "lint": "nx run-many --target=lint --all",
+    "sort": "sort-package-json \"package.json\" \"packages/**/package.json\" \"apps/**/package.json\"",
+    "storybook": "npm run dev && nx start @mikoshi/storybook",
+    "test": "nx run-many --verbose --target=test --all"
   },
   "devDependencies": {
     "lerna": "^8.0.1",
-    "nx": "^17.2.6"
+    "nx": "^17.2.6",
+    "sort-package-json": "^2.6.0"
   }
 }

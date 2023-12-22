@@ -11,13 +11,13 @@
     ".": "./dist/index.js"
   },
   "scripts": {
-    "dev": "vite build",
     "build": "vite build",
-    "test": "vitest run",
-    "watch": "vite build --watch",
     "clean": "rm -rf dist",
+    "dev": "vite build",
     "lint": "eslint . --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx",
-    "lint:fix": "eslint . --fix --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx"
+    "lint:fix": "eslint . --fix --ignore-pattern node_modules/ --ext .jsx,.js,.ts,.tsx",
+    "test": "vitest run",
+    "watch": "vite build --watch"
   },
   "devDependencies": {
     "@scaffold/eslint-config": "^0.4.0",
