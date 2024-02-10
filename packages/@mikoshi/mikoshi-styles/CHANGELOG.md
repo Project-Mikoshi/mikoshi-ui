@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.1](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@mikoshi/styles@0.10.0...@mikoshi/styles@0.10.1) (2024-02-10)
+
+**Note:** Version bump only for package @mikoshi/styles
+
+
+
+
+
 # [0.10.0](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@mikoshi/styles@0.9.0...@mikoshi/styles@0.10.0) (2023-12-22)
 
 

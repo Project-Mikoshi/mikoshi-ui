@@ -1,6 +1,6 @@
 {
   "name": "@mikoshi/storybook",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "private": true,
   "description": "Storybook Playground for Mikoshi",
   "repository": {
@@ -21,13 +21,13 @@
   "devDependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@mikoshi/components": "^0.3.1",
-    "@mikoshi/styles": "^0.10.0",
+    "@mikoshi/components": "^0.3.2",
+    "@mikoshi/styles": "^0.10.1",
     "@mui/icons-material": "^5.15.1",
     "@mui/material": "^5.15.1",
-    "@scaffold/eslint-config": "^0.4.0",
-    "@scaffold/stylelint-config": "^0.3.0",
-    "@scaffold/typescript-config": "^0.6.0",
+    "@scaffold/eslint-config": "^0.4.1",
+    "@scaffold/stylelint-config": "^0.3.1",
+    "@scaffold/typescript-config": "^0.6.1",
     "@storybook/addon-actions": "^7.6.6",
     "@storybook/addon-essentials": "^7.6.6",
     "@storybook/addon-links": "^7.6.6",

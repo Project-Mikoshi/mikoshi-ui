@@ -1,6 +1,6 @@
 {
   "name": "@mikoshi/utils",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/anthony-y-zhu14/MikoshiUI.git",
@@ -20,8 +20,8 @@
     "watch": "vite build --watch"
   },
   "devDependencies": {
-    "@scaffold/eslint-config": "^0.4.0",
-    "@scaffold/typescript-config": "^0.6.0",
+    "@scaffold/eslint-config": "^0.4.1",
+    "@scaffold/typescript-config": "^0.6.1",
     "@types/lodash": "^4.14.202",
     "@types/node": "^20.10.5",
     "@types/pluralize": "^0.0.33",
