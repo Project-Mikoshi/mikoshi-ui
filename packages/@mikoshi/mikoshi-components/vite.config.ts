@@ -26,15 +26,6 @@ export default defineConfig(() => {
         ]
       }
     },
-    resolve: {
-      alias: {
-        '@/components/': path.resolve(DIRECTORY_NAME, 'src/components'),
-        '@/utils': path.resolve(DIRECTORY_NAME, 'src/utils'),
-        '@/constants': path.resolve(DIRECTORY_NAME, 'src/constants'),
-        '@/types': path.resolve(DIRECTORY_NAME, 'src/types'),
-        '@/svgs': path.resolve(DIRECTORY_NAME, 'src/svgs')
-      }
-    },
     plugins: [
       react(),
       tsconfigPaths(),
