@@ -17,13 +17,6 @@ export default defineConfig(() => {
       },
       sourcemap: true
     },
-    resolve: {
-      alias: {
-        '@/utils': path.resolve(DIRECTORY_NAME, 'src/utils'),
-        '@/constants': path.resolve(DIRECTORY_NAME, 'src/constants'),
-        '@/types': path.resolve(DIRECTORY_NAME, 'src/types')
-      }
-    },
     plugins: [
       tsconfigPaths(),
       splitVendorChunkPlugin(),
