@@ -1,6 +1,6 @@
 {
   "name": "@mikoshi/components",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/anthony-y-zhu14/MikoshiUI.git",
@@ -40,12 +40,12 @@
   "devDependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
-    "@mikoshi/styles": "workspace:^0.10.1",
+    "@mikoshi/styles": "workspace:^0.11.0",
     "@mui/icons-material": "^5.15.18",
     "@mui/material": "^5.15.18",
-    "@scaffold/eslint-config": "workspace:^0.4.1",
+    "@scaffold/eslint-config": "workspace:^0.5.0",
     "@scaffold/stylelint-config": "workspace:^0.3.1",
-    "@scaffold/typescript-config": "workspace:^0.6.1",
+    "@scaffold/typescript-config": "workspace:^0.7.0",
     "@testing-library/jest-dom": "^6.4.5",
     "@testing-library/react": "^15.0.7",
     "@types/lodash": "^4.14.202",

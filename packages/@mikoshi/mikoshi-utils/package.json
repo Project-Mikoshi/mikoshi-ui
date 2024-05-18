@@ -1,6 +1,6 @@
 {
   "name": "@mikoshi/utils",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/anthony-y-zhu14/MikoshiUI.git",
@@ -19,8 +19,8 @@
     "watch": "vite build --watch"
   },
   "devDependencies": {
-    "@scaffold/eslint-config": "workspace:^0.4.1",
-    "@scaffold/typescript-config": "workspace:^0.6.1",
+    "@scaffold/eslint-config": "workspace:^0.5.0",
+    "@scaffold/typescript-config": "workspace:^0.7.0",
     "@types/lodash": "^4.14.202",
     "@types/node": "^20.10.5",
     "@types/pluralize": "^0.0.33",
@@ -31,11 +31,11 @@
     "eslint-plugin-react": "^7.33.2",
     "lodash": "^4.17.21",
     "pluralize": "^8.0.0",
+    "typescript": "^5.3.3",
     "vite": "^5.1.1",
     "vite-plugin-dts": "^3.7.2",
     "vite-tsconfig-paths": "^4.3.1",
-    "vitest": "^1.2.2",
-    "typescript": "^5.3.3"
+    "vitest": "^1.2.2"
   },
   "publishConfig": {
     "access": "public"

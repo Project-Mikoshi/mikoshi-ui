@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@mikoshi/storybook@0.9.2...@mikoshi/storybook@0.10.0) (2024-05-18)
+
+
+### Features
+
+* major update on build tools ([#44](https://github.com/anthony-y-zhu14/MikoshiUI/issues/44)) ([f7f9c0b](https://github.com/anthony-y-zhu14/MikoshiUI/commit/f7f9c0b054a6e80c44dafe6b819c868c4007902e))
+
+
+
+
+
 ## [0.9.2](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@mikoshi/storybook@0.9.1...@mikoshi/storybook@0.9.2) (2024-02-10)
 
 **Note:** Version bump only for package @mikoshi/storybook
