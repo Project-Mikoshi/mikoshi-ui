@@ -12,7 +12,7 @@
   "scripts": {
     "start": "storybook dev --quiet --disable-telemetry -p 6006",
     "build": "storybook build --disable-telemetry --output-dir dist/",
-    "chromatic": "npx chromatic --storybook-build-dir=dist",
+    "deploy": "npx chromatic --storybook-build-dir=dist",
     "clean": "rm -rf dist",
     "lint": "npm-run-all --parallel lint:*",
     "lint:eslint": "eslint . --ext .jsx,.js,.ts,.tsx",

@@ -38,6 +38,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
+          npx pnpm install
 
       #------------------------------------------------------------------------------
       # build packages and apps
@@ -89,13 +90,13 @@ jobs:
       # lint
       #------------------------------------------------------------------------------
       - name: Lint check
-        run:  npm run lint
+        run:  npx turbo run lint
 
       #------------------------------------------------------------------------------
       # test
       #------------------------------------------------------------------------------
       - name: Integration and unit tests
-        run:  npm run test
+        run:  npx turbo run test
 
   #----------------------------------------------------------------------------------
   # Bump version
@@ -221,4 +222,4 @@ jobs:
       # deploy storybook
       #------------------------------------------------------------------------------
       - name: Deploy storybook
-        run: npx nx run @mikoshi/storybook:chromatic -- --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }} --exit-once-uploaded
+        run: npx turbo run deploy --filter=@mikoshi/storybook -- --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }} --exit-once-uploaded
