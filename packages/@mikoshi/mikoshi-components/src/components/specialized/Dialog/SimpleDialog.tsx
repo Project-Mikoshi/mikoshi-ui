@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import CloseIcon from '@mui/icons-material/Close'
 import { IconButton } from '@/components/core/Button'
 import { Modal, ModalBody, ModalHeader } from '@/components/specialized/Modal'
@@ -15,7 +15,7 @@ interface SimpleDialogProps {
   bindingElement?: any
 }
 
-export const SimpleDialog: FC<SimpleDialogProps> = (props) => {
+export default function (props: SimpleDialogProps) {
   // == Props ================================
   const {
     title,

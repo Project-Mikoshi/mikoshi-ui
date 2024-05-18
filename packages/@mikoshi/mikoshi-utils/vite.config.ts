@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'url'
 import path from 'path'
-import { defineConfig, splitVendorChunkPlugin } from 'vite'
+import { defineConfig, UserConfig } from 'vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
 import dts from 'vite-plugin-dts'
 
@@ -26,7 +26,6 @@ export default defineConfig(() => {
     },
     plugins: [
       tsconfigPaths(),
-      splitVendorChunkPlugin(),
       dts({
         entryRoot: 'src'
       })
@@ -34,5 +33,5 @@ export default defineConfig(() => {
     test: {
       globals: true
     }
-  }
+  } as UserConfig
 })

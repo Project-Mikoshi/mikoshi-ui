@@ -6,7 +6,7 @@
       "dom.iterable",
       "esnext"
     ],
-    "types": ["vitest"],
+    "types": ["vitest", "@testing-library/jest-dom/vitest"],
     "outDir": "./dist/",
     "baseUrl": ".",
     "paths": {

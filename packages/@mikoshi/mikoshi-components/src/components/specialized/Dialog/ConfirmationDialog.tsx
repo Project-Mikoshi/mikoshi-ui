@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import CloseIcon from '@mui/icons-material/Close'
 import { CANCEL_BUTTON_LABEL, CONFIRM_BUTTON_LABEL } from '@/constants/confirmation-dialog'
 import { Button, IconButton } from '@/components/core/Button'
@@ -17,7 +17,7 @@ interface ConfirmationDialogProps {
   bindingElement?: any
 }
 
-export const ConfirmationDialog: FC<ConfirmationDialogProps> = (props) => {
+export default function (props: ConfirmationDialogProps) {
   // == Props ================================
   const {
     title,

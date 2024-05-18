@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { Switch as MuiSwitch, SwitchProps as MuiSwitchProps } from '@mui/material'
 import CircleIcon from '@mui/icons-material/Circle'
 
@@ -10,7 +10,7 @@ interface SwitchProps extends MuiSwitchProps {
   className?: string
 }
 
-export const Switch: FC<SwitchProps> = React.forwardRef((props, ref) => {
+export default React.forwardRef((props: SwitchProps, ref: React.ForwardedRef<any>) => {
   // == Props ================================
   const {
     checkedIcon = <CircleIcon fontSize='inherit' />,

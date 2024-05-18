@@ -1,4 +1,4 @@
-import React, { ElementType, FC } from 'react'
+import React, { ElementType } from 'react'
 import { CardMedia as MuiCardMedia, SxProps } from '@mui/material'
 
 interface CardMediaProps {
@@ -12,7 +12,7 @@ interface CardMediaProps {
   children?: React.ReactNode
 }
 
-export const CardMedia: FC<CardMediaProps> = (props) => {
+export default function (props: CardMediaProps) {
   // == Props ================================
   const {
     children,

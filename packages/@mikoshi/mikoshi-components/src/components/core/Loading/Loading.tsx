@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { CircularProgress, LinearProgress } from '@mui/material'
 
 interface LoadingOverlayProps {
@@ -10,7 +10,7 @@ interface LoadingOverlayProps {
   className?: string
 }
 
-export const Loading: FC<LoadingOverlayProps> = (props) => {
+export default function (props: LoadingOverlayProps) {
   // == Props ================================
   const {
     type = 'circle',

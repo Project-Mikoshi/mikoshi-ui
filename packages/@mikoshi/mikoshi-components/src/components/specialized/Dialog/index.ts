@@ -1,2 +1,2 @@
-export { ConfirmationDialog } from './ConfirmationDialog'
-export { SimpleDialog } from './SimpleDialog'
+export { default as ConfirmationDialog } from './ConfirmationDialog'
+export { default as SimpleDialog } from './SimpleDialog'

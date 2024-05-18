@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { Paper as MuiPaper, SxProps } from '@mui/material'
 
 interface PaperProps {
@@ -10,7 +10,7 @@ interface PaperProps {
   children?: React.ReactNode
 }
 
-export const Paper: FC<PaperProps> = (props) => {
+export default function (props: PaperProps) {
   // == Props ================================
   const {
     children,

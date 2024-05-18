@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { Container } from '@/components/core/Container'
 import { Scroll } from '@/components/core/Scroll'
 
@@ -7,7 +7,7 @@ interface ModalBodyProps {
     children?: React.ReactNode,
 }
 
-export const ModalBody: FC<ModalBodyProps> = (props) => {
+export default function (props: ModalBodyProps) {
   // == Props ================================
   const {
     children,

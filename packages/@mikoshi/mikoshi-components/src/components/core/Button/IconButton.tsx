@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { IconButton as MuiIconButton, SxProps } from '@mui/material'
 import { type Color, type ButtonRef } from '@/types/button'
 
@@ -13,7 +13,7 @@ interface IconButtonProps {
   children?: React.ReactNode
 }
 
-export const IconButton: FC<IconButtonProps> = React.forwardRef((props, ref: ButtonRef) => {
+export default React.forwardRef((props: IconButtonProps, ref: ButtonRef) => {
   // == Props ================================
   const {
     onClick,

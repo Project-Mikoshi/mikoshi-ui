@@ -22,7 +22,7 @@
     "@fontsource/roboto": "^5.0.8"
   },
   "devDependencies": {
-    "@scaffold/stylelint-config": "^0.3.0",
+    "@scaffold/stylelint-config": "workspace:^0.3.0",
     "sass": "^1.69.5",
     "stylelint": "^16.0.2",
     "stylelint-config-recommended": "^14.0.0",

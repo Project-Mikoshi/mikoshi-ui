@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import React, { useEffect, useRef, useState } from 'react'
 import PerfectScrollbar from 'react-perfect-scrollbar'
 
 interface ScrollProps {
@@ -7,54 +6,48 @@ interface ScrollProps {
   children?: React.ReactNode
 }
 
-export class Scroll extends Component<ScrollProps> {
-  // == Constructor ==========================
-  constructor(props: ScrollProps) {
-    super(props)
-  }
-
+export default function (props: ScrollProps) {
   // == Props ================================
-  container: Element | Text | null | undefined = null
-  resizeObserver: ResizeObserver | null | undefined = null
-  ref: PerfectScrollbar | null = null
+  const {
+    children,
+    className = ''
+  } = props
 
-  // == Lifecycle Hooks ======================
-  componentDidMount () {
-    // eslint-disable-next-line react/no-find-dom-node
-    this.container = ReactDOM.findDOMNode(this)
+  // == Hooks ================================
+  const scrollRef = useRef<PerfectScrollbar>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [resizeObserver, setResizeObserver] = useState<ResizeObserver>()
 
-    if (window.ResizeObserver && this.container) {
-      this.resizeObserver = new ResizeObserver(this.updatePerfectScroll.bind(this))
-      this.resizeObserver.observe(this.container.parentElement as Element)
-      this.resizeObserver.observe(this.container.firstChild as Element)
+  useEffect(() => {
+    if (window.ResizeObserver && scrollRef.current && containerRef.current) {
+      if (!resizeObserver) {
+        setResizeObserver(new ResizeObserver(updatePerfectScroll))
+      }
+
+      resizeObserver!.observe(containerRef.current.parentElement as Element)
+      resizeObserver!.observe(containerRef.current.firstChild as Element)
     }
 
-    this.updatePerfectScroll()
-  }
-
-  componentWillUnmount () {
-    if (this.resizeObserver) {
-      this.resizeObserver.disconnect()
+    return () => {
+      if (resizeObserver) {
+        resizeObserver.disconnect()
+      }
     }
-  }
+  }, [scrollRef.current, containerRef.current])
 
   // == Functions ============================
-  updatePerfectScroll () {
-    this.ref?.updateScroll()
-  }
-
-  setScrollBarRef (ref: PerfectScrollbar | null) {
-    this.ref = ref
+  function updatePerfectScroll () {
+    scrollRef.current?.updateScroll()
   }
 
   // == Actions ==============================
 
   // == Template =============================
-  render() {
-    return (
-      <PerfectScrollbar className={`mikoshi-scroll ${this.props.className ?? ''}`} ref={(ref) => this.setScrollBarRef(ref)} data-testid='mikoshi-scroll'>
-        {this.props.children}
+  return (
+    <div ref={containerRef} className='m-height-100 m-width-100'>
+      <PerfectScrollbar className={`mikoshi-scroll ${className ?? ''}`} ref={scrollRef} data-testid='mikoshi-scroll'>
+        {children}
       </PerfectScrollbar>
-    )
-  }
+    </div>
+  )
 }

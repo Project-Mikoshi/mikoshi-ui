@@ -1,8 +1,7 @@
 import '@mikoshi/styles/style'
 import '@mikoshi/components/style'
-import { Parameters } from '@storybook/addons'
 
-export const parameters: Parameters = {
+export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {

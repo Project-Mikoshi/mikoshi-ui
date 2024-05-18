@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { ListItemText as MuiListItemText, ListItemTextProps as MuiListItemTextProps, SxProps } from '@mui/material'
 
 interface ListItemTextProps extends MuiListItemTextProps {
@@ -7,7 +7,7 @@ interface ListItemTextProps extends MuiListItemTextProps {
   children?: React.ReactNode
 }
 
-export const ListItemText: FC<ListItemTextProps> = React.forwardRef((props, ref) => {
+export default React.forwardRef((props: ListItemTextProps, ref: React.ForwardedRef<any>) => {
   // == Props ================================
   const {
     children,

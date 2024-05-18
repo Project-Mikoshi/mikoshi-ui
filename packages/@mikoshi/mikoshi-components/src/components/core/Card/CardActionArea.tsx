@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { CardActionArea as MuiCardActionArea, SxProps } from '@mui/material'
 
 interface CardActionAreaProps {
@@ -10,7 +10,7 @@ interface CardActionAreaProps {
   children?: React.ReactNode
 }
 
-export const CardActionArea: FC<CardActionAreaProps> = (props) => {
+export default function (props: CardActionAreaProps) {
   // == Props ================================
   const {
     onClick,

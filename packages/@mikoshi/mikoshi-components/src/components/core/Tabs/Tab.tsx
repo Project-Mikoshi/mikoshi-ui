@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { Tab as MuiTab } from '@mui/material'
 
 interface TabProps {
@@ -14,7 +14,7 @@ interface TabProps {
   className?: string
 }
 
-export const Tab: FC<TabProps> = React.forwardRef((props, ref) => {
+export default React.forwardRef((props: TabProps, ref: React.ForwardedRef<any>) => {
   // == Props ================================
   const {
     label,

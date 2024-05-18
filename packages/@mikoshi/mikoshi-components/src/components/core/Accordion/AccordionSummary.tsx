@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { AccordionSummary as MuiAccordionSummary, AccordionSummaryProps as MuiAccordionSummaryProps, SxProps } from '@mui/material'
 import ExpandMoreOutLinedIcon from '@mui/icons-material/ExpandMoreOutlined'
 
@@ -8,7 +8,7 @@ interface AccordionSummaryProps extends MuiAccordionSummaryProps {
   children: React.ReactNode
 }
 
-export const AccordionSummary: FC<AccordionSummaryProps> = (props) => {
+export default function (props: AccordionSummaryProps) {
   // == Props ================================
   const {
     children,

@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { AppBar as MuiAppBar,  SxProps } from '@mui/material'
 import { Color, Position } from '@/types/app-bar'
 
@@ -10,7 +10,7 @@ interface AppBarProps {
   children?: React.ReactNode
 }
 
-export const AppBar: FC<AppBarProps> = (props) => {
+export default function (props: AppBarProps) {
   // == Props ================================
   const {
     children,
