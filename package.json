@@ -5,7 +5,13 @@
     "type": "git",
     "url": "https://github.com/anthony-y-zhu14/MikoshiUI.git"
   },
+  "workspaces": [
+    "packages/**"
+  ],
   "scripts": {
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
     "sort": "sort-package-json \"package.json\" \"packages/**/package.json\""
   },
   "devDependencies": {
@@ -15,7 +21,7 @@
     "turbo": "^1.13.3"
   },
   "engines": {
-    "node": ">=21",
+    "node": ">=20",
     "pnpm": ">=9"
   }
 }
