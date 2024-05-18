@@ -14,8 +14,7 @@
     "build": "vite build",
     "clean": "rm -rf dist",
     "dev": "vite build",
-    "lint": "npm-run-all --parallel lint:*",
-    "lint:eslint": "eslint . --ext .jsx,.js,.ts,.tsx",
+    "lint": "eslint . --ext .jsx,.js,.ts,.tsx",
     "test": "vitest run",
     "watch": "vite build --watch"
   },
@@ -25,8 +24,8 @@
     "@types/lodash": "^4.14.202",
     "@types/node": "^20.10.5",
     "@types/pluralize": "^0.0.33",
-    "@typescript-eslint/eslint-plugin": "^6.15.0",
-    "@typescript-eslint/parser": "^6.15.0",
+    "@typescript-eslint/eslint-plugin": "^7.9.0",
+    "@typescript-eslint/parser": "^7.9.0",
     "eslint": "^8.56.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-react": "^7.33.2",
@@ -35,7 +34,8 @@
     "vite": "^5.1.1",
     "vite-plugin-dts": "^3.7.2",
     "vite-tsconfig-paths": "^4.3.1",
-    "vitest": "^1.2.2"
+    "vitest": "^1.2.2",
+    "typescript": "^5.3.3"
   },
   "publishConfig": {
     "access": "public"
