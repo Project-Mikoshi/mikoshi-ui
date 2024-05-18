@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { ListItemButton as MuiListItemButton, ListItemButtonProps as MuiListItemButtonProps, SxProps } from '@mui/material'
 
 interface ListItemButtonProps extends MuiListItemButtonProps {
@@ -7,7 +7,7 @@ interface ListItemButtonProps extends MuiListItemButtonProps {
   children?: React.ReactNode
 }
 
-export const ListItemButton: FC<ListItemButtonProps> = React.forwardRef((props, ref) => {
+export default React.forwardRef((props: ListItemButtonProps, ref: React.ForwardedRef<any>) => {
   // == Props ================================
   const {
     children,

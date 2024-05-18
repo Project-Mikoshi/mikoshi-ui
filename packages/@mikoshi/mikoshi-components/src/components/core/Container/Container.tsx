@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { Container as MuiContainer, SxProps } from '@mui/material'
 
 interface ContainerProps {
@@ -11,7 +11,7 @@ interface ContainerProps {
   children?: React.ReactNode
 }
 
-export const Container: FC<ContainerProps> = (props) => {
+export default function (props: ContainerProps) {
   // == Props ================================
   const {
     sx,

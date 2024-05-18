@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'url'
 import path from 'path'
-import { defineConfig } from 'vite'
+import { UserConfig, defineConfig } from 'vite'
 
 // @ts-expect-error
 const __dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileURLToPath(import.meta.url))
@@ -13,4 +13,4 @@ export default defineConfig(() => ({
       fileName: 'index'
     },
   }
-}))
+} as UserConfig))

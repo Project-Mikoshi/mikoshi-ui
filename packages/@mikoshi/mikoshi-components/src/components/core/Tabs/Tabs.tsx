@@ -1,6 +1,5 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { Tabs as MuiTabs } from '@mui/material'
-import { type ButtonRef } from '@/types/button'
 
 interface TabsProps {
   indicatorColor?: 'primary' | 'secondary',
@@ -11,7 +10,7 @@ interface TabsProps {
   className?: string
 }
 
-export const Tabs: FC<TabsProps> = React.forwardRef((props, ref: ButtonRef) => {
+export default React.forwardRef((props: TabsProps, ref: React.ForwardedRef<any>) => {
   // == Props ================================
   const {
     children,

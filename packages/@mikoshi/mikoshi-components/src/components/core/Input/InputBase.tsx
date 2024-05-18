@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { InputBase as MuiInputBase, InputBaseProps as MuiInputBaseProps, SxProps } from '@mui/material'
 
 interface InputBaseProps extends MuiInputBaseProps {
@@ -6,7 +6,7 @@ interface InputBaseProps extends MuiInputBaseProps {
   className?: string
 }
 
-export const InputBase: FC<InputBaseProps> = React.forwardRef((props, ref) => {
+export default React.forwardRef((props: InputBaseProps, ref: React.ForwardedRef<any>) => {
   // == Props ================================
   const {
     className = ''

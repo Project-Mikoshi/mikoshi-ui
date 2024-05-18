@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { CardActions as MuiCardActions, SxProps } from '@mui/material'
 
 interface CardFooterProps {
@@ -8,7 +8,7 @@ interface CardFooterProps {
   children?: React.ReactNode
 }
 
-export const CardFooter: FC<CardFooterProps> = (props) => {
+export default function (props: CardFooterProps) {
   // == Props ================================
   const {
     children,

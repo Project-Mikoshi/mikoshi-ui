@@ -1,7 +1,7 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { Tooltip as MuiTooltip, TooltipProps } from '@mui/material'
 
-export const Tooltip: FC<TooltipProps> = React.forwardRef((props, ref) => {
+export default React.forwardRef((props: TooltipProps, ref) => {
   // == Props ================================
   const {
     children,

@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import ReactModal from 'react-modal'
 import { Container } from '@/components/core/Container'
 
@@ -13,7 +13,7 @@ interface ModalProps {
     bindingElement?: any
 }
 
-export const Modal: FC<ModalProps> = (props) => {
+export default function (props: ModalProps) {
   // == Props ================================
   const {
     isOpen,

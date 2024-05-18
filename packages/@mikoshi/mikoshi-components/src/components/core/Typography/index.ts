@@ -1,1 +1,1 @@
-export { Typography } from './Typograph'
+export { default as Typography } from './Typography'

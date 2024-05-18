@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { CardHeader as MuiCardHeader, SxProps } from '@mui/material'
 
 interface CardHeaderProps {
@@ -9,7 +9,7 @@ interface CardHeaderProps {
   className?: string
 }
 
-export const CardHeader: FC<CardHeaderProps> = (props) => {
+export default function (props: CardHeaderProps) {
   // == Props ================================
   const {
     sx,
