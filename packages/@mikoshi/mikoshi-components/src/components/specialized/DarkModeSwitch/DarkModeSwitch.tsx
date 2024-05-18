@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined'
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined'
 import { Switch } from '@/components/core/Switch'
@@ -10,7 +10,7 @@ interface DarkModeSwitchProps {
   className?: string
 }
 
-export const DarkModeSwitch: FC<DarkModeSwitchProps> = (props) => {
+export default function (props: DarkModeSwitchProps) {
   // == Props ================================
   const {
     checked = false,
@@ -18,7 +18,7 @@ export const DarkModeSwitch: FC<DarkModeSwitchProps> = (props) => {
     className = ''
   } = props
 
-  const tooltipText = checked ? 'Swtich to light mode' : 'Swtich to dark mode'
+  const tooltipText = checked ? 'Switch to light mode' : 'Switch to dark mode'
 
   // == Hooks ================================
 

@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { MenuItem as MuiMenuItem, MenuItemProps as MuiMenuItemProps, SxProps } from '@mui/material'
 
 interface MenuItemProps extends MuiMenuItemProps {
@@ -7,7 +7,7 @@ interface MenuItemProps extends MuiMenuItemProps {
   children: React.ReactNode
 }
 
-export const MenuItem: FC<MenuItemProps> = (props) => {
+export default function (props: MenuItemProps) {
   // == Props ================================
   const {
     children,

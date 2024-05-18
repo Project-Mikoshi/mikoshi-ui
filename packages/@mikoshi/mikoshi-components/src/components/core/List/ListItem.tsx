@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { ListItem as MuiListItem, ListItemProps as MuiListItemProps, SxProps } from '@mui/material'
 
 interface ListItemProps extends MuiListItemProps {
@@ -7,7 +7,7 @@ interface ListItemProps extends MuiListItemProps {
   children: React.ReactNode
 }
 
-export const ListItem: FC<ListItemProps> = (props) => {
+export default function (props: ListItemProps) {
   // == Props ================================
   const {
     children,

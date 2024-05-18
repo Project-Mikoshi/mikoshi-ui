@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { ToggleButton as MuiToggleButton, SxProps } from '@mui/material'
 
 interface ToggleButtonProps {
@@ -12,7 +12,7 @@ interface ToggleButtonProps {
   children?: React.ReactNode
 }
 
-export const ToggleButton: FC<ToggleButtonProps> = (props) => {
+export default function (props: ToggleButtonProps) {
   // == Props ================================
   const {
     value,

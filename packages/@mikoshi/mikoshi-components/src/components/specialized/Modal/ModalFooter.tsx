@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { Container } from '@/components/core/Container'
 
 interface ModalFooterProps {
@@ -6,7 +6,7 @@ interface ModalFooterProps {
     children?: React.ReactNode,
 }
 
-export const ModalFooter: FC<ModalFooterProps> = (props) => {
+export default function (props: ModalFooterProps) {
   // == Props ================================
   const {
     children,

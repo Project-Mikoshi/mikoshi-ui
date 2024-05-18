@@ -1,7 +1,7 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { TextField as MuiTextField, TextFieldProps } from '@mui/material'
 
-export const TextField: FC<TextFieldProps> = React.forwardRef((props, ref) => {
+export default React.forwardRef((props: TextFieldProps, ref: React.ForwardedRef<any>) => {
   // == Props ================================
   const {
     className = ''

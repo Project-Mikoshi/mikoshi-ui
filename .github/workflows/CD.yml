@@ -28,16 +28,20 @@ jobs:
           NODE_OPTIONS: "--max_old_space_size=4096"
     steps:
       - uses: actions/checkout@v3
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
       - uses: actions/setup-node@v3
         with:
-          node-version: 21.x
+          node-version: 20.x
 
       #------------------------------------------------------------------------------
       # install
       #------------------------------------------------------------------------------
       - name: Install dependencies
         run: |
-          npm install
+          pnpm install
 
       #------------------------------------------------------------------------------
       # build packages and apps
@@ -57,9 +61,6 @@ jobs:
           path: |
             node_modules
             **/node_modules
-            apps/**/dist/
-            apps/**/.next/
-            !apps/**/node_modules/dist/
             packages/**/dist/
             !packages/**/node_modules/dist/
           key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
@@ -84,9 +85,6 @@ jobs:
           path: |
             node_modules
             **/node_modules
-            apps/**/dist/
-            apps/**/.next/
-            !apps/**/node_modules/dist/
             packages/**/dist/
             !packages/**/node_modules/dist/
           key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
@@ -126,9 +124,6 @@ jobs:
           path: |
             node_modules
             **/node_modules
-            apps/**/dist/
-            apps/**/.next/
-            !apps/**/node_modules/dist/
             packages/**/dist/
             !packages/**/node_modules/dist/
           key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
@@ -181,9 +176,6 @@ jobs:
           path: |
             node_modules
             **/node_modules
-            apps/**/dist/
-            apps/**/.next/
-            !apps/**/node_modules/dist/
             packages/**/dist/
             !packages/**/node_modules/dist/
           key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
@@ -225,9 +217,6 @@ jobs:
           path: |
             node_modules
             **/node_modules
-            apps/**/dist/
-            apps/**/.next/
-            !apps/**/node_modules/dist/
             packages/**/dist/
             !packages/**/node_modules/dist/
           key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
@@ -236,4 +225,4 @@ jobs:
       # deploy storybook
       #------------------------------------------------------------------------------
       - name: Deploy storybook
-        run: npx nx run @mikoshi/storybook:chromatic -- --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }} --exit-once-uploaded
+        run: npx turbo run deploy --filter=@mikoshi/storybook -- --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }} --exit-once-uploaded

@@ -1,3 +1,3 @@
-export { Accordion } from './Accordion'
-export { AccordionDetails } from './AccordionDetails'
-export { AccordionSummary } from './AccordionSummary'
+export { default as Accordion } from './Accordion'
+export { default as AccordionDetails } from './AccordionDetails'
+export { default as AccordionSummary } from './AccordionSummary'

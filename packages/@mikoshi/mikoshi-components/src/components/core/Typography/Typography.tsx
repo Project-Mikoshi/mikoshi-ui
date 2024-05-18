@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { Typography as MuiTypography, SxProps } from '@mui/material'
 
 interface TypographyProps {
@@ -17,7 +17,7 @@ interface TypographyProps {
   children?: React.ReactNode
 }
 
-export const Typography: FC<TypographyProps> = React.forwardRef((props, ref) => {
+export default React.forwardRef((props: TypographyProps, ref) => {
   // == Props ================================
   const {
     children,

@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { AccordionDetails as MuiAccordionDetails, AccordionDetailsProps as MuiAccordionDetailsProps, SxProps } from '@mui/material'
 
 interface AccordionDetailsProps extends MuiAccordionDetailsProps {
@@ -7,7 +7,7 @@ interface AccordionDetailsProps extends MuiAccordionDetailsProps {
   children: React.ReactNode
 }
 
-export const AccordionDetails: FC<AccordionDetailsProps> = (props) => {
+export default function (props: AccordionDetailsProps) {
   // == Props ================================
   const {
     children,

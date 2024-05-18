@@ -1,2 +1,2 @@
-export { InputBase } from './InputBase'
-export { TextField } from './TextField'
+export { default as InputBase } from './InputBase'
+export { default as TextField } from './TextField'

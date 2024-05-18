@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'url'
 import path from 'path'
-import { defineConfig, splitVendorChunkPlugin } from 'vite'
+import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tsconfigPaths from 'vite-tsconfig-paths'
 import dts from 'vite-plugin-dts'
@@ -29,7 +29,6 @@ export default defineConfig(() => {
     plugins: [
       react(),
       tsconfigPaths(),
-      splitVendorChunkPlugin(),
       dts({
         entryRoot: 'src'
       })

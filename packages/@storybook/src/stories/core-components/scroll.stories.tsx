@@ -28,7 +28,7 @@ const Template = () => {
 
   // == Template =============================
   return (
-    <Paper className='m-height-100 m-width-100 m-overflow-hidden'>
+    <Paper className='m-width-100 m-overflow-hidden' sx={{ height: '350px' }}>
       <Scroll>
         <Container className='m-flex-column' flex>
           <Typography variant='h6'>A simple modal component</Typography>
@@ -45,4 +45,4 @@ const Template = () => {
   )
 }
 
-export const AppBarDemo = Template.bind({})
+export const ScrollDemo = Template.bind({})
