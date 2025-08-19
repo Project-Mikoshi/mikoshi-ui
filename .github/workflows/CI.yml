@@ -8,18 +8,9 @@ on:
     types: [opened, edited, synchronize, reopened, ready_for_review]
     paths-ignore: [doc/**]
 
-#------------------------------------------------------------------------------------
-# Define application permissions & version
-#------------------------------------------------------------------------------------
 permissions: read-all
 
-#------------------------------------------------------------------------------------
-# Workflow jobs (Linux only)
-#------------------------------------------------------------------------------------
 jobs:
-  #----------------------------------------------------------------------------------
-  # check the title of pull request
-  #----------------------------------------------------------------------------------
   validate-pull-request:
     runs-on: ubuntu-latest
     name: Verify pull request
@@ -35,96 +26,29 @@ jobs:
           max_length: 120
           github_token: ${{ github.token }}
 
-  #----------------------------------------------------------------------------------
-  # build packges and apps
-  #----------------------------------------------------------------------------------
-  build:
-    name: Build packages and apps
+  ci:
+    name: Build, Lint, and Test
     needs: validate-pull-request
     runs-on: ubuntu-latest
     env:
-          NODE_OPTIONS: "--max_old_space_size=4096"
+      NODE_OPTIONS: "--max_old_space_size=4096"
     steps:
       - uses: actions/checkout@v3
+
       - name: Install pnpm
         uses: pnpm/action-setup@v3
         with:
           version: 10
+
       - uses: actions/setup-node@v3
         with:
           node-version: 22.x
 
-      #------------------------------------------------------------------------------
-      # install
-      #------------------------------------------------------------------------------
       - name: Install dependencies
-        run: |
-          pnpm install
+        run: pnpm install --frozen-lockfile
 
-      #------------------------------------------------------------------------------
-      # build
-      #------------------------------------------------------------------------------
-      - name: Build packages
-        env:
-          NODE_OPTIONS: "--max_old_space_size=4096"
-        run:  npm run build
+      - name: Lint
+        run: npm run lint
 
-      #------------------------------------------------------------------------------
-      # cache build
-      #------------------------------------------------------------------------------
-      - name: Cache build
-        id: cache-build
-        uses: actions/cache@v4
-        with:
-          path: |
-            **/node_modules
-            **/dist
-          key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
-  
-  #------------------------------------------------------------------------------
-  # lint
-  #------------------------------------------------------------------------------
-  lint:
-    runs-on: ubuntu-latest
-    name: Source code lint check
-    needs: build
-    steps:
-      - uses: actions/checkout@v3
-
-      #------------------------------------------------------------------------------
-      # retrieve cache
-      #------------------------------------------------------------------------------
-      - name: Retrieve cached build
-        id: cache-build
-        uses: actions/cache@v4
-        with:
-          path: |
-            **/node_modules
-            **/dist
-          key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
-
-      - run:  npm run lint
-
-  #------------------------------------------------------------------------------
-  # test
-  #------------------------------------------------------------------------------
-  test:
-    runs-on: ubuntu-latest
-    name: Integration and unit tests
-    needs: build
-    steps:
-      - uses: actions/checkout@v3
-
-      #------------------------------------------------------------------------------
-      # retrieve cache
-      #------------------------------------------------------------------------------
-      - name: Retrieve cached build
-        id: cache-build
-        uses: actions/cache@v4
-        with:
-          path: |
-            **/node_modules
-            **/dist
-          key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
-
-      - run:  npm run test
+      - name: Test
+        run: npm run test
