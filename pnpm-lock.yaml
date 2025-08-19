@@ -21,21 +21,155 @@ importers:
         specifier: ^2.5.6
         version: 2.5.6
 
-  packages/@mikoshi/core:
+  apps/@storybook:
+    devDependencies:
+      '@config/eslint':
+        specifier: workspace:*
+        version: link:../../configs/eslint
+      '@config/stylelint':
+        specifier: workspace:*
+        version: link:../../configs/stylelint
+      '@config/typescript':
+        specifier: workspace:*
+        version: link:../../configs/typescript
+      '@emotion/react':
+        specifier: ^11.14.0
+        version: 11.14.0(@types/react@18.3.2)(react@18.3.1)
+      '@emotion/styled':
+        specifier: ^11.14.1
+        version: 11.14.1(@emotion/react@11.14.0(@types/react@18.3.2)(react@18.3.1))(@types/react@18.3.2)(react@18.3.1)
+      '@mikoshi/design':
+        specifier: workspace:*
+        version: link:../../packages/design
+      '@mikoshi/react':
+        specifier: workspace:*
+        version: link:../../packages/react
+      '@mui/icons-material':
+        specifier: ^7.3.1
+        version: 7.3.1(@mui/material@7.3.1(@emotion/react@11.14.0(@types/react@18.3.2)(react@18.3.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@18.3.2)(react@18.3.1))(@types/react@18.3.2)(react@18.3.1))(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@types/react@18.3.2)(react@18.3.1)
+      '@mui/material':
+        specifier: ^7.3.1
+        version: 7.3.1(@emotion/react@11.14.0(@types/react@18.3.2)(react@18.3.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@18.3.2)(react@18.3.1))(@types/react@18.3.2)(react@18.3.1))(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@storybook/addon-docs':
+        specifier: ^9.1.2
+        version: 9.1.2(@types/react@18.3.2)(storybook@9.1.2(@testing-library/dom@10.1.0)(prettier@3.2.5)(vite@7.1.3(@types/node@20.19.11)(jiti@2.5.1)(sass@1.90.0)(yaml@2.8.1)))
+      '@storybook/builder-vite':
+        specifier: ^9.1.2
+        version: 9.1.2(storybook@9.1.2(@testing-library/dom@10.1.0)(prettier@3.2.5)(vite@7.1.3(@types/node@20.19.11)(jiti@2.5.1)(sass@1.90.0)(yaml@2.8.1)))(vite@7.1.3(@types/node@20.19.11)(jiti@2.5.1)(sass@1.90.0)(yaml@2.8.1))
+      '@storybook/react-vite':
+        specifier: ^9.1.2
+        version: 9.1.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.46.3)(storybook@9.1.2(@testing-library/dom@10.1.0)(prettier@3.2.5)(vite@7.1.3(@types/node@20.19.11)(jiti@2.5.1)(sass@1.90.0)(yaml@2.8.1)))(typescript@5.9.2)(vite@7.1.3(@types/node@20.19.11)(jiti@2.5.1)(sass@1.90.0)(yaml@2.8.1))
+      '@types/react':
+        specifier: ^18.0.20
+        version: 18.3.2
+      '@types/react-dom':
+        specifier: ^18.0.6
+        version: 18.3.0
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^8.40.0
+        version: 8.40.0(@typescript-eslint/parser@8.40.0(eslint@8.57.0)(typescript@5.9.2))(eslint@8.57.0)(typescript@5.9.2)
+      '@typescript-eslint/parser':
+        specifier: ^8.40.0
+        version: 8.40.0(eslint@8.57.0)(typescript@5.9.2)
+      chromatic:
+        specifier: ^13.1.3
+        version: 13.1.3
+      eslint:
+        specifier: ^8.56.0
+        version: 8.57.0
+      eslint-plugin-import:
+        specifier: ^2.29.1
+        version: 2.29.1(@typescript-eslint/parser@8.40.0(eslint@8.57.0)(typescript@5.9.2))(eslint@8.57.0)
+      eslint-plugin-react:
+        specifier: ^7.33.2
+        version: 7.34.1(eslint@8.57.0)
+      npm-run-all:
+        specifier: ^4.1.5
+        version: 4.1.5
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+      sass:
+        specifier: ^1.90.0
+        version: 1.90.0
+      storybook:
+        specifier: ^9.1.2
+        version: 9.1.2(@testing-library/dom@10.1.0)(prettier@3.2.5)(vite@7.1.3(@types/node@20.19.11)(jiti@2.5.1)(sass@1.90.0)(yaml@2.8.1))
+      stylelint:
+        specifier: ^16.23.1
+        version: 16.23.1(typescript@5.9.2)
+      vite:
+        specifier: ^7.1.3
+        version: 7.1.3(@types/node@20.19.11)(jiti@2.5.1)(sass@1.90.0)(yaml@2.8.1)
+
+  configs/build:
+    devDependencies:
+      '@config/typescript':
+        specifier: workspace:*
+        version: link:../typescript
+      tsdown:
+        specifier: ^0.14.1
+        version: 0.14.1(typescript@5.9.2)
+      typescript:
+        specifier: ^5.9.2
+        version: 5.9.2
+
+  configs/eslint:
+    dependencies:
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^7.18.0
+        version: 7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.0)(typescript@5.9.2))(eslint@8.57.0)(typescript@5.9.2)
+      '@typescript-eslint/parser':
+        specifier: ^7.18.0
+        version: 7.18.0(eslint@8.57.0)(typescript@5.9.2)
+      eslint-plugin-import:
+        specifier: ^2.29.1
+        version: 2.29.1(@typescript-eslint/parser@7.18.0(eslint@8.57.0)(typescript@5.9.2))(eslint@8.57.0)
+      eslint-plugin-react:
+        specifier: ^7.33.2
+        version: 7.34.1(eslint@8.57.0)
+    devDependencies:
+      eslint:
+        specifier: ^8.56.0
+        version: 8.57.0
+
+  configs/stylelint:
+    dependencies:
+      stylelint-config-recommended:
+        specifier: ^17.0.0
+        version: 17.0.0(stylelint@16.23.1(typescript@5.9.2))
+      stylelint-config-standard-scss:
+        specifier: ^15.0.1
+        version: 15.0.1(postcss@8.5.6)(stylelint@16.23.1(typescript@5.9.2))
+    devDependencies:
+      stylelint:
+        specifier: ^16.23.1
+        version: 16.23.1(typescript@5.9.2)
+
+  configs/typescript:
+    devDependencies:
+      typescript:
+        specifier: ^5.9.2
+        version: 5.9.2
+
+  packages/core:
     dependencies:
       pluralize:
         specifier: ^8.0.0
         version: 8.0.0
     devDependencies:
-      '@scaffold/build-config':
+      '@config/build':
         specifier: workspace:*
-        version: link:../../@scaffold/build-config
-      '@scaffold/eslint-config':
+        version: link:../../configs/build
+      '@config/eslint':
         specifier: workspace:*
-        version: link:../../@scaffold/eslint-config
-      '@scaffold/typescript-config':
+        version: link:../../configs/eslint
+      '@config/typescript':
         specifier: workspace:*
-        version: link:../../@scaffold/typescript-config
+        version: link:../../configs/typescript
       '@types/lodash':
         specifier: ^4.14.202
         version: 4.17.4
@@ -70,15 +204,15 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4(@types/node@20.19.11)(@vitest/ui@3.2.4)(jiti@2.5.1)(jsdom@26.1.0)(sass@1.90.0)(yaml@2.8.1)
 
-  packages/@mikoshi/design:
+  packages/design:
     dependencies:
       '@fontsource/roboto':
         specifier: ^5.0.8
         version: 5.0.13
     devDependencies:
-      '@scaffold/stylelint-config':
+      '@config/stylelint':
         specifier: workspace:*
-        version: link:../../@scaffold/stylelint-config
+        version: link:../../configs/stylelint
       sass:
         specifier: ^1.69.5
         version: 1.90.0
@@ -89,7 +223,7 @@ importers:
         specifier: ^7.1.3
         version: 7.1.3(@types/node@20.19.11)(jiti@2.5.1)(sass@1.90.0)(yaml@2.8.1)
 
-  packages/@mikoshi/react:
+  packages/react:
     dependencies:
       react-modal:
         specifier: ^3.16.1
@@ -98,6 +232,18 @@ importers:
         specifier: ^1.5.8
         version: 1.5.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     devDependencies:
+      '@config/build':
+        specifier: workspace:*
+        version: link:../../configs/build
+      '@config/eslint':
+        specifier: workspace:*
+        version: link:../../configs/eslint
+      '@config/stylelint':
+        specifier: workspace:*
+        version: link:../../configs/stylelint
+      '@config/typescript':
+        specifier: workspace:*
+        version: link:../../configs/typescript
       '@emotion/react':
         specifier: ^11.11.4
         version: 11.14.0(@types/react@18.3.2)(react@18.3.1)
@@ -113,18 +259,6 @@ importers:
       '@mui/material':
         specifier: ^5.15.18
         version: 5.15.18(@emotion/react@11.14.0(@types/react@18.3.2)(react@18.3.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@18.3.2)(react@18.3.1))(@types/react@18.3.2)(react@18.3.1))(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@scaffold/build-config':
-        specifier: workspace:*
-        version: link:../../@scaffold/build-config
-      '@scaffold/eslint-config':
-        specifier: workspace:*
-        version: link:../../@scaffold/eslint-config
-      '@scaffold/stylelint-config':
-        specifier: workspace:*
-        version: link:../../@scaffold/stylelint-config
-      '@scaffold/typescript-config':
-        specifier: workspace:*
-        version: link:../../@scaffold/typescript-config
       '@testing-library/jest-dom':
         specifier: ^6.4.5
         version: 6.7.0
@@ -188,140 +322,6 @@ importers:
       vitest:
         specifier: ^3.2.4
         version: 3.2.4(@types/node@20.19.11)(@vitest/ui@3.2.4)(jiti@2.5.1)(jsdom@26.1.0)(sass@1.90.0)(yaml@2.8.1)
-
-  packages/@scaffold/build-config:
-    devDependencies:
-      '@scaffold/typescript-config':
-        specifier: workspace:*
-        version: link:../typescript-config
-      tsdown:
-        specifier: ^0.14.1
-        version: 0.14.1(typescript@5.9.2)
-      typescript:
-        specifier: ^5.9.2
-        version: 5.9.2
-
-  packages/@scaffold/eslint-config:
-    dependencies:
-      '@typescript-eslint/eslint-plugin':
-        specifier: ^7.18.0
-        version: 7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.0)(typescript@5.9.2))(eslint@8.57.0)(typescript@5.9.2)
-      '@typescript-eslint/parser':
-        specifier: ^7.18.0
-        version: 7.18.0(eslint@8.57.0)(typescript@5.9.2)
-      eslint-plugin-import:
-        specifier: ^2.29.1
-        version: 2.29.1(@typescript-eslint/parser@7.18.0(eslint@8.57.0)(typescript@5.9.2))(eslint@8.57.0)
-      eslint-plugin-react:
-        specifier: ^7.33.2
-        version: 7.34.1(eslint@8.57.0)
-    devDependencies:
-      eslint:
-        specifier: ^8.56.0
-        version: 8.57.0
-
-  packages/@scaffold/stylelint-config:
-    dependencies:
-      stylelint-config-recommended:
-        specifier: ^17.0.0
-        version: 17.0.0(stylelint@16.23.1(typescript@5.9.2))
-      stylelint-config-standard-scss:
-        specifier: ^15.0.1
-        version: 15.0.1(postcss@8.5.6)(stylelint@16.23.1(typescript@5.9.2))
-    devDependencies:
-      stylelint:
-        specifier: ^16.23.1
-        version: 16.23.1(typescript@5.9.2)
-
-  packages/@scaffold/typescript-config:
-    devDependencies:
-      typescript:
-        specifier: ^5.9.2
-        version: 5.9.2
-
-  packages/@storybook:
-    devDependencies:
-      '@emotion/react':
-        specifier: ^11.14.0
-        version: 11.14.0(@types/react@18.3.2)(react@18.3.1)
-      '@emotion/styled':
-        specifier: ^11.14.1
-        version: 11.14.1(@emotion/react@11.14.0(@types/react@18.3.2)(react@18.3.1))(@types/react@18.3.2)(react@18.3.1)
-      '@mikoshi/design':
-        specifier: workspace:*
-        version: link:../@mikoshi/design
-      '@mikoshi/react':
-        specifier: workspace:*
-        version: link:../@mikoshi/react
-      '@mui/icons-material':
-        specifier: ^7.3.1
-        version: 7.3.1(@mui/material@7.3.1(@emotion/react@11.14.0(@types/react@18.3.2)(react@18.3.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@18.3.2)(react@18.3.1))(@types/react@18.3.2)(react@18.3.1))(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@types/react@18.3.2)(react@18.3.1)
-      '@mui/material':
-        specifier: ^7.3.1
-        version: 7.3.1(@emotion/react@11.14.0(@types/react@18.3.2)(react@18.3.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@18.3.2)(react@18.3.1))(@types/react@18.3.2)(react@18.3.1))(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@scaffold/eslint-config':
-        specifier: workspace:*
-        version: link:../@scaffold/eslint-config
-      '@scaffold/stylelint-config':
-        specifier: workspace:*
-        version: link:../@scaffold/stylelint-config
-      '@scaffold/typescript-config':
-        specifier: workspace:*
-        version: link:../@scaffold/typescript-config
-      '@storybook/addon-docs':
-        specifier: ^9.1.2
-        version: 9.1.2(@types/react@18.3.2)(storybook@9.1.2(@testing-library/dom@10.1.0)(prettier@3.2.5)(vite@7.1.3(@types/node@20.19.11)(jiti@2.5.1)(sass@1.90.0)(yaml@2.8.1)))
-      '@storybook/builder-vite':
-        specifier: ^9.1.2
-        version: 9.1.2(storybook@9.1.2(@testing-library/dom@10.1.0)(prettier@3.2.5)(vite@7.1.3(@types/node@20.19.11)(jiti@2.5.1)(sass@1.90.0)(yaml@2.8.1)))(vite@7.1.3(@types/node@20.19.11)(jiti@2.5.1)(sass@1.90.0)(yaml@2.8.1))
-      '@storybook/react-vite':
-        specifier: ^9.1.2
-        version: 9.1.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.46.3)(storybook@9.1.2(@testing-library/dom@10.1.0)(prettier@3.2.5)(vite@7.1.3(@types/node@20.19.11)(jiti@2.5.1)(sass@1.90.0)(yaml@2.8.1)))(typescript@5.9.2)(vite@7.1.3(@types/node@20.19.11)(jiti@2.5.1)(sass@1.90.0)(yaml@2.8.1))
-      '@types/react':
-        specifier: ^18.0.20
-        version: 18.3.2
-      '@types/react-dom':
-        specifier: ^18.0.6
-        version: 18.3.0
-      '@typescript-eslint/eslint-plugin':
-        specifier: ^8.40.0
-        version: 8.40.0(@typescript-eslint/parser@8.40.0(eslint@8.57.0)(typescript@5.9.2))(eslint@8.57.0)(typescript@5.9.2)
-      '@typescript-eslint/parser':
-        specifier: ^8.40.0
-        version: 8.40.0(eslint@8.57.0)(typescript@5.9.2)
-      chromatic:
-        specifier: ^13.1.3
-        version: 13.1.3
-      eslint:
-        specifier: ^8.56.0
-        version: 8.57.0
-      eslint-plugin-import:
-        specifier: ^2.29.1
-        version: 2.29.1(@typescript-eslint/parser@8.40.0(eslint@8.57.0)(typescript@5.9.2))(eslint@8.57.0)
-      eslint-plugin-react:
-        specifier: ^7.33.2
-        version: 7.34.1(eslint@8.57.0)
-      npm-run-all:
-        specifier: ^4.1.5
-        version: 4.1.5
-      react:
-        specifier: ^18.2.0
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.3.1(react@18.3.1)
-      sass:
-        specifier: ^1.90.0
-        version: 1.90.0
-      storybook:
-        specifier: ^9.1.2
-        version: 9.1.2(@testing-library/dom@10.1.0)(prettier@3.2.5)(vite@7.1.3(@types/node@20.19.11)(jiti@2.5.1)(sass@1.90.0)(yaml@2.8.1))
-      stylelint:
-        specifier: ^16.23.1
-        version: 16.23.1(typescript@5.9.2)
-      vite:
-        specifier: ^7.1.3
-        version: 7.1.3(@types/node@20.19.11)(jiti@2.5.1)(sass@1.90.0)(yaml@2.8.1)
 
 packages:
 
@@ -3375,9 +3375,6 @@ packages:
   is-ci@3.0.1:
     resolution: {integrity: sha512-ZYvCgrefwqoQ6yTyYUbQu64HsITZ3NfKX1lzaEYdkTDcfKzzCI/wthRRYKkdjHKFVgNiXKAKm65Zo1pk2as/QQ==}
     hasBin: true
-
-  is-core-module@2.13.1:
-    resolution: {integrity: sha512-hHrIjvZsftOsvKSn2TRYl63zvxsgE0K+0mYMoH6gD4omR5IWB2KynivBQczo3+wF1cCkjzvptnI9Q0sPU66ilw==}
 
   is-core-module@2.16.1:
     resolution: {integrity: sha512-UfoeMA6fIJ8wTYFEUjelnaGI67v6+N7qXJEvQuIGa99l4xsCruSYOVSQ0uPANn4dAzm8lkYPaKLrrijLq7x23w==}
@@ -8356,7 +8353,7 @@ snapshots:
       eslint-import-resolver-node: 0.3.9
       eslint-module-utils: 2.8.1(@typescript-eslint/parser@7.18.0(eslint@8.57.0)(typescript@5.9.2))(eslint-import-resolver-node@0.3.9)(eslint@8.57.0)
       hasown: 2.0.2
-      is-core-module: 2.13.1
+      is-core-module: 2.16.1
       is-glob: 4.0.3
       minimatch: 3.1.2
       object.fromentries: 2.0.8
@@ -8383,7 +8380,7 @@ snapshots:
       eslint-import-resolver-node: 0.3.9
       eslint-module-utils: 2.8.1(@typescript-eslint/parser@8.40.0(eslint@8.57.0)(typescript@5.9.2))(eslint-import-resolver-node@0.3.9)(eslint@8.57.0)
       hasown: 2.0.2
-      is-core-module: 2.13.1
+      is-core-module: 2.16.1
       is-glob: 4.0.3
       minimatch: 3.1.2
       object.fromentries: 2.0.8
@@ -9003,10 +9000,6 @@ snapshots:
   is-ci@3.0.1:
     dependencies:
       ci-info: 3.9.0
-
-  is-core-module@2.13.1:
-    dependencies:
-      hasown: 2.0.2
 
   is-core-module@2.16.1:
     dependencies:

@@ -1,4 +1,4 @@
-import { TSDownConfig } from '@scaffold/build-config'
+import { TSDownConfig } from '@config/build'
 import { defineConfig } from 'tsdown'
 import scss from 'rollup-plugin-scss'
 

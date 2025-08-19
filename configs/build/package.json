@@ -1,5 +1,5 @@
 {
-  "name": "@scaffold/build-config",
+  "name": "@config/build",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -24,7 +24,7 @@
     "build": "tsdown --config src/tsdown.ts"
   },
   "devDependencies": {
-    "@scaffold/typescript-config": "workspace:*",
+    "@config/typescript": "workspace:*",
     "tsdown": "^0.14.1",
     "typescript": "^5.9.2"
   },

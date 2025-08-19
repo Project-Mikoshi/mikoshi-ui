@@ -63,6 +63,10 @@ jobs:
             **/node_modules
             packages/**/dist/
             !packages/**/node_modules/dist/
+            apps/**/dist/
+            !apps/**/node_modules/dist/
+            configs/**/dist/
+            !configs/**/node_modules/dist/
           key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
 
   #----------------------------------------------------------------------------------
@@ -87,6 +91,10 @@ jobs:
             **/node_modules
             packages/**/dist/
             !packages/**/node_modules/dist/
+            apps/**/dist/
+            !apps/**/node_modules/dist/
+            configs/**/dist/
+            !configs/**/node_modules/dist/
           key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
 
       #------------------------------------------------------------------------------
@@ -126,6 +134,10 @@ jobs:
             **/node_modules
             packages/**/dist/
             !packages/**/node_modules/dist/
+            apps/**/dist/
+            !apps/**/node_modules/dist/
+            configs/**/dist/
+            !configs/**/node_modules/dist/
           key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
 
       #------------------------------------------------------------------------------
@@ -178,6 +190,10 @@ jobs:
             **/node_modules
             packages/**/dist/
             !packages/**/node_modules/dist/
+            apps/**/dist/
+            !apps/**/node_modules/dist/
+            configs/**/dist/
+            !configs/**/node_modules/dist/
           key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
 
       #------------------------------------------------------------------------------
@@ -219,6 +235,10 @@ jobs:
             **/node_modules
             packages/**/dist/
             !packages/**/node_modules/dist/
+            apps/**/dist/
+            !apps/**/node_modules/dist/
+            configs/**/dist/
+            !configs/**/node_modules/dist/
           key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
 
       #------------------------------------------------------------------------------

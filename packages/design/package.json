@@ -15,7 +15,7 @@
     "@fontsource/roboto": "^5.0.8"
   },
   "devDependencies": {
-    "@scaffold/stylelint-config": "workspace:*",
+    "@config/stylelint": "workspace:*",
     "sass": "^1.69.5",
     "stylelint": "^16.23.1",
     "vite": "^7.1.3"

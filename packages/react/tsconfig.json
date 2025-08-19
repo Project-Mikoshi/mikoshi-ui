@@ -1,18 +1,18 @@
 {
-  "extends": "@scaffold/typescript-config/tsconfig.json",
+  "extends": "@config/typescript/tsconfig.json",
   "compilerOptions": {
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
-    "types": ["vitest"],
+    "types": ["vitest", "@testing-library/jest-dom/vitest"],
     "outDir": "./dist/",
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
     }
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["node_modules", "dist"]
 }
