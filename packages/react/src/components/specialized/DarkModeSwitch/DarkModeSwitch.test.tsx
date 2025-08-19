@@ -8,7 +8,7 @@ describe('components/application/dark-mode-switch', () => {
   it('should render', () => {
     const props = {
       checked: true,
-      onChange: (event: React.ChangeEvent<HTMLInputElement>) => {}
+      onChange: () => {}
     }
 
     render(

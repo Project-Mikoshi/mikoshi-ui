@@ -10,7 +10,7 @@ import {
   CardMedia,
   Typography
 } from '@mikoshi/react'
-// @ts-expect-error
+// @ts-expect-error importing image directly
 import LizardImg from '../../asset/contemplative-reptile.jpeg'
 
 export default {

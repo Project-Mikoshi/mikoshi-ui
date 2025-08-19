@@ -14,7 +14,7 @@ export default {
 
   framework: '@storybook/react-vite',
 
-  async viteFinal(config, options) {
+  async viteFinal(config) {
     // Add your configuration here
     return config
   }
