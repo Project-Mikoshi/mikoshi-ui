@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Paper } from '@mikoshi/components'
+import { Container, Paper } from '@mikoshi/react'
 
 export default {
   title: 'Core/Paper',

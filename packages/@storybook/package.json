@@ -21,8 +21,8 @@
   "devDependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
-    "@mikoshi/components": "workspace:*",
-    "@mikoshi/styles": "workspace:*",
+    "@mikoshi/react": "workspace:*",
+    "@mikoshi/design": "workspace:*",
     "@mui/icons-material": "^7.3.1",
     "@mui/material": "^7.3.1",
     "@scaffold/eslint-config": "workspace:*",

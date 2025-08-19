@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container, Button, Scroll, Typography, Paper } from '@mikoshi/components'
+import { Container, Button, Scroll, Typography, Paper } from '@mikoshi/react'
 
 export default {
   title: 'Core/Scroll',

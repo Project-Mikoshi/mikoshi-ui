@@ -3,13 +3,13 @@ import {
   Container,
   Button,
   Typography
-} from '@mikoshi/components/core.js'
+} from '@mikoshi/react/core.js'
 import {
   Modal,
   ModalBody,
   ModalHeader,
   ModalFooter
-} from '@mikoshi/components/specialized.js'
+} from '@mikoshi/react/specialized.js'
 
 export default {
   title: 'Specialized/Modal',

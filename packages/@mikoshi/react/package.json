@@ -1,5 +1,5 @@
 {
-  "name": "@mikoshi/components",
+  "name": "@mikoshi/react",
   "version": "0.4.0",
   "repository": {
     "type": "git",
@@ -41,7 +41,7 @@
   "devDependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
-    "@mikoshi/styles": "workspace:*",
+    "@mikoshi/design": "workspace:*",
     "@mui/icons-material": "^5.15.18",
     "@mui/material": "^5.15.18",
     "@scaffold/build-config": "workspace:*",
