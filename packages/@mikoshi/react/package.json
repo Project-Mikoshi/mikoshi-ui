@@ -1,11 +1,6 @@
 {
   "name": "@mikoshi/react",
   "version": "0.4.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/anthony-y-zhu14/MikoshiUI.git",
-    "directory": "packages/@mikoshi/mikoshi-components"
-  },
   "sideEffects": false,
   "type": "module",
   "exports": {
