@@ -24,7 +24,6 @@ module.exports = {
   rules: {
     'no-trailing-spaces': 'error',
     'no-multiple-empty-lines': 'error',
-    indent: ['error', 2],
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
     complexity: ['error', 8],

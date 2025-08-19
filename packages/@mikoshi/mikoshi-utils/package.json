@@ -11,31 +11,29 @@
     ".": "./dist/index.js"
   },
   "scripts": {
-    "build": "vite build",
-    "clean": "rm -rf dist",
-    "dev": "vite build",
+    "build": "tsdown",
     "lint": "eslint . --ext .jsx,.js,.ts,.tsx",
     "test": "vitest run",
     "watch": "vite build --watch"
   },
+  "dependencies": {
+    "pluralize": "^8.0.0"
+  },
   "devDependencies": {
-    "@scaffold/eslint-config": "workspace:^0.5.0",
-    "@scaffold/typescript-config": "workspace:^0.7.0",
+    "@scaffold/build-config": "workspace:*",
+    "@scaffold/eslint-config": "workspace:*",
+    "@scaffold/typescript-config": "workspace:*",
     "@types/lodash": "^4.14.202",
     "@types/node": "^20.10.5",
     "@types/pluralize": "^0.0.33",
-    "@typescript-eslint/eslint-plugin": "^7.9.0",
-    "@typescript-eslint/parser": "^7.9.0",
     "eslint": "^8.56.0",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-react": "^7.33.2",
     "lodash": "^4.17.21",
-    "pluralize": "^8.0.0",
-    "typescript": "^5.3.3",
-    "vite": "^5.1.1",
-    "vite-plugin-dts": "^3.7.2",
-    "vite-tsconfig-paths": "^4.3.1",
-    "vitest": "^1.2.2"
+    "tsdown": "^0.14.1",
+    "typescript": "^5.9.2",
+    "vite": "^6.0.5",
+    "vite-plugin-dts": "^4.4.0",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.2.4"
   },
   "publishConfig": {
     "access": "public"

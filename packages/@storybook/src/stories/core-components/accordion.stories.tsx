@@ -5,7 +5,7 @@ import {
   AccordionDetails,
   Typography,
   Paper
-} from '@mikoshi/components/core'
+} from '@mikoshi/components'
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown'
 import GetAppIcon from '@mui/icons-material/GetApp'
 
