@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@scaffold/typescript-config@0.6.1...@scaffold/typescript-config@0.7.0) (2024-05-18)
+
+
+### Features
+
+* major update on build tools ([#44](https://github.com/anthony-y-zhu14/MikoshiUI/issues/44)) ([f7f9c0b](https://github.com/anthony-y-zhu14/MikoshiUI/commit/f7f9c0b054a6e80c44dafe6b819c868c4007902e))
+
+
+
+
+
 ## [0.6.1](https://github.com/anthony-y-zhu14/MikoshiUI/compare/@scaffold/typescript-config@0.6.0...@scaffold/typescript-config@0.6.1) (2024-02-10)
 
 **Note:** Version bump only for package @scaffold/typescript-config

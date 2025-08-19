@@ -1,6 +1,6 @@
 {
   "name": "@mikoshi/components",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/anthony-y-zhu14/MikoshiUI.git",
@@ -58,7 +58,7 @@
     "@types/rollup-plugin-peer-deps-external": "^2.2.4",
     "@typescript-eslint/eslint-plugin": "^7.9.0",
     "@typescript-eslint/parser": "^7.9.0",
-    "@vitest/ui": "^2.1.8",
+    "@vitest/ui": "^3.2.4",
     "eslint": "^8.56.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-react": "^7.33.2",
@@ -76,7 +76,7 @@
     "tsdown": "^0.14.1",
     "typescript": "^5.9.2",
     "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^2.1.8"
+    "vitest": "^3.2.4"
   },
   "peerDependencies": {
     "@emotion/react": ">=11.11.4",

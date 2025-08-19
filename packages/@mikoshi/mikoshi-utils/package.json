@@ -1,6 +1,6 @@
 {
   "name": "@mikoshi/utils",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/anthony-y-zhu14/MikoshiUI.git",
@@ -37,7 +37,7 @@
     "vite": "^6.0.5",
     "vite-plugin-dts": "^4.4.0",
     "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^2.1.8"
+    "vitest": "^3.2.4"
   },
   "publishConfig": {
     "access": "public"
