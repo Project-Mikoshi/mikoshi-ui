@@ -1,5 +1,5 @@
-import '@mikoshi/styles/style'
-import '@mikoshi/components/style'
+import '@mikoshi/design/style'
+import '@mikoshi/react/style'
 
 export const parameters = {
   themes: {

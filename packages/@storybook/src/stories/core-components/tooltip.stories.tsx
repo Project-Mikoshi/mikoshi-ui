@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Paper, Button, Tooltip } from '@mikoshi/components'
+import { Container, Paper, Button, Tooltip } from '@mikoshi/react'
 
 export default {
   title: 'Core/Tooltip',

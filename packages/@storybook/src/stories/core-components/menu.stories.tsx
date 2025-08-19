@@ -3,7 +3,7 @@ import {
   Menu,
   MenuItem,
   Button
-} from '@mikoshi/components'
+} from '@mikoshi/react'
 
 export default {
   title: 'Core/Menu',
