@@ -1,0 +1,50 @@
+{
+  "name": "@mikoshi/core",
+  "version": "0.4.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./dist/*/index.d.ts",
+      "import": "./dist/*/index.js",
+      "default": "./dist/*/index.js"
+    },
+    "./*.js": {
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js",
+      "default": "./dist/*.js"
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "lint": "eslint",
+    "test": "vitest run",
+    "watch": "vite build --watch"
+  },
+  "dependencies": {
+    "pluralize": "^8.0.0"
+  },
+  "devDependencies": {
+    "@config/build": "workspace:*",
+    "@config/eslint": "workspace:*",
+    "@config/typescript": "workspace:*",
+    "@types/lodash": "^4.14.202",
+    "@types/node": "^20.10.5",
+    "@types/pluralize": "^0.0.33",
+    "eslint": "^9.33.0",
+    "lodash": "^4.17.21",
+    "tsdown": "^0.14.1",
+    "typescript": "^5.9.2",
+    "vite": "^6.0.5",
+    "vite-plugin-dts": "^4.4.0",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.2.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

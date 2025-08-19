@@ -1,0 +1,26 @@
+{
+  "name": "@mikoshi/design",
+  "version": "0.11.0",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.css",
+    "./mixins": "./src/mixins.scss",
+    "./style": "./dist/index.css"
+  },
+  "scripts": {
+    "build": "vite build",
+    "lint": "stylelint '**/*.scss'"
+  },
+  "dependencies": {
+    "@fontsource/roboto": "^5.0.8"
+  },
+  "devDependencies": {
+    "@config/stylelint": "workspace:*",
+    "sass": "^1.69.5",
+    "stylelint": "^16.23.1",
+    "vite": "^7.1.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

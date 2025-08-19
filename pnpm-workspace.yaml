@@ -1,5 +1,9 @@
 packages:
   - packages/**
+  - apps/**
+  - configs/**
 
 onlyBuiltDependencies:
   - '@parcel/watcher'
+  - esbuild
+  - nx

@@ -8,221 +8,60 @@ on:
     branches:
       - master
 
-#------------------------------------------------------------------------------------
-# Define application permissions & version
-#------------------------------------------------------------------------------------
 permissions: write-all
 
-#------------------------------------------------------------------------------------
-# Workflow jobs (Linux only)
-#------------------------------------------------------------------------------------
 jobs:
-  #----------------------------------------------------------------------------------
-  # build packages and apps
-  #----------------------------------------------------------------------------------
-  build:
-    name: Build packages and apps
-    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') }}
+  cd:
+    name: Build, Test, Version, Publish, Deploy
     runs-on: ubuntu-latest
     env:
-          NODE_OPTIONS: "--max_old_space_size=4096"
-    steps:
-      - uses: actions/checkout@v3
-      - name: Install pnpm
-        uses: pnpm/action-setup@v3
-        with:
-          version: 10
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 22.x
-
-      #------------------------------------------------------------------------------
-      # install
-      #------------------------------------------------------------------------------
-      - name: Install dependencies
-        run: |
-          pnpm install
-
-      #------------------------------------------------------------------------------
-      # build packages and apps
-      #------------------------------------------------------------------------------
-      - name: Build packages and apps
-        env:
-          NODE_OPTIONS: "--max_old_space_size=4096"
-        run:  npm run build
-
-      #------------------------------------------------------------------------------
-      # cache build
-      #------------------------------------------------------------------------------
-      - name: Cache build
-        id: cache-build
-        uses: actions/cache@v3
-        with:
-          path: |
-            node_modules
-            **/node_modules
-            packages/**/dist/
-            !packages/**/node_modules/dist/
-          key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
-
-  #----------------------------------------------------------------------------------
-  # Test and lint of the build
-  #----------------------------------------------------------------------------------
-  test:
-    name: Test and lint of the build
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-
-      #------------------------------------------------------------------------------
-      # retrieve cache
-      #------------------------------------------------------------------------------
-      - name: Retrieve cached build
-        id: cache-build
-        uses: actions/cache@v3
-        with:
-          path: |
-            node_modules
-            **/node_modules
-            packages/**/dist/
-            !packages/**/node_modules/dist/
-          key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
-
-      #------------------------------------------------------------------------------
-      # lint
-      #------------------------------------------------------------------------------
-      - name: Lint check
-        run:  npm run lint
-
-      #------------------------------------------------------------------------------
-      # test
-      #------------------------------------------------------------------------------
-      - name: Integration and unit tests
-        run:  npm run test
-
-  #----------------------------------------------------------------------------------
-  # Bump version
-  #----------------------------------------------------------------------------------
-  version:
-    name: Bump version
-    needs: build
-    runs-on: ubuntu-latest
+      NODE_OPTIONS: "--max_old_space_size=4096"
     steps:
       - uses: actions/checkout@v3
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           fetch-depth: 0
 
-      #------------------------------------------------------------------------------
-      # retrieve cache
-      #------------------------------------------------------------------------------
-      - name: Retrieve cached build
-        id: cache-build
-        uses: actions/cache@v3
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
         with:
-          path: |
-            node_modules
-            **/node_modules
-            packages/**/dist/
-            !packages/**/node_modules/dist/
-          key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
+          version: 10
 
-      #------------------------------------------------------------------------------
-      # setup credentials
-      #------------------------------------------------------------------------------
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 22.x
+          registry-url: https://registry.npmjs.org/
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build packages and apps
+        run: npm run build
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm run test
+
       - name: Setup credentials
         run: |
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor}}@users.noreply.github.com"
 
-      #------------------------------------------------------------------------------
-      # Bump package versions base on commit label 
-      #------------------------------------------------------------------------------
-      - name: Bump package versions base on commit label 
+      - name: Bump package versions based on commit label
         env:
           GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         run: npx lerna version --yes --conventional-commits --create-release github --message "[skip ci] automatic version bump"
 
-  #----------------------------------------------------------------------------------
-  # Publish packages
-  #----------------------------------------------------------------------------------
-  publish:
-    name: Publish packages
-    needs: version
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          ref: 'master'
-
-      #------------------------------------------------------------------------------
-      # setup node
-      #------------------------------------------------------------------------------
-      - name: Set node version to 20.x
-        uses: actions/setup-node@v3
-        with:
-          node-version: 22.x
-          registry-url: https://registry.npmjs.org/
-
-      #------------------------------------------------------------------------------
-      # retrieve cache
-      #------------------------------------------------------------------------------
-      - name: Retrieve cached build
-        id: cache-build
-        uses: actions/cache@v3
-        with:
-          path: |
-            node_modules
-            **/node_modules
-            packages/**/dist/
-            !packages/**/node_modules/dist/
-          key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
-
-      #------------------------------------------------------------------------------
-      # setup npm
-      #------------------------------------------------------------------------------
       - name: Setup NPM
         run: npm set '//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}'
 
-      #------------------------------------------------------------------------------
-      # publish packages
-      #------------------------------------------------------------------------------
       - name: Publish packages
         env:
           GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx lerna publish from-package --no-verify-access --no-private --yes
 
-  #----------------------------------------------------------------------------------
-  # Deploy apps
-  #----------------------------------------------------------------------------------
-  deploy:
-    name: Deploy apps
-    needs: version
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
-      #------------------------------------------------------------------------------
-      # retrieve cache
-      #------------------------------------------------------------------------------
-      - name: Retrieve cached build
-        id: cache-build
-        uses: actions/cache@v3
-        with:
-          path: |
-            node_modules
-            **/node_modules
-            packages/**/dist/
-            !packages/**/node_modules/dist/
-          key: ${{ runner.os }}-mikoshi-${{ github.run_id }}
-
-      #------------------------------------------------------------------------------
-      # deploy storybook
-      #------------------------------------------------------------------------------
       - name: Deploy storybook
         run: npx turbo run deploy --filter=@mikoshi/storybook -- --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }} --exit-once-uploaded

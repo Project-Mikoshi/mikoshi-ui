@@ -1,0 +1,30 @@
+{
+  "name": "@config/eslint",
+  "version": "0.5.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "typescript-eslint": "^8.40.0",
+    "@eslint/js": "^9.33.0",
+    "@types/eslint": "^9.6.1",
+    "jiti": "^2.5.1",
+    "globals": "^16.3.0",
+    "eslint-plugin-import": "^2.29.1"
+  },
+  "devDependencies": {
+    "@config/typescript": "workspace:*",
+    "eslint": "^9.33.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=9.33.0"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@config/build",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./dist/*/index.d.ts",
+      "import": "./dist/*/index.js",
+      "default": "./dist/*/index.js"
+    },
+    "./*.js": {
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js",
+      "default": "./dist/*.js"
+    }
+  },
+  "scripts": {
+    "build": "tsdown --config src/tsdown.ts"
+  },
+  "devDependencies": {
+    "@config/typescript": "workspace:*",
+    "tsdown": "^0.14.1",
+    "typescript": "^5.9.2"
+  },
+  "peerDependencies": {
+    "tsdown": ">=0.14.1",
+    "typescript": ">=5.9.2"
+  }
+}

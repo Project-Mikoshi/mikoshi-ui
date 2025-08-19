@@ -1,0 +1,12 @@
+{
+  "name": "@config/typescript",
+  "version": "0.7.0",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  },
+  "peerDependencies": {
+    "typescript": ">=5.9.2"
+  }
+}
