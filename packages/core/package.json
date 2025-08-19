@@ -29,9 +29,9 @@
     "pluralize": "^8.0.0"
   },
   "devDependencies": {
-    "@scaffold/build-config": "workspace:*",
-    "@scaffold/eslint-config": "workspace:*",
-    "@scaffold/typescript-config": "workspace:*",
+    "@config/build": "workspace:*",
+    "@config/eslint": "workspace:*",
+    "@config/typescript": "workspace:*",
     "@types/lodash": "^4.14.202",
     "@types/node": "^20.10.5",
     "@types/pluralize": "^0.0.33",
