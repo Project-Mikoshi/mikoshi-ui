@@ -9,29 +9,30 @@
   "sideEffects": false,
   "type": "module",
   "exports": {
-    "./core": "./dist/core.js",
-    "./specialized": "./dist/specialized.js",
-    "./style": "./dist/style.css"
-  },
-  "typesVersions": {
-    "*": {
-      "core": [
-        "dist/core.d.ts"
-      ],
-      "specialized": [
-        "dist/specialized.d.ts"
-      ]
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./style": "./dist/style.css",
+    "./*": {
+      "types": "./dist/*/index.d.ts",
+      "import": "./dist/*/index.js",
+      "default": "./dist/*/index.js"
+    },
+    "./*.js": {
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js",
+      "default": "./dist/*.js"
     }
   },
   "scripts": {
-    "dev": "vite build",
-    "build": "vite build",
-    "test": "vitest run",
-    "watch": "vite build --watch",
-    "clean": "rm -rf dist",
+    "build": "tsdown",
     "lint": "npm-run-all --parallel lint:*",
     "lint:eslint": "eslint . --ext .jsx,.js,.ts,.tsx",
-    "lint:stylelint": "stylelint '**/*.scss'"
+    "lint:stylelint": "stylelint '**/*.scss'",
+    "test": "vitest run",
+    "watch": "vite build --watch"
   },
   "dependencies": {
     "react-modal": "^3.16.1",
@@ -40,12 +41,13 @@
   "devDependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
-    "@mikoshi/styles": "workspace:^0.10.1",
+    "@mikoshi/styles": "workspace:*",
     "@mui/icons-material": "^5.15.18",
     "@mui/material": "^5.15.18",
-    "@scaffold/eslint-config": "workspace:^0.4.1",
-    "@scaffold/stylelint-config": "workspace:^0.3.1",
-    "@scaffold/typescript-config": "workspace:^0.6.1",
+    "@scaffold/build-config": "workspace:*",
+    "@scaffold/eslint-config": "workspace:*",
+    "@scaffold/stylelint-config": "workspace:*",
+    "@scaffold/typescript-config": "workspace:*",
     "@testing-library/jest-dom": "^6.4.5",
     "@testing-library/react": "^15.0.7",
     "@types/lodash": "^4.14.202",
@@ -56,25 +58,25 @@
     "@types/rollup-plugin-peer-deps-external": "^2.2.4",
     "@typescript-eslint/eslint-plugin": "^7.9.0",
     "@typescript-eslint/parser": "^7.9.0",
-    "@vitejs/plugin-react": "^4.2.1",
-    "@vitest/ui": "^1.6.0",
+    "@vitest/ui": "^2.1.8",
     "eslint": "^8.56.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-react": "^7.33.2",
-    "jsdom": "^24.0.0",
+    "jsdom": "^26.1.0",
     "lodash": "^4.17.21",
     "npm-run-all": "^4.1.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-scss": "^4.0.1",
     "sass": "^1.69.5",
-    "stylelint": "^16.0.2",
-    "stylelint-config-recommended": "^14.0.0",
-    "stylelint-config-standard-scss": "^12.0.0",
-    "vite": "^5.2.11",
-    "vite-plugin-dts": "^3.9.1",
-    "vite-tsconfig-paths": "^4.3.2",
-    "vitest": "^1.6.0"
+    "stylelint": "^16.23.1",
+    "stylelint-config-recommended": "^17.0.0",
+    "stylelint-config-standard-scss": "^15.0.1",
+    "tsdown": "^0.14.1",
+    "typescript": "^5.9.2",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^2.1.8"
   },
   "peerDependencies": {
     "@emotion/react": ">=11.11.4",

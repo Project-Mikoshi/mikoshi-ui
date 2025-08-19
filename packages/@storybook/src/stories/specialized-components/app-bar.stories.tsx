@@ -1,6 +1,6 @@
 import React from 'react'
-import { Container, Button, Typography } from '@mikoshi/components/core'
-import { AppBar } from '@mikoshi/components/specialized'
+import { Container, Button, Typography } from '@mikoshi/components/core.js'
+import { AppBar } from '@mikoshi/components/specialized.js'
 
 
 export default {

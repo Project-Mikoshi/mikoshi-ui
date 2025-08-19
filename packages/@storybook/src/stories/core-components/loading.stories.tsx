@@ -1,5 +1,5 @@
 import React from 'react'
-import { Paper, Container, Loading, Typography } from '@mikoshi/components/core'
+import { Paper, Container, Loading, Typography } from '@mikoshi/components'
 
 export default {
   title: 'Core/Loading',
