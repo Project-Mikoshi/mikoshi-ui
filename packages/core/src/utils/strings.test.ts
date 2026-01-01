@@ -3,7 +3,7 @@ import {
   singularize,
   pluralize,
   capitalize
-} from '@/utils/strings'
+} from '#utils/strings.js'
 
 describe('unit/strings', () => {
   it('should correct pluralize and singularize word', () => {

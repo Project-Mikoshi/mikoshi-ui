@@ -2,6 +2,10 @@
   "name": "@mikoshi/core",
   "version": "0.4.0",
   "type": "module",
+  "imports": {
+    "#*.js": "./src/*.ts",
+    "#*": "./src/*/index.ts"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -26,22 +30,19 @@
     "watch": "vite build --watch"
   },
   "dependencies": {
+    "lodash-es": "^4.17.21",
     "pluralize": "^8.0.0"
   },
   "devDependencies": {
     "@config/build": "workspace:*",
     "@config/eslint": "workspace:*",
     "@config/typescript": "workspace:*",
-    "@types/lodash": "^4.14.202",
-    "@types/node": "^20.10.5",
+    "@types/lodash-es": "^4.17.12",
+    "@types/node": "^24.6.2",
     "@types/pluralize": "^0.0.33",
-    "eslint": "^9.33.0",
-    "lodash": "^4.17.21",
-    "tsdown": "^0.14.1",
+    "eslint": "^9.37.0",
+    "tsdown": "^0.15.6",
     "typescript": "^5.9.2",
-    "vite": "^6.0.5",
-    "vite-plugin-dts": "^4.4.0",
-    "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.4"
   },
   "publishConfig": {

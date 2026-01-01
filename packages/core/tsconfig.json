@@ -9,9 +9,7 @@
     "types": ["vitest"],
     "outDir": "./dist/",
     "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    }
+    "rootDir": "."
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist"]

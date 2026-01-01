@@ -4,7 +4,7 @@ import {
   isEmpty,
   isBlank,
   isNone
-} from '@/utils/validations'
+} from '#utils/validations.js'
 
 describe('unit/validations', () => {
   it('should correct check whether a value is present', () => {

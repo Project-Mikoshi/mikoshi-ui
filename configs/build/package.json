@@ -25,11 +25,11 @@
   },
   "devDependencies": {
     "@config/typescript": "workspace:*",
-    "tsdown": "^0.14.1",
+    "tsdown": "^0.15.6",
     "typescript": "^5.9.2"
   },
   "peerDependencies": {
-    "tsdown": ">=0.14.1",
+    "tsdown": ">=0.15.6",
     "typescript": ">=5.9.2"
   }
 }
